@@ -58,19 +58,28 @@ export default async function DownloadProfilePage({
     <main className="bg-[#f7f9fc] text-[#111827] min-h-screen">
       <div className="max-w-5xl mx-auto px-6 py-10">
         <header className="rounded-lg border border-[#d8dfeb] bg-white p-7 mb-7">
-          <p className="text-xs font-bold tracking-widest uppercase text-primary mb-3">
-            {profile.title}
-          </p>
-          <h1 className="text-3xl font-bold mb-3">{profile.name}</h1>
-          <p className="text-sm leading-relaxed text-[#5b6474]">
-            {profile.summary}
-          </p>
-          <div className="flex flex-wrap gap-4 mt-5 text-sm text-[#5b6474]">
-            <span>{profile.location}</span>
-            <span>{profile.email}</span>
-            <span>{profile.phone}</span>
-            <span>{profile.linkedin}</span>
-            <span>{profile.github}</span>
+          <div className="flex flex-col md:flex-row gap-6 items-start">
+            <img
+              src={profile.image}
+              alt={profile.name}
+              className="w-28 h-36 rounded-md object-cover border border-[#d8dfeb]"
+            />
+            <div>
+              <p className="text-xs font-bold tracking-widest uppercase text-primary mb-3">
+                {profile.title}
+              </p>
+              <h1 className="text-3xl font-bold mb-3">{profile.name}</h1>
+              <p className="text-sm leading-relaxed text-[#5b6474]">
+                {profile.summary}
+              </p>
+              <div className="flex flex-wrap gap-4 mt-5 text-sm text-[#5b6474]">
+                <span>{profile.location}</span>
+                <span>{profile.email}</span>
+                <span>{profile.phone}</span>
+                <span>{profile.linkedin}</span>
+                <span>{profile.github}</span>
+              </div>
+            </div>
           </div>
         </header>
 

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   Mail,
@@ -30,8 +31,15 @@ export default function ProfileHeader() {
           className="flex flex-col md:flex-row gap-10 items-start"
         >
           <div className="shrink-0">
-            <div className="w-20 h-20 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center">
-              <span className="text-2xl font-bold text-primary">BK</span>
+            <div className="relative w-28 h-36 overflow-hidden rounded-md border border-primary/30 bg-primary/10">
+              <Image
+                src={profile.image}
+                alt={profile.name}
+                fill
+                priority
+                sizes="112px"
+                className="object-cover"
+              />
             </div>
           </div>
 

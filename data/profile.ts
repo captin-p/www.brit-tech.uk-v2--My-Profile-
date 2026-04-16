@@ -16,6 +16,7 @@ const profileDataByLanguage = {
       phone: "+33 7 59 50 78 77",
       linkedin: "https://www.linkedin.com/in/bright-konadu",
       github: "https://github.com/captin-p",
+      image: "/images/profile/bright-konadu.jpg",
       summary:
         "With over 6 years of experience in enterprise IT, demonstrates a strong record of delivering infrastructure solutions across education, healthcare, and commercial environments. Proven ability to support large-scale projects serving over 1,000 users, with hands-on expertise in Cisco and Ubiquiti deployments, CCTV security systems, Windows Server administration, and Active Directory. Maintains a professional approach, with openness to further study, research, and the adoption of emerging technologies and industry best practices.",
       about: [
@@ -301,6 +302,7 @@ const profileDataByLanguage = {
       phone: "+33 7 59 50 78 77",
       linkedin: "https://www.linkedin.com/in/bright-konadu",
       github: "https://github.com/captin-p",
+      image: "/images/profile/bright-konadu.jpg",
       summary:
         "Specialiste en infrastructure reseau avec plus de 6 ans d'experience dans la mise en oeuvre de solutions IT pour les secteurs de l'education, de la sante et des entreprises. Fondateur d'une societe IT ayant pilote des projets d'infrastructure de bout en bout pour plus de 1 000 utilisateurs. Solide experience pratique en deploiement CCNA, Cisco et Ubiquiti, systemes CCTV, administration Windows Server et Active Directory.",
       about: [

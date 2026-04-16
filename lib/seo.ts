@@ -82,6 +82,7 @@ export function personJsonLd() {
     name: "Bright Konadu",
     jobTitle: "Network Infrastructure Specialist",
     url: siteUrl,
+    image: `${siteUrl}/images/profile/bright-konadu.jpg`,
     email: "konadubright024@gmail.com",
     telephone: "+33759507877",
     address: {
