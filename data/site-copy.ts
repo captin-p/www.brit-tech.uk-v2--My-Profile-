@@ -6,9 +6,11 @@ const siteCopyByLanguage = {
       links: [
         { href: "/", label: "Home" },
         { href: "/profile", label: "Profile" },
+        { href: "/services", label: "Services" },
         { href: "/graphics", label: "Graphics" },
+        { href: "/contact", label: "Contact" },
       ],
-      contact: "Contact",
+      contact: "Email",
       openMenu: "Open menu",
       closeMenu: "Close menu",
       mainNavigation: "Main navigation",
@@ -19,6 +21,7 @@ const siteCopyByLanguage = {
       navigation: "Navigation",
       getInTouch: "Get In Touch",
       linkedInProfile: "LinkedIn Profile",
+      githubProfile: "GitHub Profile",
       rights: "All rights reserved.",
     },
     ctaBanners: {
@@ -52,7 +55,7 @@ const siteCopyByLanguage = {
     },
     home: {
       hero: {
-        ccnaBadge: "CCNA Certified",
+        ccnaBadge: "CCNA",
         designBadge: "Graphic Designer",
         headingStart: "Building Reliable Networks,",
         headingMiddle: "Secure Systems",
@@ -73,7 +76,7 @@ const siteCopyByLanguage = {
         strengths: [
           "End-to-end project delivery from scoping through live deployment.",
           "6+ years across education, healthcare, and commercial sectors.",
-          "CCNA certified with strong Cisco and Ubiquiti experience.",
+          "Strong CCNA, Cisco, and Ubiquiti experience.",
           "Founder with proven client management and business ownership.",
           "Technical depth combined with creative design capability.",
           "Strong communicator who explains technical concepts clearly.",
@@ -136,6 +139,15 @@ const siteCopyByLanguage = {
             description:
               "Explore the complete career timeline, skills breakdown, certifications, education, and key achievements.",
             cta: "View Profile",
+          },
+          {
+            key: "services",
+            label: "Services",
+            href: "/services",
+            title: "Services For Real Projects",
+            description:
+              "See the network installation, CCTV, website, graphic design, IT support, and systems work available for clients.",
+            cta: "View Services",
           },
           {
             key: "graphics",
@@ -203,9 +215,11 @@ const siteCopyByLanguage = {
       links: [
         { href: "/", label: "Accueil" },
         { href: "/profile", label: "Profil" },
+        { href: "/services", label: "Services" },
         { href: "/graphics", label: "Design" },
+        { href: "/contact", label: "Contact" },
       ],
-      contact: "Contact",
+      contact: "Email",
       openMenu: "Ouvrir le menu",
       closeMenu: "Fermer le menu",
       mainNavigation: "Navigation principale",
@@ -216,6 +230,7 @@ const siteCopyByLanguage = {
       navigation: "Navigation",
       getInTouch: "Restons en contact",
       linkedInProfile: "Profil LinkedIn",
+      githubProfile: "Profil GitHub",
       rights: "Tous droits reserves.",
     },
     ctaBanners: {
@@ -249,7 +264,7 @@ const siteCopyByLanguage = {
     },
     home: {
       hero: {
-        ccnaBadge: "Certifie CCNA",
+        ccnaBadge: "CCNA",
         designBadge: "Graphiste",
         headingStart: "Des reseaux fiables,",
         headingMiddle: "des systemes securises",
@@ -270,7 +285,7 @@ const siteCopyByLanguage = {
         strengths: [
           "Livraison de projets de bout en bout, du cadrage a la mise en production.",
           "Plus de 6 ans d'experience dans l'education, la sante et le secteur prive.",
-          "Certification CCNA avec forte experience Cisco et Ubiquiti.",
+          "Solide experience CCNA, Cisco et Ubiquiti.",
           "Fondateur avec une vraie experience en relation client et gestion d'activite.",
           "Profondeur technique combinee a une capacite creative solide.",
           "Tres bon communicant, capable d'expliquer clairement les sujets techniques.",
@@ -333,6 +348,15 @@ const siteCopyByLanguage = {
             description:
               "Consultez tout le parcours, les competences, les certifications, la formation et les realisations cles.",
             cta: "Voir le profil",
+          },
+          {
+            key: "services",
+            label: "Services",
+            href: "/services",
+            title: "Services pour projets reels",
+            description:
+              "Decouvrez les services reseau, CCTV, sites web, design graphique, support IT et administration systeme.",
+            cta: "Voir les services",
           },
           {
             key: "graphics",

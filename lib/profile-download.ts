@@ -262,6 +262,7 @@ export function buildProfileDownloadHtml(language: Language) {
           <span>${escapeHtml(profile.email)}</span>
           <span>${escapeHtml(profile.phone)}</span>
           <span>${escapeHtml(profile.linkedin)}</span>
+          <span>${escapeHtml(profile.github)}</span>
         </div>
       </header>
 

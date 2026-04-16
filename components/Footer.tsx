@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { Mail, Phone, Linkedin } from "lucide-react";
+import { Mail, Phone, Linkedin, Github, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { getProfileData } from "@/data/profile";
+import { getShowcaseData } from "@/data/showcase";
 import { getSiteCopy } from "@/data/site-copy";
 
 export default function Footer() {
@@ -11,6 +12,7 @@ export default function Footer() {
   const { language } = useLanguage();
   const profile = getProfileData(language).profile;
   const siteCopy = getSiteCopy(language);
+  const contact = getShowcaseData(language).contact;
 
   return (
     <footer className="border-t border-border bg-card">
@@ -53,6 +55,20 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               <li>
                 <a
+                  href={contact.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <MessageCircle
+                    size={15}
+                    style={{ color: "var(--color-emerald)" }}
+                  />
+                  {contact.whatsappLabel}
+                </a>
+              </li>
+              <li>
+                <a
                   href={`mailto:${profile.email}`}
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
@@ -78,6 +94,17 @@ export default function Footer() {
                 >
                   <Linkedin size={15} style={{ color: "var(--color-violet)" }} />
                   {siteCopy.footer.linkedInProfile}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={profile.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Github size={15} style={{ color: "var(--color-emerald)" }} />
+                  {siteCopy.footer.githubProfile}
                 </a>
               </li>
             </ul>

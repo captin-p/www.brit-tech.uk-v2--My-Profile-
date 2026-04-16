@@ -3,10 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, MessageCircle, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import LanguageToggle from "@/components/LanguageToggle";
 import { useLanguage } from "@/components/providers/LanguageProvider";
+import { getProfileData } from "@/data/profile";
+import { getShowcaseData } from "@/data/showcase";
 import { getSiteCopy } from "@/data/site-copy";
 import { cn } from "@/lib/utils";
 
@@ -15,7 +17,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { language } = useLanguage();
+  const profile = getProfileData(language).profile;
   const copy = getSiteCopy(language).nav;
+  const contact = getShowcaseData(language).contact;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -80,7 +84,16 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-3">
           <LanguageToggle />
           <a
-            href="mailto:konadubright024@gmail.com"
+            href={contact.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
+          >
+            <MessageCircle size={15} />
+            {contact.whatsappLabel}
+          </a>
+          <a
+            href={`mailto:${profile.email}`}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-primary text-primary text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-200"
           >
             {copy.contact}
@@ -130,7 +143,18 @@ export default function Navbar() {
               })}
               <li>
                 <a
-                  href="mailto:konadubright024@gmail.com"
+                  href={contact.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
+                >
+                  <MessageCircle size={15} />
+                  {contact.whatsappLabel}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`mailto:${profile.email}`}
                   className="inline-flex items-center px-4 py-2 rounded-md border border-primary text-primary text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all"
                 >
                   {copy.contact}

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Award, GraduationCap, Globe } from "lucide-react";
 import { useLanguage } from "@/components/providers/LanguageProvider";
@@ -10,16 +11,56 @@ export default function CertificationsSection() {
   const { language } = useLanguage();
   const { certifications, education, languages } = getProfileData(language);
   const copy = getProfilePageCopy(language);
+  const credentialListTitle =
+    language === "fr" ? "Liste des certifications" : "Credential list";
 
   return (
     <section className="py-16 px-6">
       <div className="max-w-6xl mx-auto">
+        <div className="mb-10">
+          <SectionHeader
+            label={copy.qualificationsLabel}
+            title={copy.certificationsTitle}
+          />
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-12">
+          {certifications.map((cert, index) => (
+            <motion.article
+              key={cert.name}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              className="group overflow-hidden rounded-lg border border-border bg-card"
+            >
+              <div className="relative aspect-[7/5] bg-secondary">
+                <Image
+                  src={cert.image}
+                  alt={`${cert.name} certificate preview`}
+                  fill
+                  sizes="(min-width: 640px) 46vw, 92vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+              </div>
+              <div className="p-4">
+                <p className="text-sm font-semibold text-text-bright">
+                  {cert.name}
+                </p>
+                <p className="text-xs text-muted-foreground mt-1">
+                  {cert.issuer} &middot; {cert.year}
+                </p>
+              </div>
+            </motion.article>
+          ))}
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-1">
             <div className="mb-8">
               <SectionHeader
                 label={copy.qualificationsLabel}
-                title={copy.certificationsTitle}
+                title={credentialListTitle}
               />
             </div>
             <div className="flex flex-col gap-4">

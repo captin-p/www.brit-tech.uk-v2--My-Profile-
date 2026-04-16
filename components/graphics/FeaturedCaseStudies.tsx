@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import SectionHeader from "@/components/SectionHeader";
 import { getPortfolioData } from "@/data/portfolio";
@@ -12,6 +13,7 @@ export default function FeaturedCaseStudies() {
   const portfolio = getPortfolioData(language);
   const copy = getSiteCopy(language).graphics.featuredCaseStudies;
   const featured = portfolio.items.filter((item) => item.featured && item.caseStudy);
+  const visitLabel = language === "fr" ? "Voir le site" : "Visit website";
 
   if (featured.length === 0) {
     return null;
@@ -69,6 +71,19 @@ export default function FeaturedCaseStudies() {
                     </span>
                   ))}
                 </div>
+
+                {item.url && (
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${visitLabel}: ${item.title}`}
+                    className="mb-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+                  >
+                    {visitLabel}
+                    <ExternalLink size={14} aria-hidden="true" />
+                  </a>
+                )}
 
                 {item.caseStudy && (
                   <div className="flex flex-col gap-4">

@@ -1,14 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, Linkedin, MapPin, Download } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  Linkedin,
+  Github,
+  MapPin,
+  Download,
+  MessageCircle,
+} from "lucide-react";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { getProfileData, getProfilePageCopy } from "@/data/profile";
+import { getShowcaseData } from "@/data/showcase";
 
 export default function ProfileHeader() {
   const { language } = useLanguage();
   const profile = getProfileData(language).profile;
   const copy = getProfilePageCopy(language);
+  const contact = getShowcaseData(language).contact;
 
   return (
     <section className="pt-32 pb-16 px-6 border-b border-border bg-gradient-to-br from-primary/5 via-background to-accent/5">
@@ -66,12 +76,30 @@ export default function ProfileHeader() {
                 <Linkedin size={15} />
                 {copy.linkedInLabel}
               </a>
+              <a
+                href={profile.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                <Github size={15} />
+                {copy.gitHubLabel}
+              </a>
             </div>
 
             <div className="flex flex-wrap gap-3">
               <a
-                href={`mailto:${profile.email}`}
+                href={contact.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-primary text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity"
+              >
+                <MessageCircle size={14} />
+                {contact.whatsappLabel}
+              </a>
+              <a
+                href={`mailto:${profile.email}`}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border border-border text-foreground text-sm font-medium hover:border-primary hover:text-primary transition-colors"
               >
                 <Mail size={14} />
                 {copy.contactButton}

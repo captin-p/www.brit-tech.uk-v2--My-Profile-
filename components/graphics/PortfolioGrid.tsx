@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { getPortfolioData, type PortfolioCategory } from "@/data/portfolio";
 import { getSiteCopy } from "@/data/site-copy";
@@ -13,6 +14,7 @@ export default function PortfolioGrid() {
   const portfolio = getPortfolioData(language);
   const copy = getSiteCopy(language).graphics.portfolio;
   const [active, setActive] = useState<PortfolioCategory>("all");
+  const visitLabel = language === "fr" ? "Voir le site" : "Visit website";
 
   const filtered =
     active === "all"
@@ -111,6 +113,19 @@ export default function PortfolioGrid() {
                       );
                     })}
                   </div>
+
+                  {item.url && (
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${visitLabel}: ${item.title}`}
+                      className="mb-4 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:underline"
+                    >
+                      {visitLabel}
+                      <ExternalLink size={13} aria-hidden="true" />
+                    </a>
+                  )}
 
                   {item.caseStudy && (
                     <details className="group/details">

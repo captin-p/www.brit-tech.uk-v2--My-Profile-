@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { LanguageProvider } from "@/components/providers/LanguageProvider";
+import { defaultOgImage, siteName, siteUrl } from "@/lib/seo";
 import "./globals.css";
 
 const inter = Inter({
@@ -17,9 +18,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bright Konadu | Network Infrastructure Specialist",
+  metadataBase: new URL(siteUrl),
+  applicationName: siteName,
+  title: {
+    default: "Bright Konadu | Network Infrastructure Specialist",
+    template: `%s | ${siteName}`,
+  },
   description:
-    "Bright Konadu is a CCNA-certified Network Infrastructure Specialist and Graphic Designer based in Dijon, France. Expert in LAN/WAN deployment, Cisco/Ubiquiti networking, Windows Server, CCTV systems, and creative design.",
+    "Bright Konadu is a Network Infrastructure Specialist and Graphic Designer based in Dijon, France. Expert in LAN/WAN deployment, Cisco and Ubiquiti networking, Windows Server, CCTV systems, and creative design.",
   keywords: [
     "Bright Konadu",
     "Network Infrastructure Specialist",
@@ -35,16 +41,54 @@ export const metadata: Metadata = {
     "CCTV installation",
   ],
   authors: [{ name: "Bright Konadu" }],
+  creator: "Bright Konadu",
+  publisher: siteName,
+  alternates: {
+    canonical: "/",
+  },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon-light-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     title: "Bright Konadu | Network Infrastructure Specialist",
     description:
-      "CCNA-certified network engineer delivering enterprise IT infrastructure, wireless deployments, CCTV systems, and creative design.",
-    url: "https://brit-tech.uk",
-    siteName: "Brit Tech",
+      "Network engineer delivering enterprise IT infrastructure, wireless deployments, CCTV systems, and creative design.",
+    url: siteUrl,
+    siteName,
     locale: "en_GB",
     type: "website",
+    images: [
+      {
+        url: defaultOgImage,
+        width: 1200,
+        height: 630,
+        alt: "Bright Konadu - network infrastructure, IT support, CCTV, web, and design services.",
+      },
+    ],
   },
-  metadataBase: new URL("https://brit-tech.uk"),
+  twitter: {
+    card: "summary_large_image",
+    title: "Bright Konadu | Network Infrastructure Specialist",
+    description:
+      "Network infrastructure, CCTV, IT support, website, and graphic design services by Bright Konadu.",
+    images: [defaultOgImage],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  category: "technology",
 };
 
 export const viewport: Viewport = {
@@ -59,8 +103,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={`${inter.variable} ${geistMono.variable}`}>
-      <body className="font-sans antialiased">
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={`${inter.variable} ${geistMono.variable}`}
+    >
+      <body className="font-sans antialiased" suppressHydrationWarning>
         <LanguageProvider>{children}</LanguageProvider>
         <Analytics />
       </body>

@@ -2,17 +2,19 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { User, Image, ArrowRight } from "lucide-react";
+import { User, Image, ArrowRight, BriefcaseBusiness } from "lucide-react";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { getSiteCopy } from "@/data/site-copy";
 
 const iconMap = {
   profile: User,
+  services: BriefcaseBusiness,
   graphics: Image,
 } as const;
 
 const colourMap = {
   profile: "var(--color-sea-blue)",
+  services: "var(--color-emerald)",
   graphics: "var(--color-orange)",
 } as const;
 
@@ -23,7 +25,7 @@ export default function FeaturedTeaser() {
   return (
     <section className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {cards.map((card, index) => {
             const Icon = iconMap[card.key];
             const colour = colourMap[card.key];

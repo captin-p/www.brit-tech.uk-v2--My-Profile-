@@ -8,21 +8,21 @@ import {
   Wifi,
   Headphones,
   Palette,
+  type LucideIcon,
 } from "lucide-react";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import SectionHeader from "@/components/SectionHeader";
 import { getProfileData } from "@/data/profile";
 import { getSiteCopy } from "@/data/site-copy";
 
-const iconMap: Record<string, React.FC<{ size?: number; className?: string }>> =
-  {
-    Network,
-    Server,
-    Camera,
-    Wifi,
-    Headphones,
-    Palette,
-  };
+const iconMap: Record<string, LucideIcon> = {
+  Network,
+  Server,
+  Camera,
+  Wifi,
+  Headphones,
+  Palette,
+};
 
 const cardColours = [
   "var(--color-sea-blue)",
