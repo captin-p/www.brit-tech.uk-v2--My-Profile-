@@ -113,8 +113,8 @@ export default function ProfileHeader() {
                 {copy.contactButton}
               </a>
               <a
-                href={`/profile/download/${language}/`}
-                download={`bright-konadu-profile-${language}.html`}
+                href={`/downloads/bright-konadu-profile-${language}.pdf`}
+                download={`bright-konadu-profile-${language}.pdf`}
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border border-border text-foreground text-sm font-medium hover:border-primary hover:text-primary transition-colors"
                 aria-label={copy.downloadAriaLabel}
               >

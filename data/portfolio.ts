@@ -135,34 +135,6 @@ const portfolioDataByLanguage: Record<Language, PortfolioData> = {
         featured: false,
       },
       {
-        id: "speed-nettoyage-blue-card",
-        title: "Speed Nettoyage Blue Business Card",
-        category: "branding",
-        description:
-          "A clean blue front-and-back business card concept for Speed Nettoyage, using wave lines and soft shapes to suggest speed and service.",
-        tools: ["Adobe Photoshop", "Brand Layout"],
-        image: "/images/portfolio/speed-nettoyage-blue-card.jpg",
-        featured: true,
-        caseStudy: {
-          problem:
-            "The client needed a simple printed identity piece with contact details that still felt modern, professional, and easy to recognise.",
-          approach:
-            "Created a calm blue visual language, paired thin-line typography with motion-inspired curves, and separated brand-facing and contact-facing sides.",
-          outcome:
-            "Produced a polished business-card direction that gives the cleaning service a more credible, memorable client touchpoint.",
-        },
-      },
-      {
-        id: "speed-nettoyage-light-card",
-        title: "Speed Nettoyage Light Business Card",
-        category: "branding",
-        description:
-          "A lighter business-card variation with playful service iconography, soft pattern work, and a bright blue-and-yellow accent system.",
-        tools: ["Adobe Photoshop", "Business Card"],
-        image: "/images/portfolio/speed-nettoyage-light-card.jpg",
-        featured: false,
-      },
-      {
         id: "pentecost-tract-giveout",
         title: "Pentecost Tract & Giveout Layouts",
         category: "print-marketing",
@@ -288,34 +260,6 @@ const portfolioDataByLanguage: Record<Language, PortfolioData> = {
           "Une serie coordonnee de posts countdown pour la promotion d'evenement, avec cadres photo, marqueurs de jours et branding coherent.",
         tools: ["Adobe Photoshop", "Reseaux sociaux"],
         image: "/images/portfolio/pentecost-countdown-social-pack.jpg",
-        featured: false,
-      },
-      {
-        id: "speed-nettoyage-blue-card",
-        title: "Carte de visite bleue Speed Nettoyage",
-        category: "branding",
-        description:
-          "Un concept de carte de visite recto-verso pour Speed Nettoyage, avec lignes fluides et formes douces pour evoquer rapidite et service.",
-        tools: ["Adobe Photoshop", "Brand layout"],
-        image: "/images/portfolio/speed-nettoyage-blue-card.jpg",
-        featured: true,
-        caseStudy: {
-          problem:
-            "Le client avait besoin d'un support imprime simple avec ses coordonnees, tout en gardant une apparence moderne, professionnelle et reconnaissable.",
-          approach:
-            "Mise en place d'un univers bleu calme, d'une typographie fine, de courbes inspirees du mouvement et d'une separation claire entre face marque et face contact.",
-          outcome:
-            "Production d'une direction de carte de visite soignee qui renforce la credibilite et la memorisation du service.",
-        },
-      },
-      {
-        id: "speed-nettoyage-light-card",
-        title: "Carte de visite claire Speed Nettoyage",
-        category: "branding",
-        description:
-          "Une variation plus lumineuse avec iconographie de service, motifs doux et accents bleu-jaune pour une identite plus accessible.",
-        tools: ["Adobe Photoshop", "Carte de visite"],
-        image: "/images/portfolio/speed-nettoyage-light-card.jpg",
         featured: false,
       },
       {

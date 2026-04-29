@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Geist_Mono } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
 import { LanguageProvider } from "@/components/providers/LanguageProvider";
 import { defaultOgImage, siteName, siteUrl } from "@/lib/seo";
 import "./globals.css";
@@ -110,7 +109,6 @@ export default function RootLayout({
     >
       <body className="font-sans antialiased" suppressHydrationWarning>
         <LanguageProvider>{children}</LanguageProvider>
-        <Analytics />
       </body>
     </html>
   );
