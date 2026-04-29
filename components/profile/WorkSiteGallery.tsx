@@ -37,93 +37,138 @@ const galleryCopy = {
 
 const photos = [
   {
-    src: "/images/work-site/rack-panel-prep.jpg",
+    src: "/images/work-site/cable-termination-closeup.jpg",
     title: {
-      en: "Rack panel preparation",
-      fr: "Preparation du panneau rack",
+      en: "Cable termination",
+      fr: "Raccordement des cables",
     },
     description: {
-      en: "Preparing mounting points and hardware for installation.",
-      fr: "Preparation des supports et du materiel avant installation.",
+      en: "Hands-on network cable preparation before final testing.",
+      fr: "Preparation pratique des cables reseau avant les tests finaux.",
     },
     alt: {
-      en: "Hands preparing a rack panel and installation hardware on site.",
-      fr: "Preparation d'un panneau rack et du materiel d'installation sur site.",
+      en: "Close-up of network cable termination work during an installation.",
+      fr: "Gros plan du raccordement de cables reseau pendant une installation.",
     },
   },
   {
-    src: "/images/work-site/hardware-mounting.jpg",
+    src: "/images/work-site/rack-cabling-run.jpg",
     title: {
-      en: "Hardware mounting",
-      fr: "Fixation du materiel",
+      en: "Rack cabling",
+      fr: "Cablage rack",
     },
     description: {
-      en: "Drilling and fastening equipment before final placement.",
-      fr: "Percage et fixation des equipements avant la mise en place finale.",
+      en: "Structured cabling routed into the network rack.",
+      fr: "Cablage structure raccorde dans le rack reseau.",
     },
     alt: {
-      en: "Technician drilling into a mounting surface for equipment placement.",
-      fr: "Technicien percant une surface pour fixer un equipement.",
+      en: "Network cables connected to rack-mounted switching equipment.",
+      fr: "Cables reseau connectes a un equipement installe en rack.",
     },
   },
   {
-    src: "/images/work-site/wall-cabling-run.jpg",
+    src: "/images/work-site/wall-network-point.jpg",
     title: {
-      en: "Wall cabling run",
-      fr: "Passage des cables",
+      en: "Wall network point",
+      fr: "Point reseau mural",
     },
     description: {
-      en: "Structured cabling routed from the wall-mounted distribution point.",
-      fr: "Cablage structure depuis un point de distribution mural.",
+      en: "Surface-mounted network point installed for endpoint connectivity.",
+      fr: "Point reseau mural installe pour connecter les terminaux.",
     },
     alt: {
-      en: "Network cables routed from a wall-mounted distribution point.",
-      fr: "Cables reseau sortant d'un point de distribution mural.",
+      en: "Wall-mounted network box and cable on a finished installation.",
+      fr: "Boitier reseau mural et cable sur une installation terminee.",
     },
   },
   {
-    src: "/images/work-site/wall-outlet-termination.jpg",
+    src: "/images/work-site/cctv-camera-mounting.jpg",
     title: {
-      en: "Outlet termination",
-      fr: "Raccordement mural",
+      en: "CCTV mounting",
+      fr: "Fixation CCTV",
     },
     description: {
-      en: "Cable termination and wall outlet work during site setup.",
-      fr: "Raccordement des cables et prise murale pendant l'installation.",
+      en: "Camera positioning and mounting during a security installation.",
+      fr: "Positionnement et fixation de camera pendant une installation de securite.",
     },
     alt: {
-      en: "Network cable termination work at a wall outlet.",
-      fr: "Travail de raccordement reseau au niveau d'une prise murale.",
+      en: "Technician mounting CCTV hardware from a ladder on site.",
+      fr: "Technicien fixant du materiel CCTV depuis une echelle sur site.",
     },
   },
   {
-    src: "/images/work-site/network-power-adapters.jpg",
+    src: "/images/work-site/projector-av-installation.jpg",
     title: {
-      en: "Power and adapters",
-      fr: "Alimentation et adaptateurs",
+      en: "AV installation",
+      fr: "Installation AV",
     },
     description: {
-      en: "Adapters, patch leads, and power accessories staged for configuration.",
-      fr: "Adaptateurs, cordons et accessoires d'alimentation prepares.",
+      en: "Projector and classroom display equipment mounted and aligned.",
+      fr: "Projecteur et equipement d'affichage de salle installes et alignes.",
     },
     alt: {
-      en: "Network adapters, patch leads, and power accessories on a table.",
-      fr: "Adaptateurs reseau, cordons et accessoires d'alimentation sur une table.",
+      en: "Technician installing classroom projector equipment near the ceiling.",
+      fr: "Technicien installant un projecteur de salle pres du plafond.",
     },
   },
   {
-    src: "/images/work-site/equipment-kit.jpg",
+    src: "/images/work-site/field-network-configuration.jpg",
     title: {
-      en: "Equipment kit",
-      fr: "Kit d'equipement",
+      en: "Field configuration",
+      fr: "Configuration terrain",
     },
     description: {
-      en: "Network equipment and accessories prepared for deployment.",
-      fr: "Equipements reseau et accessoires prets pour le deploiement.",
+      en: "On-site configuration and checks before service handover.",
+      fr: "Configuration et controles sur site avant la remise en service.",
     },
     alt: {
-      en: "Network equipment and accessories prepared for site deployment.",
-      fr: "Equipements reseau et accessoires prepares pour le deploiement sur site.",
+      en: "Technician configuring network equipment with a laptop on site.",
+      fr: "Technicien configurant un equipement reseau avec un ordinateur sur site.",
+    },
+  },
+  {
+    src: "/images/work-site/fiber-link-testing.jpg",
+    title: {
+      en: "Fiber link testing",
+      fr: "Test de liaison fibre",
+    },
+    description: {
+      en: "Checking fiber patch leads with a visual fault locator.",
+      fr: "Verification des cordons fibre avec un localisateur visuel de defaut.",
+    },
+    alt: {
+      en: "Fiber patch leads connected to a visual fault locator during testing.",
+      fr: "Cordons fibre connectes a un localisateur visuel de defaut pendant un test.",
+    },
+  },
+  {
+    src: "/images/work-site/projector-screen-test.jpg",
+    title: {
+      en: "Projection test",
+      fr: "Test de projection",
+    },
+    description: {
+      en: "Classroom display screen checked after projector setup.",
+      fr: "Ecran de salle verifie apres l'installation du projecteur.",
+    },
+    alt: {
+      en: "Projected Windows desktop on a classroom screen during testing.",
+      fr: "Bureau Windows projete sur un ecran de salle pendant les tests.",
+    },
+  },
+  {
+    src: "/images/work-site/ladder-cable-routing.jpg",
+    title: {
+      en: "Ceiling cable route",
+      fr: "Passage de cable plafond",
+    },
+    description: {
+      en: "Routing cabling at ceiling height with ladder support.",
+      fr: "Passage des cables en hauteur avec appui sur echelle.",
+    },
+    alt: {
+      en: "Technician routing cables near the ceiling from a ladder.",
+      fr: "Technicien passant des cables pres du plafond depuis une echelle.",
     },
   },
 ] satisfies Array<{
@@ -156,6 +201,30 @@ const videos = [
     title: {
       en: "Equipment check",
       fr: "Verification du materiel",
+    },
+  },
+  {
+    src: "/videos/work-site/projector-installation.mp4",
+    poster: "/images/work-site/projector-screen-test.jpg",
+    title: {
+      en: "Projector installation",
+      fr: "Installation projecteur",
+    },
+  },
+  {
+    src: "/videos/work-site/rack-site-clip.mp4",
+    poster: "/images/work-site/rack-cabling-run.jpg",
+    title: {
+      en: "Rack site clip",
+      fr: "Clip rack sur site",
+    },
+  },
+  {
+    src: "/videos/work-site/field-installation-clip.mp4",
+    poster: "/images/work-site/ladder-cable-routing.jpg",
+    title: {
+      en: "Field installation",
+      fr: "Installation terrain",
     },
   },
 ] satisfies Array<{
