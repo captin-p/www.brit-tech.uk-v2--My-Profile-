@@ -24,10 +24,12 @@ export const metadata: Metadata = {
     template: `%s | ${siteName}`,
   },
   description:
-    "Bright Konadu is a Network Infrastructure Specialist and Graphic Designer based in Dijon, France. Expert in LAN/WAN deployment, Cisco and Ubiquiti networking, Windows Server, CCTV systems, and creative design.",
+    "Bright Konadu is a Network Infrastructure Specialist, IT Support Engineer, and aspiring cybersecurity specialist based in Dijon, France. Experienced in secure LAN/Wi-Fi deployment, Cisco and Ubiquiti networking, Windows Server, CCTV systems, and creative design.",
   keywords: [
     "Bright Konadu",
     "Network Infrastructure Specialist",
+    "IT Support Engineer",
+    "Cybersecurity Management",
     "IT Support",
     "Systems Support",
     "Graphic Designer",
@@ -38,6 +40,8 @@ export const metadata: Metadata = {
     "Ubiquiti",
     "Windows Server",
     "CCTV installation",
+    "GNS3",
+    "TryHackMe",
   ],
   authors: [{ name: "Bright Konadu" }],
   creator: "Bright Konadu",
@@ -55,7 +59,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bright Konadu | Network Infrastructure Specialist",
     description:
-      "Network engineer delivering enterprise IT infrastructure, wireless deployments, CCTV systems, and creative design.",
+      "Network engineer delivering secure IT infrastructure, wireless deployments, CCTV systems, IT support, and creative design.",
     url: siteUrl,
     siteName,
     locale: "en_GB",
@@ -73,7 +77,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Bright Konadu | Network Infrastructure Specialist",
     description:
-      "Network infrastructure, CCTV, IT support, website, and graphic design services by Bright Konadu.",
+      "Secure network infrastructure, CCTV, IT support, website, and graphic design services by Bright Konadu.",
     images: [defaultOgImage],
   },
   robots: {

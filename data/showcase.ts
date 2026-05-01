@@ -25,10 +25,10 @@ const showcaseDataByLanguage = {
             "Expanded wireless coverage and reliability across campus environments.",
         },
         {
-          value: "32",
+          value: "64+",
           label: "Camera School CCTV Build",
           description:
-            "Delivered a complete CCTV system with supporting Wi-Fi and LAN infrastructure.",
+            "Delivered CCTV coverage across two school locations with supporting Wi-Fi and LAN infrastructure.",
         },
         {
           value: "1,500",
@@ -37,10 +37,10 @@ const showcaseDataByLanguage = {
             "Designed LAN and Wi-Fi connectivity for a high-capacity university lecture block.",
         },
         {
-          value: "1,000+",
+          value: "40,000+",
           label: "Users Supported",
           description:
-            "Supported students, staff, healthcare teams, and business users across projects.",
+            "Supported students, staff, healthcare teams, and business users across campus, hospital, and client projects.",
         },
         {
           value: "99.5%",
@@ -241,10 +241,10 @@ const showcaseDataByLanguage = {
             "Extension de la couverture Wi-Fi et de la fiabilite sur des environnements campus.",
         },
         {
-          value: "32",
+          value: "64+",
           label: "Cameras pour une ecole",
           description:
-            "Livraison d'un systeme CCTV complet avec Wi-Fi et infrastructure LAN.",
+            "Livraison d'une couverture CCTV sur deux sites scolaires avec Wi-Fi et infrastructure LAN.",
         },
         {
           value: "1,500",
@@ -253,10 +253,10 @@ const showcaseDataByLanguage = {
             "Conception LAN et Wi-Fi pour un grand bloc de cours universitaire.",
         },
         {
-          value: "1,000+",
+          value: "40,000+",
           label: "Utilisateurs accompagnes",
           description:
-            "Support pour etudiants, personnels, equipes de sante et utilisateurs business.",
+            "Support pour etudiants, personnels, equipes de sante et utilisateurs business sur campus, hopitaux et projets clients.",
         },
         {
           value: "99.5%",

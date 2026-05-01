@@ -62,7 +62,7 @@ const siteCopyByLanguage = {
         headingConnector: "and",
         headingEnd: "Scalable IT Solutions",
         summary:
-          "Bright Konadu is a network infrastructure specialist with 6+ years of experience deploying enterprise networks, server environments, CCTV systems, and wireless infrastructure across education, healthcare, and commercial sectors.",
+          "Bright Konadu is a network infrastructure specialist and IT support engineer with 8+ years of hands-on experience across hardware repair, secure LAN/Wi-Fi deployment, CCTV systems, Windows Server, and systems administration.",
         profileCta: "View Profile",
         portfolioCta: "View Portfolio",
         contactCta: "Contact",
@@ -75,7 +75,7 @@ const siteCopyByLanguage = {
         strengthsLabel: "Key Strengths",
         strengths: [
           "End-to-end project delivery from scoping through live deployment.",
-          "6+ years across education, healthcare, and commercial sectors.",
+          "8+ years across education, healthcare, and commercial sectors.",
           "Strong CCNA, Cisco, and Ubiquiti experience.",
           "Founder with proven client management and business ownership.",
           "Technical depth combined with creative design capability.",
@@ -92,15 +92,15 @@ const siteCopyByLanguage = {
         label: "Featured Experience",
         title: "Work That Defines My Track Record",
         subtitle:
-          "Key projects and deployments from 6+ years across universities, hospitals, and commercial clients.",
+          "Key projects and deployments from 8+ years across universities, hospitals, schools, and commercial clients.",
         profileCta: "Full profile",
         highlights: [
           {
             sector: "University",
-            company: "AAMUSTED",
+            company: "USTED",
             title: "Campus-Wide Infrastructure Overhaul",
             description:
-              "Deployed 30+ Ubiquiti access points, 5 M5 point-to-point links, and a LAN/Wi-Fi network for a 1,500-seat lecture block. Managed infrastructure for 500+ users with 99.5% uptime.",
+              "Deployed 30+ Ubiquiti access points, 5 M5 point-to-point links, and a LAN/Wi-Fi network for a 1,500-seat lecture block. Managed infrastructure serving 500+ staff and 40,000+ students with 99.5% uptime.",
             tags: ["Ubiquiti UniFi", "Windows Server", "Active Directory"],
           },
           {
@@ -113,10 +113,10 @@ const siteCopyByLanguage = {
           },
           {
             sector: "Education (Multi-Site)",
-            company: "Bright Ko Technology",
+            company: "Self-employed",
             title: "CCTV & Network Deployments",
             description:
-              "Delivered end-to-end CCTV, Wi-Fi, and LAN solutions for multiple schools, including a 32-camera security system serving 500+ students and staff.",
+              "Delivered end-to-end CCTV, Wi-Fi, and LAN solutions for multiple schools, including 64+ CCTV cameras across two Kwasi Oppong Schools locations.",
             tags: ["CCTV", "Network Design", "Project Delivery"],
           },
           {
@@ -271,7 +271,7 @@ const siteCopyByLanguage = {
         headingConnector: "et",
         headingEnd: "des solutions IT evolutives",
         summary:
-          "Bright Konadu est un specialiste en infrastructure reseau avec plus de 6 ans d'experience dans le deploiement de reseaux d'entreprise, d'environnements serveurs, de systemes CCTV et d'infrastructures sans fil pour l'education, la sante et les entreprises.",
+          "Bright Konadu est un specialiste en infrastructure reseau et ingenieur support IT avec plus de 8 ans d'experience pratique en reparation materielle, LAN/Wi-Fi securise, CCTV, Windows Server et administration systeme.",
         profileCta: "Voir le profil",
         portfolioCta: "Voir le portfolio",
         contactCta: "Contact",
@@ -284,7 +284,7 @@ const siteCopyByLanguage = {
         strengthsLabel: "Points forts",
         strengths: [
           "Livraison de projets de bout en bout, du cadrage a la mise en production.",
-          "Plus de 6 ans d'experience dans l'education, la sante et le secteur prive.",
+          "Plus de 8 ans d'experience dans l'education, la sante et le secteur prive.",
           "Solide experience CCNA, Cisco et Ubiquiti.",
           "Fondateur avec une vraie experience en relation client et gestion d'activite.",
           "Profondeur technique combinee a une capacite creative solide.",
@@ -301,15 +301,15 @@ const siteCopyByLanguage = {
         label: "Experience marquee",
         title: "Des projets qui definissent mon parcours",
         subtitle:
-          "Des deploiements et projets cles issus de plus de 6 ans d'experience entre universites, hopitaux et clients professionnels.",
+          "Des deploiements et projets cles issus de plus de 8 ans d'experience entre universites, hopitaux, ecoles et clients professionnels.",
         profileCta: "Profil complet",
         highlights: [
           {
             sector: "Universite",
-            company: "AAMUSTED",
+            company: "USTED",
             title: "Refonte d'infrastructure a l'echelle du campus",
             description:
-              "Deploiement de plus de 30 points d'acces Ubiquiti, 5 liaisons M5 point a point et d'un reseau LAN/Wi-Fi pour un amphitheatre de 1 500 places. Gestion d'infrastructure pour plus de 500 utilisateurs avec 99,5 % de disponibilite.",
+              "Deploiement de plus de 30 points d'acces Ubiquiti, 5 liaisons M5 point a point et d'un reseau LAN/Wi-Fi pour un amphitheatre de 1 500 places. Gestion d'infrastructure pour plus de 500 membres du personnel et 40 000 etudiants avec 99,5 % de disponibilite.",
             tags: ["Ubiquiti UniFi", "Windows Server", "Active Directory"],
           },
           {
@@ -322,10 +322,10 @@ const siteCopyByLanguage = {
           },
           {
             sector: "Education multi-site",
-            company: "Bright Ko Technology",
+            company: "Independant",
             title: "Deploiements CCTV et reseau",
             description:
-              "Livraison de solutions CCTV, Wi-Fi et LAN de bout en bout pour plusieurs ecoles, dont un systeme de securite de 32 cameras au service de plus de 500 eleves et collaborateurs.",
+              "Livraison de solutions CCTV, Wi-Fi et LAN de bout en bout pour plusieurs ecoles, dont 64+ cameras CCTV sur deux sites de Kwasi Oppong Schools.",
             tags: ["CCTV", "Conception reseau", "Gestion de projet"],
           },
           {

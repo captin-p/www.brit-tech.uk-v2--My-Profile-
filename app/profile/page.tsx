@@ -19,7 +19,7 @@ import {
 
 const pageTitle = "Professional Profile";
 const pageDescription =
-  "Explore Bright Konadu's professional profile, experience, technical skills, certifications, live projects, work-site media, and achievements in IT infrastructure and design.";
+  "Explore Bright Konadu's professional profile, 8+ years of IT infrastructure experience, technical skills, cybersecurity study path, certifications, live projects, work-site media, and achievements.";
 
 export const metadata: Metadata = buildPageMetadata({
   title: pageTitle,
@@ -29,6 +29,8 @@ export const metadata: Metadata = buildPageMetadata({
     "Bright Konadu CV",
     "network engineer profile",
     "IT technician experience",
+    "IT support engineer",
+    "cybersecurity management",
     "CCNA certifications",
     "Ubiquiti technician",
   ],
