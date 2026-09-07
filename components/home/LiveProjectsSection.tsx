@@ -6,17 +6,20 @@ import SectionHeader from "@/components/SectionHeader";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { getProfileData } from "@/data/profile";
 import { getShowcaseData } from "@/data/showcase";
+import { getExtraProjects } from "@/data/extraProjects";
 
 const colours = [
   "var(--color-sea-blue)",
   "var(--color-emerald)",
   "var(--color-orange)",
+  "var(--color-purple)",
 ];
 
 export default function LiveProjectsSection() {
   const { language } = useLanguage();
   const profile = getProfileData(language).profile;
   const copy = getShowcaseData(language).liveProjects;
+  const projects = [...getExtraProjects(language), ...copy.items];
 
   return (
     <section className="py-24 px-6 bg-card">
@@ -39,8 +42,8 @@ export default function LiveProjectsSection() {
           </a>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-          {copy.items.map((project, index) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+          {projects.map((project, index) => {
             const colour = colours[index % colours.length];
 
             return (
@@ -87,11 +90,7 @@ export default function LiveProjectsSection() {
                     <a
                       href={project.liveUrl}
                       target={project.liveUrl.startsWith("http") ? "_blank" : undefined}
-                      rel={
-                        project.liveUrl.startsWith("http")
-                          ? "noopener noreferrer"
-                          : undefined
-                      }
+                      rel={project.liveUrl.startsWith("http") ? "noopener noreferrer" : undefined}
                       className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:underline"
                     >
                       {copy.liveLabel}

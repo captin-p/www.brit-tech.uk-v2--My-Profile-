@@ -1,330 +1,158 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
-import { Play, Wrench } from "lucide-react";
+import { Camera, Play } from "lucide-react";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import SectionHeader from "@/components/SectionHeader";
 import type { Language } from "@/lib/i18n";
 
-const galleryCopy = {
+const copy = {
   en: {
     label: "Field Work",
-    title: "Work-Site Installation Media",
+    title: "France Field Engineering",
     subtitle:
-      "A closer look at practical installation work: preparing hardware, routing cables, terminating wall points, and checking equipment before deployment.",
-    photosTitle: "Installation Photos",
-    videosTitle: "Site Clips",
+      "Individual photos from hands-on network infrastructure, data-centre support, rack work, connectivity checks, and field preparation in France. Device labels and serial information are obscured where visible.",
+    photosTitle: "Field-work photos",
+    videosTitle: "Site clips",
   },
   fr: {
     label: "Terrain",
-    title: "Medias d'installation sur site",
+    title: "Interventions terrain en France",
     subtitle:
-      "Un apercu du travail pratique: preparation du materiel, passage des cables, raccordement mural et verification des equipements avant deploiement.",
-    photosTitle: "Photos d'installation",
+      "Photos individuelles de travaux reseau, support data centre, racks, controles de connectivite et preparation terrain en France. Les etiquettes et numeros de serie visibles sont masques.",
+    photosTitle: "Photos terrain",
     videosTitle: "Clips du site",
   },
-} satisfies Record<
-  Language,
-  {
-    label: string;
-    title: string;
-    subtitle: string;
-    photosTitle: string;
-    videosTitle: string;
-  }
->;
+} satisfies Record<Language, Record<string, string>>;
+
+const sprite = "/images/work-site/france-fieldwork-2026.jpg";
 
 const photos = [
   {
-    src: "/images/work-site/cable-termination-closeup.jpg",
-    title: {
-      en: "Cable termination",
-      fr: "Raccordement des cables",
-    },
-    description: {
-      en: "Hands-on network cable preparation before final testing.",
-      fr: "Preparation pratique des cables reseau avant les tests finaux.",
-    },
-    alt: {
-      en: "Close-up of network cable termination work during an installation.",
-      fr: "Gros plan du raccordement de cables reseau pendant une installation.",
-    },
+    title: { en: "Data Centre Rack Work", fr: "Travail sur rack data centre" },
+    description: { en: "Hands-on support beside live rack infrastructure.", fr: "Support pratique a proximite d'infrastructures rack en production." },
+    col: 0,
+    row: 0,
   },
   {
-    src: "/images/work-site/rack-cabling-run.jpg",
-    title: {
-      en: "Rack cabling",
-      fr: "Cablage rack",
-    },
-    description: {
-      en: "Structured cabling routed into the network rack.",
-      fr: "Cablage structure raccorde dans le rack reseau.",
-    },
-    alt: {
-      en: "Network cables connected to rack-mounted switching equipment.",
-      fr: "Cables reseau connectes a un equipement installe en rack.",
-    },
+    title: { en: "Data Centre Aisle", fr: "Allee data centre" },
+    description: { en: "On-site infrastructure support in a server environment.", fr: "Support infrastructure sur site dans un environnement serveurs." },
+    col: 1,
+    row: 0,
   },
   {
-    src: "/images/work-site/wall-network-point.jpg",
-    title: {
-      en: "Wall network point",
-      fr: "Point reseau mural",
-    },
-    description: {
-      en: "Surface-mounted network point installed for endpoint connectivity.",
-      fr: "Point reseau mural installe pour connecter les terminaux.",
-    },
-    alt: {
-      en: "Wall-mounted network box and cable on a finished installation.",
-      fr: "Boitier reseau mural et cable sur une installation terminee.",
-    },
+    title: { en: "Nokia / Infoblox Connectivity", fr: "Connectivite Nokia / Infoblox" },
+    description: { en: "ONT/router connectivity and cabling checks with sensitive labels obscured.", fr: "Controles de connectivite et cablage ONT/routeur, etiquettes sensibles masquees." },
+    col: 2,
+    row: 0,
   },
   {
-    src: "/images/work-site/cctv-camera-mounting.jpg",
-    title: {
-      en: "CCTV mounting",
-      fr: "Fixation CCTV",
-    },
-    description: {
-      en: "Camera positioning and mounting during a security installation.",
-      fr: "Positionnement et fixation de camera pendant une installation de securite.",
-    },
-    alt: {
-      en: "Technician mounting CCTV hardware from a ladder on site.",
-      fr: "Technicien fixant du materiel CCTV depuis une echelle sur site.",
-    },
+    title: { en: "Nokia ONT Pair", fr: "Paire d'ONT Nokia" },
+    description: { en: "Network device installation and physical connectivity verification.", fr: "Installation d'equipements reseau et verification de la connectivite physique." },
+    col: 3,
+    row: 0,
   },
   {
-    src: "/images/work-site/projector-av-installation.jpg",
-    title: {
-      en: "AV installation",
-      fr: "Installation AV",
-    },
-    description: {
-      en: "Projector and classroom display equipment mounted and aligned.",
-      fr: "Projecteur et equipement d'affichage de salle installes et alignes.",
-    },
-    alt: {
-      en: "Technician installing classroom projector equipment near the ceiling.",
-      fr: "Technicien installant un projecteur de salle pres du plafond.",
-    },
+    title: { en: "Field Toolkit", fr: "Kit terrain" },
+    description: { en: "Cabling, adapters, console leads, test tools, and installation accessories.", fr: "Cablage, adaptateurs, cables console, outils de test et accessoires d'installation." },
+    col: 4,
+    row: 0,
   },
   {
-    src: "/images/work-site/field-network-configuration.jpg",
-    title: {
-      en: "Field configuration",
-      fr: "Configuration terrain",
-    },
-    description: {
-      en: "On-site configuration and checks before service handover.",
-      fr: "Configuration et controles sur site avant la remise en service.",
-    },
-    alt: {
-      en: "Technician configuring network equipment with a laptop on site.",
-      fr: "Technicien configurant un equipement reseau avec un ordinateur sur site.",
-    },
+    title: { en: "Network Installation Tools", fr: "Outils d'installation reseau" },
+    description: { en: "Prepared equipment for structured cabling and field intervention.", fr: "Materiel prepare pour cablage structure et intervention terrain." },
+    col: 0,
+    row: 1,
   },
   {
-    src: "/images/work-site/fiber-link-testing.jpg",
-    title: {
-      en: "Fiber link testing",
-      fr: "Test de liaison fibre",
-    },
-    description: {
-      en: "Checking fiber patch leads with a visual fault locator.",
-      fr: "Verification des cordons fibre avec un localisateur visuel de defaut.",
-    },
-    alt: {
-      en: "Fiber patch leads connected to a visual fault locator during testing.",
-      fr: "Cordons fibre connectes a un localisateur visuel de defaut pendant un test.",
-    },
+    title: { en: "Rack PDU & Cabling", fr: "PDU et cablage rack" },
+    description: { en: "Rack-mounted power distribution, servers, and managed cable runs.", fr: "Distribution electrique en rack, serveurs et cheminement de cables organise." },
+    col: 1,
+    row: 1,
   },
   {
-    src: "/images/work-site/projector-screen-test.jpg",
-    title: {
-      en: "Projection test",
-      fr: "Test de projection",
-    },
-    description: {
-      en: "Classroom display screen checked after projector setup.",
-      fr: "Ecran de salle verifie apres l'installation du projecteur.",
-    },
-    alt: {
-      en: "Projected Windows desktop on a classroom screen during testing.",
-      fr: "Bureau Windows projete sur un ecran de salle pendant les tests.",
-    },
+    title: { en: "Rack & Server Support", fr: "Support rack et serveurs" },
+    description: { en: "Server and network equipment support inside a data-centre rack.", fr: "Support serveurs et equipements reseau dans un rack de data centre." },
+    col: 2,
+    row: 1,
   },
   {
-    src: "/images/work-site/ladder-cable-routing.jpg",
-    title: {
-      en: "Ceiling cable route",
-      fr: "Passage de cable plafond",
-    },
-    description: {
-      en: "Routing cabling at ceiling height with ladder support.",
-      fr: "Passage des cables en hauteur avec appui sur echelle.",
-    },
-    alt: {
-      en: "Technician routing cables near the ceiling from a ladder.",
-      fr: "Technicien passant des cables pres du plafond depuis une echelle.",
-    },
+    title: { en: "Infrastructure Cabinet", fr: "Baie infrastructure" },
+    description: { en: "On-site work around densely populated server and network cabinets.", fr: "Intervention sur des baies serveurs et reseau fortement equipees." },
+    col: 3,
+    row: 1,
   },
-] satisfies Array<{
-  src: string;
-  title: Record<Language, string>;
-  description: Record<Language, string>;
-  alt: Record<Language, string>;
-}>;
+  {
+    title: { en: "On-site Data Centre Support", fr: "Support data centre sur site" },
+    description: { en: "Field engineering support in a secured infrastructure environment.", fr: "Support d'ingenierie terrain dans un environnement d'infrastructure securise." },
+    col: 4,
+    row: 1,
+  },
+] as const;
 
 const videos = [
-  {
-    src: "/videos/work-site/rack-preparation.mp4",
-    poster: "/images/work-site/rack-panel-prep.jpg",
-    title: {
-      en: "Rack preparation",
-      fr: "Preparation rack",
-    },
-  },
-  {
-    src: "/videos/work-site/cabling-installation.mp4",
-    poster: "/images/work-site/wall-cabling-run.jpg",
-    title: {
-      en: "Cabling installation",
-      fr: "Installation cablage",
-    },
-  },
-  {
-    src: "/videos/work-site/equipment-check.mp4",
-    poster: "/images/work-site/equipment-kit.jpg",
-    title: {
-      en: "Equipment check",
-      fr: "Verification du materiel",
-    },
-  },
-  {
-    src: "/videos/work-site/projector-installation.mp4",
-    poster: "/images/work-site/projector-screen-test.jpg",
-    title: {
-      en: "Projector installation",
-      fr: "Installation projecteur",
-    },
-  },
-  {
-    src: "/videos/work-site/rack-site-clip.mp4",
-    poster: "/images/work-site/rack-cabling-run.jpg",
-    title: {
-      en: "Rack site clip",
-      fr: "Clip rack sur site",
-    },
-  },
-  {
-    src: "/videos/work-site/field-installation-clip.mp4",
-    poster: "/images/work-site/ladder-cable-routing.jpg",
-    title: {
-      en: "Field installation",
-      fr: "Installation terrain",
-    },
-  },
-] satisfies Array<{
-  src: string;
-  poster: string;
-  title: Record<Language, string>;
-}>;
+  { src: "/videos/work-site/rack-preparation.mp4", poster: "/images/work-site/rack-panel-prep.jpg", title: { en: "Rack preparation", fr: "Preparation rack" } },
+  { src: "/videos/work-site/cabling-installation.mp4", poster: "/images/work-site/wall-cabling-run.jpg", title: { en: "Cabling installation", fr: "Installation cablage" } },
+  { src: "/videos/work-site/equipment-check.mp4", poster: "/images/work-site/equipment-kit.jpg", title: { en: "Equipment check", fr: "Verification du materiel" } },
+] as const;
 
 export default function WorkSiteGallery() {
   const { language } = useLanguage();
-  const copy = galleryCopy[language];
+  const t = copy[language];
 
   return (
     <section className="py-16 px-6 border-y border-border bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="mb-10">
-          <SectionHeader
-            label={copy.label}
-            title={copy.title}
-            subtitle={copy.subtitle}
-          />
+          <SectionHeader label={t.label} title={t.title} subtitle={t.subtitle} />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.35fr)_minmax(280px,0.85fr)] gap-8 items-start">
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <Wrench size={16} className="text-primary" />
-              <h3 className="text-sm font-semibold text-text-bright">
-                {copy.photosTitle}
-              </h3>
-            </div>
+        <div className="flex items-center gap-2 mb-5">
+          <Camera size={16} className="text-primary" />
+          <h3 className="text-sm font-semibold text-text-bright">{t.photosTitle}</h3>
+        </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {photos.map((photo, index) => (
-                <motion.article
-                  key={photo.src}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="group overflow-hidden rounded-lg border border-border bg-card"
-                >
-                  <div className="relative aspect-[4/3] bg-secondary">
-                    <Image
-                      src={photo.src}
-                      alt={photo.alt[language]}
-                      fill
-                      sizes="(min-width: 1024px) 31vw, (min-width: 640px) 45vw, 92vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h4 className="text-sm font-semibold text-text-bright">
-                      {photo.title[language]}
-                    </h4>
-                    <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-                      {photo.description[language]}
-                    </p>
-                  </div>
-                </motion.article>
-              ))}
-            </div>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {photos.map((photo, index) => (
+            <motion.article
+              key={`${photo.col}-${photo.row}`}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.35, delay: index * 0.035 }}
+              className="group overflow-hidden rounded-xl border border-border bg-card"
+            >
+              <div
+                role="img"
+                aria-label={photo.title[language]}
+                className="aspect-[4/3] bg-no-repeat transition-transform duration-500 group-hover:scale-[1.02]"
+                style={{
+                  backgroundImage: `url(${sprite})`,
+                  backgroundSize: "500% 200%",
+                  backgroundPosition: `${photo.col * 25}% ${photo.row * 100}%`,
+                }}
+              />
+              <div className="p-4">
+                <h4 className="text-sm font-semibold text-text-bright">{photo.title[language]}</h4>
+                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{photo.description[language]}</p>
+              </div>
+            </motion.article>
+          ))}
+        </div>
 
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <Play size={16} className="text-primary" />
-              <h3 className="text-sm font-semibold text-text-bright">
-                {copy.videosTitle}
-              </h3>
-            </div>
-
-            <div className="grid grid-cols-1 gap-4">
-              {videos.map((video, index) => (
-                <motion.article
-                  key={video.src}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.12 + index * 0.05 }}
-                  className="overflow-hidden rounded-lg border border-border bg-card"
-                >
-                  <video
-                    controls
-                    playsInline
-                    preload="metadata"
-                    poster={video.poster}
-                    className="block aspect-video w-full bg-black object-cover"
-                  >
-                    <source src={video.src} type="video/mp4" />
-                  </video>
-                  <div className="p-4">
-                    <h4 className="text-sm font-semibold text-text-bright">
-                      {video.title[language]}
-                    </h4>
-                  </div>
-                </motion.article>
-              ))}
-            </div>
-          </div>
+        <div className="flex items-center gap-2 mt-12 mb-5">
+          <Play size={16} className="text-primary" />
+          <h3 className="text-sm font-semibold text-text-bright">{t.videosTitle}</h3>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {videos.map((video) => (
+            <article key={video.src} className="overflow-hidden rounded-xl border border-border bg-card">
+              <video controls playsInline preload="metadata" poster={video.poster} className="block aspect-video w-full bg-black object-cover">
+                <source src={video.src} type="video/mp4" />
+              </video>
+              <div className="p-4 text-sm font-semibold text-text-bright">{video.title[language]}</div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
