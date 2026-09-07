@@ -1,0 +1,1 @@
+binary image paths are committed via Git tree objects
