@@ -1,0 +1,182 @@
+"use client";
+
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { Play, Wrench } from "lucide-react";
+import { useLanguage } from "@/components/providers/LanguageProvider";
+import SectionHeader from "@/components/SectionHeader";
+import type { Language } from "@/lib/i18n";
+
+const galleryCopy = {
+  en: {
+    label: "Field Work",
+    title: "Work-Site Installation Media",
+    subtitle:
+      "Individual photos from real field engineering, data-centre support, network equipment, cabling, tooling, and on-site infrastructure work.",
+    photosTitle: "Field Engineering Photos",
+    videosTitle: "Site Clips",
+  },
+  fr: {
+    label: "Terrain",
+    title: "Medias d'installation sur site",
+    subtitle:
+      "Photos individuelles de missions terrain, support en data centre, equipements reseau, cablage, outillage et infrastructure sur site.",
+    photosTitle: "Photos d'intervention terrain",
+    videosTitle: "Clips du site",
+  },
+} satisfies Record<Language, { label: string; title: string; subtitle: string; photosTitle: string; videosTitle: string }>;
+
+const photos = [
+  {
+    src: "/images/work-site/france/datacentre-aisle-portrait.jpg",
+    title: { en: "Data centre support", fr: "Support en data centre" },
+    description: { en: "On-site infrastructure support in a live data-centre environment.", fr: "Support infrastructure sur site dans un environnement data centre." },
+    alt: { en: "Field engineer in a data-centre aisle.", fr: "Ingenieur terrain dans une allee de data centre." },
+  },
+  {
+    src: "/images/work-site/france/datacentre-cage-portrait.jpg",
+    title: { en: "Data centre operations", fr: "Operations en data centre" },
+    description: { en: "Hands-on support around production server and rack infrastructure.", fr: "Support terrain autour d'infrastructures serveurs et racks en production." },
+    alt: { en: "Field engineer beside data-centre racks.", fr: "Ingenieur terrain pres de racks en data centre." },
+  },
+  {
+    src: "/images/work-site/france/datacentre-rack-portrait-1.jpg",
+    title: { en: "Rack infrastructure support", fr: "Support infrastructure rack" },
+    description: { en: "Rack, server, power and network infrastructure work on site.", fr: "Intervention sur rack, serveurs, alimentation et reseau sur site." },
+    alt: { en: "Engineer in front of a populated equipment rack.", fr: "Ingenieur devant un rack equipe." },
+  },
+  {
+    src: "/images/work-site/france/datacentre-rack-portrait-2.jpg",
+    title: { en: "Server-room field work", fr: "Intervention en salle serveurs" },
+    description: { en: "Field engineering support in a server-room environment.", fr: "Support d'ingenierie terrain dans une salle serveurs." },
+    alt: { en: "Field engineer inside a server room.", fr: "Ingenieur terrain dans une salle serveurs." },
+  },
+  {
+    src: "/images/work-site/france/datacentre-rack-portrait-3.jpg",
+    title: { en: "On-site infrastructure", fr: "Infrastructure sur site" },
+    description: { en: "Practical infrastructure support around live rack equipment.", fr: "Support pratique autour d'equipements rack en service." },
+    alt: { en: "Engineer working beside network and server equipment.", fr: "Ingenieur pres d'equipements reseau et serveurs." },
+  },
+  {
+    src: "/images/work-site/france/field-kit-detail.jpg",
+    title: { en: "Field engineering kit", fr: "Kit d'intervention terrain" },
+    description: { en: "Cables, adapters, connectors, tools and accessories prepared for site work.", fr: "Cables, adaptateurs, connecteurs, outils et accessoires prepares pour les interventions." },
+    alt: { en: "Network field engineering tools and cables.", fr: "Outils et cables pour intervention reseau." },
+  },
+  {
+    src: "/images/work-site/france/field-kit-overview.jpg",
+    title: { en: "Network installation tools", fr: "Outils d'installation reseau" },
+    description: { en: "Portable field kit for cabling, console access, testing and installation support.", fr: "Kit portable pour cablage, acces console, tests et support d'installation." },
+    alt: { en: "Portable network installation toolkit.", fr: "Kit portable d'installation reseau." },
+  },
+  {
+    src: "/images/work-site/france/nokia-infoblox-connectivity.jpg",
+    title: { en: "Network connectivity check", fr: "Controle de connectivite reseau" },
+    description: { en: "Ethernet and fibre connectivity checks during network-device work.", fr: "Controles Ethernet et fibre pendant une intervention sur equipements reseau." },
+    alt: { en: "Network connectivity equipment with Ethernet and fibre connections.", fr: "Equipements reseau avec connexions Ethernet et fibre." },
+  },
+  {
+    src: "/images/work-site/france/nokia-ont-pair.jpg",
+    title: { en: "Nokia ONT setup", fr: "Configuration ONT Nokia" },
+    description: { en: "ONT connectivity and patching during an on-site network task.", fr: "Connectivite et raccordement ONT pendant une intervention reseau." },
+    alt: { en: "Two Nokia ONT devices connected on site.", fr: "Deux equipements ONT Nokia connectes sur site." },
+  },
+  {
+    src: "/images/work-site/france/rack-pdu-cabling.jpg",
+    title: { en: "Rack power and cabling", fr: "Alimentation et cablage rack" },
+    description: { en: "Rack-mounted infrastructure with PDU, network and server cabling.", fr: "Infrastructure en rack avec PDU, cablage reseau et serveurs." },
+    alt: { en: "Rack infrastructure showing power distribution and cabling.", fr: "Rack montrant distribution electrique et cablage." },
+  },
+  {
+    src: "/images/work-site/cable-termination-closeup.jpg",
+    title: { en: "Cable termination", fr: "Raccordement des cables" },
+    description: { en: "Hands-on network cable preparation before final testing.", fr: "Preparation pratique des cables reseau avant les tests finaux." },
+    alt: { en: "Close-up of network cable termination work during an installation.", fr: "Gros plan du raccordement de cables reseau pendant une installation." },
+  },
+  {
+    src: "/images/work-site/rack-cabling-run.jpg",
+    title: { en: "Rack cabling", fr: "Cablage rack" },
+    description: { en: "Structured cabling routed into the network rack.", fr: "Cablage structure raccorde dans le rack reseau." },
+    alt: { en: "Network cables connected to rack-mounted switching equipment.", fr: "Cables reseau connectes a un equipement installe en rack." },
+  },
+  {
+    src: "/images/work-site/field-network-configuration.jpg",
+    title: { en: "Field configuration", fr: "Configuration terrain" },
+    description: { en: "On-site configuration and checks before service handover.", fr: "Configuration et controles sur site avant la remise en service." },
+    alt: { en: "Technician configuring network equipment with a laptop on site.", fr: "Technicien configurant un equipement reseau avec un ordinateur sur site." },
+  },
+  {
+    src: "/images/work-site/fiber-link-testing.jpg",
+    title: { en: "Fiber link testing", fr: "Test de liaison fibre" },
+    description: { en: "Checking fibre patch leads during testing.", fr: "Verification des cordons fibre pendant les tests." },
+    alt: { en: "Fibre patch leads during testing.", fr: "Cordons fibre pendant un test." },
+  },
+] satisfies Array<{ src: string; title: Record<Language, string>; description: Record<Language, string>; alt: Record<Language, string> }>;
+
+const videos = [
+  { src: "/videos/work-site/rack-preparation.mp4", poster: "/images/work-site/rack-panel-prep.jpg", title: { en: "Rack preparation", fr: "Preparation rack" } },
+  { src: "/videos/work-site/cabling-installation.mp4", poster: "/images/work-site/wall-cabling-run.jpg", title: { en: "Cabling installation", fr: "Installation cablage" } },
+  { src: "/videos/work-site/equipment-check.mp4", poster: "/images/work-site/equipment-kit.jpg", title: { en: "Equipment check", fr: "Verification du materiel" } },
+] satisfies Array<{ src: string; poster: string; title: Record<Language, string> }>;
+
+export default function WorkSiteGallery() {
+  const { language } = useLanguage();
+  const copy = galleryCopy[language];
+
+  return (
+    <section className="py-16 px-6 border-y border-border bg-background">
+      <div className="max-w-6xl mx-auto">
+        <div className="mb-10">
+          <SectionHeader label={copy.label} title={copy.title} subtitle={copy.subtitle} />
+        </div>
+
+        <div className="flex items-center gap-2 mb-4">
+          <Wrench size={16} className="text-primary" />
+          <h3 className="text-sm font-semibold text-text-bright">{copy.photosTitle}</h3>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {photos.map((photo, index) => (
+            <motion.article
+              key={photo.src}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.35, delay: Math.min(index * 0.035, 0.25) }}
+              className="group overflow-hidden rounded-lg border border-border bg-card"
+            >
+              <div className="relative aspect-[4/3] bg-secondary">
+                <Image
+                  src={photo.src}
+                  alt={photo.alt[language]}
+                  fill
+                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 92vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+              </div>
+              <div className="p-4">
+                <h4 className="text-sm font-semibold text-text-bright">{photo.title[language]}</h4>
+                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{photo.description[language]}</p>
+              </div>
+            </motion.article>
+          ))}
+        </div>
+
+        <div className="flex items-center gap-2 mt-10 mb-4">
+          <Play size={16} className="text-primary" />
+          <h3 className="text-sm font-semibold text-text-bright">{copy.videosTitle}</h3>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {videos.map((video) => (
+            <article key={video.src} className="overflow-hidden rounded-lg border border-border bg-card">
+              <video controls playsInline preload="metadata" poster={video.poster} className="block aspect-video w-full bg-black object-cover">
+                <source src={video.src} type="video/mp4" />
+              </video>
+              <div className="p-4"><h4 className="text-sm font-semibold text-text-bright">{video.title[language]}</h4></div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
