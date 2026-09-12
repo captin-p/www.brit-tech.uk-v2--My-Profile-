@@ -19,7 +19,7 @@ import {
 
 const pageTitle = "Professional Profile";
 const pageDescription =
-  "Explore Bright Konadu's professional profile, 8+ years of IT infrastructure experience, technical skills, cybersecurity study path, certifications, live projects, work-site media, and achievements.";
+  "Explore Bright Konadu's professional profile, 5+ years of IT infrastructure and network support experience, France field engineering work, technical skills, incoming MSc Cybersecurity Management studies, training, current projects, work-site media, and achievements.";
 
 export const metadata: Metadata = buildPageMetadata({
   title: pageTitle,
@@ -27,12 +27,14 @@ export const metadata: Metadata = buildPageMetadata({
   path: "/profile",
   keywords: [
     "Bright Konadu CV",
-    "network engineer profile",
-    "IT technician experience",
-    "IT support engineer",
+    "IT infrastructure engineer profile",
+    "network support engineer",
+    "field network engineer France",
+    "systems administrator",
     "cybersecurity management",
-    "CCNA certifications",
+    "CCNA training",
     "Ubiquiti technician",
+    "TouteGestion",
   ],
 });
 
