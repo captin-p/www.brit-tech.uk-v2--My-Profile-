@@ -19,7 +19,7 @@ export default function LiveProjectsSection() {
   const { language } = useLanguage();
   const profile = getProfileData(language).profile;
   const copy = getShowcaseData(language).liveProjects;
-  const projects = [...getExtraProjects(language), ...copy.items];
+  const projects = getExtraProjects(language);
 
   return (
     <section className="py-24 px-6 bg-card">
@@ -42,7 +42,7 @@ export default function LiveProjectsSection() {
           </a>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
           {projects.map((project, index) => {
             const colour = colours[index % colours.length];
 
@@ -52,7 +52,7 @@ export default function LiveProjectsSection() {
                 initial={{ opacity: 0, y: 18 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.07 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
                 className="rounded-lg border border-border bg-background p-6 flex flex-col"
                 style={{ borderTopWidth: "3px", borderTopColor: colour }}
               >
@@ -97,15 +97,17 @@ export default function LiveProjectsSection() {
                       <ExternalLink size={13} aria-hidden="true" />
                     </a>
                   )}
-                  <a
-                    href={project.repoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-muted-foreground hover:text-foreground hover:underline"
-                  >
-                    {copy.repoLabel}
-                    <Github size={13} aria-hidden="true" />
-                  </a>
+                  {project.repoUrl && (
+                    <a
+                      href={project.repoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-muted-foreground hover:text-foreground hover:underline"
+                    >
+                      {copy.repoLabel}
+                      <Github size={13} aria-hidden="true" />
+                    </a>
+                  )}
                 </div>
               </motion.article>
             );
