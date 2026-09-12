@@ -7,19 +7,24 @@ export const defaultOgImage = "/og-image.jpg";
 const baseKeywords = [
   "Bright Konadu",
   "Brit Tech",
-  "Network Infrastructure Specialist",
-  "IT Support Engineer",
+  "IT Infrastructure Engineer",
+  "Network Support Engineer",
+  "Network Engineer",
+  "Systems Administrator",
+  "Field Network Engineer",
   "Cybersecurity Management",
   "IT Support",
-  "CCTV installation",
+  "Remote Hands",
   "Cisco networking",
   "Ubiquiti UniFi",
   "Windows Server",
-  "GNS3",
-  "TryHackMe",
-  "Web design",
-  "Graphic design",
-  "Dijon France",
+  "Active Directory",
+  "Structured Cabling",
+  "CCTV installation",
+  "Next.js",
+  "Supabase",
+  "TouteGestion",
+  "Paris France",
 ];
 
 type PageMetadataInput = {
@@ -56,7 +61,7 @@ export function buildPageMetadata({
           url: defaultOgImage,
           width: 1200,
           height: 630,
-          alt: "Bright Konadu - network infrastructure, IT support, CCTV, web, and design services.",
+          alt: "Bright Konadu - IT infrastructure, network support, field engineering, and technology projects.",
         },
       ],
     },
@@ -84,14 +89,15 @@ export function personJsonLd() {
     "@type": "Person",
     "@id": personId,
     name: "Bright Konadu",
-    jobTitle: "Network Infrastructure Specialist and IT Support Engineer",
+    jobTitle: "IT Infrastructure & Network Support Engineer",
     url: siteUrl,
     image: `${siteUrl}/images/profile/bright-konadu.jpg`,
     email: "konadubright024@gmail.com",
     telephone: "+33759507877",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Dijon",
+      addressLocality: "Paris",
+      addressRegion: "Ile-de-France",
       addressCountry: "FR",
     },
     sameAs: [
@@ -99,20 +105,22 @@ export function personJsonLd() {
       "https://github.com/captin-p",
     ],
     knowsAbout: [
-      "Network infrastructure",
+      "IT infrastructure",
+      "Network engineering",
       "LAN and WAN design",
       "Cisco routing and switching",
       "Ubiquiti UniFi",
       "Windows Server",
       "Active Directory",
+      "Structured cabling",
+      "Rack and stack",
+      "Remote hands",
       "CCTV installation",
       "IT support",
       "Cybersecurity management",
-      "Threat management",
-      "GNS3",
-      "TryHackMe",
-      "Web design",
-      "Graphic design",
+      "Next.js",
+      "Supabase",
+      "Multi-tenant SaaS",
     ],
   };
 }
@@ -126,14 +134,15 @@ export function businessJsonLd() {
     founder: {
       "@id": personId,
     },
-    areaServed: ["France", "Ghana", "United Kingdom"],
+    areaServed: ["France", "Ghana"],
     serviceType: [
       "Network installation",
-      "CCTV installation",
+      "Field engineering and remote hands",
       "IT support",
       "Systems administration",
-      "Website design",
-      "Graphic design",
+      "Structured cabling",
+      "CCTV installation",
+      "Website and SaaS development",
     ],
     sameAs: [
       "https://www.linkedin.com/in/bright-konadu",
@@ -184,18 +193,19 @@ export function webPageJsonLd({
 export function servicesJsonLd() {
   return [
     "Network installation",
-    "CCTV installation",
-    "Website design",
-    "Graphic design",
+    "Field engineering and remote hands",
     "IT support",
     "Systems administration",
+    "Structured cabling",
+    "CCTV installation",
+    "Website and SaaS development",
   ].map((name) => ({
     "@type": "Service",
     name,
     provider: {
       "@id": businessId,
     },
-    areaServed: ["France", "Ghana", "United Kingdom"],
+    areaServed: ["France", "Ghana"],
   }));
 }
 
@@ -206,7 +216,7 @@ export function portfolioJsonLd() {
     url: `${siteUrl}/graphics`,
     name: "Graphics and Website Portfolio",
     description:
-      "Graphic design, branding, print marketing, and website work by Bright Konadu.",
+      "Graphic design, branding, print marketing, website work, and selected technology projects by Bright Konadu.",
     creator: {
       "@id": personId,
     },
