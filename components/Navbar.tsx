@@ -20,6 +20,11 @@ export default function Navbar() {
   const profile = getProfileData(language).profile;
   const copy = getSiteCopy(language).nav;
   const contact = getShowcaseData(language).contact;
+  const navLinks = [
+    ...copy.links.filter((link) => link.href !== "/contact"),
+    { href: "/guides", label: language === "fr" ? "Guides" : "Guides" },
+    ...copy.links.filter((link) => link.href === "/contact"),
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -45,7 +50,6 @@ export default function Navbar() {
         role="navigation"
         aria-label={copy.mainNavigation}
       >
-        {/* Logo */}
         <Link
           href="/"
           className="text-text-bright font-semibold text-lg tracking-tight hover:text-primary transition-colors"
@@ -53,19 +57,16 @@ export default function Navbar() {
           Brit<span className="text-primary">Tech</span>
         </Link>
 
-        {/* Desktop links */}
-        <ul className="hidden md:flex items-center gap-8">
-          {copy.links.map((link) => {
-            const active = pathname === link.href;
+        <ul className="hidden md:flex items-center gap-7">
+          {navLinks.map((link) => {
+            const active = pathname === link.href || (link.href === "/guides" && pathname.startsWith("/guides/"));
             return (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   className={cn(
                     "text-sm font-medium transition-colors relative pb-1",
-                    active
-                      ? "text-primary"
-                      : "text-muted-foreground hover:text-foreground"
+                    active ? "text-primary" : "text-muted-foreground hover:text-foreground"
                   )}
                 >
                   {link.label}
@@ -100,7 +101,6 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile toggle */}
         <button
           className="md:hidden text-foreground"
           onClick={() => setOpen(!open)}
@@ -111,7 +111,6 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -122,11 +121,9 @@ export default function Navbar() {
             className="md:hidden overflow-hidden bg-card border-b border-border"
           >
             <ul className="flex flex-col px-6 py-4 gap-4">
-              <li className="pb-1">
-                <LanguageToggle />
-              </li>
-              {copy.links.map((link) => {
-                const active = pathname === link.href;
+              <li className="pb-1"><LanguageToggle /></li>
+              {navLinks.map((link) => {
+                const active = pathname === link.href || (link.href === "/guides" && pathname.startsWith("/guides/"));
                 return (
                   <li key={link.href}>
                     <Link
