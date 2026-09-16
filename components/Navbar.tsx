@@ -23,6 +23,7 @@ export default function Navbar() {
   const navLinks = [
     ...copy.links.filter((link) => link.href !== "/contact"),
     { href: "/guides", label: language === "fr" ? "Guides" : "Guides" },
+    { href: "/briefings", label: language === "fr" ? "Veille tech" : "Briefings" },
     ...copy.links.filter((link) => link.href === "/contact"),
   ];
 
@@ -59,7 +60,7 @@ export default function Navbar() {
 
         <ul className="hidden md:flex items-center gap-7">
           {navLinks.map((link) => {
-            const active = pathname === link.href || (link.href === "/guides" && pathname.startsWith("/guides/"));
+            const active = pathname === link.href || (link.href !== "/" && pathname.startsWith(`${link.href}/`));
             return (
               <li key={link.href}>
                 <Link
@@ -123,7 +124,7 @@ export default function Navbar() {
             <ul className="flex flex-col px-6 py-4 gap-4">
               <li className="pb-1"><LanguageToggle /></li>
               {navLinks.map((link) => {
-                const active = pathname === link.href || (link.href === "/guides" && pathname.startsWith("/guides/"));
+                const active = pathname === link.href || (link.href !== "/" && pathname.startsWith(`${link.href}/`));
                 return (
                   <li key={link.href}>
                     <Link
