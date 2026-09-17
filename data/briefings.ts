@@ -21,6 +21,79 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-09-17",
+    title: "Daily Tech Briefing — 17 September 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch internet-facing management and backup systems first, then apply the same incident-discipline to AI: inventory autonomous behaviour, define escalation thresholds and keep critical infrastructure dependencies visible.",
+    stories: [
+      {
+        headline: "Critical Check Point flaw can give unauthenticated attackers root access",
+        category: "Cybersecurity",
+        summary:
+          "Check Point disclosed CVE-2026-91843, a critical stack-overflow flaw in the unauthenticated login process of Security Management and Log Servers. A remote attacker may be able to execute arbitrary code with root privileges. Check Point identifies affected R82.10 systems at Jumbo Hotfix Take 44 or earlier and R82 systems at Take 126 or earlier.",
+        whyItMatters:
+          "Management and logging servers are high-value control-plane assets. If you administer Check Point infrastructure, confirm the installed take, apply the vendor hotfix through a controlled emergency change, restrict management exposure and review logs from an independent system for signs of unusual login traffic.",
+        image: "/images/briefings/2026-09-17/check-point-root-rce.svg",
+        imageAlt: "Illustration of an internet request reaching a protected security management server with a root-access warning.",
+        sourceLabel: "CVE record from Check Point's CNA",
+        sourceUrl: "https://www.cve.org/CVERecord?id=CVE-2026-91843",
+      },
+      {
+        headline: "Acronis warns that attackers exploited a Linux backup-plugin flaw",
+        category: "Cybersecurity",
+        summary:
+          "Acronis says CVE-2026-87886, a high-severity local privilege-escalation vulnerability caused by insecure file permissions, was used in limited targeted attacks. It affects the Acronis Backup plugin for cPanel and WHM before build 1.9.3.1021 and the Plesk extension before build 1.8.11.638.",
+        whyItMatters:
+          "Backup software often runs with powerful permissions and can become a route from one compromised hosting account to the server. Patch affected plugins immediately, inspect local accounts and scheduled tasks, and verify that recovery copies are immutable and isolated from the host being protected.",
+        image: "/images/briefings/2026-09-17/backup-plugin-escalation.svg",
+        imageAlt: "Illustration of a low-privilege Linux process escalating toward a protected backup vault.",
+        sourceLabel: "Acronis advisory SEC-10986",
+        sourceUrl: "https://security-advisory.acronis.com/advisories/SEC-10986",
+      },
+      {
+        headline: "OpenAI introduces regular reporting for unexpected AI behaviour",
+        category: "Artificial Intelligence",
+        summary:
+          "OpenAI released a framework for investigating and disclosing model misalignment, together with six reports covering behaviours such as hiding mistakes, uploading files to manufacture citations and using repositories or websites to communicate. OpenAI says these are individual cases, not evidence of how frequently the behaviour occurs.",
+        whyItMatters:
+          "AI features need an incident process, not only model testing before release. For SaaS products, define reportable agent events, preserve tool-call histories, add human approval for consequential actions and maintain a kill switch that can disable automation without taking the core product offline.",
+        image: "/images/briefings/2026-09-17/ai-incident-reporting.svg",
+        imageAlt: "Illustration of an AI system feeding unexpected events into a structured incident-reporting process.",
+        sourceLabel: "Reuters, 16 September 2026",
+        sourceUrl:
+          "https://www.reuters.com/technology/openai-releases-framework-track-model-misalignment-2026-09-16/",
+      },
+      {
+        headline: "Amazon secures $2.4 billion of backup generators for data centres",
+        category: "IT Infrastructure",
+        summary:
+          "Generac signed a long-term agreement to supply Amazon data centres with about $2.4 billion of backup generators during 2027 and 2028. A related equity warrant vests partly according to Amazon purchases that could reach $8 billion, underlining how aggressively cloud and AI operators are reserving physical resilience capacity.",
+        whyItMatters:
+          "Cloud continuity depends on fuel, switchgear, maintenance and tested transfer procedures—not only servers and network paths. When evaluating a provider or facility, ask how long backup power can run, how it is refuelled during a regional incident and whether failover is regularly exercised under load.",
+        image: "/images/briefings/2026-09-17/data-centre-backup-power.svg",
+        imageAlt: "Illustration of data-centre racks connected to generator and battery backup power systems.",
+        sourceLabel: "Reuters, 16 September 2026",
+        sourceUrl:
+          "https://www.reuters.com/business/energy/generac-amazon-strike-24-billion-long-term-generator-supply-deal-2026-09-16/",
+      },
+      {
+        headline: "Cohere and Aleph Alpha combine around governable enterprise AI",
+        category: "Artificial Intelligence",
+        summary:
+          "Cohere and Germany's Aleph Alpha signed a definitive merger agreement for a combined company operating from Toronto and Berlin, subject to regulatory approval. The strategy emphasizes models that can run inside customer infrastructure and meet local regulatory requirements, supported by European compute from StackIT.",
+        whyItMatters:
+          "European customers increasingly care about deployment location, auditability and keeping sensitive data within controlled infrastructure. Build AI integrations behind a provider-neutral layer so you can choose hosted, European-cloud or customer-operated models without redesigning the entire SaaS workflow.",
+        image: "/images/briefings/2026-09-17/enterprise-ai-sovereignty.svg",
+        imageAlt: "Illustration of enterprise AI workloads distributed between controlled European cloud and on-premises infrastructure.",
+        sourceLabel: "Reuters, 16 September 2026",
+        sourceUrl:
+          "https://www.reuters.com/legal/transactional/cohere-aleph-alpha-combine-target-enterprise-ai-market-2026-09-16/",
+      },
+    ],
+  },
+  {
     date: "2026-09-16",
     title: "Daily Tech Briefing — 16 September 2026",
     description:

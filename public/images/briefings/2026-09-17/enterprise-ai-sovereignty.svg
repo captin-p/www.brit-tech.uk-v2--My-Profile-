@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Sovereign enterprise AI deployment</title><desc id="desc">Original illustration of an enterprise AI layer connecting European cloud and on-premises infrastructure.</desc>
+  <defs><linearGradient id="b" x2="1" y2="1"><stop stop-color="#0f172a"/><stop offset="1" stop-color="#1e3a8a"/></linearGradient><linearGradient id="a"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+  <rect width="1200" height="675" fill="url(#b)"/><text x="70" y="88" fill="#fff" font-family="Arial" font-size="43" font-weight="700">ENTERPRISE AI, YOUR DEPLOYMENT</text><text x="70" y="128" fill="#bfdbfe" font-family="Arial" font-size="22">Hosted · European cloud · customer infrastructure</text>
+  <g fill="#172554" stroke="#60a5fa" stroke-width="4"><path d="M120 315c0-58 47-105 105-105 43 0 80 25 97 62 12-5 25-7 39-7 57 0 104 46 104 103s-47 103-104 103H210c-58 0-105-47-105-105 0-18 5-36 15-51Z"/><rect x="805" y="220" width="275" height="310" rx="24"/></g>
+  <g stroke="#93c5fd" stroke-width="10" stroke-linecap="round"><path d="M850 280h185M850 340h185M850 400h185M850 460h185"/></g>
+  <circle cx="610" cy="370" r="115" fill="#111c3b" stroke="url(#a)" stroke-width="9"/><path d="M560 370c32-62 67-62 100 0-33 62-68 62-100 0Z" fill="none" stroke="#e0f2fe" stroke-width="9"/><circle cx="610" cy="370" r="17" fill="#38bdf8"/>
+  <path d="M465 370h30M725 370h80" stroke="#a78bfa" stroke-width="12" stroke-dasharray="18 12"/><circle cx="300" cy="350" r="64" fill="none" stroke="#fde047" stroke-width="6"/><path d="M300 286v128M236 350h128" stroke="#fde047" stroke-width="4"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Linux backup plugin privilege escalation</title><desc id="desc">Original illustration of a low-privilege process climbing toward a protected backup vault.</desc>
+  <defs><linearGradient id="b" x2="1" y2="1"><stop stop-color="#052e2b"/><stop offset="1" stop-color="#172554"/></linearGradient><linearGradient id="g"><stop stop-color="#34d399"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
+  <rect width="1200" height="675" fill="url(#b)"/><text x="70" y="88" fill="#fff" font-family="Arial" font-size="43" font-weight="700">BACKUP SOFTWARE IS PRIVILEGED</text><text x="70" y="128" fill="#99f6e4" font-family="Arial" font-size="22">Patch · inspect · isolate recovery copies</text>
+  <g fill="#0f3c42" stroke="#5eead4" stroke-width="4"><rect x="755" y="205" width="325" height="320" rx="32"/><circle cx="917" cy="350" r="92"/><circle cx="917" cy="350" r="28"/></g><path d="M917 258v184M825 350h184" stroke="#5eead4" stroke-width="8" opacity=".65"/>
+  <g fill="#172554" stroke="#60a5fa" stroke-width="4"><rect x="120" y="440" width="185" height="80" rx="16"/><rect x="335" y="350" width="185" height="80" rx="16"/><rect x="550" y="260" width="155" height="80" rx="16"/></g>
+  <path d="M305 480 335 390M520 390l30-90M705 300l50 40" stroke="url(#g)" stroke-width="12" stroke-dasharray="18 12"/>
+  <text x="158" y="489" fill="#93c5fd" font-family="Arial" font-size="25">USER</text><text x="365" y="399" fill="#93c5fd" font-family="Arial" font-size="25">PLUGIN</text><text x="580" y="309" fill="#fda4af" font-family="Arial" font-size="25">ROOT</text>
+</svg>
