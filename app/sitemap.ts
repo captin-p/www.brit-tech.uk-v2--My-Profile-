@@ -42,13 +42,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${siteUrl}/guides`,
-      lastModified: new Date("2026-09-16"),
+      lastModified: new Date("2026-09-17"),
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${siteUrl}/briefings`,
-      lastModified: new Date("2026-09-16"),
+      lastModified: new Date("2026-09-17"),
       changeFrequency: "daily",
       priority: 0.9,
     },

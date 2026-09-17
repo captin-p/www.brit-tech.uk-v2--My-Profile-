@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Security management server root-access warning</title><desc id="desc">Original illustration of an unauthenticated network request approaching a protected management server.</desc>
+  <defs><linearGradient id="b" x2="1" y2="1"><stop stop-color="#071426"/><stop offset="1" stop-color="#312e81"/></linearGradient><linearGradient id="r"><stop stop-color="#fb7185"/><stop offset="1" stop-color="#f97316"/></linearGradient></defs>
+  <rect width="1200" height="675" fill="url(#b)"/><text x="70" y="88" fill="#fff" font-family="Arial" font-size="43" font-weight="700">SECURITY CONTROL PLANE</text><text x="70" y="128" fill="#bfdbfe" font-family="Arial" font-size="22">Unauthenticated request · remote code · root impact</text>
+  <g fill="#172554" stroke="#60a5fa" stroke-width="4"><rect x="790" y="190" width="290" height="330" rx="24"/><rect x="830" y="245" width="210" height="62" rx="10"/><rect x="830" y="330" width="210" height="62" rx="10"/><rect x="830" y="415" width="210" height="62" rx="10"/></g>
+  <g fill="#38bdf8"><circle cx="1000" cy="276" r="8"/><circle cx="1000" cy="361" r="8"/><circle cx="1000" cy="446" r="8"/></g>
+  <circle cx="210" cy="350" r="92" fill="#111c3b" stroke="#f43f5e" stroke-width="7"/><path d="M165 350h90M210 305v90" stroke="#fda4af" stroke-width="14" stroke-linecap="round"/>
+  <path d="M320 350h360" stroke="url(#r)" stroke-width="12" stroke-dasharray="20 14"/><path d="m660 325 40 25-40 25" fill="none" stroke="#f97316" stroke-width="12"/>
+  <path d="M720 225v250" stroke="#f43f5e" stroke-width="22"/><text x="847" y="570" fill="#fda4af" font-family="Arial" font-size="30" font-weight="700">ROOT</text>
+</svg>
