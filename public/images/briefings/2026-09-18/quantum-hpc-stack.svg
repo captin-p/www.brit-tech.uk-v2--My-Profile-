@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Open quantum and supercomputing software stack</title><desc id="desc">Original illustration of an open scheduler connecting a classical supercomputer to several quantum processors.</desc>
+  <defs><linearGradient id="b" x2="1" y2="1"><stop stop-color="#07122d"/><stop offset="1" stop-color="#312e81"/></linearGradient></defs><rect width="1200" height="675" fill="url(#b)"/>
+  <text x="68" y="86" fill="#fff" font-family="Arial" font-size="43" font-weight="700">OPEN HYBRID COMPUTING STACK</text><text x="68" y="128" fill="#c7d2fe" font-family="Arial" font-size="22">Classical HPC schedules suitable work across quantum backends</text>
+  <g fill="#172554" stroke="#60a5fa" stroke-width="4"><rect x="80" y="225" width="280" height="285" rx="24"/><rect x="840" y="195" width="270" height="135" rx="24"/><rect x="840" y="400" width="270" height="135" rx="24"/></g>
+  <g fill="#1e3a8a" stroke="#93c5fd" stroke-width="3"><rect x="120" y="275" width="200" height="48" rx="8"/><rect x="120" y="345" width="200" height="48" rx="8"/><rect x="120" y="415" width="200" height="48" rx="8"/></g><text x="125" y="552" fill="#bfdbfe" font-family="Arial" font-size="25" font-weight="700">SUPERCOMPUTER</text>
+  <rect x="470" y="260" width="250" height="190" rx="28" fill="#4c1d95" stroke="#c084fc" stroke-width="6"/><path d="M520 320h150M520 360h150M520 400h95" stroke="#e9d5ff" stroke-width="9"/><text x="518" y="494" fill="#e9d5ff" font-family="Arial" font-size="26" font-weight="700">OPEN SCHEDULER</text>
+  <path d="M360 365h110M720 330c70 0 55-70 120-70M720 385c70 0 55 80 120 80" fill="none" stroke="#a5b4fc" stroke-width="10"/><path d="m446 342 35 23-35 23M812 237l35 23-35 23M812 422l35 23-35 23" fill="none" stroke="#a5b4fc" stroke-width="10"/>
+  <g fill="none" stroke="#22d3ee" stroke-width="5"><circle cx="945" cy="260" r="35"/><ellipse cx="945" cy="260" rx="75" ry="25" transform="rotate(25 945 260)"/><circle cx="985" cy="465" r="35"/><ellipse cx="985" cy="465" rx="75" ry="25" transform="rotate(-25 985 465)"/></g>
+</svg>

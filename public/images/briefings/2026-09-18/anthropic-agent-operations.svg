@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">AI agent operations under human supervision</title><desc id="desc">Original illustration of many AI agents working through a policy gateway with a human supervising consequential actions.</desc>
+  <defs><linearGradient id="b" x2="1" y2="1"><stop stop-color="#1f160e"/><stop offset="1" stop-color="#5b2b18"/></linearGradient></defs><rect width="1200" height="675" fill="url(#b)"/>
+  <text x="68" y="86" fill="#fff" font-family="Arial" font-size="43" font-weight="700">30,000 AGENTS, ONE POLICY LAYER</text><text x="68" y="128" fill="#fed7aa" font-family="Arial" font-size="22">Pre-screen actions · record blocks · keep human ownership</text>
+  <g fill="#431407" stroke="#fb923c" stroke-width="4"><circle cx="170" cy="270" r="42"/><circle cx="285" cy="220" r="42"/><circle cx="285" cy="340" r="42"/><circle cx="170" cy="430" r="42"/><circle cx="390" cy="285" r="42"/><circle cx="390" cy="420" r="42"/></g>
+  <g fill="#fdba74"><circle cx="155" cy="265" r="5"/><circle cx="185" cy="265" r="5"/><circle cx="270" cy="215" r="5"/><circle cx="300" cy="215" r="5"/><circle cx="270" cy="335" r="5"/><circle cx="300" cy="335" r="5"/></g>
+  <path d="M445 340h170" stroke="#fed7aa" stroke-width="10"/><rect x="615" y="205" width="130" height="275" rx="24" fill="#7c2d12" stroke="#fbbf24" stroke-width="6"/><path d="M650 270h60M650 325h60M650 380h60" stroke="#fde68a" stroke-width="9"/><text x="628" y="445" fill="#fff" font-family="Arial" font-size="21" font-weight="700">POLICY</text>
+  <path d="M745 340h140" stroke="#86efac" stroke-width="11"/><path d="m862 316 38 24-38 24" fill="none" stroke="#86efac" stroke-width="11"/>
+  <circle cx="1000" cy="260" r="52" fill="#172554" stroke="#60a5fa" stroke-width="5"/><path d="M930 435c10-70 130-70 140 0" fill="#172554" stroke="#60a5fa" stroke-width="5"/><text x="922" y="500" fill="#bfdbfe" font-family="Arial" font-size="25" font-weight="700">HUMAN OWNER</text>
+</svg>
