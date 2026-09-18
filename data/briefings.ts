@@ -21,6 +21,81 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-09-18",
+    title: "Daily Tech Briefing — 18 September 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch Cisco ISE first and check every node for compromise. Then reduce SaaS supply-chain exposure with short-lived scoped credentials, enforce approval boundaries around AI agents, and treat optical interconnects and open software stacks as strategic infrastructure choices.",
+    stories: [
+      {
+        headline: "Attackers are exploiting a critical Cisco ISE authentication bypass",
+        category: "Cybersecurity",
+        summary:
+          "Cisco says CVE-2026-76460 is being actively exploited. The CVSS 10.0 flaw lets an unauthenticated remote attacker bypass the management interface on Identity Services Engine and ISE-PIC; successful exploitation can lead to root command execution. There is no workaround, although infrastructure ACLs can restrict exposure while administrators deploy fixed releases.",
+        whyItMatters:
+          "ISE controls who and what can reach enterprise networks, so compromise undermines the trust layer itself. Patch every node, inspect access.log for suspicious usernames, and cross-check firewall and network telemetry stored outside ISE. Cisco recommends re-imaging affected nodes if exploitation is suspected because a root attacker may erase local evidence.",
+        image: "/images/briefings/2026-09-18/cisco-ise-zero-day.svg",
+        imageAlt: "Illustration of an unauthenticated request bypassing a network identity gateway and reaching its root control plane.",
+        sourceLabel: "Cisco security advisory, 16 September 2026",
+        sourceUrl:
+          "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ISE-ABP-VNSW7Tn5",
+      },
+      {
+        headline: "Brevo compromise turns trusted website scripts into a malware channel",
+        category: "Cybersecurity",
+        summary:
+          "Brevo confirmed that attackers used a compromised Cloudflare API key to alter JavaScript delivered through its domains. For roughly four hours on 14 September, affected customer sites displayed fake CAPTCHA-style ClickFix prompts, while logged-in WordPress administrators could be targeted with a malicious plugin. The wider incident also exposed customer contact lists through separate abuse of Brevo accounts.",
+        whyItMatters:
+          "A SaaS vendor's script runs inside your users' browsers with your site's trust. Inventory third-party JavaScript, restrict it with Content Security Policy and Subresource Integrity where possible, rotate CDN credentials, and keep API tokens scoped and short-lived. A kill switch for vendor scripts should not require a full application deployment.",
+        image: "/images/briefings/2026-09-18/brevo-script-supply-chain.svg",
+        imageAlt: "Illustration of a trusted third-party script being altered at the CDN edge before reaching customer websites.",
+        sourceLabel: "BleepingComputer, 17 September 2026",
+        sourceUrl:
+          "https://www.bleepingcomputer.com/news/security/brevo-supply-chain-attack-injected-clickfix-scripts-on-customer-sites/",
+      },
+      {
+        headline: "Claude now leads 26% of Anthropic's work on future models",
+        category: "Artificial Intelligence",
+        summary:
+          "Anthropic says Claude led 26% of its AI research and development work in August, up from 1% in March, while more than 90% involved human-AI collaboration. Around 30,000 agents ran on its internal platform. Anthropic says every agent action is pre-screened and roughly one in 47,000 decisions was blocked by safety controls.",
+        whyItMatters:
+          "The useful pattern is not autonomous coding alone, but measured delegation with enforcement and telemetry. For SaaS engineering, define which actions agents may propose or execute, pre-screen tool calls, log blocked decisions and preserve a human owner for releases, secrets, billing and production changes.",
+        image: "/images/briefings/2026-09-18/anthropic-agent-operations.svg",
+        imageAlt: "Illustration of many AI agents working through a policy gateway under human supervision.",
+        sourceLabel: "Reuters, 17 September 2026",
+        sourceUrl:
+          "https://www.reuters.com/business/anthropic-says-claude-now-leads-quarter-work-building-its-next-ai-models-2026-09-17/",
+      },
+      {
+        headline: "Marvell and GlobalFoundries expand optical capacity for AI data centres",
+        category: "IT Infrastructure",
+        summary:
+          "GlobalFoundries and Marvell expanded their manufacturing agreement for chips used in high-speed optical links inside AI data centres. The deal responds to growing demand for the connectivity that moves data between accelerator clusters, highlighting that interconnect capacity is becoming as consequential as the compute silicon itself.",
+        whyItMatters:
+          "For network infrastructure, accelerator utilisation depends on latency, optics, switching and congestion control across the fabric. Capacity planning should measure communication bottlenecks and failure domains, not just GPU counts; SaaS teams buying AI capacity should also ask providers about network oversubscription and predictable throughput.",
+        image: "/images/briefings/2026-09-18/optical-ai-fabric.svg",
+        imageAlt: "Illustration of AI accelerator racks connected by high-speed optical links and switching fabric.",
+        sourceLabel: "Reuters, 17 September 2026",
+        sourceUrl:
+          "https://www.reuters.com/business/globalfoundries-marvell-expand-chip-capacity-deal-ai-data-center-connectivity-2026-09-17/",
+      },
+      {
+        headline: "France builds an open bridge between quantum systems and supercomputers",
+        category: "IT Infrastructure",
+        summary:
+          "France's CEA and quantum startup Alice & Bob will extend the open-source Qaptiva stack so classical supercomputers can assign suitable tasks to quantum processors. CEA already integrates machines from Quandela and Pasqal and plans to install an Alice & Bob system in 2027. The initiative is intended to prevent a single software ecosystem from dominating hybrid quantum computing.",
+        whyItMatters:
+          "The architecture is a useful interoperability lesson well before quantum computing becomes routine: keep specialised accelerators behind open interfaces and let the scheduler choose the right backend. Avoid hard-coding applications to one vendor's hardware, especially when platforms are immature and regional sovereignty matters.",
+        image: "/images/briefings/2026-09-18/quantum-hpc-stack.svg",
+        imageAlt: "Illustration of an open software scheduler connecting a classical supercomputer to several quantum processors.",
+        sourceLabel: "Reuters, 17 September 2026",
+        sourceUrl:
+          "https://www.reuters.com/technology/frances-cea-alice-bob-partner-quantum-supercomputing-software-2026-09-17/",
+      },
+    ],
+  },
+  {
     date: "2026-09-17",
     title: "Daily Tech Briefing — 17 September 2026",
     description:
