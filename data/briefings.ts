@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-09-20",
+    title: "Daily Tech Briefing — 20 September 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Audit browser extensions before enabling embedded AI agents, isolate recruitment coding tasks, and treat power, permitting and semiconductor diversity as first-class dependencies in every cloud and SaaS resilience plan.",
+    stories: [
+      {
+        headline: "One malicious extension can hijack five browser-based AI assistants",
+        category: "Cybersecurity",
+        summary:
+          "Security researcher Gal Weizman demonstrated BragJack, a family of attacks in which an ordinary Chromium extension could manipulate privileged AI components in Chrome, Edge, Perplexity Comet, Opera Neon and Claude in Chrome. Depending on the browser, the proof of concept could force prompts, read local files or browsing data, capture screenshots, and use the agent to act on websites. Google and Microsoft have fixed the assigned CVEs.",
+        whyItMatters:
+          "An AI browser turns extension risk into delegated-action risk. Keep browsers current, remove unused extensions, centrally block broad host and debugger permissions, and use separate managed profiles for administration. Do not let an agent with access to production consoles share a browser profile with general browsing or unreviewed extensions.",
+        image: "/images/briefings/2026-09-20/browser-agent-hijack.svg",
+        imageAlt: "Illustration of a malicious browser extension redirecting commands into a privileged AI browser agent.",
+        sourceLabel: "Forever Security technical research, 16 September 2026",
+        sourceUrl: "https://forever.security/blog/bragjack-attack-hijacks-every-browser-agent",
+      },
+      {
+        headline: "WaterPlum compromised at least 30,000 developer devices",
+        category: "Cybersecurity",
+        summary:
+          "A joint advisory from Japanese, US, Australian and German authorities says North Korea's WaterPlum group infected at least 30,000 devices across more than 100 countries and accessed over 7,000 cryptocurrency wallets. Attackers pose as AI, crypto or NFT employers, then use coding tests, malicious npm packages and booby-trapped VS Code projects to install credential stealers and remote-access tools.",
+        whyItMatters:
+          "Developers are both direct targets and routes into their employers. Run interview assignments and unfamiliar repositories inside disposable sandboxes with no secrets, browser sessions or corporate network access. Disable automatic workspace trust, review package-install scripts and immediately revoke credentials if a test project behaves unexpectedly.",
+        image: "/images/briefings/2026-09-20/waterplum-developer-targeting.svg",
+        imageAlt: "Illustration of a fake coding interview delivering malware to a developer workstation and connected company network.",
+        sourceLabel: "Joint FBI and international law-enforcement advisory, 18 September 2026",
+        sourceUrl: "https://www.ic3.gov/CSA/2026/260918.pdf",
+      },
+      {
+        headline: "IMF says European AI gains will depend on power and local capacity",
+        category: "Artificial Intelligence",
+        summary:
+          "An IMF paper presented to EU finance ministers estimates that AI could raise European productivity by about 1% over five years, while also widening inequality, stressing electricity infrastructure and deepening reliance on US and Chinese technology. Around 60% of workers in advanced European economies are in highly AI-exposed roles, and data centres already consume about 3% of electricity in several major European hubs.",
+        whyItMatters:
+          "AI adoption is an infrastructure and workforce programme, not only an API choice. For a European-facing SaaS product, track regional inference costs and energy constraints, keep model providers replaceable, preserve human workflows for essential tasks and document where customer data is processed.",
+        image: "/images/briefings/2026-09-20/europe-ai-power.svg",
+        imageAlt: "Illustration of European AI services sharing constrained electricity and data-centre infrastructure.",
+        sourceLabel: "Reuters, 19 September 2026",
+        sourceUrl: "https://www.reuters.com/business/imf-tells-eu-ministers-ai-could-boost-growth-increase-economic-strains-2026-09-19/",
+      },
+      {
+        headline: "Ohio data-centre resistance becomes a capacity-planning risk",
+        category: "IT Infrastructure",
+        summary:
+          "Data-centre development has become a major political issue in Ohio as communities contest electricity demand, water use, farmland conversion and more than $2 billion in state sales-tax incentives during 2024 and 2025. One city has imposed a six-month approval moratorium, while the governor has suspended new tax-exemption applications pending reform and local groups are pursuing tighter limits.",
+        whyItMatters:
+          "A region listed on a provider roadmap is not usable capacity until power, permits and community approval are secured. Separate announced from contracted capacity, maintain alternative regions and providers, and include utility-price or permitting changes in disaster-recovery and cost forecasts.",
+        image: "/images/briefings/2026-09-20/data-centre-permitting.svg",
+        imageAlt: "Illustration of a planned data centre waiting behind power, water and community approval gates.",
+        sourceLabel: "Reuters, 19 September 2026",
+        sourceUrl: "https://www.reuters.com/legal/government/democrats-try-ride-data-center-backlash-election-victory-rural-us-midwest-2026-09-19/",
+      },
+      {
+        headline: "CXMT begins mass production on a denser DRAM platform",
+        category: "IT Infrastructure",
+        summary:
+          "Chinese memory maker CXMT says its fifth-generation DRAM platform has entered mass production. The company claims it can produce at least 50% more dies per wafer than its prior platform and has started manufacturing 24-gigabit LPDDR5X products that hold 50% more data than comparable earlier chips. The claims have not yet been independently validated.",
+        whyItMatters:
+          "Memory supply influences server pricing, accelerator utilisation and the cost of running AI workloads. A credible additional supplier could improve availability, but export controls and validation requirements still matter. Avoid specifying a single memory vendor and qualify capacity on performance, reliability and support rather than headline density alone.",
+        image: "/images/briefings/2026-09-20/dram-mass-production.svg",
+        imageAlt: "Illustration of denser DRAM chips moving from a semiconductor wafer into server and AI systems.",
+        sourceLabel: "Reuters, 20 September 2026",
+        sourceUrl: "https://www.reuters.com/world/asia-pacific/chinas-cxmt-says-new-memory-chip-platform-enters-mass-production-2026-09-20/",
+      },
+    ],
+  },
+  {
     date: "2026-09-19",
     title: "Daily Tech Briefing — 19 September 2026",
     description:
