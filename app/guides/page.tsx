@@ -3,6 +3,7 @@ import Link from "next/link";
 import { guides } from "@/data/guides";
 import { moreGuides } from "@/data/guides-more";
 import { latestGuides } from "@/data/guides-latest";
+import { pcTurnsOnNoDisplayGuide } from "@/data/guides/pc-turns-on-no-display";
 import { GuideBrowser } from "@/components/guides/GuideBrowser";
 
 export const metadata: Metadata = {
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default function GuidesPage() {
-  const allGuides = [...latestGuides, ...guides, ...moreGuides];
+  const allGuides = [pcTurnsOnNoDisplayGuide, ...latestGuides, ...guides, ...moreGuides];
 
   return (
     <main className="mx-auto max-w-6xl px-6 py-16 md:py-24">
