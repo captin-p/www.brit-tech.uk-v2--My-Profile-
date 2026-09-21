@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">AI coding agent sandbox escape</title>
+  <desc id="desc">An AI terminal crosses a broken isolation boundary toward a developer workstation.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#07152b"/><stop offset="1" stop-color="#163d65"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="8"/></filter></defs>
+  <rect width="1200" height="675" fill="url(#bg)"/><g opacity=".18" stroke="#55d6ff"><path d="M0 110h1200M0 220h1200M0 330h1200M0 440h1200M0 550h1200"/><path d="M120 0v675M300 0v675M480 0v675M660 0v675M840 0v675M1020 0v675"/></g>
+  <rect x="115" y="155" width="380" height="330" rx="28" fill="#0d2543" stroke="#62d8ff" stroke-width="4"/><circle cx="155" cy="195" r="9" fill="#ff6d7a"/><circle cx="184" cy="195" r="9" fill="#ffd166"/><circle cx="213" cy="195" r="9" fill="#62e6a7"/><path d="M170 278l55 45-55 45M250 368h95" fill="none" stroke="#86f1c1" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M600 95v485" stroke="#76e8ff" stroke-width="12" stroke-dasharray="28 22"/><path d="M600 260l-27 25 27 24-27 25 27 24-27 25 27 24" fill="none" stroke="#ff7b8b" stroke-width="15"/>
+  <path d="M460 335h270" stroke="#ff8d9b" stroke-width="18" stroke-linecap="round"/><path d="M714 300l70 35-70 35z" fill="#ff8d9b"/><circle cx="770" cy="335" r="46" fill="#ff8d9b" opacity=".24" filter="url(#glow)"/>
+  <rect x="765" y="180" width="320" height="290" rx="26" fill="#102c4e" stroke="#b3c9e5" stroke-width="4"/><rect x="815" y="230" width="220" height="150" rx="12" fill="#071426"/><path d="M825 405h200M930 380v25" stroke="#b3c9e5" stroke-width="12" stroke-linecap="round"/><path d="M845 275h120M845 310h155M845 345h95" stroke="#55d6ff" stroke-width="12" stroke-linecap="round"/>
+  <text x="80" y="610" fill="#fff" font-family="system-ui,sans-serif" font-size="42" font-weight="700">SANDBOX BOUNDARY</text><text x="830" y="545" fill="#9fc2df" font-family="system-ui,sans-serif" font-size="25">DEVELOPER HOST</text>
+</svg>

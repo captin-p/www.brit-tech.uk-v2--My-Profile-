@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-09-21",
+    title: "Daily Tech Briefing — 21 September 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Update AI coding agents, inspect dependency behaviour at runtime, and include infrastructure financing, advanced packaging and incident-notification dependencies in AI risk reviews.",
+    stories: [
+      {
+        headline: "Two Codex sandbox escapes could reach a developer's host",
+        category: "Cybersecurity",
+        summary:
+          "Researchers at Accomplish found two ways around OpenAI Codex isolation. Heapjack recovered a trust token from memory shared by trusted and untrusted JavaScript, enabling unsandboxed commands even in read-only mode. Overpatch used attacker-controlled patch paths to widen filesystem permissions. OpenAI fixed both reports within eight days.",
+        whyItMatters:
+          "Update Codex Desktop to build 26.818.21641 or later and the CLI to 0.149.0 or later. Treat every cloned repository as hostile: keep coding agents away from production credentials, Docker sockets and SSH keys, and use a disposable VM for unfamiliar code.",
+        image: "/images/briefings/2026-09-21/codex-sandbox-escape.svg",
+        imageAlt: "Illustration of an AI coding agent crossing a software sandbox boundary toward a developer workstation.",
+        sourceLabel: "Accomplish security research, 15 September 2026",
+        sourceUrl: "https://www.accomplish.ai/blog/escaping-the-openai-codex-sandbox-twice/",
+      },
+      {
+        headline: "Malicious npm packages move execution from install time to runtime",
+        category: "Cybersecurity",
+        summary:
+          "Checkmarx found nine npm packages in a campaign led by indexed-btree, which mimicked the legitimate sorted-btree library and reached nearly two million weekly downloads. Instead of relying on an install script, the malware activated inside BTree.prototype.set when given a specific key, then fingerprinted the host and used messaging services plus an Ethereum test network for command and control.",
+        whyItMatters:
+          "Package-install controls alone cannot stop code that waits for normal application execution. Review lockfiles and transitive dependencies, monitor runtime process and network behaviour, and rebuild from a trusted environment while rotating exposed secrets if any affected package was installed.",
+        image: "/images/briefings/2026-09-21/npm-runtime-malware.svg",
+        imageAlt: "Illustration of a malicious npm dependency activating during application runtime and reaching external command infrastructure.",
+        sourceLabel: "Checkmarx Zero, 17 September 2026",
+        sourceUrl: "https://checkmarx.com/zero-post/npm-btree-malware-campaign-affects-millions-of-downloads-no-need-for-install-script/",
+      },
+      {
+        headline: "AI infrastructure carries up to $300 billion of guarantee exposure",
+        category: "IT Infrastructure",
+        summary:
+          "The Financial Times reports that technology companies have provided residual-value guarantees supporting as much as $300 billion of debt for AI chips and data centres, often through special-purpose vehicles rather than direct balance-sheet borrowing. The arrangements depend partly on future equipment values while accelerating infrastructure construction.",
+        whyItMatters:
+          "AI capacity can depend on financing assumptions as much as power, networking and accelerators. Assess providers' financial durability, distinguish funded capacity from announced projects, avoid unnecessary long prepayments and keep workloads portable if pricing or expansion plans change.",
+        image: "/images/briefings/2026-09-21/ai-financing-exposure.svg",
+        imageAlt: "Illustration of AI data-centre equipment supported by layered financing and residual-value guarantees.",
+        sourceLabel: "Financial Times, 21 September 2026",
+        sourceUrl: "https://www.ft.com/content/7f11afae-c4e3-4054-a65b-873f3647f563",
+      },
+      {
+        headline: "Taiwan starts an advanced-packaging park anchored by TSMC",
+        category: "IT Infrastructure",
+        summary:
+          "Taiwan broke ground on the 88.7-hectare Baipu Industrial Park in Kaohsiung, where TSMC plans an advanced-packaging validation laboratory and talent centre expected in late 2029. Packaging is essential for combining the high-performance chips used by Nvidia, AMD and Broadcom, making it a strategic part of the AI supply chain rather than a final assembly step.",
+        whyItMatters:
+          "Server and accelerator availability can be constrained by packaging even when chip fabrication capacity exists. Forecast AI capacity across the complete supply chain, qualify more than one provider or region and include concentrated packaging dependencies in business-continuity reviews.",
+        image: "/images/briefings/2026-09-21/advanced-packaging-park.svg",
+        imageAlt: "Illustration of advanced semiconductor packages moving from a validation laboratory into AI servers.",
+        sourceLabel: "Reuters, 21 September 2026",
+        sourceUrl: "https://www.reuters.com/world/asia-pacific/taiwan-breaks-ground-advanced-packaging-park-anchored-by-tsmc-2026-09-21/",
+      },
+      {
+        headline: "US proposes an AI-incident notification channel with China",
+        category: "Artificial Intelligence",
+        summary:
+          "After talks in New York on 20 September, the United States proposed a bilateral mechanism for notifying serious AI-related national-security incidents for the US and Chinese presidents to consider. China's response was not disclosed. Future discussions could cover AI weaponisation, critical-infrastructure protection and the prevention of cyberattacks.",
+        whyItMatters:
+          "The same principle applies at SaaS scale: model failures and provider compromises need predefined escalation paths. Set thresholds for disabling AI features, name technical and executive contacts, preserve evidence, prepare customer notifications and maintain a tested non-AI fallback.",
+        image: "/images/briefings/2026-09-21/ai-incident-notification.svg",
+        imageAlt: "Illustration of two national AI systems connected by a secure incident-notification channel.",
+        sourceLabel: "Reuters, 20 September 2026",
+        sourceUrl: "https://www.reuters.com/business/finance/us-treasurys-bessent-chinas-he-launch-talks-ai-trade-critical-minerals-2026-09-20/",
+      },
+    ],
+  },
+  {
     date: "2026-09-20",
     title: "Daily Tech Briefing — 20 September 2026",
     description:
