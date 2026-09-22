@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-09-22",
+    title: "Daily Tech Briefing — 22 September 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Disable unapproved cloud indexing in coding assistants, formalise cross-team incident sharing, and treat communications security plus energy and water telemetry as core infrastructure controls.",
+    stories: [
+      {
+        headline: "Z.ai disables coding-assistant features after repositories were uploaded without consent",
+        category: "Cybersecurity",
+        summary:
+          "Chinese AI company Z.ai disabled parts of its ZCode assistant after users reported that its default-enabled Codebase Indexing feature uploaded complete local repositories to Alibaba Cloud without clear consent. Z.ai says it patched the vulnerability, enabled zero-data retention and received an independent assessment confirming that uploaded data had been deleted.",
+        whyItMatters:
+          "A coding assistant can expose source code, database credentials and customer logic before a developer intentionally submits a prompt. Inventory every IDE assistant, disable automatic repository indexing, block unapproved cloud destinations and verify retention terms rather than relying on a product's default settings.",
+        image: "/images/briefings/2026-09-22/codebase-cloud-upload.svg",
+        imageAlt: "Illustration of a local source-code repository being uploaded to a cloud service without an explicit approval gate.",
+        sourceLabel: "Reuters, 21 September 2026",
+        sourceUrl: "https://www.reuters.com/legal/litigation/chinas-zai-disables-ai-coding-assistant-features-after-security-issue-2026-09-21/",
+      },
+      {
+        headline: "Auditors call information sharing the weak point in EU cyber defence",
+        category: "Cybersecurity",
+        summary:
+          "The European Court of Auditors says member states are not sharing enough timely, actionable information during cross-border incidents despite €1.4 billion in EU cybersecurity spending. It cited a 2025 ransomware attack that disrupted airports in several countries without any affected state notifying the EU cybersecurity agency or other members.",
+        whyItMatters:
+          "Security tools cannot compensate for a broken reporting path. Define who must be notified when a SaaS incident crosses tenants, suppliers or countries; prepare a standard evidence package; and make notification thresholds part of exercises instead of deciding them during an outage.",
+        image: "/images/briefings/2026-09-22/eu-cyber-sharing.svg",
+        imageAlt: "Illustration of fragmented cyber incident alerts failing to reach a shared European response network.",
+        sourceLabel: "Reuters, 21 September 2026",
+        sourceUrl: "https://www.reuters.com/legal/government/poor-data-sharing-undermining-eu-cyber-defences-auditors-say-2026-09-21/",
+      },
+      {
+        headline: "US watchdog finds aircraft communications vulnerable to interception and spoofing",
+        category: "Cybersecurity",
+        summary:
+          "A US Government Accountability Office review found that the FAA has not completed key risk assessments or deployed comprehensive real-time detection for spectrum threats. Two aircraft messaging systems predate modern cybersecurity safeguards and lack common encryption, leaving communications exposed to interception, impersonation and jamming.",
+        whyItMatters:
+          "This is a critical-infrastructure lesson in protecting legacy protocols. Compensating controls need independent monitoring, authenticated alternate channels and tested manual procedures; redundancy alone does not help when every path trusts unauthenticated data.",
+        image: "/images/briefings/2026-09-22/aviation-comms-security.svg",
+        imageAlt: "Illustration of an aircraft receiving a spoofed message across an unsecured communications channel.",
+        sourceLabel: "Reuters summary of the GAO review, 21 September 2026",
+        sourceUrl: "https://www.reuters.com/world/us/us-report-says-faa-must-better-address-threats-aircraft-communication-2026-09-21/",
+      },
+      {
+        headline: "EU proposes energy and water labels for data centres",
+        category: "IT Infrastructure",
+        summary:
+          "The European Commission proposed requiring data centres with at least 500 kW of capacity to report energy and water efficiency through a common label. Operators would also disclose how water use relates to local water stress and whether facilities can support energy systems through measures such as waste-heat reuse.",
+        whyItMatters:
+          "European infrastructure procurement will increasingly require operational efficiency evidence, not only uptime claims. Start collecting power-usage effectiveness, water metrics, heat-reuse capability and local resource risk from hosting providers so future reporting and customer due diligence do not become emergency projects.",
+        image: "/images/briefings/2026-09-22/data-centre-label.svg",
+        imageAlt: "Illustration of a European data centre receiving an efficiency label for electricity, water and heat reuse.",
+        sourceLabel: "Reuters, 21 September 2026",
+        sourceUrl: "https://www.reuters.com/business/environment/eu-require-data-centres-disclose-energy-water-efficiency-2026-09-21/",
+      },
+      {
+        headline: "Alibaba targets a 20-gigawatt cloud while introducing a new AI chip",
+        category: "Artificial Intelligence",
+        summary:
+          "Alibaba unveiled its Zhenwu V900 accelerator, which it says delivers three times the performance of its predecessor and can form clusters of up to 500,000 chips. Commercial production is planned for early 2027, while Alibaba Cloud is targeting more than 20 gigawatts of global data-centre capacity by 2032.",
+        whyItMatters:
+          "AI competition is moving from individual models to vertically integrated stacks spanning chips, interconnects, cloud regions and software. Keep SaaS model interfaces portable and evaluate providers on real available capacity, regional support and exit paths—not model benchmarks or announced gigawatts alone.",
+        image: "/images/briefings/2026-09-22/alibaba-ai-stack.svg",
+        imageAlt: "Illustration of an AI chip connected through a large accelerator cluster to cloud data centres.",
+        sourceLabel: "Reuters, 22 September 2026",
+        sourceUrl: "https://www.reuters.com/business/retail-consumer/alibaba-plans-ai-model-with-5-trillion-10-trillion-parameters-unveils-new-chip-2026-09-22/",
+      },
+    ],
+  },
+  {
     date: "2026-09-21",
     title: "Daily Tech Briefing — 21 September 2026",
     description:
