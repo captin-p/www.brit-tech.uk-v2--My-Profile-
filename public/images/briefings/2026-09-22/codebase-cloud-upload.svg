@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Unapproved codebase cloud upload</title><desc id="desc">A local source-code repository is uploaded toward a cloud until an approval gate blocks the transfer.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#07172a"/><stop offset="1" stop-color="#24385d"/></linearGradient></defs><rect width="1200" height="675" fill="url(#bg)"/>
+  <rect x="90" y="145" width="370" height="310" rx="28" fill="#102a48" stroke="#6ed4ff" stroke-width="5"/><path d="M135 215h115l35 36h130v150H135z" fill="#0a1c33" stroke="#91e0ff" stroke-width="5"/><path d="M180 296h180M180 335h130M180 374h155" stroke="#66d8ae" stroke-width="12" stroke-linecap="round"/><text x="142" y="505" fill="#c9e7fa" font-family="system-ui,sans-serif" font-size="25">LOCAL REPOSITORY</text>
+  <path d="M470 305h260" stroke="#ff8b91" stroke-width="14" stroke-dasharray="24 15"/><path d="M704 270l70 35-70 35z" fill="#ff8b91"/><circle cx="605" cy="305" r="54" fill="#7b2639" stroke="#ff9ba3" stroke-width="5"/><path d="M580 280l50 50M630 280l-50 50" stroke="#fff" stroke-width="11" stroke-linecap="round"/>
+  <g transform="translate(765 155)"><path d="M105 255h190c65 0 102-36 102-87 0-49-36-83-82-86C296 28 250 5 201 19c-34 10-61 38-72 73-64 0-107 37-107 87 0 47 35 76 83 76z" fill="#173858" stroke="#b7d9ee" stroke-width="6"/><path d="M210 115v92M170 153l40-40 40 40" fill="none" stroke="#ffcb70" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="82" y="590" fill="#fff" font-family="system-ui,sans-serif" font-size="43" font-weight="800">DEFAULT CLOUD INDEXING NEEDS CONSENT</text>
+</svg>
