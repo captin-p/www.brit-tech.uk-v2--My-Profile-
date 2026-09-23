@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-09-23",
+    title: "Daily Tech Briefing — 23 September 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch exposed F5 BIG-IP APM systems first, then review how AI agents handle payments, model-provider costs and safety claims, and hardware concentration across the network and chip supply chain.",
+    stories: [
+      {
+        headline: "Actively exploited F5 BIG-IP APM flaw enables unauthenticated code execution",
+        category: "Cybersecurity",
+        summary:
+          "F5 confirmed active exploitation of CVE-2026-94127, an unauthenticated remote-code-execution flaw affecting BIG-IP Access Policy Manager when an access policy and OAuth profile are configured on a virtual server. Affected releases include 21.1.0, 17.5.0–17.5.1 and 17.1.0–17.1.3; successful exploitation can give an attacker full control of the appliance.",
+        whyItMatters:
+          "APM sits directly in the identity and network-access path, so compromise can expose credentials and trusted internal routes. Identify affected virtual servers, apply F5's workaround or fixed release immediately, restrict data-plane exposure and inspect independently stored network and authentication logs for signs of exploitation.",
+        image: "/images/briefings/2026-09-23/f5-apm-rce.svg",
+        imageAlt: "Illustration of malicious traffic crossing an OAuth access gateway and reaching a vulnerable F5 BIG-IP APM appliance.",
+        sourceLabel: "CIS advisory 2026-098, issued 22 September 2026",
+        sourceUrl: "https://www.cisecurity.org/advisory/a-vulnerability-in-f5-big-ip-access-policy-manager-could-allow-for-remote-code-execution_2026-098",
+      },
+      {
+        headline: "Banks warn that AI shopping agents are outrunning payment protections",
+        category: "Artificial Intelligence",
+        summary:
+          "NatWest, Bank of America, ING, Capital One, Commonwealth Bank of Australia and ASB Bank warned that agentic commerce is advancing faster than standards and consumer protections. Risks include agents collecting card details directly, selecting weaker payment methods and leaving customers unclear about liability when purchases or fraud go wrong.",
+        whyItMatters:
+          "If you add purchasing or billing actions to a SaaS agent, treat it as a high-risk workflow: tokenize payment data, require explicit confirmation and spending limits, disclose when an agent acts, preserve decision logs and provide a clear human dispute path.",
+        image: "/images/briefings/2026-09-23/agentic-payment-risk.svg",
+        imageAlt: "Illustration of an AI shopping agent approaching a payment gateway with approval, privacy and fraud controls.",
+        sourceLabel: "Reuters, 22 September 2026",
+        sourceUrl: "https://www.reuters.com/legal/litigation/banks-warn-ai-shopping-bots-raise-scam-fraud-data-privacy-risks-2026-09-22/",
+      },
+      {
+        headline: "Claude Opus 5.5 lowers frontier-model cost while adding external safety testing",
+        category: "Artificial Intelligence",
+        summary:
+          "Anthropic launched Claude Opus 5.5 at $4 per million input tokens and $20 per million output tokens, 20% below Opus 5. The company says it delivers comparable performance to its top-tier model at 40% lower operating cost and was independently evaluated by Frontier Design and METR before release; the containment result remains an Anthropic-reported internal measure.",
+        whyItMatters:
+          "Lower model prices can materially change SaaS unit economics, but benchmark and safety claims need your own workload tests. Compare quality, latency and cost per completed task, keep providers interchangeable and validate agent permissions and failure modes before promoting a new model into production.",
+        image: "/images/briefings/2026-09-23/opus-cost-safety.svg",
+        imageAlt: "Illustration comparing AI model cost, performance and containment testing before a production release.",
+        sourceLabel: "Reuters, 22 September 2026",
+        sourceUrl: "https://www.reuters.com/business/anthropic-unveils-claude-opus-55-2026-09-22/",
+      },
+      {
+        headline: "China surveys Broadcom switch concentration in state data centres",
+        category: "IT Infrastructure",
+        summary:
+          "Chinese authorities are reportedly surveying Broadcom switch use across state-controlled data centres as part of a push toward domestic infrastructure. Preliminary findings cited by the Financial Times suggest Broadcom equipment may account for as much as 90% of deployed switches, although Reuters could not independently verify the report.",
+        whyItMatters:
+          "This is a network-level concentration warning. Keep accurate switch silicon and software inventories, test interoperable alternatives, store portable configurations and avoid designing AI fabrics around assumptions that one vendor will always remain purchasable or supported in every region.",
+        image: "/images/briefings/2026-09-23/switch-concentration.svg",
+        imageAlt: "Illustration of many data-centre network paths converging on a single switch vendor and a smaller alternative path.",
+        sourceLabel: "Reuters, 23 September 2026",
+        sourceUrl: "https://www.reuters.com/world/china/china-surveys-broadcom-switch-use-state-data-centers-ft-reports-2026-09-23/",
+      },
+      {
+        headline: "Germany and the Netherlands fund an AI-assisted chip-design challenge",
+        category: "IT Infrastructure",
+        summary:
+          "Dutch innovation agency NADI and Germany's SPRIND will commit €40 million over 20 months to small teams using AI to accelerate the design of training and inference chips. The project combines the Dutch ASML-centered ecosystem with German research and manufacturing strengths as Europe seeks to reduce dependence on US and Chinese technology.",
+        whyItMatters:
+          "AI infrastructure diversity depends on design tools and specialised inference chips as well as fabrication. For your own systems, match hardware to workload, measure performance per watt and keep application interfaces portable enough to adopt efficient regional accelerators when they become viable.",
+        image: "/images/briefings/2026-09-23/europe-ai-chip-design.svg",
+        imageAlt: "Illustration of German and Dutch engineering teams using AI tools to design an efficient inference chip.",
+        sourceLabel: "Reuters, 23 September 2026",
+        sourceUrl: "https://www.reuters.com/business/german-dutch-strategic-innovation-agencies-collaborate-ai-chip-design-2026-09-23/",
+      },
+    ],
+  },
+  {
     date: "2026-09-22",
     title: "Daily Tech Briefing — 22 September 2026",
     description:
