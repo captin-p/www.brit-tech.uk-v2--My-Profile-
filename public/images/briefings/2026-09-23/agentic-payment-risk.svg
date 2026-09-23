@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Agentic commerce payment controls</title><desc id="desc">An AI shopping agent reaches a payment gateway guarded by approval, privacy and fraud controls.</desc>
+  <rect width="1200" height="675" fill="#081425"/><circle cx="300" cy="338" r="155" fill="#142b46" stroke="#54d8ff" stroke-width="5"/><path d="M235 315a65 65 0 0 1 130 0v70H235z" fill="#54d8ff"/><circle cx="270" cy="335" r="10" fill="#081425"/><circle cx="330" cy="335" r="10" fill="#081425"/><path d="M270 365h60" stroke="#081425" stroke-width="10" stroke-linecap="round"/>
+  <path d="M460 338h220" stroke="#f5bf4f" stroke-width="10" stroke-dasharray="22 18"/><path d="m645 298 45 40-45 40" fill="none" stroke="#f5bf4f" stroke-width="10"/>
+  <rect x="720" y="180" width="370" height="315" rx="32" fill="#142b46" stroke="#f5bf4f" stroke-width="5"/><rect x="775" y="245" width="260" height="160" rx="18" fill="#eef8ff"/><path d="M775 290h260" stroke="#142b46" stroke-width="30"/><circle cx="820" cy="365" r="18" fill="#25c99a"/><path d="m810 365 9 9 20-24" fill="none" stroke="#081425" stroke-width="7"/>
+  <g fill="#eef8ff" font-family="system-ui" font-size="29" font-weight="700"><text x="95" y="590">AI AGENT</text><text x="735" y="560">CONFIRM • LIMIT • LOG</text></g><g fill="#f5bf4f" font-family="system-ui" font-size="24"><text x="500" y="300">approval gate</text><text x="500" y="410">tokenized payment</text></g>
+</svg>
