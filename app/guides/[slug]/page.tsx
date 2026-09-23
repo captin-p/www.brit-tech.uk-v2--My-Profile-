@@ -4,10 +4,11 @@ import type { Metadata } from "next";
 import { guides } from "@/data/guides";
 import { moreGuides } from "@/data/guides-more";
 import { latestGuides } from "@/data/guides-latest";
+import { guides20260923 } from "@/data/guides-2026-09-23";
 import { pcTurnsOnNoDisplayGuide } from "@/data/guides/pc-turns-on-no-display";
 import { ArticleReader } from "@/components/guides/ArticleReader";
 
-const allGuides = [pcTurnsOnNoDisplayGuide, ...latestGuides, ...guides, ...moreGuides];
+const allGuides = [...guides20260923, pcTurnsOnNoDisplayGuide, ...latestGuides, ...guides, ...moreGuides];
 function findGuide(slug: string) { return allGuides.find((guide) => guide.slug === slug); }
 export function generateStaticParams() { return allGuides.map(({ slug }) => ({ slug })); }
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const guide = findGuide(slug); return guide ? { title: `${guide.title} | BritTech Guides`, description: guide.description } : {}; }
