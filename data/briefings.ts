@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-09-28",
+    title: "Daily Tech Briefing — 28 September 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Treat exposed Citrix NetScaler appliances as the immediate priority: preserve evidence, check for compromise and apply Citrix's fixed builds before returning them to service. Then review whether critical communications and SaaS workloads can operate from a genuinely separate failure domain.",
+    stories: [
+      {
+        headline: "Two Citrix NetScaler zero-days are under active exploitation",
+        category: "Cybersecurity",
+        summary:
+          "CISA says attackers are exploiting CVE-2026-88771 and CVE-2026-88772 against Citrix NetScaler ADC and Gateway appliances. Both flaws can enable remote code execution, and CISA added them to its Known Exploited Vulnerabilities catalog while urging organisations to preserve forensic evidence before mitigation.",
+        whyItMatters:
+          "NetScaler commonly sits on the internet-facing identity and remote-access boundary. Inventory every appliance, restrict management and data-plane exposure, collect volatile and external logs before rebooting, follow Citrix's compromise checks and install the fixed release—not merely a perimeter rule.",
+        image: "/images/briefings/2026-09-28/citrix-netscaler-zero-days.svg",
+        imageAlt: "Illustration of malicious internet traffic reaching a Citrix NetScaler gateway while evidence is preserved and a fixed build is prepared.",
+        sourceLabel: "CISA alert, 27 September 2026",
+        sourceUrl: "https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway",
+      },
+      {
+        headline: "Strikes on Ukrainian telecoms expose the physical side of network resilience",
+        category: "IT Infrastructure",
+        summary:
+          "Kyivstar said its headquarters in Kyiv was hit, while Russia said it struck a Vodafone Ukraine data centre. Ukraine's digital ministry says attacks on internet-provider facilities during the past week disrupted service for about 100,000 households around Kyiv.",
+        whyItMatters:
+          "Redundant servers do not provide resilience when offices, fibre routes, power and data centres share the same physical failure domain. Map those dependencies, keep out-of-band communications available, test cross-region recovery and ensure critical alerts can use an independently operated path.",
+        image: "/images/briefings/2026-09-28/telecom-physical-resilience.svg",
+        imageAlt: "Illustration of damaged telecom and data-centre sites with service failing over through a geographically separate network path.",
+        sourceLabel: "Reuters, 27 September 2026",
+        sourceUrl: "https://www.reuters.com/world/europe/russia-hits-ukraines-largest-mobile-provider-strikes-data-centres-2026-09-27/",
+      },
+      {
+        headline: "India prepares to test practical orbital computing on 1 October",
+        category: "IT Infrastructure",
+        summary:
+          "TakeMe2Space plans to launch its sub-50 kg MOI-1A satellite on SpaceX's Transporter-18 mission. The spacecraft carries Nvidia Orin NX edge processors and is intended to process sensor data in orbit instead of transmitting every raw dataset to Earth; the company says 23 customers have signed for the mission.",
+        whyItMatters:
+          "This is edge computing with an extreme network constraint. The same design principle applies on Earth: filter and process data close to its source, send only useful results across scarce links, and plan for intermittent connectivity, remote attestation and safe software rollback.",
+        image: "/images/briefings/2026-09-28/orbital-edge-compute.svg",
+        imageAlt: "Illustration of a small satellite processing imagery with an onboard edge computer before transmitting selected results to Earth.",
+        sourceLabel: "Reuters, 28 September 2026",
+        sourceUrl: "https://www.reuters.com/business/media-telecom/indias-takeme2space-launch-orbital-computing-satellite-spacex-rocket-2026-09-28/",
+      },
+      {
+        headline: "China may reopen a narrow path to Nvidia chips for ByteDance and Alibaba",
+        category: "Artificial Intelligence",
+        summary:
+          "China's government has reportedly asked ByteDance, Alibaba and other companies about plans to buy Nvidia RTX PRO 5500 processors, signalling that it may permit purchases of the workstation-class chip. The report is based on unnamed sources and no final approval has been announced.",
+        whyItMatters:
+          "AI capacity can change through policy as quickly as through hardware supply. Treat announced accelerator access as provisional, measure workloads across more than one chip family and keep model-serving software portable so a licensing or procurement change does not strand a SaaS roadmap.",
+        image: "/images/briefings/2026-09-28/china-nvidia-access.svg",
+        imageAlt: "Illustration of AI workloads waiting at a policy-controlled gateway leading to Nvidia workstation-class processors.",
+        sourceLabel: "Reuters report citing The Information, 27 September 2026",
+        sourceUrl: "https://www.reuters.com/business/retail-consumer/china-weighs-allowing-bytedance-alibaba-buy-new-nvidia-chips-information-reports-2026-09-27/",
+      },
+      {
+        headline: "Bill Gates calls for enforceable AI safeguards beyond self-regulation",
+        category: "Artificial Intelligence",
+        summary:
+          "Bill Gates said AI safety cannot rely on companies regulating themselves and called for legislation in the US Congress. His intervention adds pressure for rules that assign responsibility as models gain more autonomy and access to consequential systems.",
+        whyItMatters:
+          "Product teams should assume that evidence-backed controls will become a customer and regulatory requirement. Keep model inventories, evaluation results, tool-call logs, approval records and incident playbooks now, so governance is part of the SaaS architecture rather than a later compliance retrofit.",
+        image: "/images/briefings/2026-09-28/ai-safeguards-law.svg",
+        imageAlt: "Illustration of an AI system passing through technical safeguards and a legal accountability layer before deployment.",
+        sourceLabel: "Reuters, 27 September 2026",
+        sourceUrl: "https://www.reuters.com/legal/litigation/bill-gates-joins-calls-ai-safeguards-including-legislation-2026-09-27/",
+      },
+    ],
+  },
+  {
     date: "2026-09-27",
     title: "Daily Tech Briefing — 27 September 2026",
     description:
