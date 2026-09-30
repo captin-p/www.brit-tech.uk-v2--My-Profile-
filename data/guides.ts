@@ -14,6 +14,14 @@ export type Guide = {
 };
 
 export const guides: Guide[] = [
+  { slug: "laptop-plugged-in-not-charging", title: "Laptop Plugged In but Not Charging? Check This Before Replacing the Battery", description: "A safe way to separate charger, cable, USB-C port, charging-limit and battery problems before buying replacement parts.", category: "fix", difficulty: "Beginner", minutes: 12, published: "2026-09-30", tags: ["Laptop","Windows","Battery","USB-C","Power","Troubleshooting"], videoSearch: "laptop plugged in not charging USB-C charger wattage Windows troubleshooting", sections: [
+    { heading: "1. Check the power path", body: ["Test the wall outlet, then connect the laptop charger directly instead of through a hub or dock. If the laptop has several USB-C ports, use a port documented for charging."] },
+    { heading: "2. Check charger and cable power", body: ["A USB-C plug does not guarantee enough charging power. Compare the charger wattage and cable capability with the laptop manufacturer's requirements. A phone charger can fit but still be too weak."] },
+    { heading: "3. Check for an intentional charging limit", body: ["Some laptops deliberately stop charging near a configured level to reduce battery wear. Check the manufacturer's battery-health or smart-charging settings before treating a repeatable charging ceiling as a fault."] },
+    { heading: "4. Restart and test while powered off", body: ["Restart Windows and reconnect power. If charging is slow, shut the laptop down and check again. A laptop that charges while off but loses charge during heavy use may be receiving power that is insufficient for the workload."] },
+    { heading: "5. Isolate the fault safely", body: ["If available, test a known-good charger and cable that the manufacturer lists as compatible. Inspect the charging port for visible damage without inserting metal tools. Use manufacturer battery diagnostics before buying a replacement battery."] },
+    { heading: "When to stop and get help", body: ["Stop using and charging the laptop if the battery is swollen, the case is lifting, you notice smoke or an unusual smell, the connector sparks, or the battery area becomes dangerously hot. Do not puncture or squeeze a swollen battery. Seek qualified repair help for those symptoms, liquid damage, a loose charging socket, or a confirmed charging-system fault."] }
+  ] },
   {
     slug: "usb-drive-not-showing-windows",
     title: "USB Drive Not Showing in Windows? Check These Things Before Formatting It",
