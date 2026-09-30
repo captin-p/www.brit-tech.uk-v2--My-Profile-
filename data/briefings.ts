@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-09-30",
+    title: "Daily Tech Briefing — 30 September 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Prioritise the Branch Target Reuse mitigations on Linux systems that expose BPF or other JIT engines, then assess whether automated security tools have independent approval and rollback controls. For infrastructure planning, treat supplier replacement cycles and fibre capacity as measurable dependencies rather than background assumptions.",
+    stories: [
+      {
+        headline: "Branch Target Reuse bypasses existing Spectre-v2 defences in JIT engines",
+        category: "Cybersecurity",
+        summary:
+          "Researchers disclosed Branch Target Reuse, a speculative execute-after-free technique affecting JIT engines in the Linux kernel, Firefox's SpiderMonkey and Oracle GraalVM across Intel, AMD and Arm processors. They demonstrated Linux-kernel memory disclosure despite existing mitigations; Linux fixes are associated with CVE-2026-64507 and CVE-2026-64508.",
+        whyItMatters:
+          "Systems running multi-tenant workloads, browser automation or untrusted code deserve first attention. Track vendor guidance rather than disabling JIT globally, patch supported Linux kernels and runtimes, reduce unnecessary BPF access, and separate high-value secrets from hosts that execute untrusted workloads.",
+        image: "/images/briefings/2026-09-30/branch-target-reuse.svg",
+        imageAlt: "Illustration of a stale processor branch target redirecting speculative execution from a JIT code cache toward protected memory.",
+        sourceLabel: "VUSec disclosure via oss-sec, 29 September 2026",
+        sourceUrl: "https://seclists.org/oss-sec/2026/q3/1014",
+      },
+      {
+        headline: "Visa open-sources part of its AI-powered cyber-defence system",
+        category: "Cybersecurity",
+        summary:
+          "Visa released part of its AI-powered defence system as open-source software after recent agent vulnerabilities highlighted the limits of human-paced response. The payments company expects future attacks to adapt continuously without direct human control and argues that defenders will need automation capable of operating at comparable speed.",
+        whyItMatters:
+          "Automated defence can shorten detection and containment, but it must not become an unsupervised privileged agent. Apply scoped credentials, dry-run modes, human approval for destructive actions, immutable decision logs and tested rollback before allowing an AI security tool to isolate hosts or change network policy.",
+        image: "/images/briefings/2026-09-30/agentic-cyber-defence.svg",
+        imageAlt: "Illustration of an automated security agent detecting adaptive attack traffic before changes pass through approval and rollback controls.",
+        sourceLabel: "Reuters, 29 September 2026",
+        sourceUrl: "https://www.reuters.com/legal/government/visa-joins-growing-alarm-over-ai-powered-risks-2026-09-29/",
+      },
+      {
+        headline: "EU governments favour risk-based timelines for replacing high-risk telecom equipment",
+        category: "IT Infrastructure",
+        summary:
+          "EU governments removed a proposed fixed 36-month deadline for mobile operators to replace equipment from suppliers deemed high risk. The draft approach would instead consider risk, product lifecycle, replacement cycles, interoperability and alternative supply; industry estimates put potential replacement costs as high as €40 billion.",
+        whyItMatters:
+          "A supplier exit is a multi-year network migration, not a procurement switch. Maintain vendor and firmware inventories, map dependencies across radio, core and management systems, test interoperable alternatives, preserve configuration portability and plan capacity so security replacement work does not stall fibre, 5G or 6G upgrades.",
+        image: "/images/briefings/2026-09-30/telecom-supplier-exit.svg",
+        imageAlt: "Illustration of a mobile network migrating from a high-risk supplier through staged replacement and interoperability testing.",
+        sourceLabel: "Reuters, 29 September 2026",
+        sourceUrl: "https://www.reuters.com/world/china/european-telcos-may-get-more-time-phase-out-high-risk-suppliers-under-eu-2026-09-29/",
+      },
+      {
+        headline: "AT&T secures more than $3 billion of fibre and cable from Corning",
+        category: "IT Infrastructure",
+        summary:
+          "AT&T signed a multi-year procurement agreement worth more than $3 billion as it expands toward 60 million fibre locations by the end of the decade. The operator says an average fibre household now consumes more than one terabyte per month—five times its 2016 level—while AI, cloud services and connected devices increase backbone demand.",
+        whyItMatters:
+          "Access-network demand eventually becomes an aggregation and backbone problem. Capacity plans should model concurrent throughput, upstream growth, optical budgets, route diversity and restoration inventory—not only advertised access speed—and should reserve headroom for bursty SaaS and AI traffic.",
+        image: "/images/briefings/2026-09-30/fibre-capacity.svg",
+        imageAlt: "Illustration of residential, cloud and AI traffic converging through a resilient fibre network with measured backbone headroom.",
+        sourceLabel: "Reuters, 29 September 2026",
+        sourceUrl: "https://www.reuters.com/business/media-telecom/att-signs-over-3-billion-fiber-deal-with-corning-data-demand-surges-2026-09-29/",
+      },
+      {
+        headline: "Leading AI companies commit to independent safety audits",
+        category: "Artificial Intelligence",
+        summary:
+          "OpenAI, Anthropic, Meta, Google and Nvidia joined a voluntary US agreement to develop internal controls and work with independent auditors. The accord says AI tools should be assessed for whether they operate as intended and prevented from hacking or accessing technical systems in unintended ways.",
+        whyItMatters:
+          "Even voluntary commitments can shape enterprise procurement. Keep model and tool inventories, document evaluation coverage, preserve action logs and incident evidence, and be ready to show an auditor exactly how an AI feature is authorised, monitored, disabled and separated from production credentials.",
+        image: "/images/briefings/2026-09-30/ai-independent-audit.svg",
+        imageAlt: "Illustration of an AI system passing through internal controls and an independent audit before receiving production access.",
+        sourceLabel: "Reuters, 29 September 2026",
+        sourceUrl: "https://www.reuters.com/legal/government/trump-host-zuckerberg-anthropics-amodei-other-ai-titans-tuesday-2026-09-29/",
+      },
+    ],
+  },
+  {
     date: "2026-09-29",
     title: "Daily Tech Briefing — 29 September 2026",
     description:
