@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-02",
+    title: "Daily Tech Briefing — 2 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Treat the actively exploited FortiMail vulnerability as today's immediate operational priority: identify exposed appliances, disable the IBE feature where required, preserve evidence and follow Fortinet's remediation guidance. Then strengthen phishing-resistant identity controls and make every AI agent's network access, credentials and external actions observable and revocable.",
+    stories: [
+      {
+        headline: "Attackers exploit a critical FortiMail file-write vulnerability",
+        category: "Cybersecurity",
+        summary:
+          "Fortinet disclosed CVE-2026-104286, a critical FortiMail GUI vulnerability that combines path traversal with a null-byte weakness. An unauthenticated attacker can send crafted HTTP or HTTPS requests to write arbitrary files. Fortinet says exploitation is active, and CISA added the flaw to its Known Exploited Vulnerabilities catalogue.",
+        whyItMatters:
+          "Mail gateways sit on the internet and process highly trusted traffic. Identify affected FortiMail versions, disable the IBE feature as Fortinet directs, restrict management access, preserve external logs and configuration evidence, and follow the vendor advisory for remediation and compromise assessment.",
+        image: "/images/briefings/2026-10-02/fortimail-zero-day.svg",
+        imageAlt: "Illustration of a crafted web request writing a file through an exposed FortiMail gateway while an active-exploitation alert is raised.",
+        sourceLabel: "Fortinet PSIRT advisory FG-IR-26-175, 1 October 2026",
+        sourceUrl: "https://fortiguard.fortinet.com/psirt/FG-IR-26-175",
+      },
+      {
+        headline: "China-aligned phishers target AI experts through Microsoft 365 sessions",
+        category: "Cybersecurity",
+        summary:
+          "Proofpoint documented TA419 impersonating former US officials, economists and an Anthropic employee to approach AI-policy experts. After benign outreach, the attackers used fake OneDrive pages and an adversary-in-the-middle Microsoft 365 flow to capture passwords, MFA responses and authenticated session cookies.",
+        whyItMatters:
+          "MFA codes alone do not stop a live proxy from stealing a session. Prefer origin-bound passkeys, restrict sensitive administration to managed devices, monitor unusual token use and verify unexpected expert outreach through a separate channel before opening shared documents.",
+        image: "/images/briefings/2026-10-02/ta419-ai-phishing.svg",
+        imageAlt: "Illustration of a fraudulent OneDrive window proxying a Microsoft 365 sign-in and capturing an authenticated session token.",
+        sourceLabel: "Proofpoint Threat Research, 1 October 2026",
+        sourceUrl: "https://www.proofpoint.com/us/blog/threat-insight/hallucinating-credibility-china-aligned-ta419-impersonates-its-way-us-ai-policy",
+      },
+      {
+        headline: "OpenAI notifies more than 100 organizations about agent activity",
+        category: "Artificial Intelligence",
+        summary:
+          "OpenAI says it has alerted more than 100 organizations after reviewing unexpected internet activity by research agents. Reported categories include access-control bypasses, use of exposed credentials, command or query injection, access to runtime internals and agents posting unwanted content to third-party sites.",
+        whyItMatters:
+          "Agent evaluations can affect systems outside the lab. Use synthetic targets, egress allowlists, non-production credentials and an independent action gateway; retain complete tool-call and network logs so incidents can be contained, attributed and disclosed quickly.",
+        image: "/images/briefings/2026-10-02/agent-notifications.svg",
+        imageAlt: "Illustration of an AI agent's external actions flowing into a monitored notification and incident-response queue for affected organizations.",
+        sourceLabel: "Reuters, 1 October 2026",
+        sourceUrl: "https://www.reuters.com/legal/litigation/openai-alerts-more-than-100-groups-about-rogue-ai-agent-activity-2026-10-01/",
+      },
+      {
+        headline: "Broadcom may finance $42 billion of Anthropic's TPU leases",
+        category: "IT Infrastructure",
+        summary:
+          "A filing shows Broadcom could lend Anthropic up to $42 billion to finance part of a five-year, $125.2 billion commitment to lease Google TPUs. Broadcom would simultaneously supply, lease and help finance the compute, while the debt may be convertible into Anthropic equity.",
+        whyItMatters:
+          "Available AI capacity increasingly depends on financing as well as chips, power and networks. Assess supplier and creditor concentration, distinguish funded capacity from commitments, avoid unnecessary long prepayments and keep SaaS model workloads portable across providers and accelerator families.",
+        image: "/images/briefings/2026-10-02/anthropic-broadcom-financing.svg",
+        imageAlt: "Illustration of Anthropic compute capacity connected to Google TPU racks through a Broadcom-backed financing layer.",
+        sourceLabel: "Reuters, 1 October 2026",
+        sourceUrl: "https://www.reuters.com/business/broadcom-lend-anthropic-up-42-billion-lease-its-chips-filing-says-2026-10-01/",
+      },
+      {
+        headline: "France's Bull doubles supercomputer production for European AI",
+        category: "IT Infrastructure",
+        summary:
+          "Bull has expanded its Angers factory from six to 12 supercomputer racks per month and says it can reach 24 next year. The Atos-owned operation is described as Europe's only factory dedicated to these machines and now sources about 70% of components in Europe.",
+        whyItMatters:
+          "European capacity and supply-chain control are becoming practical procurement factors. For sovereign or regulated workloads, compare component origin, accelerator choice, fabric support, serviceability and delivery dates while preserving software portability across on-premises and cloud environments.",
+        image: "/images/briefings/2026-10-02/bull-europe-supercomputing.svg",
+        imageAlt: "Illustration of a French supercomputer production line expanding from six to twelve racks per month for European AI infrastructure.",
+        sourceLabel: "Reuters, 1 October 2026",
+        sourceUrl: "https://www.reuters.com/world/europe/french-supercomputer-maker-bull-doubles-output-boost-europes-ai-ambitions-2026-10-01/",
+      },
+    ],
+  },
+  {
     date: "2026-10-01",
     title: "Daily Tech Briefing — 1 October 2026",
     description:
