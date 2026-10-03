@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-03",
+    title: "Daily Tech Briefing — 3 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Treat internet-facing SharePoint servers as the immediate operational priority: patching alone is insufficient after possible ToolShell exploitation, so rotate ASP.NET machine keys, hunt for web shells and inspect domain-wide activity. Then review software-installation controls and make AI spending contingent on measurable workload value, portability and sustainable infrastructure assumptions.",
+    stories: [
+      {
+        headline: "Warlock ransomware reaches water and telecom operators through SharePoint",
+        category: "Cybersecurity",
+        summary:
+          "Symantec says the China-nexus Longlegs group, also known as Storm-2603, compromised a water utility, a telecommunications provider, a regional government body and a university. The attackers exploited on-premises SharePoint vulnerabilities, harvested ASP.NET machine keys and used a signed driver to disable security tools before deploying Warlock ransomware.",
+        whyItMatters:
+          "SharePoint compromise can become domain-wide quickly: in one case, the attackers pushed an EDR-disabling tool to 40 hosts in roughly two hours and staged ransomware in SYSVOL. Patch supported servers, rotate SharePoint machine keys, restart IIS, hunt for web shells and review domain-controller, endpoint and network telemetry stored outside the affected estate.",
+        image: "/images/briefings/2026-10-03/warlock-sharepoint.svg",
+        imageAlt: "Illustration of a compromised SharePoint server distributing Warlock ransomware through a domain to water and telecom infrastructure.",
+        sourceLabel: "Symantec Threat Hunter Team, 1 October 2026",
+        sourceUrl: "https://www.security.com/threat-intelligence/warlock-ransomware-critical-infrastructure",
+      },
+      {
+        headline: "Fake Zoom installer delivers a persistent macOS backdoor",
+        category: "Cybersecurity",
+        summary:
+          "Jamf Threat Labs identified CloudSyncD, a backdoor packaged inside a disk image designed to resemble the Zoom installer. The lure asks users to bypass Gatekeeper and enter their macOS password, then installs a universal Mach-O implant that communicates with live command-and-control infrastructure.",
+        whyItMatters:
+          "Trusted brand names and a familiar installer layout do not establish software authenticity. Obtain collaboration tools from managed distribution or vendor-owned domains, prevent standard users from bypassing Gatekeeper, and monitor unexpected launch agents, privileged installer activity and encrypted outbound beacons.",
+        image: "/images/briefings/2026-10-03/cloudsyncd-zoom.svg",
+        imageAlt: "Illustration of a counterfeit Zoom disk image installing the CloudSyncD backdoor on a managed macOS device.",
+        sourceLabel: "Jamf Threat Labs research",
+        sourceUrl: "https://www.jamf.com/blog/cloudsyncd-macos-backdoor-fake-zoom-installer/",
+      },
+      {
+        headline: "AWS commits $1 billion as data-centre resistance becomes a capacity risk",
+        category: "IT Infrastructure",
+        summary:
+          "AWS will spend more than $1 billion over five years in US communities hosting its data centres, including support for energy affordability, water preservation, education and job training. Amazon says more than 100 proposed data-centre moratoriums are under consideration nationwide.",
+        whyItMatters:
+          "Compute capacity depends on community approval, power prices and water availability as well as servers and network links. Treat announced regions as provisional until permits and energisation are confirmed, and retain alternate deployment regions for SaaS services that cannot wait for delayed capacity.",
+        image: "/images/briefings/2026-10-03/aws-community-capacity.svg",
+        imageAlt: "Illustration of an AWS data centre connected to community, electricity and water approval gates before capacity becomes available.",
+        sourceLabel: "Reuters, 2 October 2026",
+        sourceUrl: "https://www.reuters.com/business/retail-consumer/amazon-invest-1-billion-over-five-years-us-data-center-communities-2026-10-02/",
+      },
+      {
+        headline: "European firms expect to finance AI mainly from their own cash",
+        category: "Artificial Intelligence",
+        summary:
+          "An ECB survey of about 5,000 euro-area firms found that 72% planning AI investment expect to use cash flow or retained earnings. Training is a priority for 46% and data infrastructure for 40%, while bank loans, grants and leasing each appear in only 16% of financing plans.",
+        whyItMatters:
+          "For a European SaaS builder, the practical constraint is often cash flow rather than model access. Stage AI investment behind measurable customer outcomes, favour usage-based infrastructure, budget for staff training and avoid locking scarce capital into hardware or long contracts before demand is proven.",
+        image: "/images/briefings/2026-10-03/euro-ai-financing.svg",
+        imageAlt: "Illustration of a European SaaS company funding AI tools, employee training and data infrastructure primarily from retained earnings.",
+        sourceLabel: "European Central Bank blog, 2 October 2026",
+        sourceUrl: "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20261002~7e82912ad5.en.html",
+      },
+      {
+        headline: "AI infrastructure may require $4.2 trillion in new revenue within five years",
+        category: "IT Infrastructure",
+        summary:
+          "Reuters reports that global data-centre spending could exceed $30 trillion by 2050. Bain estimates infrastructure builders must find more than $4.2 trillion of new revenue within five years, while economists warn that broad productivity gains have not yet caught up with the pace of investment.",
+        whyItMatters:
+          "Infrastructure announcements increasingly depend on aggressive utilisation and revenue assumptions. Evaluate providers' debt, committed versus planned capacity and customer concentration; keep workloads portable and calculate cost per completed SaaS task rather than relying on token prices or headline benchmarks.",
+        image: "/images/briefings/2026-10-03/ai-infrastructure-economics.svg",
+        imageAlt: "Illustration comparing a thirty-trillion-dollar AI data-centre build-out with the revenue required to sustain it.",
+        sourceLabel: "Reuters analysis, 3 October 2026",
+        sourceUrl: "https://www.reuters.com/business/retail-consumer/ais-race-transform-world-before-money-runs-out-2026-10-03/",
+      },
+    ],
+  },
+  {
     date: "2026-10-02",
     title: "Daily Tech Briefing — 2 October 2026",
     description:
