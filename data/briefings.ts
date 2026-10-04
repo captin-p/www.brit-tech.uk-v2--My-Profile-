@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-04",
+    title: "Daily Tech Briefing — 4 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch Core Privileged Access Manager first because its authentication and root-command pathways sit at the centre of Unix and Linux administration. Then make AI and data-centre plans accountable for incident reporting, regional power constraints, community approval and total workload demand rather than relying on headline efficiency gains.",
+    stories: [
+      {
+        headline: "Critical BoKS flaws expose privileged Linux and Unix administration",
+        category: "Cybersecurity",
+        summary:
+          "Fortra patched eight vulnerabilities in Core Privileged Access Manager, including a 9.9-rated flaw that can make Active Directory service-account passwords predictable, a command-injection weakness that can execute shell commands as root on the BoKS Master, and a remotely reachable stack overflow in host autoregistration.",
+        whyItMatters:
+          "A compromise of privileged-access infrastructure can provide control over an entire server fleet. Identify every BoKS Manager and Master, upgrade to a fixed release, rotate affected AD service-account credentials and Kerberos material, restrict BCC and WSI network access, and review privileged activity using logs stored outside BoKS.",
+        image: "/images/briefings/2026-10-04/boks-privileged-access.svg",
+        imageAlt: "Illustration of critical vulnerabilities crossing a privileged-access gateway toward managed Linux and Unix servers.",
+        sourceLabel: "Fortra product security advisories and SecurityWeek, 3 October 2026",
+        sourceUrl: "https://www.fortra.com/security/advisories/product-security",
+      },
+      {
+        headline: "New US AI task force will review incident reporting and response",
+        category: "Artificial Intelligence",
+        summary:
+          "The White House has appointed intelligence chief Jay Clayton to lead a task force examining AI risks and opportunities. Its 120-day review will assess reporting mechanisms for breaches, hacks and other AI incidents and recommend improvements to federal response capabilities.",
+        whyItMatters:
+          "Government and enterprise buyers are moving from broad AI principles toward evidence and response procedures. For SaaS products, define reportable agent events, preserve tool and network logs, assign an incident owner, and document how an AI feature can be disabled without taking the underlying service offline.",
+        image: "/images/briefings/2026-10-04/ai-incident-task-force.svg",
+        imageAlt: "Illustration of AI incident reports flowing into a government risk and response task force.",
+        sourceLabel: "Reuters, 3 October 2026",
+        sourceUrl: "https://www.reuters.com/world/us/jay-clayton-lead-trumps-ai-task-force-deliver-report-120-days-wsj-reports-2026-10-03/",
+      },
+      {
+        headline: "US plans a $4.2 billion nuclear loan as AI power demand rises",
+        category: "IT Infrastructure",
+        summary:
+          "The US plans to lend Vistra about $4.2 billion to increase output at least three nuclear stations. Vistra's six reactors currently produce more than 6.5 gigawatts, while US electricity demand is rising after decades of relative stability because of AI data centres, transport electrification and cryptocurrency mining.",
+        whyItMatters:
+          "Cloud and AI capacity increasingly depends on long-term generation projects rather than server availability alone. Ask providers about grid connection, curtailment exposure, backup limits and the portion of capacity that is already energised before committing critical workloads or delivery dates.",
+        image: "/images/briefings/2026-10-04/nuclear-ai-power.svg",
+        imageAlt: "Illustration of nuclear generation supplying a power grid connected to AI data centres.",
+        sourceLabel: "Reuters, 3 October 2026",
+        sourceUrl: "https://www.reuters.com/legal/litigation/us-lend-42-billion-vistra-boost-nuclear-power-output-source-says-2026-10-03/",
+      },
+      {
+        headline: "Ohio's data-centre backlash becomes an infrastructure delivery risk",
+        category: "IT Infrastructure",
+        summary:
+          "Data centres became a prominent issue at an Ohio election rally as residents and politicians debated electricity prices, farmland and water use. Proposed legislation intended to shift more electricity costs toward very large users failed to advance, illustrating how capacity policy can change through local political pressure.",
+        whyItMatters:
+          "A planned campus is not dependable capacity until utility tariffs, permits and community conditions are settled. Track local approval and power-cost exposure in provider assessments, and retain alternate regions when SaaS availability or customer onboarding depends on promised expansion.",
+        image: "/images/briefings/2026-10-04/ohio-capacity-backlash.svg",
+        imageAlt: "Illustration of a data-centre project waiting behind electricity, land, water and community approval gates in Ohio.",
+        sourceLabel: "Associated Press, 3 October 2026",
+        sourceUrl: "https://apnews.com/article/trump-ohio-jon-husted-vivek-ramaswamy-a86aad6b19d4afb2c505b902171ebd8e",
+      },
+      {
+        headline: "Cheaper AI may increase total data-centre electricity demand",
+        category: "Artificial Intelligence",
+        summary:
+          "New McKinsey and BCG analysis indicates that falling token prices and more efficient models can encourage much wider AI use, raising total power demand even when each task consumes less energy. McKinsey expects global data-centre electricity demand to grow about 24% annually through 2030.",
+        whyItMatters:
+          "Efficiency per token is not the same as efficiency per business outcome. Set workload budgets, measure cost and energy per completed task, cache repeated results, route simple work to smaller models and keep a non-AI path for processes where automation adds little value.",
+        image: "/images/briefings/2026-10-04/ai-efficiency-demand.svg",
+        imageAlt: "Illustration showing cheaper AI tokens driving more workloads and greater aggregate data-centre electricity demand.",
+        sourceLabel: "Business Insider analysis of McKinsey and BCG reports, 3 October 2026",
+        sourceUrl: "https://www.businessinsider.com/cheaper-ai-models-may-strain-power-grid-consulting-firms-say-2026-10",
+      },
+    ],
+  },
+  {
     date: "2026-10-03",
     title: "Daily Tech Briefing — 3 October 2026",
     description:
