@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AI-assisted bank attacks</title><desc id="desc">Attack traffic targets several banks while defenders share network indicators.</desc>
+  <rect width="1200" height="630" rx="36" fill="#071827"/><g fill="#16384f" stroke="#80c7e8" stroke-width="4"><path d="M120 250l150-85 150 85z"/><path d="M145 260h250v175H145z"/><path d="M475 250l150-85 150 85z"/><path d="M500 260h250v175H500z"/><path d="M830 250l150-85 150 85z"/><path d="M855 260h250v175H855z"/></g>
+  <g stroke="#c7e9f8" stroke-width="14"><path d="M190 285v110m80-110v110m80-110v110M545 285v110m80-110v110m80-110v110M900 285v110m80-110v110m80-110v110"/></g>
+  <circle cx="600" cy="85" r="45" fill="#ff6b6b"/><text x="578" y="100" fill="white" font-size="48" font-family="sans-serif" font-weight="700">AI</text><path d="M600 130 270 165M600 130l25 35M600 130l380 35" stroke="#ff6b6b" stroke-width="9" stroke-dasharray="14 12"/>
+  <rect x="360" y="490" width="480" height="74" rx="37" fill="#0c6d67"/><text x="420" y="540" fill="white" font-family="sans-serif" font-size="30" font-weight="700">SHARED INDICATORS • 28 IPs</text>
+</svg>
