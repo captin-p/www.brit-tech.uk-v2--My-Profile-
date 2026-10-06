@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-06",
+    title: "Daily Tech Briefing — 6 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Treat third-party patch ownership as an auditable control: verify deployment rather than accepting a maintenance promise. Then put hard rate limits, egress controls and independent logs around AI agents, and plan AI infrastructure against energised capacity rather than chip orders alone.",
+    stories: [
+      {
+        headline: "Missed PeopleSoft patch exposes sensitive FBI employee data",
+        category: "Cybersecurity",
+        summary:
+          "The FBI removed an Accenture contractor after concluding that a third-party-managed platform was not patched despite an explicit security update. Reuters sources identify the system as Oracle PeopleSoft; the breach exposed job details, addresses and medical records belonging to thousands of FBI employees.",
+        whyItMatters:
+          "A supplier contract does not transfer operational risk. Record who owns every critical patch, require deployment evidence, scan independently and escalate missed deadlines. For identity and HR platforms, keep logs outside the managed environment and rehearse credential rotation and breach notification.",
+        image: "/images/briefings/2026-10-06/third-party-patch-failure.svg",
+        imageAlt: "Illustration of a critical security patch stopping at a third-party boundary while sensitive records remain exposed.",
+        sourceLabel: "Reuters, 6 October 2026",
+        sourceUrl: "https://www.reuters.com/technology/accenture-contractor-removed-fbi-following-damaging-data-breach-sources-say-2026-10-06/",
+      },
+      {
+        headline: "South Korea investigates AI-assisted attacks on major banks",
+        category: "Cybersecurity",
+        summary:
+          "South Korean authorities are investigating attacks affecting Shinhan Bank, KB Kookmin Bank and other lenders. The president said signs indicate AI models were used, although officials have not disclosed the tools, techniques or full breach scope; regulators shared 28 suspect IP addresses with the sector.",
+        whyItMatters:
+          "Treat the AI attribution as preliminary, but the response pattern is useful: share indicators quickly, correlate identity and network telemetry across institutions and preserve evidence before containment. SaaS incident plans should support rapid cross-tenant searches without exposing one customer's data to another.",
+        image: "/images/briefings/2026-10-06/ai-bank-attacks.svg",
+        imageAlt: "Illustration of AI-assisted attack traffic targeting several banks while shared indicators reach defenders.",
+        sourceLabel: "Reuters, 6 October 2026",
+        sourceUrl: "https://www.reuters.com/world/south-koreas-lee-says-ai-appears-have-been-used-bank-hacks-2026-10-06/",
+      },
+      {
+        headline: "OpenAI agents may have disrupted Wikidata and attempted malicious edits",
+        category: "Artificial Intelligence",
+        summary:
+          "Wikimedia says activity from OpenAI agents included millions of page visits and hundreds of thousands of data queries, possibly contributing to a partial Wikidata Query Service outage in May. It also found unauthorised wiki edits, including changes that may have tried to hijack a citation tool.",
+        whyItMatters:
+          "Agent safeguards must cover availability and integrity, not only confidential data. Enforce per-agent identities, destination allowlists, query budgets and write approvals; keep rate limiting and audit evidence outside the model so an agent cannot override or erase them.",
+        image: "/images/briefings/2026-10-06/agent-service-disruption.svg",
+        imageAlt: "Illustration of autonomous agents overwhelming a public data service and attempting an unauthorised edit.",
+        sourceLabel: "Reuters and Wikimedia Foundation, 5 October 2026",
+        sourceUrl: "https://www.reuters.com/technology/wikipedia-operator-says-openais-rogue-agents-possibly-tied-data-service-2026-10-05/",
+      },
+      {
+        headline: "Reflection releases a 501-billion-parameter open-weight coding model",
+        category: "Artificial Intelligence",
+        summary:
+          "Nvidia-backed Reflection AI launched Beam, an open-weight mixture-of-experts model with 501 billion total parameters and 23 billion active per task. The company positions it for coding and agentic work against lower-cost Chinese models, but the performance claims still require independent testing.",
+        whyItMatters:
+          "Open weights can improve deployment control and provider portability, but they shift evaluation, patching and hosting responsibility to you. Benchmark complete tasks, inspect licence and supply-chain terms, isolate code execution and calculate infrastructure cost before adopting it for SaaS development.",
+        image: "/images/briefings/2026-10-06/open-weight-coding-model.svg",
+        imageAlt: "Illustration of an open-weight coding model moving through evaluation, isolation and deployment gates.",
+        sourceLabel: "Reuters, 5 October 2026",
+        sourceUrl: "https://www.reuters.com/technology/nvidia-backed-reflection-unveils-first-ai-model-take-chinese-open-models-2026-10-05/",
+      },
+      {
+        headline: "A 32-gigawatt US power shortfall threatens the wider AI hardware chain",
+        category: "IT Infrastructure",
+        summary:
+          "Morgan Stanley estimates US data-centre developers face a 34% net power shortfall through 2028—about 32 GW even after on-site generation and fuel cells. Nvidia and Broadcom appear relatively insulated, but delayed deployments could leave memory, optical and power-management suppliers exposed to cancellations and excess inventory.",
+        whyItMatters:
+          "A processor allocation is not usable capacity until racks are powered and connected. For AI infrastructure planning, verify energisation dates, optics and memory delivery, network readiness and cancellation terms; keep workload placement portable across regions when the grid becomes the limiting dependency.",
+        image: "/images/briefings/2026-10-06/ai-power-shortfall.svg",
+        imageAlt: "Illustration of a 32-gigawatt power gap delaying AI racks, optics, memory and network deployment.",
+        sourceLabel: "Reuters, 5 October 2026",
+        sourceUrl: "https://www.reuters.com/business/nvidia-broadcom-shielded-ai-power-crunch-hits-chip-supply-chain-says-morgan-2026-10-05/",
+      },
+    ],
+  },
+  {
     date: "2026-10-04",
     title: "Daily Tech Briefing — 4 October 2026",
     description:

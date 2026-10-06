@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Open-weight coding model evaluation</title><desc id="desc">An open model passes through evaluation, isolation and deployment gates.</desc>
+  <rect width="1200" height="630" rx="36" fill="#071827"/><circle cx="210" cy="315" r="115" fill="#173a55" stroke="#70d7ca" stroke-width="6"/><path d="M165 315h90m-45-45v90" stroke="#70d7ca" stroke-width="18" stroke-linecap="round"/><text x="125" y="470" fill="#dffaf7" font-family="sans-serif" font-size="26">OPEN WEIGHTS</text>
+  <g fill="#102d43" stroke="#7cb6d6" stroke-width="5"><rect x="390" y="210" width="190" height="210" rx="26"/><rect x="650" y="210" width="190" height="210" rx="26"/><rect x="910" y="210" width="190" height="210" rx="26"/></g>
+  <g fill="white" font-family="sans-serif" text-anchor="middle"><text x="485" y="295" font-size="30" font-weight="700">EVALUATE</text><text x="485" y="345" font-size="22">quality • licence</text><text x="745" y="295" font-size="30" font-weight="700">ISOLATE</text><text x="745" y="345" font-size="22">code • secrets</text><text x="1005" y="295" font-size="30" font-weight="700">DEPLOY</text><text x="1005" y="345" font-size="22">cost • rollback</text></g>
+  <path d="M325 315h65m190 0h70m190 0h70" stroke="#70d7ca" stroke-width="12"/><text x="600" y="550" fill="#9de9df" font-family="sans-serif" font-size="34" text-anchor="middle">501B TOTAL • 23B ACTIVE PER TASK</text>
+</svg>
