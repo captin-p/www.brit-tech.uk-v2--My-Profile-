@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-07",
+    title: "Daily Tech Briefing — 7 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Remove operational-technology management interfaces from the public internet first, then validate access controls and preserve independent telemetry. For AI and infrastructure planning, gate powerful cyber models by verified use case and build capacity forecasts around contracted power, approved sites and complete accelerator supply chains.",
+    stories: [
+      {
+        headline: "8,547 European renewable-energy systems are exposed online",
+        category: "Cybersecurity",
+        summary:
+          "Dutch researchers identified 8,547 internet-facing systems linked to solar parks and wind farms across 35 European countries. Most were administrative login pages, but the researchers believe attackers could have gained full operational control at about 181 sites, including interfaces with start, stop and reset controls.",
+        whyItMatters:
+          "This is classic IT/OT boundary failure. Remove management interfaces from public addressing, require a hardened access gateway with phishing-resistant MFA, segment supervisory networks and alert on configuration or state changes using telemetry stored outside the controller environment.",
+        image: "/images/briefings/2026-10-07/renewable-ot-exposure.svg",
+        imageAlt: "Illustration of exposed internet-facing controls for European wind turbines and solar arrays being moved behind a secure access gateway.",
+        sourceLabel: "Reuters, 6 October 2026",
+        sourceUrl: "https://www.reuters.com/technology/thousands-european-wind-solar-power-systems-exposed-online-dutch-researchers-say-2026-10-06/",
+      },
+      {
+        headline: "Anthropic expands controlled access to cyber-capable AI models",
+        category: "Artificial Intelligence",
+        summary:
+          "Anthropic combined its cyber programs into a three-tier Cyber Verification Program for vetted defenders. It says partners found at least 129,000 verified vulnerabilities between April and July, including more than 33,000 rated critical or high, while Anthropic's open-source scanning found another 5,500 through October.",
+        whyItMatters:
+          "The tiered design is a practical pattern for sensitive SaaS capabilities: verify the operator and organisation, bind permissions to an approved purpose, reduce safeguards only when justified and retain action-level audit evidence. Model access alone still does not replace validation, remediation ownership or responsible disclosure.",
+        image: "/images/briefings/2026-10-07/verified-cyber-ai.svg",
+        imageAlt: "Illustration of cybersecurity teams receiving tiered, verified access to powerful AI models through policy and audit controls.",
+        sourceLabel: "Reuters, 6 October 2026",
+        sourceUrl: "https://www.reuters.com/legal/litigation/anthropic-opens-its-most-powerful-ai-models-more-security-teams-2026-10-06/",
+      },
+      {
+        headline: "Google contracts 3.59 GW of power for data-centre growth",
+        category: "IT Infrastructure",
+        summary:
+          "Google agreed to buy 3,590 MW from Constellation Energy in the PJM grid. The package includes a 20-year agreement for 890 MW from upgraded nuclear plants and a 15-year agreement for another 2,700 MW, while Constellation plans more than $4.3 billion of fleet investment.",
+        whyItMatters:
+          "Cloud capacity is becoming a power-procurement problem. When evaluating regions or AI providers, distinguish contracted electricity from future generation, check delivery dates and curtailment terms, and make sure workload failover crosses both computing and grid failure domains.",
+        image: "/images/briefings/2026-10-07/google-power-capacity.svg",
+        imageAlt: "Illustration of a 3.59-gigawatt power agreement connecting nuclear generation and the PJM grid to data centres.",
+        sourceLabel: "Reuters, 6 October 2026",
+        sourceUrl: "https://www.reuters.com/business/energy/google-enters-massive-36-gw-power-deal-with-constellation-energy-2026-10-06/",
+      },
+      {
+        headline: "Fast permits turn Aragon into a €60 billion data-centre hub",
+        category: "IT Infrastructure",
+        summary:
+          "Spain's Aragon region expects more than €60 billion of data-centre and digital-infrastructure investment over the next decade. Its PIGA fast-track can reduce approvals from years to under 12 months, but critics warn that compressed public consultation and environmental review weaken scrutiny.",
+        whyItMatters:
+          "A fast permit can improve delivery confidence, but legal challenges, national water and electricity rules and community opposition remain capacity risks. Treat announced regions as provisional until permits, grid connections and resource conditions are final, and keep an alternate region ready for critical SaaS workloads.",
+        image: "/images/briefings/2026-10-07/aragon-data-centres.svg",
+        imageAlt: "Illustration of data centres in Aragon passing through accelerated permit, power, water and community-review gates.",
+        sourceLabel: "Reuters, 6 October 2026",
+        sourceUrl: "https://www.reuters.com/technology/fast-track-permits-turn-spains-aragon-into-a-70-billion-data-centre-magnet-what-2026-10-06/",
+      },
+      {
+        headline: "AMD plans a substantial 2027 increase in AI-chip supply",
+        category: "IT Infrastructure",
+        summary:
+          "AMD says it will substantially increase CPU and GPU supply in 2027 and is planning three to five years ahead. The company is coordinating with Foxconn and TSMC on production while seeking sufficient memory from Samsung and SK Hynix, and says it needs more advanced wafer capacity.",
+        whyItMatters:
+          "Accelerator availability depends on wafers, advanced packaging, memory and systems assembly—not the GPU roadmap alone. For infrastructure budgets, qualify complete configurations and delivery commitments, benchmark alternatives and avoid designing a SaaS feature that can run only on one accelerator stack.",
+        image: "/images/briefings/2026-10-07/amd-supply-chain.svg",
+        imageAlt: "Illustration of AMD processors moving through wafer, memory and systems-assembly stages toward AI infrastructure deployment.",
+        sourceLabel: "Reuters, 6 October 2026",
+        sourceUrl: "https://www.reuters.com/world/asia-pacific/amd-plans-substantially-increase-supply-2027-ceo-says-2026-10-06/",
+      },
+    ],
+  },
+  {
     date: "2026-10-06",
     title: "Daily Tech Briefing — 6 October 2026",
     description:

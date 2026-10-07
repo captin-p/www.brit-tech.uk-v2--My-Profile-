@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Renewable-energy control systems exposed online</title><desc id="desc">Wind and solar controls move from the public internet behind a secure operational-technology gateway.</desc>
+  <rect width="1200" height="630" rx="36" fill="#071827"/><path d="M0 470 225 350l210 85 210-125 240 115 315-155v360H0z" fill="#0f3d46"/>
+  <g stroke="#77d6df" stroke-width="12" fill="none" stroke-linecap="round"><path d="M195 405V245"/><path d="m195 245-88-42M195 245l88-42M195 245v-98"/><path d="M985 400V250"/><path d="m985 250-82-42M985 250l82-42M985 250v-94"/></g>
+  <g fill="#58bfc9" stroke="#a9eef2" stroke-width="4"><path d="m315 440 120-38 82 98-128 30z"/><path d="m730 430 122-38 80 96-128 32z"/></g><g stroke="#071827" stroke-width="4"><path d="m356 428 72 88M402 413l74 90M338 462l139-42M360 498l140-43"/><path d="m770 417 73 88M816 402l75 90M752 451l140-42M774 487l139-43"/></g>
+  <rect x="505" y="236" width="190" height="174" rx="24" fill="#18384d" stroke="#ff7e8f" stroke-width="7"/><path d="M545 290h110M545 332h110M545 374h65" stroke="#ffb36b" stroke-width="16" stroke-linecap="round"/><path d="M600 410v78" stroke="#63d9c7" stroke-width="16"/><path d="m559 470 41 41 41-41" fill="none" stroke="#63d9c7" stroke-width="16"/>
+  <text x="600" y="105" fill="white" font-family="sans-serif" font-size="50" font-weight="700" text-anchor="middle">8,547 EXPOSED SYSTEMS</text><text x="600" y="576" fill="#ccecf6" font-family="sans-serif" font-size="29" text-anchor="middle">PUBLIC INTERNET → SECURE OT ACCESS</text>
+</svg>
