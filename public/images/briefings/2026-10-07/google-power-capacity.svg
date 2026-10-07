@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Power agreement for data-centre capacity</title><desc id="desc">Nuclear generation and the PJM grid supply 3.59 gigawatts of contracted power to data centres.</desc>
+  <rect width="1200" height="630" rx="36" fill="#071827"/><g fill="#14374d" stroke="#71c9e3" stroke-width="6"><path d="M100 460h310l-38-238H138z"/><rect x="805" y="195" width="300" height="280" rx="22"/></g><path d="M160 208c-45-65 42-84 10-145M250 208c-45-65 42-84 10-145M340 208c-45-65 42-84 10-145" fill="none" stroke="#91e0e8" stroke-width="18" stroke-linecap="round"/>
+  <g fill="#7ccde5"><rect x="850" y="240" width="210" height="34" rx="8"/><rect x="850" y="302" width="210" height="34" rx="8"/><rect x="850" y="364" width="210" height="34" rx="8"/></g><path d="M410 335h170M620 335h185" stroke="#63d9c7" stroke-width="18"/><circle cx="600" cy="335" r="62" fill="#243a4c" stroke="#ffce69" stroke-width="7"/><path d="m616 282-50 72h41l-19 48 62-92h-43z" fill="#ffd166"/>
+  <text x="600" y="105" fill="white" font-family="sans-serif" font-size="54" font-weight="700" text-anchor="middle">3.59 GW CONTRACTED</text><text x="600" y="555" fill="#ccecf6" font-family="sans-serif" font-size="29" text-anchor="middle">GENERATION • PJM GRID • DATA CENTRES</text>
+</svg>
