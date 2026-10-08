@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-08",
+    title: "Daily Tech Briefing — 8 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Require out-of-band verification before releasing sensitive customer data, even when a request arrives from a trusted domain. Then isolate desktop agents with operating-system-enforced policy, test cloud failover across physical sites, and treat spectrum, power and fully commissioned capacity as first-class infrastructure dependencies.",
+    stories: [
+      {
+        headline: "A trusted government mailbox tricked Revolut into releasing customer data",
+        category: "Cybersecurity",
+        summary:
+          "Hackers took control of an unused Italian government-agency email address and used it to request customer information from Revolut. The bank sent personal data belonging to 680 customers, including 55 in France, and says it will cover the cost of replacement identity documents where required.",
+        whyItMatters:
+          "A legitimate domain does not authenticate an unusual request. For sensitive SaaS exports, require a known case identifier, call-back or signed portal confirmation, dual approval and an audit trail that records exactly which fields were disclosed and why.",
+        image: "/images/briefings/2026-10-08/trusted-mailbox-breach.svg",
+        imageAlt: "Illustration of a compromised trusted mailbox attempting to obtain customer records while an out-of-band verification gate blocks the transfer.",
+        sourceLabel: "Reuters, 7 October 2026",
+        sourceUrl: "https://www.reuters.com/business/finance/revolut-will-cover-costs-customers-hit-by-data-hack-western-europe-ceo-says-2026-10-07/",
+      },
+      {
+        headline: "Microsoft adds operating-system containment for desktop AI agents",
+        category: "Artificial Intelligence",
+        summary:
+          "Microsoft introduced Execution Containers, or MXC, to stop desktop agents accessing data or performing unauthorised tasks. Windows administrators will be able to define agent rules that the operating system enforces, while Microsoft also moves more coding and Copilot work from the cloud onto capable PCs.",
+        whyItMatters:
+          "Treat every endpoint agent as untrusted code with a delegated identity. Enforce filesystem and network boundaries below the model, use short-lived credentials, separate administration from everyday browsing and retain logs outside the agent's writable environment.",
+        image: "/images/briefings/2026-10-08/windows-agent-containment.svg",
+        imageAlt: "Illustration of an AI agent running inside a Windows execution container with filesystem, network and policy boundaries.",
+        sourceLabel: "Reuters, 7 October 2026",
+        sourceUrl: "https://www.reuters.com/business/microsoft-nvidia-ceos-unveil-new-ai-laptop-san-francisco-event-2026-10-07/",
+      },
+      {
+        headline: "Drone attack forces a Yandex data centre to suspend operations",
+        category: "IT Infrastructure",
+        summary:
+          "Drones hit a Yandex data centre in Russia's Ryazan region, causing a fire and fully suspending the site's operations. Yandex Cloud reported electricity problems in one availability zone and advised customers to use other zones; the company's core consumer services remained available.",
+        whyItMatters:
+          "Availability zones are useful only when applications can actually move between them. Test cross-zone and cross-region recovery, keep backups and control planes outside the primary site, map shared power and fibre dependencies and define which services may degrade during evacuation or isolation.",
+        image: "/images/briefings/2026-10-08/data-centre-physical-resilience.svg",
+        imageAlt: "Illustration of a damaged data-centre zone failing over workloads to a physically separate region through independent power and network paths.",
+        sourceLabel: "Reuters, 8 October 2026",
+        sourceUrl: "https://www.reuters.com/world/drones-hit-yandex-data-centre-first-major-attack-russian-data-hub-2026-10-08/",
+      },
+      {
+        headline: "French group plans a €10 billion AI campus in Finland",
+        category: "IT Infrastructure",
+        summary:
+          "Sesterce plans to develop an AI data-centre site at a former paper mill in Jämsä, Finland. The first phase is planned for 200 MW, followed by 600 MW, with a longer-term ambition exceeding 1 GW; the company says an anchor customer is already committed.",
+        whyItMatters:
+          "Industrial-site reuse can accelerate access to land, power and cooling, but announced megawatts are not deployable compute. Verify grid connection, construction stages, network routes, customer concentration and exit options before relying on future European capacity.",
+        image: "/images/briefings/2026-10-08/finland-ai-campus.svg",
+        imageAlt: "Illustration of a Finnish industrial site being converted into a phased AI data-centre campus with power and fibre connections.",
+        sourceLabel: "Reuters, 8 October 2026",
+        sourceUrl: "https://www.reuters.com/business/frances-sesterce-plans-11-billion-ai-investment-finland-2026-10-08/",
+      },
+      {
+        headline: "FCC moves toward new spectrum for direct-to-device satellite service",
+        category: "IT Infrastructure",
+        summary:
+          "The US Federal Communications Commission will vote on 29 October on advancing a 25 MHz spectrum auction for direct-to-device services. It is also considering 482 MHz for supplemental coverage from space and updated rules for hybrid terrestrial and satellite networks.",
+        whyItMatters:
+          "Satellite-to-phone service changes network design rather than merely adding coverage. Plan for variable latency and capacity, roaming and emergency-routing behaviour, spectrum coexistence, lawful-access requirements and clear monitoring at the terrestrial-satellite boundary.",
+        image: "/images/briefings/2026-10-08/direct-to-device-spectrum.svg",
+        imageAlt: "Illustration of smartphones connecting through shared spectrum to satellites and terrestrial mobile networks.",
+        sourceLabel: "Reuters, 7 October 2026",
+        sourceUrl: "https://www.reuters.com/business/media-telecom/us-fcc-vote-advancing-new-spectrum-auction-boost-direct-device-services-2026-10-07/",
+      },
+    ],
+  },
+  {
     date: "2026-10-07",
     title: "Daily Tech Briefing — 7 October 2026",
     description:
