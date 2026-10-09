@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-09",
+    title: "Daily Tech Briefing — 9 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch self-hosted Atlassian Data Center products and review access logs before lower-risk work. Then restrict AI agents with task-scoped identities and independent policy enforcement, keep network fabrics observable across accelerator vendors, and define which workloads may be curtailed before committing to demand-responsive infrastructure.",
+    stories: [
+      {
+        headline: "Attackers target a critical Atlassian Data Center flaw within hours",
+        category: "Cybersecurity",
+        summary:
+          "Honeypots recorded exploitation attempts against CVE-2026-21589 shortly after proof-of-concept code appeared. The unauthenticated file-access flaw affects all supported self-hosted versions of Bitbucket, Confluence, Jira, Bamboo, Crowd, Crucible and Fisheye before their fixed releases; certain Jira-and-Crowd configurations may expose credentials that enable administrative access.",
+        whyItMatters:
+          "Patch every affected node immediately, especially identity-linked deployments. Review reverse-proxy and application logs for requests to known configuration paths, rotate Crowd application credentials where exposure is possible and avoid treating an upgrade as proof that earlier exploitation did not occur.",
+        image: "/images/briefings/2026-10-09/atlassian-data-center-exploit.svg",
+        imageAlt: "Illustration of an unauthenticated request extracting a configuration file from an Atlassian Data Center deployment while administrators apply a patch.",
+        sourceLabel: "SecurityWeek and Atlassian, 8 October 2026",
+        sourceUrl: "https://www.securityweek.com/attackers-target-critical-atlassian-vulnerability-within-hours-of-poc-publication/",
+      },
+      {
+        headline: "US seizes seven domains used to scan critical infrastructure",
+        category: "Cybersecurity",
+        summary:
+          "The US Justice Department says seven domains linked to China's Integrity Technology Group were used to scan and attack critical infrastructure in the United States and other countries. It is the second public disruption of the company's alleged infrastructure after authorities dismantled a botnet of more than 250,000 compromised consumer devices in 2024.",
+        whyItMatters:
+          "Domain seizure disrupts command infrastructure but does not remediate compromised devices. Block and retrospectively search for related indicators, separate management planes from internet-facing services, preserve DNS and flow logs and assume reconnaissance can resume through replacement domains or residential proxies.",
+        image: "/images/briefings/2026-10-09/infrastructure-scanning-disruption.svg",
+        imageAlt: "Illustration of seven malicious domains being disconnected from scanners targeting critical infrastructure networks.",
+        sourceLabel: "Reuters, 9 October 2026",
+        sourceUrl: "https://www.reuters.com/technology/us-announces-effort-disrupt-hacking-infrastructure-run-by-chinas-integrity-tech-2026-10-09/",
+      },
+      {
+        headline: "Google introduces a cross-application Gemini agent for work",
+        category: "Artificial Intelligence",
+        summary:
+          "Google Cloud introduced a Gemini agent that can plan work, use tools and return completed tasks in documents, email and developer environments. It operates across Google Workspace, Microsoft 365 and Slack, and can select between Google's Gemini and Anthropic's Claude models.",
+        whyItMatters:
+          "A universal agent creates a broad identity and data boundary across multiple SaaS systems. Use task-scoped OAuth grants, approval gates for writes and external messages, per-connector audit logs, tenant-level kill switches and model-independent policies that remain enforceable when the agent changes models.",
+        image: "/images/briefings/2026-10-09/enterprise-agent-boundary.svg",
+        imageAlt: "Illustration of an enterprise AI agent connecting to email, documents, code and chat through separate permission and audit gates.",
+        sourceLabel: "Google Cloud and Reuters, 8 October 2026",
+        sourceUrl: "https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026",
+      },
+      {
+        headline: "Token Fabric targets mixed-vendor AI clusters",
+        category: "IT Infrastructure",
+        summary:
+          "Nvidia-backed Upscale AI launched Token Fabric, a hardware-and-software networking platform intended to connect accelerators from different suppliers. The system combines Upscale networking chips, Nvidia Spectrum-X equipment and software that identifies bottlenecks and failing components.",
+        whyItMatters:
+          "Mixed accelerators are useful only if the fabric and software expose predictable performance and failures. Benchmark east-west throughput, congestion control and collective operations under load; require open telemetry and portable orchestration so a nominally multi-vendor cluster does not become locked to one control plane.",
+        image: "/images/briefings/2026-10-09/mixed-ai-token-fabric.svg",
+        imageAlt: "Illustration of different AI accelerator types connected through an observable data-centre network fabric.",
+        sourceLabel: "Reuters, 8 October 2026",
+        sourceUrl: "https://www.reuters.com/business/nvidia-backed-upscale-ai-launches-platform-connect-chips-rival-suppliers-2026-10-08/",
+      },
+      {
+        headline: "Data-centre demand response moves from pilots toward grid policy",
+        category: "IT Infrastructure",
+        summary:
+          "Utilities and technology companies are testing data centres that reduce or shift electricity use during grid stress. Facilities surveyed by the Electric Power Research Institute reported potential peak reductions of 10% to 30%, while a Duke University study estimated flexible demand could avoid $40 billion to $150 billion of grid investment over a decade.",
+        whyItMatters:
+          "Curtailable power can accelerate grid connection, but it converts an energy event into a capacity-management event. Classify workloads by interruption tolerance, test queueing and regional migration, reserve headroom for stateful services and make curtailment thresholds visible in infrastructure and customer SLOs.",
+        image: "/images/briefings/2026-10-09/data-center-demand-response.svg",
+        imageAlt: "Illustration of a data centre reducing non-critical computing load when the electricity grid reaches peak demand.",
+        sourceLabel: "Reuters, 8 October 2026",
+        sourceUrl: "https://www.reuters.com/business/energy/data-centers-flexible-power-usage-could-save-grid-billions-can-they-scale-2026-10-08/",
+      },
+    ],
+  },
+  {
     date: "2026-10-08",
     title: "Daily Tech Briefing — 8 October 2026",
     description:
