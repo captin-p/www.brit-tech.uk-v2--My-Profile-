@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Remote-access social engineering stopped by verification</title><desc id="desc">A fraudulent support request is blocked by identity verification before confidential legal files are reached.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#081522"/><stop offset="1" stop-color="#18334b"/></linearGradient></defs><rect width="1200" height="630" rx="32" fill="url(#bg)"/>
+  <g fill="#122a40" stroke="#60a5fa" stroke-width="4"><rect x="760" y="125" width="300" height="390" rx="28"/><rect x="825" y="195" width="170" height="210" rx="12"/></g><path d="M855 235h110M855 275h110M855 315h80M855 355h105" stroke="#bae6fd" stroke-width="12" stroke-linecap="round"/><circle cx="910" cy="459" r="24" fill="#34d399"/>
+  <circle cx="210" cy="315" r="105" fill="#3a1829" stroke="#fb7185" stroke-width="5"/><circle cx="210" cy="270" r="34" fill="#fecdd3"/><path d="M145 375c18-58 112-58 130 0" fill="#fecdd3"/><path d="M315 315h310" stroke="#fb7185" stroke-width="14" stroke-dasharray="22 18"/>
+  <path d="M640 180c96 29 132 68 132 68v114c0 94-67 150-132 176-65-26-132-82-132-176V248s36-39 132-68z" fill="#0f4c50" stroke="#5eead4" stroke-width="6"/><path d="m580 354 40 40 82-96" fill="none" stroke="#99f6e4" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="72" y="82" fill="#e0f2fe" font-family="Arial" font-size="34" font-weight="700">VERIFY BEFORE REMOTE ACCESS</text><text x="74" y="576" fill="#93c5fd" font-family="Arial" font-size="24">Ticket context · phishing-resistant MFA · recorded session</text>
+</svg>
