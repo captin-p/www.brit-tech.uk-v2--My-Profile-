@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-10",
+    title: "Daily Tech Briefing — 10 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Treat remote-support requests as privileged authentication events, not routine help-desk traffic. Then tighten hardware supply-chain evidence, demand model-specific safety disclosures, prepare agent governance for the full system lifecycle, and keep recoverable backups outside the primary cloud provider and physical failure domain.",
+    stories: [
+      {
+        headline: "Social engineering breaches expose data at major US law firms",
+        category: "Cybersecurity",
+        summary:
+          "Holland & Knight says a threat actor used social engineering to gain remote access to a firm computer, exposing Social Security numbers in a small number of files. Squire Patton Boggs disclosed a separate limited data exposure, while Nelson Mullins said attackers copied documents accessible from one user's laptop.",
+        whyItMatters:
+          "Remote access should require verified ticket context, phishing-resistant MFA and explicit approval for privilege elevation. Limit local document access, record support sessions and retain identity and endpoint telemetry outside the affected account so a single persuaded user cannot silently expose an entire workspace.",
+        image: "/images/briefings/2026-10-10/social-engineering-law-firms.svg",
+        imageAlt: "Illustration of a fraudulent remote-support request being stopped by identity verification before reaching confidential legal files.",
+        sourceLabel: "Reuters, 9 October 2026",
+        sourceUrl: "https://www.reuters.com/legal/government/holland-knight-other-firms-disclose-data-security-breaches-2026-10-09/",
+      },
+      {
+        headline: "Contractor admits helping divert $2.5 billion of restricted AI servers",
+        category: "Cybersecurity",
+        summary:
+          "A contractor linked to Super Micro pleaded guilty to charges involving the illegal export of servers containing Nvidia B200, H100 and H200 accelerators to China. Prosecutors say the scheme used false records and staged dummy servers to conceal the diversion of approximately $2.5 billion in technology.",
+        whyItMatters:
+          "Infrastructure custody needs cryptographic serial-number records, purchaser and destination verification, exception approval and physical audits. Reconcile shipping, rack-discovery and network telemetry so exported or resold hardware cannot disappear behind paperwork alone.",
+        image: "/images/briefings/2026-10-10/ai-server-diversion.svg",
+        imageAlt: "Illustration of AI servers moving through a supply chain while serial-number, destination and physical-audit controls detect diversion.",
+        sourceLabel: "Reuters, 9 October 2026",
+        sourceUrl: "https://www.reuters.com/legal/government/super-micro-contractor-pleads-guilty-scheme-divert-ai-servers-with-nvidia-chips-2026-10-09/",
+      },
+      {
+        headline: "Only 3.6% of reviewed Chinese AI releases disclosed model-specific safety tests",
+        category: "Artificial Intelligence",
+        summary:
+          "SemiAnalysis reviewed 857 releases from nine major Chinese developers and found public model-specific safety results for 31 of them. Only nine had results available at or before launch; the study measures public disclosure and does not establish whether the remaining models were tested privately.",
+        whyItMatters:
+          "A general safety statement is not deployment evidence. Before using a model in SaaS workflows, require version-specific evaluation results for privacy, jailbreak resistance, tool use and dangerous capabilities, then reproduce the tests against your own data, permissions and failure modes.",
+        image: "/images/briefings/2026-10-10/china-ai-safety-disclosure.svg",
+        imageAlt: "Illustration of a small set of AI model releases passing through publicly documented safety evaluations while many remain undisclosed.",
+        sourceLabel: "Reuters, 9 October 2026",
+        sourceUrl: "https://www.reuters.com/legal/litigation/china-ai-developers-publish-safety-tests-just-36-model-releases-report-finds-2026-10-09/",
+      },
+      {
+        headline: "EU says its AI Act already covers rogue-agent risks",
+        category: "Artificial Intelligence",
+        summary:
+          "EU technology chief Henna Virkkunen says the AI Act covers the full lifecycle of capable models and can address risks from autonomous agents. The Commission is assessing safety, transparency and copyright information requested from more than 30 AI companies, with potential fines reaching 7% of global annual turnover.",
+        whyItMatters:
+          "European SaaS builders need continuous evidence, not a one-time launch review. Maintain model and tool inventories, approval and revocation records, post-deployment monitoring, incident logs and a documented owner for every agent that can access customer data or external systems.",
+        image: "/images/briefings/2026-10-10/eu-agent-governance.svg",
+        imageAlt: "Illustration of an autonomous AI agent passing through European lifecycle governance, monitoring and incident-reporting controls.",
+        sourceLabel: "Reuters, 9 October 2026",
+        sourceUrl: "https://www.reuters.com/world/eu-tech-chief-says-bloc-well-equipped-fend-off-rogue-ai-risk-2026-10-09/",
+      },
+      {
+        headline: "A second Yandex data-centre strike leaves a cloud backup unreachable",
+        category: "IT Infrastructure",
+        summary:
+          "A second consecutive drone attack partly disabled Yandex's Kaluga data centre after the previous day's shutdown in Sasovo. One SaaS operator told Reuters that its 8,000 users remained locked out and its backup database could not be reached or restored elsewhere through Yandex Cloud.",
+        whyItMatters:
+          "A backup inside the same provider is not a complete recovery strategy. Keep immutable copies in an independently administered account or provider, export the metadata and keys needed for restoration, and regularly prove that a clean environment can recover without the primary cloud's control plane.",
+        image: "/images/briefings/2026-10-10/cloud-backup-failure-domain.svg",
+        imageAlt: "Illustration of two damaged data-centre regions isolating a cloud backup while an independent recovery copy remains available.",
+        sourceLabel: "Reuters, 9 October 2026",
+        sourceUrl: "https://www.reuters.com/world/europe/russias-yandex-says-second-data-centre-hit-by-drone-attack-2026-10-09/",
+      },
+    ],
+  },
+  {
     date: "2026-10-09",
     title: "Daily Tech Briefing — 9 October 2026",
     description:
