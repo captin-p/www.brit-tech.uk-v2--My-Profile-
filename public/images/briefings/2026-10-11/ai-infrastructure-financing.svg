@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AI infrastructure financing gates</title>
+  <desc id="desc">A planned AI data centre passes through financing, permitting and commissioning gates before becoming operational capacity.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#07182a"/><stop offset="1" stop-color="#132b3b"/></linearGradient><linearGradient id="store"><stop stop-color="#34d399"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient></defs>
+  <rect width="1200" height="630" rx="32" fill="url(#bg)"/>
+  <g transform="translate(76 178)" fill="#112d45" stroke="#67e8f9" stroke-width="4"><rect width="260" height="250" rx="28"/><path d="M38 86h184v126H38z"/><path d="M58 86V51h36v35M112 86V34h36v52M166 86V61h36v25"/></g>
+  <g fill="#7dd3fc"><rect x="133" y="304" width="34" height="58" rx="5"/><rect x="199" y="304" width="34" height="58" rx="5"/></g>
+  <path d="M336 303h104" stroke="#60a5fa" stroke-width="7"/>
+  <g font-family="system-ui,sans-serif" font-weight="700" font-size="20"><g transform="translate(440 133)"><rect width="210" height="118" rx="24" fill="#132f45" stroke="#60a5fa" stroke-width="4"/><circle cx="42" cy="59" r="22" fill="#60a5fa"/><text x="79" y="66" fill="#dbeafe">FINANCE</text></g><g transform="translate(440 267)"><rect width="210" height="118" rx="24" fill="#16383d" stroke="#34d399" stroke-width="4"/><circle cx="42" cy="59" r="22" fill="#34d399"/><text x="79" y="66" fill="#d1fae5">PERMITS</text></g><g transform="translate(440 401)"><rect width="210" height="118" rx="24" fill="#332b55" stroke="#a78bfa" stroke-width="4"/><circle cx="42" cy="59" r="22" fill="#a78bfa"/><text x="79" y="66" fill="#ede9fe">COMMISSION</text></g></g>
+  <path d="M650 192h110M650 326h110M650 460h110" stroke="#64748b" stroke-width="6" stroke-dasharray="14 11"/>
+  <g transform="translate(760 126)"><rect width="350" height="380" rx="34" fill="#102a38" stroke="url(#store)" stroke-width="6"/><path d="M54 269V123h64v146M143 269V78h64v191M232 269V104h64v165" fill="#145566" stroke="#5eead4" stroke-width="4"/><path d="M40 289h270" stroke="#a7f3d0" stroke-width="8"/><g fill="#34d399"><circle cx="86" cy="333" r="14"/><circle cx="175" cy="333" r="14"/><circle cx="264" cy="333" r="14"/></g><text x="175" y="55" text-anchor="middle" fill="#d1fae5" font-family="system-ui,sans-serif" font-size="23" font-weight="800">LIVE CAPACITY</text></g>
+  <text x="63" y="582" fill="#e6fffb" font-family="system-ui,sans-serif" font-size="34" font-weight="700">Funding turns plans into usable capacity</text>
+</svg>

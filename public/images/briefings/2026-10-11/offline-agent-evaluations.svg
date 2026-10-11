@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Offline AI evaluation environment</title>
+  <desc id="desc">An AI test chamber is isolated from the public internet by a closed network egress gate.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#091528"/><stop offset="1" stop-color="#182844"/></linearGradient><radialGradient id="orb"><stop stop-color="#7dd3fc"/><stop offset="1" stop-color="#2563eb"/></radialGradient></defs>
+  <rect width="1200" height="630" rx="32" fill="url(#bg)"/>
+  <g opacity=".25" stroke="#93c5fd"><path d="M0 112h1200M0 210h1200M0 420h1200M0 518h1200"/><path d="M150 0v630M350 0v630M850 0v630M1050 0v630"/></g>
+  <rect x="110" y="120" width="520" height="390" rx="44" fill="#0b2038" stroke="#38bdf8" stroke-width="5"/>
+  <text x="160" y="184" fill="#a5e7ff" font-family="system-ui,sans-serif" font-size="27" font-weight="700">EVALUATION ZONE</text>
+  <circle cx="370" cy="310" r="92" fill="url(#orb)" opacity=".9"/>
+  <g fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"><path d="M324 290c20-48 72-48 92 0M319 334c27 45 83 45 108 0"/><circle cx="337" cy="300" r="7" fill="#fff"/><circle cx="404" cy="300" r="7" fill="#fff"/></g>
+  <g stroke="#67e8f9" stroke-width="5"><path d="M370 218v-42M370 444v-42M278 310h-42M504 310h-42"/></g>
+  <path d="M630 315h168" stroke="#f59e0b" stroke-width="7" stroke-dasharray="16 13"/>
+  <rect x="745" y="185" width="106" height="260" rx="24" fill="#1b2639" stroke="#f59e0b" stroke-width="6"/>
+  <rect x="775" y="215" width="46" height="200" rx="14" fill="#f59e0b"/><circle cx="798" cy="315" r="11" fill="#111827"/>
+  <g fill="none" stroke="#94a3b8" stroke-width="5"><circle cx="1000" cy="310" r="103"/><ellipse cx="1000" cy="310" rx="46" ry="103"/><path d="M897 310h206M918 255h164M918 365h164"/></g>
+  <path d="M928 238l144 144" stroke="#fb7185" stroke-width="18" stroke-linecap="round"/>
+  <text x="75" y="580" fill="#eef7ff" font-family="system-ui,sans-serif" font-size="34" font-weight="700">No live internet during model evaluation</text>
+</svg>

@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-11",
+    title: "Daily Tech Briefing — 11 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Treat AI-assisted intrusion as an observable toolchain: preserve agent session artifacts and correlate them with identity and network evidence. Keep evaluations offline by default, put deterministic containment and an emergency stop below every agent, prepare source-control infrastructure for non-human concurrency, and enforce strict conflict-of-interest controls around incident-response providers.",
+    stories: [
+      {
+        headline: "Forensics tie South Korean bank attacks to ARTEX AI and Claude agents",
+        category: "Cybersecurity",
+        summary:
+          "New forensic evidence strengthens the earlier assessment that AI tools were used against Shinhan, KB Kookmin and Hana banks. CrowdStrike found exposed infrastructure containing Claude Code session histories, ARTEX configuration and memory files; the records linked the actor to the targets and showed ARTEX using several model backends.",
+        whyItMatters:
+          "AI-assisted intrusion leaves operational evidence beyond conventional malware. Preserve agent histories, prompts, configuration and memory files during incident response, then correlate them with DNS, proxy, identity and endpoint telemetry so investigators can reconstruct both the human operator and the automated actions.",
+        image: "/images/briefings/2026-10-11/ai-assisted-bank-attack.svg",
+        imageAlt: "Illustration of AI-agent session records being correlated with network and identity evidence from attacks on three banks.",
+        sourceLabel: "CrowdStrike, 10 October 2026",
+        sourceUrl: "https://www.crowdstrike.com/en-us/blog/unknown-threat-actor-uses-artex-to-target-south-korean-finance/",
+      },
+      {
+        headline: "Anthropic removes live internet access from all internal evaluations",
+        category: "Artificial Intelligence",
+        summary:
+          "Anthropic says every internal model evaluation will run without live internet access until its security and monitoring controls can reliably detect unintended model actions. The company had already isolated some high-risk and cybersecurity evaluations, but recent incidents prompted it to extend that boundary to all tests.",
+        whyItMatters:
+          "Agent test environments should be unable to reach arbitrary public systems by default. Use synthetic targets, deny outbound traffic at the network layer, permit only explicit destinations through a logged proxy and ensure monitoring sits outside the model's credentials and execution environment.",
+        image: "/images/briefings/2026-10-11/offline-agent-evaluations.svg",
+        imageAlt: "Illustration of an AI evaluation environment isolated from the public internet by a network-layer egress boundary.",
+        sourceLabel: "Anthropic, 9 October 2026",
+        sourceUrl: "https://www.anthropic.com/research/investigating-unintended-model-actions",
+      },
+      {
+        headline: "Microsoft calls for a zero-trust emergency brake on AI models",
+        category: "Artificial Intelligence",
+        summary:
+          "Microsoft CEO Satya Nadella argues that organizations should assume advanced models may be compromised and contain them from the start. He calls for observable systems, tamper-resistant human-readable evidence and an authorized way to pause or stop a model while it is completing a task.",
+        whyItMatters:
+          "Put a deterministic policy layer below the model rather than relying on prompt instructions. Issue short-lived task-scoped credentials, log decisions outside the agent, and implement tenant- and agent-level kill switches that revoke access without taking the rest of a SaaS product offline.",
+        image: "/images/briefings/2026-10-11/ai-emergency-brake.svg",
+        imageAlt: "Illustration of a human-operated emergency brake stopping an AI agent before it reaches production systems.",
+        sourceLabel: "The Verge, 10 October 2026",
+        sourceUrl: "https://www.theverge.com/ai-artificial-intelligence/1009337/satya-nadella-says-we-should-assume-all-ai-models-are-compromised",
+      },
+      {
+        headline: "AI-infrastructure borrowing falls sharply as investors demand more evidence",
+        category: "IT Infrastructure",
+        summary:
+          "Global AI-related debt issuance fell to $23 billion in September—less than half August's total—after months of record borrowing, according to Morgan Stanley data reported by the Financial Times. An estimated $466 billion has still been raised this year, but lenders are scrutinizing returns, leverage and construction risk more closely.",
+        whyItMatters:
+          "Announced data-centre capacity is not the same as funded, permitted and commissioned capacity. When choosing an AI or cloud provider, separate operational regions from financing pipelines, avoid unnecessary long prepayments and keep workloads portable if a supplier delays expansion or changes commercial terms.",
+        image: "/images/briefings/2026-10-11/ai-infrastructure-financing.svg",
+        imageAlt: "Illustration of AI data-centre capacity passing through financing, permit and commissioning gates before becoming usable infrastructure.",
+        sourceLabel: "Financial Times, 10 October 2026",
+        sourceUrl: "https://www.ft.com/content/9c13d40e-d2b2-45d5-921c-a68cd4b308f9",
+      },
+      {
+        headline: "Cybersecurity executive arrested on extortion-conspiracy charges",
+        category: "Cybersecurity",
+        summary:
+          "Edward Dubrovsky, who held senior roles at ransomware negotiation and incident-response firms, was arrested in Pennsylvania. Public court records list conspiracy and extortion-related charges, but the complaint remains sealed and the FBI has not confirmed reports linking the case to its ShinyHunters investigation.",
+        whyItMatters:
+          "Incident-response providers may receive privileged access, sensitive evidence and authority over payments. Vet ownership and conflicts, separate investigation from negotiation, require dual approval for data release or funds, scope vendor credentials narrowly and retain an independent audit trail for every consequential action.",
+        image: "/images/briefings/2026-10-11/incident-response-trust-boundary.svg",
+        imageAlt: "Illustration of an external incident-response provider passing through access, conflict-of-interest and dual-approval controls.",
+        sourceLabel: "BleepingComputer and US court records, 10 October 2026",
+        sourceUrl: "https://www.bleepingcomputer.com/news/security/cyber-exec-arrested-in-case-allegedly-tied-to-shinyhunters-hackers/",
+      },
+    ],
+  },
+  {
     date: "2026-10-10",
     title: "Daily Tech Briefing — 10 October 2026",
     description:
