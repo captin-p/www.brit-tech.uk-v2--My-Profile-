@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Emergency brake for an AI agent</title>
+  <desc id="desc">A human-controlled red emergency switch interrupts an AI agent's path to production services.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b1728"/><stop offset="1" stop-color="#24162f"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <rect width="1200" height="630" rx="32" fill="url(#bg)"/>
+  <g transform="translate(95 174)"><rect width="272" height="272" rx="50" fill="#10273c" stroke="#57d9ec" stroke-width="5"/><circle cx="136" cy="116" r="64" fill="none" stroke="#67e8f9" stroke-width="7"/><path d="M105 112c16-38 55-38 69 0M100 146c22 34 62 34 78 0" fill="none" stroke="#67e8f9" stroke-width="7" stroke-linecap="round"/><circle cx="113" cy="119" r="6" fill="#67e8f9"/><circle cx="158" cy="119" r="6" fill="#67e8f9"/><rect x="66" y="211" width="140" height="18" rx="9" fill="#3b82f6"/></g>
+  <path d="M367 310h208" stroke="#60a5fa" stroke-width="8" stroke-dasharray="18 14"/><path d="M547 285l42 25-42 25" fill="#60a5fa"/>
+  <g transform="translate(502 135)" filter="url(#glow)"><rect width="240" height="350" rx="42" fill="#351521" stroke="#fb7185" stroke-width="6"/><circle cx="120" cy="141" r="82" fill="#e11d48" stroke="#fecdd3" stroke-width="9"/><path d="M88 105l64 72M152 105l-64 72" stroke="#fff1f2" stroke-width="17" stroke-linecap="round"/><rect x="52" y="259" width="136" height="46" rx="23" fill="#fecdd3"/><text x="120" y="289" text-anchor="middle" fill="#6b102a" font-family="system-ui,sans-serif" font-size="22" font-weight="800">STOP</text></g>
+  <path d="M742 310h114" stroke="#475569" stroke-width="8" stroke-dasharray="18 14"/>
+  <g transform="translate(856 164)" opacity=".58"><rect width="255" height="292" rx="38" fill="#111f32" stroke="#64748b" stroke-width="5"/><g fill="#94a3b8"><rect x="44" y="52" width="72" height="72" rx="12"/><rect x="139" y="52" width="72" height="72" rx="12"/><rect x="44" y="157" width="72" height="72" rx="12"/><rect x="139" y="157" width="72" height="72" rx="12"/></g></g>
+  <text x="72" y="576" fill="#fff1f2" font-family="system-ui,sans-serif" font-size="34" font-weight="700">Assume compromise. Preserve human control.</text>
+</svg>
