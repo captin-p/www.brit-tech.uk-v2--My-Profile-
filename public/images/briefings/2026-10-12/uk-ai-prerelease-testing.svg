@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Independent pre-release AI testing</title><desc id="desc">A sealed pre-release AI model crosses a controlled boundary into an independent UK safety laboratory.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071628"/><stop offset="1" stop-color="#19354d"/></linearGradient><linearGradient id="c" x1="0" x2="1"><stop stop-color="#43e6cf"/><stop offset="1" stop-color="#5792ff"/></linearGradient></defs>
+  <rect width="1200" height="630" rx="32" fill="url(#bg)"/><path d="M0 492c245-46 402 41 618 0s383-40 582 6v132H0z" fill="#0c2237"/>
+  <g transform="translate(90 166)"><rect width="300" height="274" rx="32" fill="#102f49" stroke="#5ac9eb" stroke-width="4"/><g transform="translate(78 55)" fill="none" stroke="url(#c)" stroke-width="8"><circle cx="72" cy="72" r="58"/><path d="M72 14v116M14 72h116M31 31l82 82M113 31l-82 82"/></g><rect x="72" y="215" width="156" height="14" rx="7" fill="#a9dff0"/></g>
+  <path d="M390 303h167" stroke="#55d8de" stroke-width="8"/><path d="M533 280l34 23-34 23" fill="none" stroke="#55d8de" stroke-width="8"/>
+  <g transform="translate(557 111)"><rect width="92" height="384" rx="20" fill="#0a2137" stroke="#ffb454" stroke-width="5"/><path d="M46 35v314" stroke="#ffb454" stroke-width="5" stroke-dasharray="13 14"/><circle cx="46" cy="192" r="25" fill="#19354d" stroke="#ffd28c" stroke-width="5"/></g>
+  <g transform="translate(710 144)"><path d="M0 96L190 0l190 96v245H0z" fill="#102f49" stroke="#66e2d1" stroke-width="5"/><path d="M0 96h380" stroke="#66e2d1" stroke-width="5"/><rect x="76" y="146" width="228" height="145" rx="20" fill="#153a55"/><g fill="#9cf3e4"><circle cx="125" cy="193" r="17"/><circle cx="190" cy="193" r="17"/><circle cx="255" cy="193" r="17"/></g><path d="M112 247h156" stroke="#ffcc7b" stroke-width="12" stroke-linecap="round"/></g>
+  <text x="60" y="574" fill="#edf8ff" font-family="system-ui,sans-serif" font-size="34" font-weight="700">Independent tests before production release</text>
+</svg>
