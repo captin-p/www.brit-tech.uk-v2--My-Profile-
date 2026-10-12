@@ -21,6 +21,77 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-12",
+    title: "Daily Tech Briefing — 12 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch and investigate exposed GlobalProtect gateways first, then test whether cloud recovery survives the loss of a provider region. For AI services, retain model portability and independent evaluation evidence while tracking capital availability as a real constraint on promised capacity.",
+    stories: [
+      {
+        headline: "GlobalProtect authentication bypass is being exploited in attacks",
+        category: "Cybersecurity",
+        summary:
+          "Palo Alto Networks says it has observed limited exploitation of CVE-2026-0257 against unpatched PAN-OS devices. The flaw can let an unauthenticated attacker establish an unauthorized GlobalProtect VPN connection when authentication-override cookies and a specific certificate configuration are in use.",
+        whyItMatters:
+          "An attacker entering through your own VPN can resemble a legitimate remote user. Identify every portal and gateway that generates or accepts override cookies, upgrade all of them together, terminate old sessions and investigate unusual device names, source networks and post-login activity.",
+        image: "/images/briefings/2026-10-12/globalprotect-auth-bypass.svg",
+        imageAlt: "Illustration of an unauthorized VPN session passing a GlobalProtect gateway while administrators rotate certificates and terminate sessions.",
+        sourceLabel: "Palo Alto Networks security advisory",
+        sourceUrl: "https://security.paloaltonetworks.com/CVE-2026-0257",
+      },
+      {
+        headline: "Ransomware disruption at IDC Frontier remains an active cloud-recovery test",
+        category: "Cybersecurity",
+        summary:
+          "Japanese provider IDC Frontier says a ransomware attack caused the continuing outage in IDCF Cloud East Japan Region 1. The company isolated the affected network and systems and was still investigating the impact and restoring services in its latest public update; reporting says approximately 495 organizations and local governments were affected.",
+        whyItMatters:
+          "Provider-managed snapshots are not enough if ransomware or containment removes the same control plane. Keep immutable backups in an independently administered account or provider, export the keys and metadata needed to restore them and regularly prove recovery in a clean region.",
+        image: "/images/briefings/2026-10-12/idcf-cloud-ransomware.svg",
+        imageAlt: "Illustration of a ransomware-affected cloud region being isolated while an independent backup restores services in a clean region.",
+        sourceLabel: "IDC Frontier incident notice, updated 11 October 2026",
+        sourceUrl: "https://www.idcf.jp/news/topics/20261007001/",
+      },
+      {
+        headline: "US developers can again share pre-release AI models with UK safety testers",
+        category: "Artificial Intelligence",
+        summary:
+          "The US administration has reportedly reversed an earlier restriction that discouraged American AI developers from giving Britain's AI Security Institute early access to new models. The institute evaluates advanced systems before release for dangerous capabilities and misuse risks.",
+        whyItMatters:
+          "Independent evaluation is becoming part of the release pipeline for frontier models. For SaaS products, preserve model-version records, run repeatable tests against your own tools and permissions and keep a rollback path when a provider changes model behavior or access terms.",
+        image: "/images/briefings/2026-10-12/uk-ai-prerelease-testing.svg",
+        imageAlt: "Illustration of a pre-release AI model crossing a controlled boundary into an independent UK safety evaluation laboratory.",
+        sourceLabel: "Reuters, 11 October 2026",
+        sourceUrl: "https://www.reuters.com/legal/litigation/us-reverses-course-britains-testing-ai-models-telegraph-says-2026-10-11/",
+      },
+      {
+        headline: "Broadcom says capital—not chips—is becoming AI infrastructure's main constraint",
+        category: "IT Infrastructure",
+        summary:
+          "Broadcom CEO Hock Tan says the company is overcoming wafer and memory shortages, but the amount of capital required will be the largest constraint on continued AI expansion. The warning shifts attention from component availability to whether announced capacity can actually be financed.",
+        whyItMatters:
+          "A provider roadmap is not usable capacity until funding, power, networking and commissioning are secured. Separate operational regions from financed pipelines, avoid unnecessary long prepayments and keep workloads portable if a supplier slows expansion or changes commercial terms.",
+        image: "/images/briefings/2026-10-12/ai-capital-constraint.svg",
+        imageAlt: "Illustration of funded capital passing through power, networking and commissioning gates before becoming usable AI infrastructure.",
+        sourceLabel: "Reuters, 12 October 2026",
+        sourceUrl: "https://www.reuters.com/world/asia-pacific/broadcom-ceo-says-biggest-hurdle-ai-fuelled-tech-growth-is-capital-not-memory-2026-10-12/",
+      },
+      {
+        headline: "IMF says AI infrastructure investment is sustaining global growth",
+        category: "Artificial Intelligence",
+        summary:
+          "The IMF says heavy AI investment is helping keep global growth near 3% and could lift growth in advanced Asian economies by 0.5 to 1 percentage point. It also expects AI to augment, downgrade or eliminate about 40% of jobs over time, underlining the scale of both the infrastructure boom and the transition risk.",
+        whyItMatters:
+          "Demand may remain strong, but it does not make every AI workload economical. Measure cost per completed task, route narrow decisions to smaller models, preserve non-AI fallbacks and design products around human accountability where automation changes roles or customer outcomes.",
+        image: "/images/briefings/2026-10-12/ai-growth-workforce.svg",
+        imageAlt: "Illustration of AI infrastructure investment driving economic growth while work is redistributed between people and automated systems.",
+        sourceLabel: "Reuters, 12 October 2026",
+        sourceUrl: "https://www.reuters.com/world/china/imf-says-ai-investment-keeps-global-growth-around-3-with-major-asia-benefits-2026-10-12/",
+      },
+    ],
+  },
+
+  {
     date: "2026-10-11",
     title: "Daily Tech Briefing — 11 October 2026",
     description:
