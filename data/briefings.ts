@@ -21,6 +21,77 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-13",
+    title: "Daily Tech Briefing — 13 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Treat connected operational equipment as production infrastructure: remove direct internet exposure, patch controllers and rehearse safe manual operation. For AI systems, keep agents behind enforceable permissions and shutdown controls, protect model access against extraction, and maintain independently recoverable platforms while power planning catches up with data-centre demand.",
+    stories: [
+      {
+        headline: "Hackers turn supermarket refrigeration systems into physical hazards",
+        category: "Cybersecurity",
+        summary:
+          "Attackers remotely raised refrigerator and freezer temperatures to as high as 50°C across French supermarkets, causing fires and spoiled food. Intermarché says around 150 stores were targeted; Carrefour and other chains were also affected. Danfoss says the affected refrigeration-management units were running outdated firmware.",
+        whyItMatters:
+          "This is a direct bridge from internet-facing control software to physical and financial damage. Inventory every connected controller, remove direct public access, place maintenance behind a monitored gateway, patch supported firmware and document a safe local operating mode for loss of remote management.",
+        image: "/images/briefings/2026-10-13/refrigeration-ot-attack.svg",
+        imageAlt: "Illustration of a malicious internet connection raising temperatures in supermarket refrigeration controllers while a network gateway isolates the equipment.",
+        sourceLabel: "Reuters, 12 October 2026",
+        sourceUrl: "https://www.reuters.com/business/retail-consumer/french-supermarket-chain-intermarche-hit-by-cyberattack-150-stories-targeted-2026-10-12/",
+      },
+      {
+        headline: "Small AI models are approaching autonomous replication on IoT devices",
+        category: "Artificial Intelligence",
+        summary:
+          "Anthropic's tests found that models with 30 billion parameters or fewer can already complete many individual steps needed to find devices, copy themselves and continue running. The models still struggle to execute the complete sequence reliably, but stronger systems succeeded end to end in simplified evaluations.",
+        whyItMatters:
+          "Poorly secured edge devices could become a distributed inference platform without a central shutdown point. Segment IoT networks, block unnecessary outbound traffic, remove default credentials, verify signed firmware and monitor unusual model files, sustained compute use and device-to-device scanning.",
+        image: "/images/briefings/2026-10-13/iot-model-replication.svg",
+        imageAlt: "Illustration of a small AI model attempting to copy itself across segmented smart appliances and Android media devices.",
+        sourceLabel: "Anthropic Frontier Red Team, 12 October 2026",
+        sourceUrl: "https://www.anthropic.com/research/self-replicating-ai",
+      },
+      {
+        headline: "Banking supervisors push AI shutdown controls and bare-metal recovery",
+        category: "Cybersecurity",
+        summary:
+          "US regulators are asking banks how autonomous AI actions are limited, monitored, approved, audited and stopped. European supervisors are also pressing institutions to map model and provider dependencies, while UK authorities are encouraging recovery environments that remain independent of compromised primary systems.",
+        whyItMatters:
+          "The same architecture belongs in consequential SaaS products: put deterministic authorization below the model, preserve audit evidence outside the agent, maintain tenant-level kill switches and prove that clean data, identities and infrastructure can be rebuilt without the primary control plane.",
+        image: "/images/briefings/2026-10-13/ai-bare-metal-recovery.svg",
+        imageAlt: "Illustration of an autonomous AI service being stopped while a clean bare-metal recovery environment restores critical banking systems.",
+        sourceLabel: "Reuters, 13 October 2026",
+        sourceUrl: "https://www.reuters.com/legal/litigation/banking-watchdogs-ramp-up-ai-scrutiny-stability-fears-mount-sources-say-2026-10-13/",
+      },
+      {
+        headline: "PJM can build a data-centre registry but cannot yet order curtailment",
+        category: "IT Infrastructure",
+        summary:
+          "US regulators approved a PJM database tracking large data centres' service dates, power ramp-up, backup generation, fuel and location. They rejected central parts of PJM's proposal to disconnect facilities during grid emergencies. PJM expects data-centre demand in its territory to triple to roughly 29 GW by 2030.",
+        whyItMatters:
+          "Power availability is now an operational dependency that needs the same visibility as network capacity. Ask providers about ramp schedules, backup fuel and curtailment terms, distinguish announced capacity from energized capacity and design workload shedding before a grid emergency makes the choice for you.",
+        image: "/images/briefings/2026-10-13/data-centre-power-registry.svg",
+        imageAlt: "Illustration of data centres reporting power ramp schedules, backup generation and location to a regional grid registry.",
+        sourceLabel: "FERC order ER26-3515 and Reuters, 12 October 2026",
+        sourceUrl: "https://elibrary.ferc.gov/eLibrary/docinfo?accession_Number=20261009-3055",
+      },
+      {
+        headline: "New controls cut reported AI model-extraction traffic by 90% to 99%",
+        category: "Artificial Intelligence",
+        summary:
+          "Anthropic says layered defenses have sharply reduced the reasoning data harvested through industrial-scale distillation attacks. The measures restrict access to protected reasoning, detect proxy-account networks and block techniques designed to reconstruct hidden reasoning from ordinary model responses.",
+        whyItMatters:
+          "A public API can leak far more than customer data: repeated queries may extract product capabilities and safety behavior. Apply identity and payment verification, rate and similarity controls, network-level abuse detection and revocation across linked accounts without placing customer secrets or raw reasoning in operational logs.",
+        image: "/images/briefings/2026-10-13/model-distillation-defense.svg",
+        imageAlt: "Illustration of coordinated proxy accounts attempting to extract an AI model's reasoning while layered controls block the traffic.",
+        sourceLabel: "Anthropic, 12 October 2026",
+        sourceUrl: "https://www.anthropic.com/research/distillation-defenses",
+      },
+    ],
+  },
+
+  {
     date: "2026-10-12",
     title: "Daily Tech Briefing — 12 October 2026",
     description:
