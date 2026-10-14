@@ -21,6 +21,77 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-14",
+    title: "Daily Tech Briefing — 14 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch and investigate exposed Ivanti Connect Secure appliances first, then prioritize the actively exploited Windows Shell bypass across managed endpoints. For AI deployments, benchmark models against real workflows, preserve accelerator portability and require genuinely independent evaluation evidence before granting agents consequential permissions.",
+    stories: [
+      {
+        headline: "Actively exploited Ivanti VPN flaw allows unauthenticated commands",
+        category: "Cybersecurity",
+        summary:
+          "Ivanti disclosed CVE-2026-104935, an authentication-bypass vulnerability in Connect Secure that can let a remote unauthenticated attacker run arbitrary commands. The flaw has a CVSS score of 8.6 and is being exploited in the wild; Ivanti has released fixed versions for the affected branches.",
+        whyItMatters:
+          "A compromised VPN appliance can expose credentials and provide a trusted path into internal networks. Patch immediately, run Ivanti's Integrity Checker Tool, preserve external logs, rotate secrets stored on the appliance and investigate lateral movement; rebuild from a trusted image if integrity checks indicate compromise.",
+        image: "/images/briefings/2026-10-14/ivanti-vpn-zero-day.svg",
+        imageAlt: "Illustration of an unauthenticated attack reaching an Ivanti VPN appliance while administrators patch, check integrity and rotate credentials.",
+        sourceLabel: "Ivanti security advisory, 13 October 2026",
+        sourceUrl: "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935",
+      },
+      {
+        headline: "Windows update fixes an exploited Mark-of-the-Web bypass",
+        category: "Cybersecurity",
+        summary:
+          "Microsoft's October security release addresses 1,411 listed vulnerabilities, including 70 rated critical. CVE-2026-96951, a Windows Shell command-injection issue that can bypass Mark of the Web protections, was already being exploited when the update shipped.",
+        whyItMatters:
+          "Prioritize the exploited bypass across managed endpoints instead of treating every patch as equal. Validate the update in a pilot ring, accelerate broad deployment, confirm Defender and EDR health and review telemetry for suspicious archives, scripts and files delivered from the internet.",
+        image: "/images/briefings/2026-10-14/windows-patch-tuesday.svg",
+        imageAlt: "Illustration of a Windows security update closing a Mark-of-the-Web bypass before a downloaded command reaches an endpoint.",
+        sourceLabel: "Microsoft Security Response Center, 13 October 2026",
+        sourceUrl: "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96951",
+      },
+      {
+        headline: "Gemini 4 Argon arrives with launch pricing that doubles after November",
+        category: "Artificial Intelligence",
+        summary:
+          "Google launched Gemini 4 Argon for multi-step work in coding, finance, law, cybersecurity and science. API pricing starts at $2 per million input tokens and $10 per million output tokens, then doubles after 30 November; Google's productivity claims still need testing on independent workloads.",
+        whyItMatters:
+          "Benchmark quality, latency and cost per completed task using your own SaaS workflows, and budget against the post-launch price rather than the introductory rate. Keep the model behind an abstraction layer and give agent tools short-lived, narrowly scoped credentials.",
+        image: "/images/briefings/2026-10-14/gemini-argon-evaluation.svg",
+        imageAlt: "Illustration of the Gemini 4 Argon model being evaluated for task quality, latency, cost and tool permissions before production use.",
+        sourceLabel: "Reuters, 13 October 2026",
+        sourceUrl: "https://www.reuters.com/business/google-launches-flagship-ai-model-gemini-4-argon-developers-businesses-2026-10-13/",
+      },
+      {
+        headline: "Scaleway chooses AMD and Sweden for a European AI supercomputer",
+        category: "IT Infrastructure",
+        summary:
+          "Scaleway plans its first AI supercomputer outside France in Sweden, using AMD Instinct MI355X accelerators and the open-source ROCm software stack. The system will combine Bull and Giga Computing servers, HPE networking, VAST storage and liquid cooling, with Sweden selected partly for low-carbon power.",
+        whyItMatters:
+          "This creates another European route for AI capacity outside the dominant CUDA ecosystem. Test ROCm compatibility and migration effort, then measure the complete platform—including fabric, storage, cooling and data residency—rather than comparing accelerator specifications alone.",
+        image: "/images/briefings/2026-10-14/europe-amd-supercomputer.svg",
+        imageAlt: "Illustration of an AMD-powered European AI supercomputer connected through high-speed networking, storage and low-carbon Swedish power.",
+        sourceLabel: "Reuters, 13 October 2026",
+        sourceUrl: "https://www.reuters.com/business/media-telecom/scaleway-build-amd-powered-ai-supercomputer-sweden-2026-10-13/",
+      },
+      {
+        headline: "AI labs and evaluators still disagree over what safety findings can be published",
+        category: "Artificial Intelligence",
+        summary:
+          "Reuters reports that frontier-model developers and external safety evaluators are still negotiating how much control laboratories should have over publication, methods and trade-secret redactions. With no common standard, model providers retain significant leverage because they control access to unreleased systems.",
+        whyItMatters:
+          "Vendor-sponsored testing is not automatically independent evidence. For consequential SaaS features, require contracts that protect evaluator control of methods and conclusions, disclose redactions and conflicts, preserve access logs and make important findings reproducible before agents receive sensitive data or production permissions.",
+        image: "/images/briefings/2026-10-14/independent-ai-evaluation.svg",
+        imageAlt: "Illustration of an independent AI evaluator separating reproducible safety findings from vendor-controlled redactions and publication decisions.",
+        sourceLabel: "Reuters, 13 October 2026",
+        sourceUrl: "https://www.reuters.com/world/behind-ai-industrys-call-independent-reviews-fight-over-what-gets-made-public-2026-10-13/",
+      },
+    ],
+  },
+
+  {
     date: "2026-10-13",
     title: "Daily Tech Briefing — 13 October 2026",
     description:
