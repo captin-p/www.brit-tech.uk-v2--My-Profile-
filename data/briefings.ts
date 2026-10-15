@@ -21,6 +21,77 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-15",
+    title: "Daily Tech Briefing — 15 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch Cisco Secure Email Gateway and PAN-OS management interfaces first, then investigate both as potential compromises rather than treating the updates as routine maintenance. For longer-term resilience, constrain AI agents below the model, maintain independent connectivity paths and include semiconductor-tool capacity in infrastructure forecasts.",
+    stories: [
+      {
+        headline: "Crafted email attachments can give attackers root access to Cisco gateways",
+        category: "Cybersecurity",
+        summary:
+          "Cisco says attackers are exploiting CVE-2026-76519, a critical Secure Email Gateway flaw that lets an unauthenticated sender write arbitrary files and execute commands as root through a crafted attachment. It affects physical and virtual gateways when AMP File Reputation is enabled and the Content Scanner Tools version is earlier than 25.3.0.5525; no workaround exists.",
+        whyItMatters:
+          "The security appliance inspecting inbound mail can itself become the entry point. Upgrade immediately, identify every affected virtual and physical gateway, preserve mail and system logs outside the appliance, hunt for unfamiliar files and processes and rebuild from trusted media if compromise is suspected.",
+        image: "/images/briefings/2026-10-15/cisco-email-root-zero-day.svg",
+        imageAlt: "Illustration of a crafted email attachment reaching a Cisco Secure Email Gateway while administrators patch and investigate the appliance.",
+        sourceLabel: "Cisco security advisory, 14 October 2026",
+        sourceUrl: "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-afw-zqYJkjxp",
+      },
+      {
+        headline: "Exploited PAN-OS management flaw enables root command execution",
+        category: "Cybersecurity",
+        summary:
+          "Palo Alto Networks observed limited exploitation of CVE-2026-0322, an authenticated remote-code-execution vulnerability in PAN-OS management interfaces. An attacker with valid administrative access and network reachability can execute arbitrary code as root on PA-Series, VM-Series and Panorama systems.",
+        whyItMatters:
+          "A firewall management-plane compromise can undermine the controls and evidence used to protect the network. Install the fixed release, restrict management to a hardened jump host, rotate administrator credentials and API keys, and compare appliance activity with independently stored authentication and flow logs.",
+        image: "/images/briefings/2026-10-15/panos-management-rce.svg",
+        imageAlt: "Illustration of an authenticated attacker targeting a PAN-OS management interface while access is restricted to a monitored jump host.",
+        sourceLabel: "Palo Alto Networks advisory, 14 October 2026",
+        sourceUrl: "https://security.paloaltonetworks.com/CVE-2026-0322",
+      },
+      {
+        headline: "DeepMind calls recent AI-agent hacks an early warning",
+        category: "Artificial Intelligence",
+        summary:
+          "Google DeepMind chair Demis Hassabis said recent agent-driven intrusions show that more serious incidents could follow as systems become stronger. He called for security practices comparable to those used in other high-risk fields and an international, risk-proportionate certification body.",
+        whyItMatters:
+          "Do not wait for an industry standard before securing SaaS agents. Enforce destination allowlists, task-scoped credentials, approval gates and transaction limits beneath the model; retain tamper-resistant tool-call evidence and rehearse how to revoke an agent without disabling the core product.",
+        image: "/images/briefings/2026-10-15/ai-security-standards.svg",
+        imageAlt: "Illustration of AI agents passing through certification, permission and audit controls before reaching production systems.",
+        sourceLabel: "Reuters, 14 October 2026",
+        sourceUrl: "https://www.reuters.com/legal/litigation/google-deepminds-hassabis-calls-ai-hacks-early-warning-shots-2026-10-14/",
+      },
+      {
+        headline: "Starlink disruption exposes Europe's satellite-network concentration risk",
+        category: "IT Infrastructure",
+        summary:
+          "Ukraine reported interruptions to Starshield service on fast-moving terminals and a separate gap in US-provided missile-warning data. The causes remain unclear, but European governments currently lack ready-made replacements for either low-orbit tactical connectivity or US space-based infrared warning systems.",
+        whyItMatters:
+          "A technically redundant service is not resilient when every path depends on one provider, jurisdiction or control plane. Document satellite and terrestrial dependencies, keep an independently operated fallback, test degraded-bandwidth procedures and avoid embedding provider-specific assumptions into critical applications.",
+        image: "/images/briefings/2026-10-15/satellite-dependency.svg",
+        imageAlt: "Illustration of a disrupted satellite connection failing over toward independent terrestrial and alternative-provider network paths.",
+        sourceLabel: "Reuters, 14 October 2026",
+        sourceUrl: "https://www.reuters.com/business/media-telecom/ukraine-struggles-with-starlink-us-satellite-data-europe-has-no-quick-fix-2026-10-14/",
+      },
+      {
+        headline: "ASML says planned capacity increases will not meet AI-chip demand",
+        category: "IT Infrastructure",
+        summary:
+          "ASML says some customers are already seeking advanced lithography-tool orders for 2029 and 2030. The company now expects planned capacity increases of 30% in both 2027 and 2028 to be insufficient, and will raise throughput through equipment upgrades while increasing prices from 2027.",
+        whyItMatters:
+          "AI capacity is constrained several layers before a server reaches a rack. Forecast supply and pricing across fabrication tools, packaging, memory, networking and power—not GPUs alone—and keep workloads portable across hardware generations when delivery schedules or economics change.",
+        image: "/images/briefings/2026-10-15/chipmaking-capacity.svg",
+        imageAlt: "Illustration of semiconductor lithography capacity feeding AI chips, servers and data-centre racks through a constrained supply chain.",
+        sourceLabel: "Reuters, 14 October 2026",
+        sourceUrl: "https://www.reuters.com/business/asml-forecasts-q4-sales-above-expectations-ai-chip-demand-2026-10-14/",
+      },
+    ],
+  },
+
+  {
     date: "2026-10-14",
     title: "Daily Tech Briefing — 14 October 2026",
     description:
