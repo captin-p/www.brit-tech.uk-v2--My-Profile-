@@ -21,6 +21,77 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-16",
+    title: "Daily Tech Briefing — 16 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch self-hosted BeyondTrust Remote Support appliances and preserve their encrypted logs before broader exploitation begins. Then review whether network failover paths actually leave the primary facility, whether AI evaluations are independent in practice, and whether forensic evidence and data-centre plans account for provenance, power and cooling constraints.",
+    stories: [
+      {
+        headline: "China-linked group exploited a critical BeyondTrust remote-support flaw",
+        category: "Cybersecurity",
+        summary:
+          "BeyondTrust disclosed CVE-2026-102764, a critical Remote Support vulnerability that can let a remote attacker perform file operations on an appliance. Google and Mandiant observed a suspected China-linked actor using the flaw to obtain credentials, upload malicious files and tunnel traffic through compromised systems; BeyondTrust warns that broader exploitation may follow disclosure.",
+        whyItMatters:
+          "Remote-support appliances already sit inside a privileged trust boundary. Apply BT26-05 to every self-hosted instance, restrict administrative access, rotate credentials reachable from the appliance and preserve the encrypted /home-partition logs before rebuilding; BeyondTrust says its SaaS tenants were patched on 9 October.",
+        image: "/images/briefings/2026-10-16/beyondtrust-remote-support.svg",
+        imageAlt: "Illustration of an attacker exploiting a remote-support appliance while administrators patch, preserve logs and rotate privileged credentials.",
+        sourceLabel: "BeyondTrust security advisory BT26-05, 15 October 2026",
+        sourceUrl: "https://www.beyondtrust.com/trust-center/security-advisories/bt26-05",
+      },
+      {
+        headline: "Nasdaq network fault affected both primary and secondary same-site feeds",
+        category: "IT Infrastructure",
+        summary:
+          "A network disruption at Nasdaq's Carteret, New Jersey facility caused intermittent data gaps across multiple multicast groups and affected both the primary A and secondary B feeds for its US equities markets. Trading continued, and customers were directed to unaffected backup feeds originating from Chicago.",
+        whyItMatters:
+          "Redundant links are not independent when they share a facility, routing domain or operational control plane. Map common failure points, place the recovery feed in a genuinely separate region and regularly prove that clients can switch, detect missing data and request replay without manual improvisation.",
+        image: "/images/briefings/2026-10-16/nasdaq-network-failover.svg",
+        imageAlt: "Illustration of two market-data feeds failing at one network facility while clients switch to an independent regional backup.",
+        sourceLabel: "Reuters, 15 October 2026",
+        sourceUrl: "https://www.reuters.com/business/nasdaq-reports-network-disruption-us-equities-data-feeds-impacted-2026-10-15/",
+      },
+      {
+        headline: "Anthropic gives METR employee-level access for independent AI evaluation",
+        category: "Artificial Intelligence",
+        summary:
+          "Anthropic has embedded six evaluators from nonprofit METR with access similar to its internal risk teams, including dedicated hardware, office space and internal tools. METR may publish its own findings; narrowly defined sensitive material can be redacted, while METR can publicly challenge attempted censorship without disclosing the protected content.",
+        whyItMatters:
+          "This is a more useful independence test than a vendor-funded report alone. When assessing models for SaaS use, ask who selected the evaluator, what systems and logs they could inspect, who controls publication, what was redacted and whether results apply to the exact model version and permissions you deploy.",
+        image: "/images/briefings/2026-10-16/embedded-ai-evaluator.svg",
+        imageAlt: "Illustration of an independent AI evaluator working inside a model laboratory with protected access and publication controls.",
+        sourceLabel: "Reuters, 15 October 2026",
+        sourceUrl: "https://www.reuters.com/business/anthropic-grants-ai-evaluator-metr-employee-level-access-its-models-2026-10-15/",
+      },
+      {
+        headline: "OpenAI and Meta warn courts that deepfake evidence is becoming harder to detect",
+        category: "Artificial Intelligence",
+        summary:
+          "OpenAI, Meta and technical experts told the US judiciary that generated video is becoming difficult for both people and detection software to distinguish from authentic material. Judges are considering how existing evidence rules should handle manipulated media without prematurely relying on a single AI-specific test.",
+        whyItMatters:
+          "Security investigations and SaaS abuse cases increasingly depend on screenshots, recordings and exported logs. Preserve originals, hashes, timestamps and collection context; require corroborating identity and network telemetry, and treat automated deepfake scores as one signal rather than proof of authenticity.",
+        image: "/images/briefings/2026-10-16/deepfake-evidence-integrity.svg",
+        imageAlt: "Illustration of digital video evidence passing through provenance, hashing and corroboration checks before use in an investigation.",
+        sourceLabel: "Reuters, 15 October 2026",
+        sourceUrl: "https://www.reuters.com/legal/government/openai-meta-caution-us-judiciary-about-risk-deepfake-evidence-2026-10-15/",
+      },
+      {
+        headline: "Data-centre demand for Schneider equipment grows at a triple-digit rate",
+        category: "IT Infrastructure",
+        summary:
+          "Schneider Electric raised its 2026 revenue and profit forecasts after quarterly data-centre demand grew at a triple-digit rate. The company supplies the electrical distribution, cooling and control equipment needed to turn grid capacity into usable racks, and reported record third-quarter revenue of €11.46 billion.",
+        whyItMatters:
+          "Servers and accelerators are only one part of deployable capacity. Validate switchgear, UPS, cooling, commissioning and maintenance lead times alongside power and network availability; for SaaS planning, distinguish a provider's announced megawatts from racks that are fully powered, cooled and serviceable.",
+        image: "/images/briefings/2026-10-16/data-centre-power-cooling.svg",
+        imageAlt: "Illustration of grid power passing through switchgear, cooling and control systems before reaching data-centre racks.",
+        sourceLabel: "Reuters, 16 October 2026",
+        sourceUrl: "https://www.reuters.com/business/schneider-electric-raises-2026-targets-again-booming-data-centre-demand-2026-10-16/",
+      },
+    ],
+  },
+
+  {
     date: "2026-10-15",
     title: "Daily Tech Briefing — 15 October 2026",
     description:
