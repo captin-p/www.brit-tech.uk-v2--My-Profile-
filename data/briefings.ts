@@ -21,6 +21,77 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-18",
+    title: "Daily Tech Briefing — 18 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Treat SaaS application identities as privileged accounts: preserve Entra evidence, disable the seven affected ConnectWise connections and hunt for attacker-added credentials, roles and mailbox rules. Then patch exposed Drupal estates, put explicit accountability around consequential AI-agent actions, reserve human control for high-risk research and discount data-centre capacity that lacks firm financing, permits, power and delivery dates.",
+    stories: [
+      {
+        headline: "ConnectWise application identities exposed Microsoft 365 tenants",
+        category: "Cybersecurity",
+        summary:
+          "ConnectWise says attackers obtained unauthorized access to Cloud Backup application identities and used trusted Microsoft 365 connections. The company disabled seven application identities and suspended Cloud Backup; scheduled backups and restores remain unavailable. ConnectWise says existing archives are preserved, but previously issued tokens may remain valid and tenant-level changes require separate investigation.",
+        whyItMatters:
+          "MFA does not protect application-only authentication. Preserve Entra and Purview evidence, disable the listed app IDs, inspect service-principal credentials, roles, consent grants, federation trusts and mailbox rules, then verify the latest usable recovery point while backups are paused.",
+        image: "/images/briefings/2026-10-18/connectwise-app-identity.svg",
+        imageAlt: "Illustration of a compromised cloud-backup application identity reaching Microsoft 365 tenants while administrators revoke access and preserve evidence.",
+        sourceLabel: "ConnectWise Trust Center update, 18 October 2026",
+        sourceUrl: "https://www.connectwise.com/company/trust/advisories",
+      },
+      {
+        headline: "Drupal warns critical RCE paths may become exploitable quickly",
+        category: "Cybersecurity",
+        summary:
+          "Drupal fixed critical remote-code-execution flaws in the core Field UI module and the contributed Entity List module. Neither is directly exploitable alone, but contributed modules or custom code can expose serious chains, including known paths that require no authentication. Supported sites should move to Drupal 10.6.19, 11.3.19 or 11.4.10, and Entity List 3.0.10.",
+        whyItMatters:
+          "Inventory both core and contributed modules rather than checking the CMS version alone. Patch promptly, review custom integrations that invoke Field UI or Entity List functionality and, if core cannot be updated immediately, uninstall Field UI as Drupal's stated mitigation.",
+        image: "/images/briefings/2026-10-18/drupal-rce-update.svg",
+        imageAlt: "Illustration of a Drupal site closing remote-code-execution paths through core, contributed-module and custom-code updates.",
+        sourceLabel: "Drupal security advisory SA-CORE-2026-014",
+        sourceUrl: "https://www.drupal.org/sa-core-2026-014",
+      },
+      {
+        headline: "Bank of England says AI-agent accountability must be resolved",
+        category: "Artificial Intelligence",
+        summary:
+          "Bank of England governor Andrew Bailey warned that AI agents conducting financial transactions can blur accountability and legal liability when something goes wrong. He called model testing a priority and said regulators need to address the issue as agents move from advice into consequential action.",
+        whyItMatters:
+          "For SaaS agents, define who authorizes each action and who bears the outcome before enabling payments, purchases or account changes. Use explicit confirmation, transaction limits, deterministic policy checks, replayable decision logs and a human dispute path.",
+        image: "/images/briefings/2026-10-18/ai-agent-accountability.svg",
+        imageAlt: "Illustration of an AI agent approaching a financial transaction gate with human approval, policy and audit controls.",
+        sourceLabel: "Financial Times, 17 October 2026",
+        sourceUrl: "https://www.ft.com/content/3185b4cd-ab35-4efc-9d75-dcecc1631625",
+      },
+      {
+        headline: "Anthropic warns the window for AI safeguards is shrinking",
+        category: "Artificial Intelligence",
+        summary:
+          "Anthropic co-founder Jack Clark told policymakers that model capabilities are improving faster than expected and called for strict human oversight and transparency around biological research. He also described a conditional internal forecast in which AI could lift US GDP sharply by 2030, while stressing risks from biological and cyber misuse.",
+        whyItMatters:
+          "Separate capability claims from deployable product value. For high-risk AI features, constrain tools and data by domain, require qualified human approval, version evaluations with the exact model and permissions in production, and preserve a non-AI fallback.",
+        image: "/images/briefings/2026-10-18/ai-safeguard-window.svg",
+        imageAlt: "Illustration of accelerating AI capability approaching a narrowing safeguard window protected by human oversight and evaluation gates.",
+        sourceLabel: "Reuters, 17 October 2026",
+        sourceUrl: "https://www.reuters.com/world/china/anthropics-clark-says-ais-impact-accelerating-quickly-could-vastly-boost-us-gdp-2026-10-17/",
+      },
+      {
+        headline: "Only a minority of planned US AI data-centre capacity looks credible",
+        category: "IT Infrastructure",
+        summary:
+          "A Financial Times review says at least 47 large US AI-infrastructure projects have been delayed or cancelled in 2026, amid financing pressure, permitting resistance and construction problems. It estimates that only about 35% of announced development is presently credible, despite headline plans worth trillions of dollars.",
+        whyItMatters:
+          "Do not treat announced megawatts as usable capacity. Score providers on committed financing, land, permits, grid interconnects, cooling, network paths and delivery history; avoid unprotected long prepayments and keep workloads portable across regions and operators.",
+        image: "/images/briefings/2026-10-18/data-centre-credibility.svg",
+        imageAlt: "Illustration of announced AI data-centre capacity passing through financing, permits, power and construction gates before becoming usable racks.",
+        sourceLabel: "Financial Times, 17 October 2026",
+        sourceUrl: "https://www.ft.com/content/9ea5a37d-15c9-4d5b-94d6-719048c9cd3c",
+      },
+    ],
+  },
+
+  {
     date: "2026-10-17",
     title: "Daily Tech Briefing — 17 October 2026",
     description:
