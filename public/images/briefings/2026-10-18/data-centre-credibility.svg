@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Data-centre capacity credibility gates</title><desc id="desc">Announced AI data-centre capacity passes through financing, permits, power and construction before reaching usable racks.</desc>
+  <rect width="1200" height="630" rx="36" fill="#071725"/><path d="M80 315h1040" stroke="#244b67" stroke-width="10"/>
+  <g font-family="system-ui,sans-serif" font-weight="700" text-anchor="middle"><g transform="translate(95 185)"><circle cx="75" cy="130" r="68" fill="#14344b" stroke="#77c7ff" stroke-width="6"/><path d="M40 130h70M75 95v70" stroke="#77c7ff" stroke-width="11"/><text x="75" y="238" fill="#c9e9ff" font-size="25">ANNOUNCED</text></g>
+  <g transform="translate(310 185)"><path d="M75 55 145 95v80l-70 40-70-40V95Z" fill="#192d42" stroke="#f6c85f" stroke-width="6"/><text x="75" y="143" fill="#f6c85f" font-size="24">£</text><text x="75" y="238" fill="#ffe8a8" font-size="25">FINANCE</text></g>
+  <g transform="translate(505 185)"><rect x="5" y="62" width="140" height="145" rx="18" fill="#192d42" stroke="#ff9f43" stroke-width="6"/><path d="M35 105h80M35 145h80" stroke="#ff9f43" stroke-width="10"/><text x="75" y="238" fill="#ffd1a1" font-size="25">PERMITS</text></g>
+  <g transform="translate(700 185)"><circle cx="75" cy="130" r="70" fill="#192d42" stroke="#74e0c5" stroke-width="6"/><path d="m87 66-57 79h49l-16 54 58-80H72Z" fill="#74e0c5"/><text x="75" y="238" fill="#b9f8e9" font-size="25">POWER</text></g>
+  <g transform="translate(895 145)"><rect x="0" y="50" width="190" height="240" rx="20" fill="#102e44" stroke="#8ea7ff" stroke-width="6"/><g fill="#8ea7ff"><rect x="30" y="82" width="130" height="28" rx="8"/><rect x="30" y="130" width="130" height="28" rx="8"/><rect x="30" y="178" width="130" height="28" rx="8"/><rect x="30" y="226" width="130" height="28" rx="8"/></g><text x="95" y="330" fill="#d2dcff" font-size="25">USABLE RACKS</text></g></g>
+  <g fill="#55d6a8"><circle cx="275" cy="315" r="12"/><circle cx="470" cy="315" r="12"/><circle cx="665" cy="315" r="12"/><circle cx="860" cy="315" r="12"/></g>
+</svg>
