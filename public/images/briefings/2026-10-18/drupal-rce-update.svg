@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Drupal remote-code-execution update</title><desc id="desc">A Drupal web stack closes attack paths across core, contributed modules and custom code.</desc>
+  <rect width="1200" height="630" rx="36" fill="#071827"/><circle cx="990" cy="120" r="150" fill="#0678be" opacity=".16"/>
+  <g transform="translate(125 130)"><rect width="550" height="370" rx="30" fill="#102c43" stroke="#7bdcff" stroke-width="6"/><rect x="35" y="40" width="480" height="70" rx="15" fill="#0a1e2f"/><circle cx="75" cy="75" r="11" fill="#ff6b6b"/><circle cx="110" cy="75" r="11" fill="#f6c85f"/><circle cx="145" cy="75" r="11" fill="#55d6a8"/>
+  <path d="M75 166h250M75 220h360M75 274h300M75 328h210" stroke="#7bdcff" stroke-width="18" stroke-linecap="round" opacity=".7"/><path d="m404 152 65 38v76c0 76-65 104-65 104s-65-28-65-104v-76Z" fill="#0678be" stroke="#d8f4ff" stroke-width="7"/><path d="m371 257 26 26 47-58" fill="none" stroke="#d8f4ff" stroke-width="12"/></g>
+  <g transform="translate(755 158)" fill="#102c43" stroke="#ff9f43" stroke-width="6"><rect width="270" height="86" rx="18"/><rect y="118" width="270" height="86" rx="18"/><rect y="236" width="270" height="86" rx="18"/></g>
+  <g fill="#ffcf7b" font-family="system-ui,sans-serif" font-size="28" font-weight="700"><text x="839" y="212">CORE</text><text x="807" y="330">MODULES</text><text x="815" y="448">CUSTOM</text></g>
+  <path d="M690 315h76" stroke="#ff6b6b" stroke-width="16" stroke-dasharray="18 14"/><path d="m731 284 44 31-44 31" fill="none" stroke="#ff6b6b" stroke-width="12"/>
+</svg>
