@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Compromised cloud application identity</title><desc id="desc">A cloud-backup identity reaches Microsoft 365 tenants while defenders revoke access and preserve evidence.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071525"/><stop offset="1" stop-color="#12324a"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="10"/></filter></defs>
+  <rect width="1200" height="630" rx="36" fill="url(#bg)"/><circle cx="185" cy="118" r="105" fill="#18b6a4" opacity=".12"/><circle cx="1030" cy="510" r="150" fill="#4da3ff" opacity=".11"/>
+  <g fill="none" stroke="#70e1d1" stroke-width="12" stroke-linecap="round"><path d="M150 315h160"/><path d="M890 210h155M890 315h155M890 420h155"/></g>
+  <g transform="translate(310 175)"><rect width="310" height="280" rx="32" fill="#0e2638" stroke="#d9fbf5" stroke-width="5"/><path d="M74 118c6-50 83-63 111-23 47-16 85 56 42 85H68c-42-8-38-60 6-62Z" fill="#18b6a4"/><circle cx="155" cy="218" r="32" fill="#071525" stroke="#f6c85f" stroke-width="8"/><path d="M155 198v40M135 218h40" stroke="#f6c85f" stroke-width="7"/></g>
+  <path d="M620 315h250" stroke="#ff6b6b" stroke-width="18" stroke-dasharray="26 18"/><path d="m842 288 45 27-45 27" fill="none" stroke="#ff6b6b" stroke-width="14"/>
+  <g fill="#102f47" stroke="#8fc7ff" stroke-width="5"><rect x="890" y="155" width="170" height="110" rx="20"/><rect x="890" y="260" width="170" height="110" rx="20"/><rect x="890" y="365" width="170" height="110" rx="20"/></g>
+  <path d="M724 245v140" stroke="#f6c85f" stroke-width="12"/><path d="M690 245h68v90c0 45-68 67-68 67s-68-22-68-67v-90h68" fill="#071525" stroke="#f6c85f" stroke-width="7"/><path d="m658 325 23 23 45-53" fill="none" stroke="#f6c85f" stroke-width="10"/>
+</svg>
