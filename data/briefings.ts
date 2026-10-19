@@ -21,6 +21,77 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-19",
+    title: "Daily Tech Briefing — 19 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Treat power availability as a first-class dependency for AI capacity. Then patch and isolate affected GitLab and Commvault storage, require accountable AI governance and keep utility AI observable, segmented and recoverable.",
+    stories: [
+      {
+        headline: "Microsoft exits UK AI data-centre project delayed by grid constraints",
+        category: "IT Infrastructure",
+        summary:
+          "Microsoft has ended its agreement for Nscale's planned data centre in Loughton, Essex. Reuters reports that the project faced repeated delays and that grid officials did not expect to supply power until the 2030s; Nscale says it is exploring alternative power sources and other UK sites.",
+        whyItMatters:
+          "A signed compute contract does not create usable capacity without a firm grid connection. Require dated power milestones, termination rights and capacity evidence, and keep workloads portable across regions and providers.",
+        image: "/images/briefings/2026-10-19/uk-grid-capacity.svg",
+        imageAlt: "Illustration of a planned UK AI data centre waiting behind a delayed grid connection while workloads move to an alternative region.",
+        sourceLabel: "Reuters, 18 October 2026",
+        sourceUrl: "https://www.reuters.com/business/media-telecom/microsoft-pulls-out-uk-data-center-deal-with-nscale-telegraph-reports-2026-10-18/",
+      },
+      {
+        headline: "Qatar cyber agency flags a critical Commvault storage risk",
+        category: "Cybersecurity",
+        summary:
+          "Qatar's National Cyber Security Agency published a critical advisory for a vulnerability in Commvault File System, the storage layer used by Commvault Cloud and HyperScale environments. The agency warns that remote compromise could expose stored data and disrupt availability.",
+        whyItMatters:
+          "Backup infrastructure combines privileged access with the recovery copies needed during an incident. Identify CVFS versions, follow Commvault's fixed-release guidance, restrict management and data paths, and verify that an immutable recovery copy remains outside the affected trust boundary.",
+        image: "/images/briefings/2026-10-19/commvault-storage-risk.svg",
+        imageAlt: "Illustration of protected backup storage isolated behind network controls while administrators patch a vulnerable Commvault file-system layer.",
+        sourceLabel: "Qatar NCSA advisory, 18 October 2026",
+        sourceUrl: "https://ncsa.gov.qa/media/cybersecurity-advisories",
+      },
+      {
+        headline: "Qatar cyber agency warns self-managed GitLab can expose CI/CD secrets",
+        category: "Cybersecurity",
+        summary:
+          "Qatar's National Cyber Security Agency issued a critical advisory for self-managed GitLab Community and Enterprise editions, warning that a malicious CI/CD configuration could lead to unauthenticated code execution and expose repositories, credentials, secrets and connected deployment systems.",
+        whyItMatters:
+          "A compromised CI server can turn source control into a route to production. Confirm affected versions against GitLab's release notes, update every self-managed node, rotate runner and deployment credentials, and keep runners segmented with short-lived, environment-scoped secrets.",
+        image: "/images/briefings/2026-10-19/gitlab-cicd-risk.svg",
+        imageAlt: "Illustration of a malicious CI/CD configuration being blocked before it can reach repositories, secrets and production deployment systems.",
+        sourceLabel: "Qatar NCSA advisory, 18 October 2026",
+        sourceUrl: "https://ncsa.gov.qa/media/cybersecurity-advisories",
+      },
+      {
+        headline: "Anthropic commits equity to a public-benefit fund",
+        category: "Artificial Intelligence",
+        summary:
+          "Anthropic says it will place 5% of its shares into a new wholly owned Public Benefit Fund focused initially on AI's effects on work and economic opportunity. The company says the allocation may rise as its valuation grows, while governance details and the first programs are still to be announced.",
+        whyItMatters:
+          "A funded commitment is more concrete than a principles statement, but accountability depends on who governs it and what gets measured. Apply the same test to SaaS AI programs: name an owner, publish decision criteria, track outcomes and keep safety obligations separate from promotional spending.",
+        image: "/images/briefings/2026-10-19/anthropic-benefit-fund.svg",
+        imageAlt: "Illustration of company equity flowing into a governed public-benefit fund with transparent oversight and measurable outcomes.",
+        sourceLabel: "Reuters, 18 October 2026",
+        sourceUrl: "https://www.reuters.com/business/anthropic-commit-5-stake-new-public-benefit-fund-2026-10-18/",
+      },
+      {
+        headline: "Connecticut officials seek oversight of AI inside utility operations",
+        category: "Artificial Intelligence",
+        summary:
+          "Connecticut consumer officials asked the state utility regulator to investigate how electricity, gas and water providers use AI for forecasting, equipment management and customer service. The request focuses on human oversight, data security, third-party access and customer disclosure.",
+        whyItMatters:
+          "AI touching operational technology needs stricter boundaries than a general office assistant. Keep models off protected control networks, minimize exported telemetry, record consequential recommendations, require a responsible operator and preserve tested manual fallback procedures.",
+        image: "/images/briefings/2026-10-19/utility-ai-oversight.svg",
+        imageAlt: "Illustration of an AI system advising a utility control room while human oversight, network segmentation and manual fallback remain in place.",
+        sourceLabel: "CT Insider, 18 October 2026",
+        sourceUrl: "https://www.ctinsider.com/business/article/ct-ai-utilities-pura-investigation-21105418.php",
+      },
+    ],
+  },
+
+  {
     date: "2026-10-18",
     title: "Daily Tech Briefing — 18 October 2026",
     description:
