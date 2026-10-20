@@ -21,6 +21,77 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-20",
+    title: "Daily Tech Briefing — 20 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Assume AI-assisted attackers can run broad reconnaissance and exploitation at machine speed: reduce external attack surface, prioritize exploitable paths and keep detection evidence outside production systems. Give every internal agent its own zero-standing-access identity, review supplier dependencies exposed by the Ahold outage, and treat proposed AI-capacity contracts as provisional until power, financing and delivery milestones are independently verified.",
+    stories: [
+      {
+        headline: "One attacker used AI agents to compromise more than 100 websites",
+        category: "Cybersecurity",
+        summary:
+          "A Chinese-speaking attacker used the open-source Cairn agent platform to find and exploit vulnerabilities across more than 100 company websites, including sites associated with Deere, SharkNinja and Cummins. Reuters reports that the campaign cost roughly $5,000 in model tokens and required limited direct intervention after the attacker supplied high-level instructions.",
+        whyItMatters:
+          "AI lowers the cost of testing many targets and chaining subtle weaknesses. Continuously inventory internet-facing assets, remove abandoned endpoints, rate-limit suspicious discovery traffic, prioritize reachable exploit paths and correlate WAF, identity, DNS and endpoint evidence before attackers can iterate again.",
+        image: "/images/briefings/2026-10-20/agentic-web-attacks.svg",
+        imageAlt: "Illustration of autonomous attack agents probing many public websites while layered network and identity controls detect and block them.",
+        sourceLabel: "Reuters investigation, 19 October 2026",
+        sourceUrl: "https://www.reuters.com/legal/government/how-one-hacker-used-ai-agents-few-thousand-dollars-break-into-scores-sites-2026-10-19/",
+      },
+      {
+        headline: "Ahold cyber incident keeps major retail delivery systems offline",
+        category: "Cybersecurity",
+        summary:
+          "Ahold Delhaize reported malicious activity to Dutch police after taking systems offline across European and US brands. Albert Heijn's online deliveries have been unavailable for at least 11 days, US retail websites remained offline and distribution channels were disrupted, although physical stores continued operating.",
+        whyItMatters:
+          "Recovery is a business-workflow problem, not just a server-restoration problem. Map dependencies between ordering, inventory, warehouses, transport and customer communications; define a degraded manual mode and test whether suppliers can exchange the minimum data without the primary platform.",
+        image: "/images/briefings/2026-10-20/retail-cyber-recovery.svg",
+        imageAlt: "Illustration of a retail ordering platform recovering through separate inventory, distribution and manual continuity paths after a cyber incident.",
+        sourceLabel: "Reuters, 19 October 2026",
+        sourceUrl: "https://www.reuters.com/business/ahold-delhaize-reports-cybersecurity-incident-dutch-police-2026-10-19/",
+      },
+      {
+        headline: "US orders DeepSeek removed from civilian government IT",
+        category: "Artificial Intelligence",
+        summary:
+          "The US Department of Homeland Security ordered civilian agencies to remove DeepSeek products and third-party services built with its models, citing risks including sensitive-data transfer, security vulnerabilities and intelligence collection. Agencies were also told to monitor traffic entering and leaving government websites.",
+        whyItMatters:
+          "An AI dependency can enter through an SDK, hosted API or downstream SaaS product even when staff never install the named application. Maintain a model and provider bill of materials, inspect outbound destinations, document data-processing locations and keep a tested replacement path.",
+        image: "/images/briefings/2026-10-20/deepseek-government-removal.svg",
+        imageAlt: "Illustration of a government network removing an AI service while administrators trace direct and third-party dependencies and monitor outbound traffic.",
+        sourceLabel: "Reuters, 19 October 2026",
+        sourceUrl: "https://www.reuters.com/technology/us-banning-chinese-ai-deepseek-government-agency-it-systems-2026-10-19/",
+      },
+      {
+        headline: "Microsoft says enterprise agents should begin with no permissions",
+        category: "Artificial Intelligence",
+        summary:
+          "Microsoft expanded Project Perception and Agent 365 controls for enterprise AI agents. Its design gives agents separate identities, starts them with no standing authority and grants task-scoped, time-limited permissions; higher-impact actions can require verified human approval.",
+        whyItMatters:
+          "Do not let an agent inherit a user's full SaaS or administrative session. Issue a distinct workload identity, bind tools and destinations to the approved task, expire permissions automatically and store monitoring evidence somewhere the agent cannot disable or modify.",
+        image: "/images/briefings/2026-10-20/agent-zero-permissions.svg",
+        imageAlt: "Illustration of an enterprise AI agent starting with zero permissions and receiving a short-lived task-specific authorization after human approval.",
+        sourceLabel: "Microsoft Security Blog, 19 October 2026",
+        sourceUrl: "https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/",
+      },
+      {
+        headline: "Anthropic and Nscale discuss a second $45 billion cloud-capacity deal",
+        category: "IT Infrastructure",
+        summary:
+          "Nscale is discussing a second potential agreement to provide Anthropic with AI computing capacity at its West Virginia Monarch campus. The proposed 460-megawatt facility would use Nvidia Vera Rubin systems, but negotiations remain ongoing and details may change.",
+        whyItMatters:
+          "A proposed contract and headline megawatts are not operational capacity. Distinguish negotiation from a binding commitment and verify financing, grid interconnection, cooling, network paths, hardware delivery and commissioning milestones before relying on future regions.",
+        image: "/images/briefings/2026-10-20/nscale-anthropic-capacity.svg",
+        imageAlt: "Illustration of a proposed AI cloud campus passing through contract, financing, power, cooling and network-delivery gates before becoming usable capacity.",
+        sourceLabel: "Reuters, 19 October 2026",
+        sourceUrl: "https://www.reuters.com/technology/nscale-anthropic-talks-45-billion-cloud-computing-deal-bloomberg-news-reports-2026-10-19/",
+      },
+    ],
+  },
+
+  {
     date: "2026-10-19",
     title: "Daily Tech Briefing — 19 October 2026",
     description:
