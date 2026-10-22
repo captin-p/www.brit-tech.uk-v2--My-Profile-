@@ -21,6 +21,77 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-22",
+    title: "Daily Tech Briefing — 22 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch PHP and internet-facing Plex servers first, then hunt rather than merely update: both flaws have active exploitation pressure. Treat the Onamae incident as a reminder that a provider compromise can place malware directly inside tenant servers. Keep AI models portable across clouds, and include subsea route and landing-station diversity when assessing international network resilience.",
+    stories: [
+      {
+        headline: "PHP2Shell exploitation reaches millions of attempts",
+        category: "Cybersecurity",
+        summary:
+          "PHP released emergency fixes for CVE-2026-109618 and CVE-2026-109619, two critical unauthenticated remote-code-execution vulnerabilities affecting PHP installations that serve web requests. Cloudflare says exploitation traffic rose from thousands of attempts before disclosure to millions afterwards.",
+        whyItMatters:
+          "PHP sits beneath many WordPress, Drupal, Joomla and custom SaaS deployments. Upgrade to PHP 8.5.12, 8.4.27, 8.3.36 or 8.2.35, rebuild containers and server images, verify the runtime actually changed and review web, process and outbound-network evidence for exploitation.",
+        image: "/images/briefings/2026-10-22/php2shell-rce.svg",
+        imageAlt: "Illustration of widespread exploit traffic targeting PHP web servers while administrators patch, rebuild and inspect them.",
+        sourceLabel: "PHP Security Team advisory, 21 October 2026",
+        sourceUrl: "https://www.php.net/archive/2026.php",
+      },
+      {
+        headline: "Attackers chain four Plex flaws into elevated code execution",
+        category: "Cybersecurity",
+        summary:
+          "CISA warned that attackers are exploiting the Plex2Shell chain against Plex Media Server. The four vulnerabilities can expose an administrator token and progress to elevated code execution; exploitation reports include cryptominer deployment. Versions before 1.43.3.10861 are affected.",
+        whyItMatters:
+          "Home-lab and media servers can become a bridge into trusted networks. Upgrade immediately, remove direct internet exposure, isolate Plex from management and production segments, rotate its token and investigate new libraries, processes, scheduled tasks and outbound connections.",
+        image: "/images/briefings/2026-10-22/plex2shell-chain.svg",
+        imageAlt: "Illustration of four chained Plex Media Server vulnerabilities being blocked before reaching an administrator token and host execution.",
+        sourceLabel: "BleepingComputer report citing CISA and Plex, 21 October 2026",
+        sourceUrl: "https://www.bleepingcomputer.com/news/security/cisa-hackers-chain-plex-flaws-in-plex2shell-attacks-to-breach-servers/",
+      },
+      {
+        headline: "Onamae provider compromise installed malware on up to 26,739 servers",
+        category: "IT Infrastructure",
+        summary:
+          "Japan's Onamae Desktop Cloud says an unauthorized party installed malicious programs inside customer server environments. The provider progressively shut down all Desktop Cloud plans, warned that stored data may have been exposed and gave no restart estimate.",
+        whyItMatters:
+          "A clean tenant configuration cannot protect you if the hosting control plane is compromised. Rotate every secret stored on affected servers, rebuild from trusted external images, validate backups outside the provider and maintain a tested route to move DNS, workloads and data elsewhere.",
+        image: "/images/briefings/2026-10-22/onamae-vps-compromise.svg",
+        imageAlt: "Illustration of a compromised hosting control plane installing malware across many customer servers while clean workloads move to another provider.",
+        sourceLabel: "Onamae.com incident notice, 21 October 2026",
+        sourceUrl: "https://www.onamae.com/news/article/11584",
+      },
+      {
+        headline: "OpenAI models are coming to Google Cloud's enterprise marketplace",
+        category: "Artificial Intelligence",
+        summary:
+          "OpenAI will offer frontier models including GPT-6 Astra and the Codex coding agent through Google Cloud Model Garden and Marketplace. Customers will be able to use existing cloud commitments and Google's access-control and data-governance services for regulated workloads.",
+        whyItMatters:
+          "A second major distribution route can simplify procurement, but billing portability is not technical portability. Keep prompts, evaluations and tool interfaces provider-neutral; verify retention, regional processing, identity boundaries and whether governance settings follow the model across hosting channels.",
+        image: "/images/briefings/2026-10-22/openai-google-cloud.svg",
+        imageAlt: "Illustration of enterprise AI workloads accessing OpenAI models through Google Cloud governance while retaining a portable application layer.",
+        sourceLabel: "Reuters, 21 October 2026",
+        sourceUrl: "https://www.reuters.com/business/retail-consumer/openai-sell-its-top-models-google-cloud-latest-enterprise-push-2026-10-21/",
+      },
+      {
+        headline: "New Southeast Asian cable adds 16 fibre pairs on a geopolitically routed path",
+        category: "IT Infrastructure",
+        summary:
+          "The US-backed MViSTA subsea cable will link Malaysia, Vietnam, Singapore and Thailand over approximately 2,500 kilometres. Developers expect 16 fibre pairs, a late-2028 launch and a supplier choice between NEC and Alcatel Submarine Networks; the planned route avoids disputed South China Sea areas.",
+        whyItMatters:
+          "International resilience depends on physical route, landing stations, repair access and political exposure—not only advertised capacity. When selecting regional cloud or transit providers, check whether supposedly independent paths share the same cable, landing point or jurisdiction.",
+        image: "/images/briefings/2026-10-22/mvista-subsea-cable.svg",
+        imageAlt: "Illustration of a sixteen-pair subsea fibre route linking Malaysia, Vietnam, Singapore and Thailand through diverse landing points.",
+        sourceLabel: "Reuters, 22 October 2026",
+        sourceUrl: "https://www.reuters.com/world/asia-pacific/new-us-backed-southeast-asia-data-cable-pick-nec-or-alcatel-supplier-developer-2026-10-22/",
+      },
+    ],
+  },
+
+  {
     date: "2026-10-21",
     title: "Daily Tech Briefing — 21 October 2026",
     description:
