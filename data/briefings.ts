@@ -21,6 +21,77 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-23",
+    title: "Daily Tech Briefing — 23 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch self-managed GitLab before lower-risk work and treat CI/CD hosts as credential-bearing control-plane systems. Monitor encrypted overlay and mesh traffic by behaviour rather than reputation alone, keep AI security evaluation tied to reproducible technical outcomes, include electrical distribution materials in data-centre capacity plans, and compare local AI against hosted models using full lifecycle cost and governance requirements.",
+    stories: [
+      {
+        headline: "GitLab fixes a maximum-severity unauthenticated code-execution flaw",
+        category: "Cybersecurity",
+        summary:
+          "GitLab patched CVE-2026-110264, a CVSS 10.0 integer-overflow vulnerability in its regular-expression compiler. A remote unauthenticated attacker could execute arbitrary code on affected self-managed CE and EE servers. GitLab.com and sufficiently recent Dedicated tenants are already patched.",
+        whyItMatters:
+          "A compromised GitLab server can expose repositories, runner credentials and deployment secrets. Upgrade self-managed installations to 19.5.1, 19.4.3, 19.3.6, 19.2.9, 19.1.9, 19.0.10 or 18.11.13, then review GitLab's published crash and render-error detections and rotate reachable secrets if exploitation is suspected.",
+        image: "/images/briefings/2026-10-23/gitlab-rce.svg",
+        imageAlt: "Illustration of an unauthenticated request being stopped before reaching GitLab repositories, runners and deployment secrets.",
+        sourceLabel: "GitLab critical patch release, 21 October 2026",
+        sourceUrl: "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/",
+      },
+      {
+        headline: "State-linked attackers hide command traffic inside a decentralised mesh",
+        category: "Cybersecurity",
+        summary:
+          "ESET uncovered MythicRatatoskr, a Go backdoor whose command server was concealed inside the volunteer-run Yggdrasil mesh network. Russia-aligned UAC-0099 gained access to a Ukrainian grain company and handed it to Sandworm, which later used Microsoft's legitimate SDelete utility for data destruction.",
+        whyItMatters:
+          "A destination can look unfamiliar yet remain reachable through an encrypted overlay. Baseline installed networking software, alert on new virtual adapters and persistent IPv6 mesh traffic, restrict application egress, monitor administrative-tool deployment through Group Policy and keep recovery copies beyond domain-admin reach.",
+        image: "/images/briefings/2026-10-23/yggdrasil-mesh-c2.svg",
+        imageAlt: "Illustration of hidden command traffic traversing a decentralised IPv6 mesh before a destructive action is blocked.",
+        sourceLabel: "ESET Research, 22 October 2026",
+        sourceUrl: "https://www.welivesecurity.com/en/eset-research/mythicratatoskr-yggdrasil-enabled-backdoor-deployed-uac0099-sandworm-collaboration/",
+      },
+      {
+        headline: "OpenAI and Poland's NASK link AI safety research to operational cyber defence",
+        category: "Artificial Intelligence",
+        summary:
+          "OpenAI and Poland's NASK National Research Institute agreed to collaborate on AI safety, security and technical evaluations. Earlier work through OpenAI's Daybreak programme helped CERT Polska discover six MikroTik RouterOS vulnerabilities, including a chain that could take control of devices without authentication; MikroTik released fixes.",
+        whyItMatters:
+          "The useful measure of an AI-security partnership is reproducible defensive output, not a memorandum. For network testing, isolate targets, define authorization boundaries, preserve model and tool-call evidence, require vendor-coordinated disclosure and retest the exact fixed firmware before closing findings.",
+        image: "/images/briefings/2026-10-23/openai-nask-router-security.svg",
+        imageAlt: "Illustration of an AI-assisted security laboratory testing a MikroTik router inside an isolated and audited environment.",
+        sourceLabel: "OpenAI and NASK announcement, 23 October 2026",
+        sourceUrl: "https://openai.com/index/openai-nask-ai-safety-security-partnership/",
+      },
+      {
+        headline: "Electrical cable production becomes another AI data-centre bottleneck",
+        category: "IT Infrastructure",
+        summary:
+          "Nexans says demand for low- and medium-voltage cable is rising faster than production capacity as AI data centres expand. A new cross-linked polyethylene cable line can take about three years to build, while France's Enedis has moved from annual purchasing to six- or seven-year contracts to secure supply.",
+        whyItMatters:
+          "Servers and grid megawatts do not become usable racks without switchgear, distribution cable, cooling and commissioning. When evaluating a facility or provider roadmap, request delivery dates for electrical balance-of-plant equipment and distinguish reserved materials from unfunded or merely forecast capacity.",
+        image: "/images/briefings/2026-10-23/data-centre-cable-bottleneck.svg",
+        imageAlt: "Illustration of grid power waiting behind constrained electrical-cable production before reaching AI data-centre racks.",
+        sourceLabel: "Reuters, 22 October 2026",
+        sourceUrl: "https://www.reuters.com/technology/cable-capacity-emerges-bottleneck-ai-data-centres-nexans-says-2026-10-22/",
+      },
+      {
+        headline: "A US court tests local AI servers alongside commercial services",
+        category: "Artificial Intelligence",
+        summary:
+          "Louisiana's Fifth Circuit Court of Appeal installed two Dell servers with Nvidia chips, costing about $65,000 each, to develop domain-specific tools while continuing to evaluate hosted products. Initial work targets document intake and compliance, with future checks for fabricated citations and hidden prompt-injection instructions.",
+        whyItMatters:
+          "This is a practical hybrid-AI architecture decision. Compare hosted and local models using total cost, patching, power, capacity utilization, retention, identity controls and evaluation quality. Keep the application layer portable so sensitive workflows can move without rewriting the product.",
+        image: "/images/briefings/2026-10-23/hybrid-local-ai.svg",
+        imageAlt: "Illustration of a governed application choosing between local AI servers and a hosted model service.",
+        sourceLabel: "Reuters, 22 October 2026",
+        sourceUrl: "https://www.reuters.com/legal/government/louisiana-court-buys-ai-servers-test-how-tech-can-streamline-workload-2026-10-22/",
+      },
+    ],
+  },
+
+  {
     date: "2026-10-22",
     title: "Daily Tech Briefing — 22 October 2026",
     description:
