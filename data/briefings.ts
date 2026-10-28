@@ -21,6 +21,77 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-28",
+    title: "Daily Tech Briefing — 28 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Move managed browsers to Firefox 159 first, then check collaboration endpoints for unexpected WhatsApp attachments and linked sessions. Keep public-service and SaaS recovery independent of internet-facing systems, treat AI-network fabrics as a measurable design choice, and include memory yield and availability—not announced production alone—in accelerator-capacity plans.",
+    stories: [
+      {
+        headline: "Firefox 159 closes sandbox escapes and same-origin bypasses",
+        category: "Cybersecurity",
+        summary:
+          "Mozilla released Firefox 159 with a large set of high-severity fixes, including a same-origin-policy bypass, a sandbox escape and networking privilege escalation. Several memory-safety flaws could also lead to code execution or escape from browser isolation.",
+        whyItMatters:
+          "Browsers routinely hold SaaS admin sessions, cloud consoles and developer credentials. Push Firefox 159 through endpoint management, confirm restart completion, update supported ESR and Thunderbird channels where deployed, and keep privileged administration in a separate browser profile with tightly controlled extensions.",
+        image: "/images/briefings/2026-10-28/firefox-security-boundary.svg",
+        imageAlt: "Illustration of a browser security boundary blocking a same-origin bypass, privilege escalation and sandbox escape.",
+        sourceLabel: "Mozilla Foundation Security Advisory 2026-118, 27 October 2026",
+        sourceUrl: "https://www.mozilla.org/en-US/security/advisories/mfsa2026-118/",
+      },
+      {
+        headline: "Intrusion attempt forces the US election regulator to shut public services",
+        category: "Cybersecurity",
+        summary:
+          "The US Federal Election Commission temporarily took web-facing systems offline after detecting an attempted breach. The precaution disrupted public campaign-finance disclosures immediately before the midterm elections, while the investigation continued.",
+        whyItMatters:
+          "Security containment can itself create a serious availability incident. Separate public filing and status services from investigative systems, maintain read-only recovery copies, publish an out-of-band service-status channel and rehearse restoring essential customer-facing functions without reconnecting a possibly compromised environment.",
+        image: "/images/briefings/2026-10-28/fec-service-continuity.svg",
+        imageAlt: "Illustration of a public filing service switching to an isolated recovery path during an intrusion attempt.",
+        sourceLabel: "Reuters, 27 October 2026",
+        sourceUrl: "https://www.reuters.com/technology/hacker-trying-breach-us-federal-election-commission-system-email-shows-2026-10-27/",
+      },
+      {
+        headline: "Compromised WhatsApp accounts spread malware through trusted contacts",
+        category: "Cybersecurity",
+        summary:
+          "Singapore's cyber agency says malicious executable, ISO and ZIP attachments are spreading through compromised WhatsApp accounts. In reported cases, opening a file led to similar messages being sent without the victim's knowledge, potentially through hijacked WhatsApp Web sessions.",
+        whyItMatters:
+          "A familiar sender is not a trust boundary. Block risky attachment types where possible, verify unexpected files over another channel, review linked WhatsApp devices and hunt for the published indicators, including unexpected ManageEngine UEMS agents and outbound TCP traffic on port 8383.",
+        image: "/images/briefings/2026-10-28/whatsapp-trusted-account-malware.svg",
+        imageAlt: "Illustration of a malicious attachment spreading between trusted chat contacts while endpoint controls isolate the infected device.",
+        sourceLabel: "Cyber Security Agency of Singapore, 28 October 2026",
+        sourceUrl: "https://www.csa.gov.sg/alerts-and-advisories/advisories/ad-2026-013/",
+      },
+      {
+        headline: "Oracle makes network fabric a first-class part of its multi-vendor AI cloud",
+        category: "IT Infrastructure",
+        summary:
+          "Oracle is expanding Nvidia Vera Rubin capacity while adding Google TPUs, Cerebras and SambaNova systems. Its Acceleron networking stack uses dedicated fabrics, direct data paths, converged NICs, multi-planar designs and collective-communication rerouting around failed links or adapters.",
+        whyItMatters:
+          "This is where your network background becomes central to AI infrastructure. Compare fabrics on oversubscription, RDMA behaviour, failure recovery, telemetry and isolation—not accelerator labels alone—and keep SaaS inference interfaces portable so workloads can move between compute architectures.",
+        image: "/images/briefings/2026-10-28/oracle-ai-fabric.svg",
+        imageAlt: "Illustration of several AI accelerator types connected through a resilient multi-plane network fabric with automatic rerouting.",
+        sourceLabel: "Oracle AI World announcement, 27 October 2026",
+        sourceUrl: "https://www.oracle.com/it/news/announcement/ai-world-oracle-unveils-new-cloud-networking-innovations-for-ai-2026-10-27/",
+      },
+      {
+        headline: "China prepares scarce AI memory for production despite 20–30% yields",
+        category: "Artificial Intelligence",
+        summary:
+          "Reuters reports that CXMT plans limited HBM3E production within two months even though only about 20% to 30% of chips currently meet specification, versus roughly 70% at market leader SK Hynix. The company did not comment, and testing reportedly places the product closer to the previous HBM generation.",
+        whyItMatters:
+          "High-bandwidth memory can constrain AI capacity as sharply as accelerators or power. Treat announced output as provisional, model yield-driven cost and supply risk, qualify alternate hardware and keep model-serving software adaptable to different memory capacities and accelerator platforms.",
+        image: "/images/briefings/2026-10-28/hbm-yield.svg",
+        imageAlt: "Illustration of high-bandwidth memory stacks passing through a low-yield production line before reaching AI accelerators.",
+        sourceLabel: "Reuters, 28 October 2026",
+        sourceUrl: "https://www.reuters.com/world/china/chinas-cxmt-start-advanced-ai-memory-production-despite-poor-yields-sources-say-2026-10-28/",
+      },
+    ],
+  },
+
+  {
     date: "2026-10-24",
     title: "Daily Tech Briefing — 24 October 2026",
     description:
