@@ -21,6 +21,77 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-29",
+    title: "Daily Tech Briefing — 29 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Remove or update the Strands environment tool and rotate exposed agent-host credentials first. Patch Veeam Backup & Replication and Tailscale next, then review whether your AI provider and SaaS plans account for restricted model access, infrastructure delivery delays and sustainable unit economics rather than announced capability alone.",
+    stories: [
+      {
+        headline: "Prompt injection could make an AWS agent reveal its host secrets",
+        category: "Cybersecurity",
+        summary:
+          "AWS disclosed CVE-2026-115415 in the open-source Strands Agents Tools package. A malicious prompt in content processed by an agent could tell the environment tool to disable masking and return host environment variables—including cloud credentials and API keys—in clear text without operator approval.",
+        whyItMatters:
+          "An agent must never control the policy that hides its credentials. Upgrade strands-agents-tools to 0.8.6 or later, remove the deprecated environment tool if you cannot update, rotate secrets from every exposed agent host and replace long-lived environment credentials with short-lived workload identities.",
+        image: "/images/briefings/2026-10-29/agent-env-secret.svg",
+        imageAlt: "Illustration of a prompt-injection attempt being blocked before an AI agent can reveal cloud credentials from its host environment.",
+        sourceLabel: "AWS Security Bulletin 2026-154, 28 October 2026",
+        sourceUrl: "https://aws.amazon.com/security/security-bulletins/2026-154-aws/",
+      },
+      {
+        headline: "Veeam fixes a critical unauthenticated authorization bypass",
+        category: "Cybersecurity",
+        summary:
+          "Veeam patched CVE-2026-108142, a CVSS 9.1 flaw that can let an unauthenticated attacker bypass authorization on the CDP Coordinator Service. Affected releases include Veeam Backup & Replication 13.1.1.18 and earlier 13.1 builds, plus 13.0.2.29 and earlier 13.0 builds; Veeam says 12.x is unaffected.",
+        whyItMatters:
+          "Backup infrastructure combines privileged access with the copies needed for recovery. Upgrade to 13.1.2.57 or 13.0.3.63, restrict CDP and management services to dedicated administration networks, review independently stored telemetry and confirm immutable backups remain outside the Veeam server's trust boundary.",
+        image: "/images/briefings/2026-10-29/veeam-cdp-auth-bypass.svg",
+        imageAlt: "Illustration of an unauthenticated request being stopped before reaching Veeam backup coordination and immutable recovery copies.",
+        sourceLabel: "Veeam security bulletin KB4948, 27 October 2026",
+        sourceUrl: "https://www.veeam.com/kb4948",
+      },
+      {
+        headline: "Tailscale patches routes to root-only sockets and network-wide denial of service",
+        category: "Cybersecurity",
+        summary:
+          "Tailscale 1.104.4 fixes four SSH and Serve issues. Authorized peers could reach root-only Unix sockets such as Docker or the tailscaled API, a local operator could enable full node takeover through Serve, and a permitted SSH session could exhaust memory and crash tailscaled, disrupting every connection on the node.",
+        whyItMatters:
+          "Overlay access policy is not enough when the daemon performs local operations as root. Update affected SSH and Serve nodes to 1.104.4 or later, review forwarding and Unix-socket backends, and temporarily set TS_SSH_DISABLE_FORWARDING=1 where an immediate update is impossible.",
+        image: "/images/briefings/2026-10-29/tailscale-ssh-boundary.svg",
+        imageAlt: "Illustration of a Tailscale peer being prevented from forwarding traffic into root-only Docker and daemon sockets.",
+        sourceLabel: "Tailscale security bulletins, 26 October 2026; release 28 October",
+        sourceUrl: "https://tailscale.com/security-bulletins",
+      },
+      {
+        headline: "Google restricts its strongest cyber-capable model to vetted defenders",
+        category: "Artificial Intelligence",
+        summary:
+          "Google announced Gemini 4 Carbon, initially available only to selected cyber defenders while pre-release testing and guardrail work continue. Google reports leading results for vulnerability finding, exploit validation and patching, but these are provider-published benchmarks and broad developer access is not yet available.",
+        whyItMatters:
+          "Treat capability claims and deployability as separate questions. Reproduce results on your own authorized targets, isolate the model from production credentials, log every tool call, require approval for exploitation or remediation and evaluate the exact guarded version rather than an unrestricted benchmark configuration.",
+        image: "/images/briefings/2026-10-29/gemini-carbon-cyber.svg",
+        imageAlt: "Illustration of a powerful cybersecurity model operating inside a restricted evaluation environment with human approval controls.",
+        sourceLabel: "Google announcement, 28 October 2026",
+        sourceUrl: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+      },
+      {
+        headline: "Azure demand accelerates while third-party capacity deliveries slip",
+        category: "IT Infrastructure",
+        summary:
+          "Microsoft reported 48% Azure growth and $33.17 billion in quarterly Azure revenue while generating $18.6 billion in free cash flow. Quarterly capital spending reached $45.2 billion but missed Microsoft's own $50 billion projection because some third-party infrastructure capacity arrived later than expected.",
+        whyItMatters:
+          "Cloud demand can be strong while physical delivery still lags. For SaaS planning, distinguish financial strength from immediately available regional capacity, test quota and failover assumptions, avoid relying on one future expansion and track cost per completed workload rather than provider spending headlines.",
+        image: "/images/briefings/2026-10-29/azure-capacity-finance.svg",
+        imageAlt: "Illustration of growing Azure demand and cash flow beside a delayed third-party data-centre capacity delivery.",
+        sourceLabel: "Reuters, 28 October 2026",
+        sourceUrl: "https://www.reuters.com/business/retail-consumer/microsoft-beats-quarterly-cloud-revenue-estimates-2026-10-28/",
+      },
+    ],
+  },
+
+  {
     date: "2026-10-28",
     title: "Daily Tech Briefing — 28 October 2026",
     description:
