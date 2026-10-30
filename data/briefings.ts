@@ -21,6 +21,77 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-30",
+    title: "Daily Tech Briefing — 30 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch internet-facing Cisco ASA and FTD VPN gateways first, then check Linux servers exposed through PHP for the Fragnesia privilege-escalation path. Evaluate downloadable cyber models inside isolated test networks, and treat AI hardware inventory, cash conversion, environmental approval and drainage design as real capacity constraints—not footnotes to cloud announcements.",
+    stories: [
+      {
+        headline: "CISA confirms active exploitation of a Cisco VPN gateway crash flaw",
+        category: "Cybersecurity",
+        summary:
+          "CISA added CVE-2026-76418 to its Known Exploited Vulnerabilities catalogue on 29 October. A crafted connection to an ASA or FTD SSL VPN tunnel group using secondary authentication can reload the firewall without credentials, taking remote-access sessions and other traffic through that appliance offline.",
+        whyItMatters:
+          "A VPN concentrator is both a security boundary and an availability dependency. Identify affected tunnel groups, upgrade to Cisco's fixed ASA or FTD release immediately, preserve crash and connection telemetry off-box, and confirm redundant gateways cannot be exhausted by the same request pattern. Cisco says no workaround is available.",
+        image: "/images/briefings/2026-10-30/cisco-vpn-dos.svg",
+        imageAlt: "Illustration of a malicious SSL VPN request being blocked before it can restart a Cisco firewall gateway and disconnect remote users.",
+        sourceLabel: "Cisco security advisory; CISA KEV addition, 29 October 2026",
+        sourceUrl: "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-tunnel-dos-s6mgkb75",
+      },
+      {
+        headline: "Attackers chain a Linux kernel root flaw after PHP2Shell",
+        category: "Cybersecurity",
+        summary:
+          "CISA's exploited-vulnerability catalogue now includes CVE-2026-46300, known as Fragnesia. The Linux XFRM ESP-in-TCP logic flaw can let a local attacker gain root and is being chained after initial access through PHP2Shell, turning a web-runtime compromise into full host control.",
+        whyItMatters:
+          "Patching only the entry-point vulnerability can leave a complete escalation path intact. Update affected kernels, prioritise PHP-facing Linux servers, check for unexpected XFRM activity and privileged processes, and rebuild from trusted images where PHP2Shell exploitation is suspected rather than relying on an in-place patch alone.",
+        image: "/images/briefings/2026-10-30/linux-fragnesia-chain.svg",
+        imageAlt: "Illustration of a PHP web compromise attempting to cross a Linux kernel boundary to root access while layered controls interrupt the attack chain.",
+        sourceLabel: "CISA Known Exploited Vulnerabilities catalogue, updated 28 October 2026",
+        sourceUrl: "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      },
+      {
+        headline: "Mistral releases a downloadable cyber-capable Large 4 model",
+        category: "Artificial Intelligence",
+        summary:
+          "Mistral publicly released Large 4 on 29 October after testing with government and corporate users. The open-weight model is positioned for finding and fixing security vulnerabilities and can run on an organisation's own infrastructure instead of only through a hosted API.",
+        whyItMatters:
+          "Local deployment can improve data control and reduce provider lock-in, but downloadable weights also remove a provider's ability to withdraw access. Benchmark the exact model on authorised targets, isolate it from production networks and secrets, restrict tools through an independent policy layer, and record every action for incident review.",
+        image: "/images/briefings/2026-10-30/mistral-large4-local.svg",
+        imageAlt: "Illustration of an open-weight cybersecurity model running inside an organisation-controlled network with approval and audit controls.",
+        sourceLabel: "Reuters, 29 October 2026",
+        sourceUrl: "https://www.reuters.com/legal/litigation/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users-2026-10-29/",
+      },
+      {
+        headline: "Google's TPU systems expose the cash cost behind AI-cloud growth",
+        category: "IT Infrastructure",
+        summary:
+          "Google Cloud's custom-accelerator business is expanding as complete TPU systems combine chips, networking, storage and software. Reuters reports that building inventory before customers pay is tying up more cash, while Alphabet is simultaneously funding data-centre expansion and expects TPU sales to accelerate in 2027.",
+        whyItMatters:
+          "AI capacity is a working-capital and supply-chain problem as well as a compute benchmark. When selecting an inference provider, examine deliverable regional capacity, networking and storage integration, lead times and contract exposure; keep your SaaS model layer portable if hardware deliveries or pricing assumptions change.",
+        image: "/images/briefings/2026-10-30/google-tpu-inventory.svg",
+        imageAlt: "Illustration of Google TPU systems, network fabric and storage moving from paid inventory into cloud customer capacity.",
+        sourceLabel: "Reuters, 29 October 2026",
+        sourceUrl: "https://www.reuters.com/business/googles-nvidia-chip-challenge-boosts-cloud-sales-crimps-cash-flow-2026-10-29/",
+      },
+      {
+        headline: "Finland halts Google data-centre works as police examine drainage",
+        category: "IT Infrastructure",
+        summary:
+          "Finnish police opened an environmental-law investigation into clearing and drainage at Google's planned Muhos data-centre site. The regulator had already stopped environment-altering preparatory work there and at another site; permission to restart is uncertain, and the investigation is expected to continue into 2027.",
+        whyItMatters:
+          "A cloud region is not usable capacity until permits, water management, power and construction approvals are secure. Treat announced sites as provisional, map SaaS recovery to existing independent regions, and include drainage, environmental assessments and community obligations in data-centre and colocation due diligence.",
+        image: "/images/briefings/2026-10-30/finland-data-centre-permit.svg",
+        imageAlt: "Illustration of a planned Finnish data centre paused behind environmental, drainage and permit review gates.",
+        sourceLabel: "Reuters, 29 October 2026",
+        sourceUrl: "https://www.reuters.com/business/environment/finland-launches-criminal-probe-suspected-environmental-damage-google-data-2026-10-29/",
+      },
+    ],
+  },
+
+  {
     date: "2026-10-29",
     title: "Daily Tech Briefing — 29 October 2026",
     description:
