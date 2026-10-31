@@ -21,6 +21,77 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-10-31",
+    title: "Daily Tech Briefing — 31 October 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Treat internet-facing Ivanti Connect Secure appliances as the first priority: update, preserve off-box evidence and investigate credentials reachable from the gateway. Patch kernels on MPTCP listeners and Drupal Commerce next. For AI and capacity planning, keep consequential decisions under human review and distinguish signed utility contracts from electricity that will only arrive years later.",
+    stories: [
+      {
+        headline: "CISA confirms attackers are chaining three Ivanti gateway flaws",
+        category: "Cybersecurity",
+        summary:
+          "CISA added CVE-2026-111357 and CVE-2026-118527 to its exploited-vulnerability catalogue on 30 October. Together with the earlier CVE-2026-104935 authentication bypass, the chain can move from unauthenticated appliance access to root privileges and attacker-controlled file placement on Ivanti Connect Secure.",
+        whyItMatters:
+          "A compromised VPN gateway can expose identity infrastructure, internal routes and reusable credentials. Upgrade affected Connect Secure releases using Ivanti's latest advisory, preserve traffic and authentication evidence outside the appliance, rotate reachable LDAP and service credentials, and investigate exposed systems rather than assuming an update removes prior access.",
+        image: "/images/briefings/2026-10-31/ivanti-gateway-chain.svg",
+        imageAlt: "Illustration of three chained vulnerabilities attempting to cross an Ivanti VPN gateway into root access while network controls isolate the appliance.",
+        sourceLabel: "Canadian Centre for Cyber Security update, 30 October 2026",
+        sourceUrl: "https://www.cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1035",
+      },
+      {
+        headline: "A Linux MPTCP flaw enables remote commands as root",
+        category: "Cybersecurity",
+        summary:
+          "Anthropic disclosed CVE-2026-98432, a use-after-free race in the Linux networking stack. Its proof of concept can remotely defeat kernel address randomisation and execute an attacker-chosen command as root on servers exposing a Multipath TCP listener, without credentials or user interaction.",
+        whyItMatters:
+          "This is directly relevant to network-facing Linux infrastructure. Update to a maintained kernel containing the upstream fix, inventory whether MPTCP is enabled or listening, filter unnecessary exposure at the firewall, and rebuild or investigate any server showing unexpected MPTCP handshakes or privileged process execution.",
+        image: "/images/briefings/2026-10-31/linux-mptcp-root.svg",
+        imageAlt: "Illustration of crafted Multipath TCP packets being blocked before exploiting the Linux kernel and executing commands as root.",
+        sourceLabel: "Anthropic vulnerability research, 27 October 2026; operational alert 30 October",
+        sourceUrl: "https://www.anthropic.com/research/discovering-vulnerabilities-with-claude",
+      },
+      {
+        headline: "Attackers exploit Drupal Commerce to place fraudulent orders",
+        category: "Cybersecurity",
+        summary:
+          "Drupal says CVE-2026-118539 is being exploited against Commerce Core. Insufficient protection for routes and entity fields can allow an access bypass with financial impact, including suspicious or fraudulent orders on both full-stack and headless commerce sites.",
+        whyItMatters:
+          "A SaaS transaction can be technically valid while bypassing business authorization. Upgrade Commerce Core 3.x to 3.3.13 or earlier branches to 8.x-2.41, audit recent orders and payment states for inconsistencies, and add server-side checks that independently verify price, identity and order transitions.",
+        image: "/images/briefings/2026-10-31/drupal-commerce-bypass.svg",
+        imageAlt: "Illustration of a fraudulent checkout request being stopped by server-side authorization before reaching Drupal Commerce orders and payments.",
+        sourceLabel: "Drupal security advisory SA-CONTRIB-2026-254",
+        sourceUrl: "https://www.drupal.org/sa-contrib-2026-254",
+      },
+      {
+        headline: "Military AI adoption exposes compute and human-oversight limits",
+        category: "Artificial Intelligence",
+        summary:
+          "Reuters reports that the Pentagon's large-scale use of Maven analysis during the Iran war quickly exhausted available classified computing capacity. Reported mistakes and outdated underlying data also reinforced the need for humans to challenge model output before consequential action.",
+        whyItMatters:
+          "The same lesson applies to operational SaaS agents: capacity, data freshness and approval are separate controls. Set explicit compute budgets, show source timestamps, require human confirmation for irreversible actions and retain a non-AI operating path when models or infrastructure are unavailable.",
+        image: "/images/briefings/2026-10-31/ai-human-oversight.svg",
+        imageAlt: "Illustration of an AI analysis system reaching a compute limit while a human operator reviews evidence before authorising a consequential action.",
+        sourceLabel: "Reuters analysis, 30 October 2026",
+        sourceUrl: "https://www.reuters.com/technology/artificial-intelligence/ais-rewiring-us-warfare-may-be-only-beginning-2026-10-30/",
+      },
+      {
+        headline: "One US utility plans for 4.4 GW of data-centre demand",
+        category: "IT Infrastructure",
+        summary:
+          "Alliant Energy has 3.4 GW of data-centre load contracted with Google, Meta and QTS and expects to sign roughly another 1 GW within six months. The additional load would begin ramping between 2029 and 2031, while peak demand across its system is projected to rise by more than 60% by 2031.",
+        whyItMatters:
+          "A signed power contract is still not a live cloud region. When assessing future capacity, track transmission build-out, energisation dates, redundancy, fuel mix and network connectivity; keep your SaaS workloads portable until power, cooling and commissioning are complete.",
+        image: "/images/briefings/2026-10-31/data-centre-grid-load.svg",
+        imageAlt: "Illustration of several data centres adding gigawatts of demand behind transmission, generation and commissioning gates.",
+        sourceLabel: "Reuters, 30 October 2026",
+        sourceUrl: "https://www.reuters.com/business/energy/alliant-targets-1-gw-new-data-center-contracts-six-months-power-demand-surges-2026-10-30/",
+      },
+    ],
+  },
+
+  {
     date: "2026-10-30",
     title: "Daily Tech Briefing — 30 October 2026",
     description:
