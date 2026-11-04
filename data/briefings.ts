@@ -21,6 +21,77 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-04",
+    title: "Daily Tech Briefing — 4 November 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch WordPress and the Amazon Redshift JDBC driver first: both flaws can lead to code execution, and CISA says the WordPress issue is already exploited. Then review whether your security programme assumes attackers will use AI to find tolerated weaknesses faster, whether AI summaries respect content rights, and whether future data-centre regions can meet local power and water rules.",
+    stories: [
+      {
+        headline: "CISA confirms active exploitation of WordPress core upgrade RCE",
+        category: "Cybersecurity",
+        summary:
+          "CISA added CVE-2026-119977 to its Known Exploited Vulnerabilities catalogue on 3 November. Predictable, web-accessible staging paths during full-package upgrades can let an unauthenticated attacker execute code during the upgrade window. WordPress versions 4.7 through 7.1.3 are affected; 7.1.4 fixes the issue.",
+        whyItMatters:
+          "A routine update can briefly create an internet-facing execution path. Upgrade every site to the fixed release for its maintained branch, verify automatic updates completed, restrict access to wp-content/upgrade where possible and inspect web, process and file-change evidence for activity during recent upgrades.",
+        image: "/images/briefings/2026-11-04/wordpress-upgrade-rce.svg",
+        imageAlt: "Illustration of a WordPress upgrade staging path being blocked before an unauthenticated request can execute code on the server.",
+        sourceLabel: "Canadian Centre for Cyber Security advisory, 3 November 2026",
+        sourceUrl: "https://www.cyber.gc.ca/en/alerts-advisories/wordpress-security-advisory-av26-1117",
+      },
+      {
+        headline: "Amazon Redshift JDBC driver could execute attacker-selected classes",
+        category: "Cybersecurity",
+        summary:
+          "AWS disclosed CVE-2026-119084 in Amazon Redshift JDBC Driver versions before 2.3.0. If an attacker can influence a JDBC connection URL or AWS credentials profile, the driver can load and execute arbitrary classes in the application's security context.",
+        whyItMatters:
+          "Database connection strings and profiles often cross deployment pipelines, tenant configuration and support tooling. Upgrade the driver to 2.3.0 or later, patch forks, allowlist connection parameters and rotate credentials if untrusted users could influence a connection configuration.",
+        image: "/images/briefings/2026-11-04/redshift-jdbc-rce.svg",
+        imageAlt: "Illustration of an untrusted JDBC connection parameter being rejected before it can load an arbitrary class inside an application.",
+        sourceLabel: "AWS Security Bulletin 2026-168, 3 November 2026",
+        sourceUrl: "https://aws.amazon.com/security/security-bulletins/2026-168-aws/",
+      },
+      {
+        headline: "UK warns AI will scale attacks against long-tolerated weaknesses",
+        category: "Artificial Intelligence",
+        summary:
+          "The UK National Cyber Security Centre says it is highly likely that nation states will routinely use AI-enabled cyber capabilities by 2028, increasing the scale and speed of sophisticated attacks. It also judges that AI-powered malware is highly likely to be used in a ransomware attack on UK critical infrastructure before then.",
+        whyItMatters:
+          "The near-term risk is faster discovery and exploitation of ordinary weaknesses, not a completely new attack primitive. Reduce exposed legacy services, shorten patch latency, maintain a current asset inventory and automate defensive triage without giving response agents uncontrolled production authority.",
+        image: "/images/briefings/2026-11-04/ai-cyber-scale.svg",
+        imageAlt: "Illustration of AI-assisted attack discovery accelerating toward legacy systems while defenders prioritise patching and containment.",
+        sourceLabel: "UK National Cyber Security Centre assessment, 3 November 2026",
+        sourceUrl: "https://www.ncsc.gov.uk/report/artificial-intelligence-and-cyber-intrusion",
+      },
+      {
+        headline: "EU court adviser draws a line between AI training and generated answers",
+        category: "Artificial Intelligence",
+        summary:
+          "An adviser to the EU's highest court said Gemini may infringe publishers' rights when it circumvents technical barriers or reproduces the recognisable expression of an article in an answer. The opinion also says EU text-and-data-mining rules can permit training on copyrighted material. The court will rule later and is not bound by the opinion.",
+        whyItMatters:
+          "For SaaS retrieval features, model training rights do not automatically authorize every generated answer. Preserve source provenance, respect access controls, limit verbatim reproduction, link users to originals and give customers enforceable content-use policies.",
+        image: "/images/briefings/2026-11-04/ai-content-rights.svg",
+        imageAlt: "Illustration of an AI answer passing through provenance, access-control and copyright checks before reaching a user.",
+        sourceLabel: "Reuters, 3 November 2026",
+        sourceUrl: "https://www.reuters.com/world/googles-use-press-by-ai-chatbot-may-infringe-copyright-rules-eu-court-adviser-2026-11-03/",
+      },
+      {
+        headline: "Portugal prepares renewable-power and water rules for data centres",
+        category: "IT Infrastructure",
+        summary:
+          "Portugal is finalising rules that would require data centres to use renewable electricity and either water-free cooling or alternative water sources that do not compete with households and businesses. More than 2.6 GW of capacity is under development, led by the 1.2-GW Start Campus project in Sines.",
+        whyItMatters:
+          "Planned megawatts are not deployable capacity until power, cooling, water and environmental approvals are secured. When selecting European regions or colocation, ask for the exact cooling design, water source, renewable-power contract, review status and an exit plan if commissioning slips.",
+        image: "/images/briefings/2026-11-04/portugal-data-centre-resources.svg",
+        imageAlt: "Illustration of a Portuguese data centre passing through renewable-power, cooling-water and environmental review gates.",
+        sourceLabel: "Reuters, 3 November 2026",
+        sourceUrl: "https://www.reuters.com/business/energy/portugal-readies-strict-water-energy-rules-data-centre-boom-2026-11-03/",
+      },
+    ],
+  },
+
+  {
     date: "2026-10-31",
     title: "Daily Tech Briefing — 31 October 2026",
     description:
