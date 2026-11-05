@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-05",
+    title: "Daily Tech Briefing — 5 November 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Treat connected operational equipment and payment APIs as production-critical attack surfaces: isolate remote access, cap automated transactions and preserve independent monitoring. For AI infrastructure, distinguish contracted compute from powered capacity and understand which third-party guarantees make a project financeable.",
+    stories: [
+      {
+        headline: "Connected cooling systems become a cross-sector cyber target",
+        category: "Cybersecurity",
+        summary:
+          "A cyberattack affected cold-storage monitoring and control systems at three French blood-service facilities and supermarket refrigeration across eight European countries. French authorities said blood supplies were protected because staff received alerts, disabled remote access and moved stock to unaffected refrigerators.",
+        whyItMatters:
+          "Connected facilities need the same segmentation and incident planning as servers. Inventory every remotely managed controller, restrict vendor access, keep temperature telemetry independent of the control path and rehearse a manual transfer procedure before an outage threatens critical stock.",
+        image: "/images/briefings/2026-11-05/connected-cooling-attack.svg",
+        imageAlt: "Illustration of compromised remote access being isolated from blood-bank and supermarket refrigeration systems while independent temperature monitoring remains active.",
+        sourceLabel: "Reuters report, 4 November 2026",
+        sourceUrl: "https://www.reuters.com/business/healthcare-pharmaceuticals/several-french-blood-banks-hit-by-cyberattack-nov-2-health-ministry-says-2026-11-04/",
+      },
+      {
+        headline: "India warns AI agents can compromise payment systems at machine speed",
+        category: "Cybersecurity",
+        summary:
+          "India's cybercrime agency warned banks, lenders, fintechs and payment companies that attackers are using AI agents to exploit unpatched or misconfigured systems and target automated fund-disbursement and transfer APIs. It recommended transaction limits, beneficiary-name checks and monitoring for unusually rapid activity.",
+        whyItMatters:
+          "A SaaS payment workflow can turn one stolen credential into many transfers before a person reacts. Enforce per-transaction and daily limits, require step-up approval for new beneficiaries, rate-limit sensitive APIs and alert on automation-speed sequences rather than only unusual totals.",
+        image: "/images/briefings/2026-11-05/ai-payment-attack.svg",
+        imageAlt: "Illustration of an AI-driven attack reaching a payment API and being stopped by transaction limits, beneficiary verification and velocity monitoring.",
+        sourceLabel: "Reuters report, 4 November 2026",
+        sourceUrl: "https://www.reuters.com/legal/government/india-cybercrime-agency-warns-financial-firms-ai-attacks-2026-11-04/",
+      },
+      {
+        headline: "US bank regulator says AI risk depends on what a system can do",
+        category: "Artificial Intelligence",
+        summary:
+          "The US Office of the Comptroller of the Currency issued its first AI guidance for bank examiners. It directs them to use existing risk frameworks and assess consequences and deployment context—not model sophistication—because a simple agent allowed to initiate transactions may create more risk than an advanced internal-only model.",
+        whyItMatters:
+          "This is a sound pattern for SaaS governance: classify AI features by permissions, data reach and reversibility. Put human approval, spending limits and action-level logs around consequential tools, while keeping low-impact summarisation under lighter controls.",
+        image: "/images/briefings/2026-11-05/ai-action-risk.svg",
+        imageAlt: "Illustration comparing a restricted analytical AI model with a simpler transaction agent behind approval, permission and audit controls.",
+        sourceLabel: "Reuters report, 4 November 2026",
+        sourceUrl: "https://www.reuters.com/business/finance/us-bank-regulator-issues-first-ever-ai-guidance-examiners-2026-11-04/",
+      },
+      {
+        headline: "PJM faces multi-gigawatt shortfalls as data-centre demand outruns supply",
+        category: "IT Infrastructure",
+        summary:
+          "PJM, the grid serving 13 US states and Washington, DC, projects capacity shortfalls of 6.5 gigawatts in 2027–28 and 6.8 gigawatts in 2028–29. More than 100 gigawatts of generation has been approved, but only about 25 gigawatts has been built as permitting, equipment and financing slow delivery.",
+        whyItMatters:
+          "A planned data-centre region is not usable capacity until power and interconnection are secured. Ask providers for energisation dates, curtailment terms and backup-power assumptions, then keep workloads portable across regions whose power risks are not correlated.",
+        image: "/images/briefings/2026-11-05/pjm-capacity-gap.svg",
+        imageAlt: "Illustration of data-centre demand exceeding available grid capacity while approved generation waits behind permitting, equipment and financing gates.",
+        sourceLabel: "Reuters report, 4 November 2026",
+        sourceUrl: "https://www.reuters.com/business/energy/pjm-grid-tackles-ai-power-costs-race-avoid-shortfalls--reeii-2026-11-04/",
+      },
+      {
+        headline: "Google credit support underpins a 401-megawatt Anthropic campus",
+        category: "IT Infrastructure",
+        summary:
+          "TeraWulf secured a Google credit backstop to support financing for a Kentucky data-centre project leased to Anthropic. The planned campus carries roughly 401 megawatts of critical IT load, with initial operations expected in the second half of 2027 under a 20-year lease.",
+        whyItMatters:
+          "AI capacity increasingly depends on financial guarantees as well as chips, networks and electricity. When assessing a provider, separate operational capacity from financed plans and map the guarantors, long-term tenants and construction dependencies behind each promised region.",
+        image: "/images/briefings/2026-11-05/ai-campus-finance.svg",
+        imageAlt: "Illustration of a credit guarantee connecting financing, grid power and construction to a 401-megawatt AI data-centre campus.",
+        sourceLabel: "Reuters report, 4 November 2026",
+        sourceUrl: "https://www.reuters.com/technology/terawulf-gets-credit-backstop-google-anthropic-data-center-project-2026-11-04/",
+      },
+    ],
+  },
+  {
     date: "2026-11-04",
     title: "Daily Tech Briefing — 4 November 2026",
     description:
