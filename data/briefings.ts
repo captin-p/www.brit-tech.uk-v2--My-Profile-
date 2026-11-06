@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-06",
+    title: "Daily Tech Briefing — 6 November 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Treat every exposed application credential as compromised: agentic attackers can move from public code to cloud secrets in minutes. Separate transaction authority from ordinary application access, and treat AI-capacity announcements as provisional until network design, power and delivery milestones are complete.",
+    stories: [
+      {
+        headline: "Agentic attackers moved from a public secret to Azure Key Vault in five minutes",
+        category: "Cybersecurity",
+        summary:
+          "Microsoft observed threat actors using an AI offensive framework to scan public GitHub repositories for credentials, sign in as service principals and explore Azure, Microsoft 365 and other cloud resources. In one case, an agent progressed from finding a client secret to exfiltrating Key Vault data in five minutes.",
+        whyItMatters:
+          "Deleting a leaked secret from Git history is not remediation. Revoke and rotate it immediately, inspect historical service-principal activity, restrict workload identities to the minimum resources required and replace long-lived credentials with short-lived federation wherever possible.",
+        image: "/images/briefings/2026-11-06/agent-secret-chain.svg",
+        imageAlt: "Illustration of an AI agent discovering a secret in a public repository and being blocked before reaching a cloud key vault.",
+        sourceLabel: "Microsoft Threat Intelligence, 5 November 2026",
+        sourceUrl: "https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/",
+      },
+      {
+        headline: "Credit Mutuel Arkea says cyberattack stole about €100 million",
+        category: "Cybersecurity",
+        summary:
+          "The French bank said attackers used one of its accounts to execute fraudulent transactions worth approximately €100 million. Some transfers were temporarily suspended while the bank secured operations; customer assets were not affected, and French cybercrime police opened an investigation.",
+        whyItMatters:
+          "Account authentication is only one control around financial APIs. Separate transaction creation from approval, cap value and velocity, require independent confirmation for changed destinations and keep a rapid mechanism for suspending specific payment paths without disabling the entire service.",
+        image: "/images/briefings/2026-11-06/bank-cyber-heist.svg",
+        imageAlt: "Illustration of fraudulent transactions being stopped by independent approval, value limits and a payment-path isolation control.",
+        sourceLabel: "Reuters report, 5 November 2026",
+        sourceUrl: "https://www.reuters.com/legal/government/french-bank-credit-mutuel-arkea-says-100-million-missing-after-cyberattack-2026-11-05/",
+      },
+      {
+        headline: "Independent review finds AI is accelerating Anthropic's model development",
+        category: "Artificial Intelligence",
+        summary:
+          "AI-safety nonprofit METR estimates that Anthropic's capabilities on well-specified tasks have improved about 1.9 times faster since October 2025, with substantial uncertainty. METR says current systems still cannot fully automate the most important stages of AI research and development.",
+        whyItMatters:
+          "Model progress and operational risk may change faster than annual governance cycles. Re-run SaaS evaluations on a fixed schedule, preserve regression suites, review tool permissions whenever a model changes and avoid assuming that a previous safety assessment still applies to a new release.",
+        image: "/images/briefings/2026-11-06/ai-rd-acceleration.svg",
+        imageAlt: "Illustration of AI-assisted research accelerating model capability while safety evaluation and human review follow alongside it.",
+        sourceLabel: "METR independent assessment, 5 November 2026",
+        sourceUrl: "https://metr.org/blog/2026-11-05-rd-section-anthropic-risk-report-august-2026-review/",
+      },
+      {
+        headline: "Network-design changes delay Microsoft's 200-megawatt IREN capacity",
+        category: "IT Infrastructure",
+        summary:
+          "IREN delayed some infrastructure delivery for Microsoft after the customer requested network-design changes and suppliers affected timing. The company is building 200 megawatts of Texas data-centre capacity and moved its operational revenue target from year-end to January, with a possible slip to late February.",
+        whyItMatters:
+          "Accelerators are unusable if the fabric design, optics, cooling or suppliers are not ready. For promised AI regions, request the approved topology, oversubscription targets, commissioning tests and delivery dependencies—not only GPU counts and contracted megawatts.",
+        image: "/images/briefings/2026-11-06/network-design-delay.svg",
+        imageAlt: "Illustration of an AI data-centre delivery waiting while its network fabric topology and supplier dependencies are revised.",
+        sourceLabel: "Reuters report, 5 November 2026",
+        sourceUrl: "https://www.reuters.com/technology/neocloud-firm-iren-tops-quarterly-revenue-estimates-shares-jump-2026-11-05/",
+      },
+      {
+        headline: "Google plans a $17 billion Wyoming campus with 702 MW of fuel cells",
+        category: "IT Infrastructure",
+        summary:
+          "Google announced its first Wyoming data centre, supported in part by a planned 702-megawatt natural-gas fuel-cell development with carbon capture. The facility will use air cooling to reduce local water demand, while Google says it will cover power infrastructure directly driven by the project.",
+        whyItMatters:
+          "On-site generation can shorten grid waits but introduces fuel, emissions, capture, maintenance and single-site dependencies. Evaluate the complete power chain, water design and failure modes, and keep critical SaaS workloads portable until the facility is commissioned and independently tested.",
+        image: "/images/briefings/2026-11-06/wyoming-ai-campus.svg",
+        imageAlt: "Illustration of a Wyoming data centre connected to fuel cells, carbon capture, air cooling and the regional power grid.",
+        sourceLabel: "Google infrastructure announcement, 5 November 2026",
+        sourceUrl: "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/wyoming-data-center/",
+      },
+    ],
+  },
+  {
     date: "2026-11-05",
     title: "Daily Tech Briefing — 5 November 2026",
     description:
