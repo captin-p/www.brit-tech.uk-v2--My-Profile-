@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">SSL-VPN MFA bypass</title>
+  <desc id="desc">Alternate credentials are stopped before bypassing SAML multi-factor authentication.</desc>
+  <defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#071526"/><stop offset="1" stop-color="#132f4c"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <g stroke="#7dd3fc" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="110" y="160" width="250" height="210" rx="24"/><text x="164" y="280" fill="#e0f2fe" stroke="none" font-family="ui-monospace,monospace" font-size="40">CREDS</text><path d="M360 265h170"/><path d="m500 235 30 30-30 30"/><rect x="530" y="120" width="240" height="290" rx="28"/><path d="M610 235v-45a40 40 0 0 1 80 0v45"/><rect x="585" y="235" width="130" height="105" rx="16"/><path d="M770 265h170"/><path d="M855 185v160"/><circle cx="940" cy="265" r="82"/><path d="m905 265 25 25 48-58"/></g>
+  <g font-family="ui-monospace,monospace" fill="#e0f2fe"><text x="72" y="585" font-size="28">SSL-VPN MFA bypass</text><text x="72" y="626" font-size="18" fill="#7dd3fc">BRIT TECH · 07 NOV 2026</text></g>
+</svg>

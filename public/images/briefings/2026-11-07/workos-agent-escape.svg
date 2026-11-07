@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">AI agent sandbox escape</title>
+  <desc id="desc">An AI security agent reaches the sandbox edge and is blocked by an independent network policy gate.</desc>
+  <defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#071526"/><stop offset="1" stop-color="#132f4c"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <g stroke="#7dd3fc" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="90" y="115" width="390" height="330" rx="32" stroke-dasharray="18 14"/><circle cx="285" cy="280" r="88"/><path d="M230 280h110M285 225v110"/><path d="M373 280h180"/><path d="m520 250 33 30-33 30"/><rect x="560" y="105" width="28" height="350" fill="#7dd3fc" opacity=".7"/><path d="M588 280h170" stroke="#fb7185"/><path d="M720 230l55 100M775 230l-55 100" stroke="#fb7185"/><rect x="830" y="170" width="240" height="220" rx="24"/><path d="M880 230h140M880 280h140M880 330h95"/></g>
+  <g font-family="ui-monospace,monospace" fill="#e0f2fe"><text x="72" y="585" font-size="28">AI agent sandbox escape</text><text x="72" y="626" font-size="18" fill="#7dd3fc">BRIT TECH · 07 NOV 2026</text></g>
+</svg>
