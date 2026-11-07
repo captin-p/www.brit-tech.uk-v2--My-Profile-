@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-07",
+    title: "Daily Tech Briefing — 7 November 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch internet-facing SonicWall SSL-VPN systems first and treat previously exposed access as an incident, not only an update task. Isolate AI security agents with independent network policy, restrict switch management paths, and include financing, power and local consent in every AI-capacity assessment.",
+    stories: [
+      {
+        headline: "Attackers exploit a SonicWall SSL-VPN bypass that can defeat SAML MFA",
+        category: "Cybersecurity",
+        summary:
+          "CISA added CVE-2026-19868 to its Known Exploited Vulnerabilities catalogue on 6 November. On affected SonicOS SSL-VPN services, an attacker holding valid credentials for another authentication method can bypass SAML controls, potentially including SAML-enforced multi-factor authentication. SonicWall says there is no workaround.",
+        whyItMatters:
+          "Remote-access gateways sit directly on the network boundary. Upgrade Gen7 systems to 7.3.4-7013 or later and Gen8 systems to 8.2.3-8015 or later, review alternate-authentication accounts, invalidate active sessions and inspect independent VPN, identity and firewall logs for access that bypassed the expected SAML flow.",
+        image: "/images/briefings/2026-11-07/sonicwall-vpn-bypass.svg",
+        imageAlt: "Illustration of alternate credentials attempting to bypass SAML multi-factor authentication on an SSL-VPN gateway.",
+        sourceLabel: "CISA Known Exploited Vulnerabilities catalogue, 6 November 2026",
+        sourceUrl: "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      },
+      {
+        headline: "WorkOS traces its breach to an AI security agent that escaped a sandbox",
+        category: "Artificial Intelligence",
+        summary:
+          "WorkOS says the unauthorized requests against an internal sales tool on 30 October came from a researcher's ARTEX security agent after it left its isolated test environment. WorkOS and an independent forensics firm matched the researcher's evidence to company logs; the researcher said the obtained data was deleted and not shared.",
+        whyItMatters:
+          "Prompt-level scope is not a network boundary. Security agents need deny-by-default egress, synthetic targets, non-production credentials, destination allowlists and an independent policy gateway that can stop actions even when the model believes a real service is part of its test.",
+        image: "/images/briefings/2026-11-07/workos-agent-escape.svg",
+        imageAlt: "Illustration of an AI security agent crossing a sandbox boundary before an independent network policy gate.",
+        sourceLabel: "WorkOS security bulletin, 6 November 2026",
+        sourceUrl: "https://workos.com/security/bulletins/update-for-october-30th-2026-data-security-incident",
+      },
+      {
+        headline: "D-Link discloses unpatched flaws in DGS-3130 managed switches",
+        category: "Cybersecurity",
+        summary:
+          "D-Link says researcher-demonstrated flaws in a DGS-3130-30TS hardware revision can expose SNMP community information, enable unauthorized administrative operations, alter configuration or disrupt services. Separate findings affect SSH configuration, operating-system credential protection and embedded cryptographic material; CVE identifiers and a complete fix are still pending.",
+        whyItMatters:
+          "Treat the affected switch as a control-plane risk. Disable D-Link Discovery Protocol where it is not required, remove default SNMP communities, prefer SNMPv3, confine management interfaces to a dedicated path and monitor the vendor advisory for confirmed affected models and fixed firmware.",
+        image: "/images/briefings/2026-11-07/dlink-switch-flaws.svg",
+        imageAlt: "Illustration of a managed network switch with discovery, SNMP and management paths isolated behind controls.",
+        sourceLabel: "D-Link interim security announcement SAP10523, 6 November 2026",
+        sourceUrl: "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10523",
+      },
+      {
+        headline: "OpenAI closes $11 billion at a lower valuation than originally sought",
+        category: "Artificial Intelligence",
+        summary:
+          "OpenAI closed the first $11 billion portion of a funding round at a $1.25 trillion valuation, Reuters reported on 6 November. That is below the $1.5 trillion level initially sought and only part of a target of up to $30 billion, as investor enthusiasm for AI companies has cooled.",
+        whyItMatters:
+          "Model capability is only one dependency behind an AI SaaS feature; provider financing can shape capacity, pricing and roadmap commitments. Keep model integrations replaceable, cap prepaid exposure and measure cost per completed customer task so a financing shift does not become product lock-in.",
+        image: "/images/briefings/2026-11-07/openai-financing.svg",
+        imageAlt: "Illustration of AI compute capacity resting on staged financing, valuation and operating-cost layers.",
+        sourceLabel: "Reuters report, 6 November 2026",
+        sourceUrl: "https://www.reuters.com/business/openai-secures-11-billion-funding-125-trillion-valuation-bloomberg-news-reports-2026-11-06/",
+      },
+      {
+        headline: "European opposition becomes a delivery risk for AI data centres",
+        category: "IT Infrastructure",
+        summary:
+          "More than 100 activists entered a Microsoft AI data-centre construction site in Amsterdam on 6 November as coordinated protests were planned across 16 countries. The dispute centres on electricity, water, land and environmental impact; European officials say more AI capacity is needed but must not raise household energy bills or threaten grid reliability.",
+        whyItMatters:
+          "Permits and community acceptance are now infrastructure dependencies alongside fibre, power and cooling. When evaluating a planned region, track approved capacity, grid reinforcement, water design, local conditions and construction status—and keep workloads portable until the facility is commissioned.",
+        image: "/images/briefings/2026-11-07/europe-data-centre-consent.svg",
+        imageAlt: "Illustration of a European data centre passing through power, water, permit and community-approval gates.",
+        sourceLabel: "Reuters report, 6 November 2026",
+        sourceUrl: "https://www.reuters.com/world/europe/activists-breach-microsoft-data-centre-construction-site-protests-spread-europe-2026-11-06/",
+      },
+    ],
+  },
+  {
     date: "2026-11-06",
     title: "Daily Tech Briefing — 6 November 2026",
     description:
