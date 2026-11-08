@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Patagonia AI capacity constraints</title>
+  <desc id="desc">Remote energy reaches an AI site while grid, fibre and latency constraints shape usable capacity.</desc>
+  <defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#071526"/><stop offset="1" stop-color="#17395a"/></linearGradient></defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <g stroke="#7dd3fc" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M70 410 240 180l150 190 140-150 170 190"/><circle cx="165" cy="125" r="42"/><path d="M165 55v-35M95 125H60M235 125h35M115 75 90 50M215 75l25-25"/><rect x="650" y="165" width="310" height="260" rx="28"/><path d="M710 225h190M710 285h190M710 345h135"/><path d="M390 370h260"/><path d="m615 340 35 30-35 30"/><path d="M960 295h145" stroke="#fb7185" stroke-dasharray="18 12"/><text x="980" y="270" fill="#fb7185" stroke="none" font-family="ui-monospace,monospace" font-size="20">LATENCY</text></g>
+  <g font-family="ui-monospace,monospace" fill="#e0f2fe"><text x="72" y="585" font-size="28">Patagonia AI capacity constraints</text><text x="72" y="626" font-size="18" fill="#7dd3fc">BRIT TECH · 08 NOV 2026</text></g>
+</svg>

@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-08",
+    title: "Daily Tech Briefing — 8 November 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Audit AI coding-tool configuration and repository history for embedded credentials, then verify that every microVM sandbox uses the vendor's production containment rather than a bare privileged VMM. Treat national cyber support and proposed AI regions as inputs to resilience planning—not substitutes for your own incident response, power, network and migration controls.",
+    stories: [
+      {
+        headline: "Claude Code approval files exposed credentials in public repositories",
+        category: "Cybersecurity",
+        summary:
+          "Apiiro researchers found 1,122 public copies of Claude Code's project-local settings file containing likely secrets. The file can retain an approved shell command word-for-word when a developer selects “Yes, and don't ask again”; if that command contains a password or key and the file is committed, the credential travels with the repository. Apiiro did not test whether the credentials remained valid.",
+        whyItMatters:
+          "Search current files, Git history and forks for .claude/settings.local.json and other agent transcripts or handoff files. Rotate every discovered credential before cleaning history, add repository-level ignore rules and prevent secrets from appearing in command lines or long-lived approval patterns.",
+        image: "/images/briefings/2026-11-08/claude-approval-secrets.svg",
+        imageAlt: "Illustration of an approved AI coding command retaining a credential before a repository security gate blocks the commit.",
+        sourceLabel: "iTWire report with Apiiro findings, 7 November 2026",
+        sourceUrl: "https://itwire.com/business-it-news/security/claude-code-approval-files-found-exposing-company-secrets-on-github-says-apirro-researchers",
+      },
+      {
+        headline: "Public research demonstrates a Firecracker guest-to-host escape",
+        category: "Cybersecurity",
+        summary:
+          "PWN Research demonstrated code execution in the host-side Firecracker process by using a prior host-memory primitive to locate and alter saved virtual-CPU registers. The proof ran Firecracker 1.16.1 directly as root without the jailer, so the chosen operation executed as host root; the researchers explicitly note that production privilege dropping, namespaces and seccomp change the blast radius.",
+        whyItMatters:
+          "A microVM label does not prove production isolation. Patch the underlying kernel and Firecracker stack, confirm workloads launch through the jailer as an unprivileged user with restrictive seccomp and namespaces, and keep cloud credentials and orchestration sockets outside the guest's reachable trust boundary.",
+        image: "/images/briefings/2026-11-08/firecracker-host-escape.svg",
+        imageAlt: "Illustration of a Firecracker microVM attempting to alter a host CPU register while jailer and seccomp controls contain it.",
+        sourceLabel: "PWN Research technical demonstration",
+        sourceUrl: "https://www.pwn.ai/blog/firecracker-escape",
+      },
+      {
+        headline: "Japan funds an emergency cyber-rescue and AI defence programme",
+        category: "Cybersecurity",
+        summary:
+          "Japan approved roughly ¥10 billion for an emergency cybersecurity package after attacks disrupted companies and public bodies. The plan includes public-private cyber-rescue support, faster victim assistance, stronger investigation and analysis, and a specialist team expected to use AI to find network weaknesses and counter attackers.",
+        whyItMatters:
+          "The useful model is coordinated incident recovery, not AI alone. Maintain a current asset and contact register, define when external responders receive evidence, preserve offline recovery material and rehearse the first hours of containment before a national or sector support team becomes necessary.",
+        image: "/images/briefings/2026-11-08/japan-cyber-rescue.svg",
+        imageAlt: "Illustration of a Japanese cyber-rescue team coordinating incident response, network analysis and business recovery.",
+        sourceLabel: "Prime Minister of Japan, 6 November 2026",
+        sourceUrl: "https://www.kantei.go.jp/jp/105/actions/202611/06kaigi_cyber.html",
+      },
+      {
+        headline: "US voters rejected 46 of 47 data-centre ballot measures",
+        category: "IT Infrastructure",
+        summary:
+          "The Financial Times reports that data-centre proposals lost 46 of 47 state and local ballot measures across 10 US states. Goldman Sachs estimates that short-term moratoriums could affect 45% of planned US expansion, showing that local approval may constrain AI capacity as sharply as chips, power or network equipment.",
+        whyItMatters:
+          "Provider roadmaps are not deployable capacity until zoning, permits, grid connections and community conditions are secured. Separate announced megawatts from approved and commissioned capacity, and retain alternative regions whose political and infrastructure risks are not correlated.",
+        image: "/images/briefings/2026-11-08/data-centre-ballots.svg",
+        imageAlt: "Illustration of proposed data-centre capacity waiting behind local ballot, permit and grid-approval gates.",
+        sourceLabel: "Financial Times analysis, 7 November 2026",
+        sourceUrl: "https://www.ft.com/content/9d40f40a-cbf2-46f5-b3d0-cee554e35298",
+      },
+      {
+        headline: "Argentina's AI-hub plans expose the gap between energy and usable capacity",
+        category: "Artificial Intelligence",
+        summary:
+          "Argentina is promoting Patagonia for large AI data centres using tax incentives, stranded gas and renewable resources. Yet the country has less than 40 MW of existing data-centre capacity, an underinvested grid and long network distances from many users; proposed projects must also provide most of their own electricity infrastructure.",
+        whyItMatters:
+          "Cheap or abundant generation is only one part of an AI region. For training and SaaS inference, evaluate fibre routes, latency, grid and fuel redundancy, water, local skills, regulatory stability and realistic commissioning milestones before accepting a capacity or data-residency promise.",
+        image: "/images/briefings/2026-11-08/patagonia-ai-capacity.svg",
+        imageAlt: "Illustration of a Patagonian AI data centre connected to remote energy while grid, fibre and latency constraints remain visible.",
+        sourceLabel: "Financial Times report, 8 November 2026",
+        sourceUrl: "https://www.ft.com/content/d432ae29-6454-4916-98c7-afb6993cfb67",
+      },
+    ],
+  },
+  {
     date: "2026-11-07",
     title: "Daily Tech Briefing — 7 November 2026",
     description:

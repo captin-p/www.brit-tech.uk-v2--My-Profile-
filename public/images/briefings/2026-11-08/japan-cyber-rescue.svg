@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Japan cyber-rescue programme</title>
+  <desc id="desc">Incident responders coordinate network analysis, containment and business recovery through a shared command centre.</desc>
+  <defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#071526"/><stop offset="1" stop-color="#17395a"/></linearGradient></defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <g stroke="#7dd3fc" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="270" cy="270" r="150"/><path d="M270 120v300M120 270h300M165 165l210 210M375 165 165 375"/><path d="M420 270h155"/><rect x="575" y="130" width="280" height="280" rx="30"/><path d="M635 205h160M635 270h160M635 335h105"/><path d="M855 270h120"/><circle cx="1030" cy="270" r="78"/><path d="m995 270 25 25 48-58"/></g>
+  <g font-family="ui-monospace,monospace" fill="#e0f2fe"><text x="72" y="585" font-size="28">Japan cyber-rescue programme</text><text x="72" y="626" font-size="18" fill="#7dd3fc">BRIT TECH · 08 NOV 2026</text></g>
+</svg>
