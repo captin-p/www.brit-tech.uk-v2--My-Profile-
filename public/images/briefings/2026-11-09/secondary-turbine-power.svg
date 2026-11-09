@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Secondary turbine power market</title>
+  <desc id="desc">Used turbines and converted jet engines are assessed before powering an AI data centre.</desc>
+  <defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#071526"/><stop offset="1" stop-color="#17395a"/></linearGradient></defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <g stroke="#7dd3fc" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="250" cy="275" r="125"/><circle cx="250" cy="275" r="42"/><path d="M250 150v83M250 317v83M125 275h83M292 275h83M162 187l59 59M279 304l59 59M338 187l-59 59M221 304l-59 59"/><path d="M375 275h170"/><path d="m510 245 35 30-35 30"/><rect x="645" y="145" width="390" height="270" rx="28"/><path d="M705 215h270M705 275h270M705 335h190"/><path d="M1070 170v210" stroke="#fb7185" stroke-dasharray="18 12"/></g>
+  <g font-family="ui-monospace,monospace" fill="#e0f2fe"><text x="72" y="585" font-size="28">Secondary turbine power market</text><text x="72" y="626" font-size="18" fill="#7dd3fc">BRIT TECH · 09 NOV 2026</text></g>
+</svg>
