@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-09",
+    title: "Daily Tech Briefing — 9 November 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Review every third-party cloud service that holds customer data, then verify whether proposed infrastructure capacity has an approved grid connection rather than only an energy or construction plan. For AI features, keep investment tied to measured task-level productivity and retain a provider-independent fallback.",
+    stories: [
+      {
+        headline: "Iris Plaza says an external cloud breach may affect 7.7 million people",
+        category: "Cybersecurity",
+        summary:
+          "Iris Ohyama's online-store subsidiary says an unauthorized party accessed an external cloud service and may have viewed or obtained data stored for about 7.7 million people. The records cover roughly 5.8 million current and former members and 1.9 million non-members; payment-card data was not stored in the affected service, and the investigation has not established the final number of affected people.",
+        whyItMatters:
+          "Treat SaaS suppliers and cloud services as part of your data boundary. Minimise retained customer fields, document where former-user data remains, require exportable audit logs, rehearse rapid supplier isolation and prepare a phishing-resistant notification process before an incident occurs.",
+        image: "/images/briefings/2026-11-09/iris-cloud-breach.svg",
+        imageAlt: "Illustration of customer records being isolated after unauthorized access to an external cloud service.",
+        sourceLabel: "Iris Ohyama incident notice, 5 November 2026",
+        sourceUrl: "https://www.irisohyama.co.jp/news/2026/?date=1105",
+      },
+      {
+        headline: "G7 ministers put recent pro-Russian cyber activity on the Paris agenda",
+        category: "Cybersecurity",
+        summary:
+          "G7 foreign ministers meeting in Paris on 9 and 10 November will discuss recent cyberattacks suspected to involve pro-Russian groups and possible joint countermeasures. Italy's foreign minister described the events as hybrid-warfare incidents but explicitly stopped short of attributing them to the Russian government.",
+        whyItMatters:
+          "Cross-border response depends on evidence that can survive political and legal scrutiny. Preserve original logs outside affected systems, timestamp decisions, maintain regulator and law-enforcement contacts, and separate technical indicators from unverified attribution in customer or executive reporting.",
+        image: "/images/briefings/2026-11-09/g7-cyber-coordination.svg",
+        imageAlt: "Illustration of G7 partners sharing verified cyber-incident evidence through a coordinated response channel.",
+        sourceLabel: "Reuters report, 8 November 2026",
+        sourceUrl: "https://www.reuters.com/world/g7-ministers-discuss-recent-cyber-attacks-italy-says-2026-11-08/",
+      },
+      {
+        headline: "Norway pauses new grid-capacity reservations for data centres",
+        category: "IT Infrastructure",
+        summary:
+          "Grid operator Statnett temporarily stopped new data-centre capacity reservations, new facility-functionality applications and pending applications for direct connections to Norway's 420 kV grid. Existing connections are unaffected, and facilities with approved functional requirements may still connect.",
+        whyItMatters:
+          "A planned data-centre region is not usable until its grid connection and operating behaviour are approved. Ask providers for committed power, connection status, staged-load plans, disturbance tolerance and realistic commissioning dates, then keep workloads portable until capacity is actually energized.",
+        image: "/images/briefings/2026-11-09/norway-grid-pause.svg",
+        imageAlt: "Illustration of a data-centre connection waiting behind a Norwegian high-voltage grid approval gate.",
+        sourceLabel: "Reuters report, 9 November 2026",
+        sourceUrl: "https://www.reuters.com/business/energy/norways-statnett-pauses-new-grid-capacity-data-centres-protect-power-system-2026-11-09/",
+      },
+      {
+        headline: "AI data centres are turning to used turbines and converted jet engines",
+        category: "IT Infrastructure",
+        summary:
+          "Developers are buying refurbished gas turbines, reviving mothballed equipment and converting retired jet engines because new turbine delivery discussions now extend into 2030–2031. Worldwide orders exceed 100 GW against estimated production capacity of 60–70 GW, while used equipment can carry uncertain maintenance histories and limited remaining life.",
+        whyItMatters:
+          "On-site generation shifts risk rather than eliminating it. Infrastructure reviews should cover fuel supply, emissions permits, spare parts, maintenance records, black-start capability and how generator failures interact with UPS systems and grid failover—not merely the advertised megawatt figure.",
+        image: "/images/briefings/2026-11-09/secondary-turbine-power.svg",
+        imageAlt: "Illustration of an AI data centre evaluating used turbines, converted jet engines and power-system risks.",
+        sourceLabel: "Reuters investigation, 9 November 2026",
+        sourceUrl: "https://www.reuters.com/business/aerospace-defense/ai-power-rush-sends-data-centres-hunting-used-turbines-jet-engines-2026-11-09/",
+      },
+      {
+        headline: "Australia's central bank sees limited evidence of an AI productivity payoff",
+        category: "Artificial Intelligence",
+        summary:
+          "Reserve Bank of Australia Assistant Governor Sarah Hunter said evidence that AI has materially lifted productivity or caused widespread job losses remains limited. She warned that large AI investment could create financial-stability risk if expected returns disappoint and asset prices reprice sharply.",
+        whyItMatters:
+          "Build SaaS AI cases around measured results, not provider benchmarks or investment momentum. Track cost and latency per completed task, human rework, failure rates and retained revenue; keep non-AI workflows available and avoid long commitments until production data demonstrates a durable gain.",
+        image: "/images/briefings/2026-11-09/ai-productivity-evidence.svg",
+        imageAlt: "Illustration of AI investment being measured against task-level productivity, cost and financial risk.",
+        sourceLabel: "Reuters report, 9 November 2026",
+        sourceUrl: "https://www.reuters.com/world/asia-pacific/rbas-hunter-says-ai-has-yet-deliver-productivity-boost-trigger-job-losses-2026-11-08/",
+      },
+    ],
+  },
+  {
     date: "2026-11-08",
     title: "Daily Tech Briefing — 8 November 2026",
     description:
