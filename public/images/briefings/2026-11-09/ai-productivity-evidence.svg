@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">AI productivity evidence</title>
+  <desc id="desc">AI investment is measured against task-level productivity, cost and financial risk.</desc>
+  <defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#071526"/><stop offset="1" stop-color="#17395a"/></linearGradient></defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <g stroke="#7dd3fc" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="90" y="150" width="300" height="260" rx="28"/><path d="M150 215h180M150 275h180M150 335h110"/><path d="M390 280h150"/><path d="m505 250 35 30-35 30"/><path d="M610 410V155M610 410h500"/><path d="m660 355 105-80 105 35 170-130"/><circle cx="660" cy="355" r="10" fill="#7dd3fc"/><circle cx="765" cy="275" r="10" fill="#7dd3fc"/><circle cx="870" cy="310" r="10" fill="#7dd3fc"/><circle cx="1040" cy="180" r="10" fill="#fb7185" stroke="#fb7185"/></g>
+  <g font-family="ui-monospace,monospace" fill="#e0f2fe"><text x="72" y="585" font-size="28">AI productivity evidence</text><text x="72" y="626" font-size="18" fill="#7dd3fc">BRIT TECH · 09 NOV 2026</text></g>
+</svg>
