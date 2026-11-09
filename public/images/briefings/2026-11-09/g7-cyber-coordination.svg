@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">G7 cyber-response coordination</title>
+  <desc id="desc">Seven partners share verified incident evidence through a coordinated response channel.</desc>
+  <defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#071526"/><stop offset="1" stop-color="#17395a"/></linearGradient></defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <g stroke="#7dd3fc" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="600" cy="275" r="82"/><path d="M600 193v164M518 275h164"/><circle cx="240" cy="155" r="46"/><circle cx="420" cy="115" r="46"/><circle cx="780" cy="115" r="46"/><circle cx="960" cy="155" r="46"/><circle cx="275" cy="390" r="46"/><circle cx="600" cy="430" r="46"/><circle cx="925" cy="390" r="46"/><path d="M278 180 520 245M457 145l95 70M743 145l-95 70M922 180 680 245M314 365l220-55M600 384v-27M886 365l-220-55"/></g>
+  <g font-family="ui-monospace,monospace" fill="#e0f2fe"><text x="72" y="585" font-size="28">G7 cyber-response coordination</text><text x="72" y="626" font-size="18" fill="#7dd3fc">BRIT TECH · 09 NOV 2026</text></g>
+</svg>
