@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">External cloud breach containment</title>
+  <desc id="desc">Customer records in an external cloud service are isolated behind incident-response controls.</desc>
+  <defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#071526"/><stop offset="1" stop-color="#17395a"/></linearGradient></defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <g stroke="#7dd3fc" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M165 330c-70 0-95-92-30-127 13-74 124-85 155-22 74-8 105 95 37 135"/><rect x="325" y="145" width="360" height="270" rx="28"/><path d="M385 215h240M385 275h240M385 335h150"/><path d="M685 280h135"/><rect x="820" y="155" width="275" height="250" rx="28"/><path d="M880 220h155M880 280h155M880 340h105"/><path d="m735 230 70 100M805 230l-70 100" stroke="#fb7185"/></g>
+  <g font-family="ui-monospace,monospace" fill="#e0f2fe"><text x="72" y="585" font-size="28">External cloud breach containment</text><text x="72" y="626" font-size="18" fill="#7dd3fc">BRIT TECH · 09 NOV 2026</text></g>
+</svg>
