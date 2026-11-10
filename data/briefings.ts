@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-10",
+    title: "Daily Tech Briefing — 10 November 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "If you run N-central, follow N-able's isolation guidance before doing anything else. Then review whether every consequential AI workload has a centrally enforced, fail-closed stop mechanism, and start treating incident notification, independent evaluation and infrastructure exit costs as product requirements rather than later compliance work.",
+    stories: [
+      {
+        headline: "N-able takes hosted N-central offline after a mass zero-day disclosure",
+        category: "Cybersecurity",
+        summary:
+          "N-able shut its hosted N-central remote-monitoring environments across the Americas, Europe and Asia-Pacific after a researcher published more than 30 alleged vulnerabilities and proof-of-concept exploits. The reported chains include authentication bypass, credential disclosure, arbitrary file writes and remote code execution; N-able told on-premises customers to keep servers offline while it develops and validates a hotfix, and said it had not observed active exploitation or unauthorized data access.",
+        whyItMatters:
+          "RMM platforms sit above fleets of customer systems, so compromise can become a supply-chain incident quickly. Follow N-able's current shutdown and recovery guidance, restrict management access, preserve logs outside N-central, rotate privileged credentials after remediation and verify every managed endpoint for unexpected administrative actions before restoring trust.",
+        image: "/images/briefings/2026-11-10/nable-ncentral-response.svg",
+        imageAlt: "Illustration of an N-central remote-management server isolated while security teams validate fixes and inspect managed endpoints.",
+        sourceLabel: "BleepingComputer report with N-able statements, 9 November 2026",
+        sourceUrl: "https://www.bleepingcomputer.com/news/security/n-able-takes-cloud-platform-offline-after-30-plus-zero-days-published/",
+      },
+      {
+        headline: "OpenAI puts a fail-closed stop control in its inference layer",
+        category: "Artificial Intelligence",
+        summary:
+          "OpenAI described Control Room, a central authorization service now covering its research inference workloads. Each model request carries a job identifier and the inference engine checks whether that job may continue; a stop decision blocks further output within at most 35 seconds, and the system denies inference if Control Room itself fails.",
+        whyItMatters:
+          "This is a useful pattern for SaaS agents: enforce permission at the scarce execution layer rather than trusting changeable workload code. Give every job an identity, evaluate authorization before each consequential action, fail closed when policy is unavailable and test the kill path independently from the agent process.",
+        image: "/images/briefings/2026-11-10/ai-control-room.svg",
+        imageAlt: "Illustration of a central fail-closed control room authorizing or stopping AI inference workloads.",
+        sourceLabel: "OpenAI Control Room technical overview, 9 November 2026",
+        sourceUrl: "https://openai.com/index/control-room/",
+      },
+      {
+        headline: "Australia plans mandatory security and incident reporting for frontier AI",
+        category: "Artificial Intelligence",
+        summary:
+          "Australia says its forthcoming AI Standards legislation will require frontier-model companies operating in the country to maintain security controls across development and deployment, manage serious risks, permit independent evaluations, rapidly notify government of incidents and publish safety and security frameworks. A new targeted regulator would oversee compliance and could impose significant penalties; detailed legislation is still being developed.",
+        whyItMatters:
+          "Even if your SaaS is not a frontier-model developer, customers will increasingly expect the same evidence from downstream AI products. Keep model and tool inventories, document risk decisions, preserve action-level logs, define reportable incidents and make provider evaluation and replacement possible before these become contractual requirements.",
+        image: "/images/briefings/2026-11-10/australia-ai-standards.svg",
+        imageAlt: "Illustration of frontier AI services passing through Australian security, evaluation and incident-reporting controls.",
+        sourceLabel: "Australian Government joint media release, 10 November 2026",
+        sourceUrl: "https://www.minister.defence.gov.au/media-releases/2026-11-10/new-australian-ai-safety-security-protections",
+      },
+      {
+        headline: "Anthropic releases Fable 5.2 and gated Mythos 5.2 for difficult technical work",
+        category: "Artificial Intelligence",
+        summary:
+          "Anthropic released two access tiers of the same new model: Fable 5.2 for general use with cyber and biology safeguards, and Mythos 5.2 for verified organizations doing approved security or biomedical work. Anthropic prices standard use at $8 per million input tokens and $40 per million output tokens, says generation is up to 30% faster than version 5.1, and offers a faster mode at twice the token price.",
+        whyItMatters:
+          "Capability and access policy are becoming separate product dimensions. Benchmark the safeguarded tier on your own coding and operations tasks, measure cost per accepted result rather than token price alone, and design routing so rare hard jobs can use an expensive specialist model without moving every SaaS request onto it.",
+        image: "/images/briefings/2026-11-10/anthropic-model-routing.svg",
+        imageAlt: "Illustration of SaaS tasks being routed between safeguarded and verified-access AI model tiers according to risk and cost.",
+        sourceLabel: "Anthropic model announcement, 9 November 2026",
+        sourceUrl: "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      },
+      {
+        headline: "US data-centre bill would shift more grid-upgrade risk to operators",
+        category: "IT Infrastructure",
+        summary:
+          "A bipartisan energy bill due for US Senate debate would accelerate approvals for power plants and transmission while requiring large data centres to bear more of the cost of grid upgrades and protecting other utility customers if projects fail. Reuters reports that passage remains uncertain amid environmental, tribal and political opposition.",
+        whyItMatters:
+          "Cloud and colocation economics increasingly include transmission, interconnection and failed-project liabilities—not just servers and leases. When assessing future regions, ask who funds grid work, whether power is contractually firm, what happens if an anchor tenant exits and how those costs can flow into your SaaS pricing.",
+        image: "/images/briefings/2026-11-10/datacentre-grid-costs.svg",
+        imageAlt: "Illustration of a large data centre connected to a power grid with upgrade costs assigned to the operator.",
+        sourceLabel: "Reuters report, 9 November 2026",
+        sourceUrl: "https://www.reuters.com/legal/litigation/us-congress-gets-first-post-blue-wave-crack-data-centers-with-permitting-bill-2026-11-09/",
+      },
+    ],
+  },
+  {
     date: "2026-11-09",
     title: "Daily Tech Briefing — 9 November 2026",
     description:
