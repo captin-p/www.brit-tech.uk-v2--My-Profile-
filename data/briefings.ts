@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-11",
+    title: "Daily Tech Briefing — 11 November 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch and investigate every internet-reachable Xen Orchestra instance first, then accelerate the Outlook update across managed endpoints. Separately, verify that cloud backups survive the loss of an entire provider location and treat optical transceivers as both a security-sensitive component and a capacity dependency in AI fabric planning.",
+    stories: [
+      {
+        headline: "Attackers exploit a Xen Orchestra authentication bypass to reach virtualization hosts",
+        category: "Cybersecurity",
+        summary:
+          "Vates says VSA-2026-062 is being actively exploited. A specially crafted REST authentication cookie can be parsed as an empty object, causing Xen Orchestra to return an existing token and authenticate the attacker as its owner. Successful compromise provides administrator privileges and can progress to root takeover of managed XCP-ng hosts.",
+        whyItMatters:
+          "Your virtualization control plane sits above every guest workload. Update Xen Orchestra Appliance immediately to 6.9.1 stable or 6.10.0 latest, remove public exposure, block the disclosed command-and-control infrastructure and hunt for Vates' published indicators before trusting the environment again.",
+        image: "/images/briefings/2026-11-11/xen-orchestra-auth-bypass.svg",
+        imageAlt: "Illustration of a malicious authentication cookie being blocked before reaching Xen Orchestra and its managed virtualization hosts.",
+        sourceLabel: "Vates security advisory VSA-2026-062, 10 November 2026",
+        sourceUrl: "https://docs.vates.tech/security-advisories/advisories/2026/vates-sa-2026-062/",
+      },
+      {
+        headline: "Microsoft patches an Outlook spoofing flaw already used in attacks",
+        category: "Cybersecurity",
+        summary:
+          "Microsoft's November security release fixes CVE-2026-124194, an Outlook vulnerability that Microsoft confirmed was exploited before an update was available. CISA added the flaw to its Known Exploited Vulnerabilities catalogue on 10 November; affected organizations should use Microsoft's product-specific update guidance rather than relying only on the vulnerability's moderate severity score.",
+        whyItMatters:
+          "Prioritize the Outlook update across Microsoft 365 Apps and supported Office LTSC estates, verify endpoints actually installed it and restart where required. Review email, identity and endpoint telemetry for suspicious credential-authentication attempts instead of assuming patch deployment removes earlier access.",
+        image: "/images/briefings/2026-11-11/outlook-exploited-flaw.svg",
+        imageAlt: "Illustration of a spoofed Outlook message being stopped by a security update and endpoint verification process.",
+        sourceLabel: "Microsoft Security Response Center, November 2026",
+        sourceUrl: "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-124194",
+      },
+      {
+        headline: "AI agents formally verify Signal's compiled cryptographic code",
+        category: "Artificial Intelligence",
+        summary:
+          "Google DeepMind introduced AlphaProof Code, a human-guided multi-agent framework that generated more than six million lines of Lean proof code to verify key security properties of Signal's compiled AArch64 implementation. The work covers PQXDH and Triple Ratchet properties including forward secrecy, authentication and post-compromise security; every proof is accepted only after checking by Lean's kernel.",
+        whyItMatters:
+          "This is a stronger use of AI than asking a model whether code looks secure: untrusted agents produce artifacts that a deterministic verifier checks. For SaaS and infrastructure code, look for similar patterns where AI proposes configurations, migrations or policies but an independent compiler, type system, test suite or policy engine decides whether they are acceptable.",
+        image: "/images/briefings/2026-11-11/ai-formal-verification.svg",
+        imageAlt: "Illustration of AI agents generating proofs that pass through a deterministic verification gate before protecting compiled cryptographic code.",
+        sourceLabel: "Google DeepMind research announcement, 10 November 2026",
+        sourceUrl: "https://deepmind.google/blog/introducing-alphaproof-code/",
+      },
+      {
+        headline: "Yandex says 2.84% of affected cloud data is permanently lost",
+        category: "IT Infrastructure",
+        summary:
+          "Yandex says it restored 97.16% of customer data after October drone strikes damaged three data centres, but the remaining 2.84% cannot be recovered because equipment was critically damaged and customers had no backups on the platform. The company plans to enable backups by default and distribute computing resources across additional independent locations.",
+        whyItMatters:
+          "A provider's availability zones and recovery effort are not substitutes for your own tested backup. Keep immutable copies in an independent region or provider, verify restoration regularly and document which customer data can be rebuilt when both the primary system and local provider backup are unavailable.",
+        image: "/images/briefings/2026-11-11/cloud-data-loss.svg",
+        imageAlt: "Illustration of cloud data surviving across independent backup locations while one damaged data centre remains unrecoverable.",
+        sourceLabel: "Reuters report, 10 November 2026",
+        sourceUrl: "https://www.reuters.com/technology/russias-yandex-says-nearly-3-cloud-customer-data-lost-after-attacks-2026-11-10/",
+      },
+      {
+        headline: "Proposed Chinese transceiver ban exposes AI-fabric supply concentration",
+        category: "IT Infrastructure",
+        summary:
+          "Microsoft and industry groups are urging the US government not to ban new Chinese optical transceivers used inside AI data centres, warning that alternative suppliers lack enough scale and already-purchased accelerators could sit idle. Supporters of restrictions argue the components create data-theft, malware and disruption risks; Reuters reports a possible threshold targeting 3.2-Tbps products is under consideration.",
+        whyItMatters:
+          "Optics are now a strategic dependency rather than a minor line item. Maintain a vendor-diverse bill of materials, validate firmware and provenance, qualify interoperable replacements and model how lead times affect fabric expansion, sparing and failure recovery.",
+        image: "/images/briefings/2026-11-11/optical-supply-risk.svg",
+        imageAlt: "Illustration of an AI data-centre fabric depending on optical transceivers from multiple qualified suppliers.",
+        sourceLabel: "Reuters report, 10 November 2026",
+        sourceUrl: "https://www.reuters.com/business/media-telecom/microsoft-presses-trump-scuttle-expected-ban-chinese-data-center-technology-2026-11-10/",
+      },
+    ],
+  },
+  {
     date: "2026-11-10",
     title: "Daily Tech Briefing — 10 November 2026",
     description:
