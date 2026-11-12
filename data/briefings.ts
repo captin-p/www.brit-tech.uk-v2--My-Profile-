@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-12",
+    title: "Daily Tech Briefing — 12 November 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch Ivanti Endpoint Manager and the affected Fortinet estate first. Then review whether third-party AI agents can reuse customer credentials or perform regulated actions, and make sure any internal security agent is isolated by network policy rather than prompt instructions.",
+    stories: [
+      {
+        headline: "Ivanti patches unauthenticated remote code execution in Endpoint Manager",
+        category: "Cybersecurity",
+        summary:
+          "Ivanti released Endpoint Manager 2024 SU8 to fix CVE-2026-121653, a critical SQL-injection vulnerability in the EPM core. An unauthenticated remote attacker can exploit affected versions to execute code; a second flaw can expose or modify agent HTTP traffic to an attacker already in a man-in-the-middle position.",
+        whyItMatters:
+          "Endpoint-management platforms hold broad administrative reach across managed devices. Upgrade every EPM core to 2024 SU8, restrict management exposure, preserve off-box logs and investigate unexpected database queries or administrative activity before treating patched systems as clean.",
+        image: "/images/briefings/2026-11-12/ivanti-epm-rce.svg",
+        imageAlt: "Illustration of an unauthenticated SQL injection being blocked before reaching an Ivanti Endpoint Manager core and managed endpoints.",
+        sourceLabel: "Ivanti Endpoint Manager security advisory, November 2026",
+        sourceUrl: "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Endpoint-Manager-EPM-November-2026",
+      },
+      {
+        headline: "Fortinet discloses 98 vulnerabilities after releasing hardening updates",
+        category: "Cybersecurity",
+        summary:
+          "Fortinet published technical details for 98 vulnerabilities across products including FortiOS, FortiManager, FortiAnalyzer, FortiMail and FortiAuthenticator; 19 are rated critical. The most serious issues include authentication bypasses, SQL injection and unauthenticated command execution under affected configurations.",
+        whyItMatters:
+          "These products often sit at network and identity boundaries. Match every appliance to its product-specific advisory, upgrade to the fixed branch, restrict administrative interfaces and check configuration and authentication telemetry rather than applying one generic version assumption across the estate.",
+        image: "/images/briefings/2026-11-12/fortinet-hardening.svg",
+        imageAlt: "Illustration of Fortinet firewalls, management and identity appliances passing through a coordinated security-hardening gate.",
+        sourceLabel: "Fortinet security hardening release, updated 10 November 2026",
+        sourceUrl: "https://www.fortinet.com/blog/ciso-collective/fortinet-releases-security-hardening-release-for-multiple-products",
+      },
+      {
+        headline: "Cyber spies use an autonomous AI agent to steal government documents",
+        category: "Artificial Intelligence",
+        summary:
+          "CloudSEK says the Silent Lynx group used the Hermes agent framework during an espionage operation affecting Central Asian government and critical-infrastructure targets. The agent supported reconnaissance, intrusion work, document collection, preparation for exfiltration and evidence cleanup; researchers recovered the records from an exposed attacker server.",
+        whyItMatters:
+          "Agentic attacks compress reconnaissance, scripting and collection into a repeatable workflow. Defenders need rapid patching, egress controls, identity-aware detection and complete command and tool telemetry; internal red-team agents should run only against allowlisted synthetic targets with non-production credentials.",
+        image: "/images/briefings/2026-11-12/ai-espionage-agent.svg",
+        imageAlt: "Illustration of an autonomous AI agent attempting to collect government documents while monitored security controls record every tool action.",
+        sourceLabel: "CloudSEK technical investigation, 11 November 2026",
+        sourceUrl: "https://www.cloudsek.com/blog/off-the-rails-inside-an-exposed-silent-lynx-server",
+      },
+      {
+        headline: "United Airlines restricts third-party AI agents over account and safety risks",
+        category: "Artificial Intelligence",
+        summary:
+          "United Airlines said it will restrict AI bots from accessing its digital platforms directly or through travel agencies and aggregators. It warned that sharing credentials with assistants could expose personal data, trigger unintended purchases or account changes and misuse loyalty miles; automated check-in also creates regulatory problems when a traveller must personally acknowledge prohibited-item rules.",
+        whyItMatters:
+          "A SaaS agent should never inherit a user's full session or password. Use scoped delegated tokens, action-level confirmation, idempotency controls, spending limits and revocation; keep actions that carry legal attestations or safety declarations explicitly human.",
+        image: "/images/briefings/2026-11-12/airline-agent-access.svg",
+        imageAlt: "Illustration of a third-party AI travel agent stopped at an airline account gateway until scoped authorization and human confirmation are provided.",
+        sourceLabel: "Reuters report, 11 November 2026",
+        sourceUrl: "https://www.reuters.com/legal/litigation/united-airlines-moves-block-ai-agents-its-platform-over-security-concerns-2026-11-11/",
+      },
+      {
+        headline: "E.ON evaluates former German nuclear sites for data centres",
+        category: "IT Infrastructure",
+        summary:
+          "E.ON, Europe's largest energy-grid operator, is assessing whether former German nuclear-power sites could be converted into data centres. Germany ended nuclear generation in 2023, leaving inactive locations that may offer existing high-voltage connections and industrial land, although E.ON has not announced a specific project, capacity or commissioning date.",
+        whyItMatters:
+          "Reusing grid-connected industrial sites could shorten one infrastructure bottleneck, but power access alone does not create a viable region. Check fibre diversity, demolition and remediation work, permits, cooling, backup generation and time to energisation before counting proposed capacity.",
+        image: "/images/briefings/2026-11-12/nuclear-site-datacenter.svg",
+        imageAlt: "Illustration of a former nuclear power site being evaluated for conversion into a fibre-connected data centre.",
+        sourceLabel: "Reuters report, 11 November 2026",
+        sourceUrl: "https://www.reuters.com/business/energy/eon-reviews-former-german-nuclear-sites-data-centres-2026-11-11/",
+      },
+    ],
+  },
+  {
     date: "2026-11-11",
     title: "Daily Tech Briefing — 11 November 2026",
     description:
