@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-13",
+    title: "Daily Tech Briefing — 13 November 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch every customer-managed NetScaler appliance first, then verify Microsoft 365 recovery and keep an independent incident channel ready. For AI and database changes, benchmark on your own workloads and preserve provider-neutral interfaces before committing production traffic.",
+    stories: [
+      {
+        headline: "Every NetScaler deployment is exposed to a critical packet-processing flaw",
+        category: "Cybersecurity",
+        summary:
+          "Citrix disclosed 28 memory-safety flaws across NetScaler ADC and Gateway. CVE-2026-120868 is the broadest: a network-reachable memory overflow in core packet processing with a CVSS 9.3 score that affects every deployment, including default configurations, without authentication or a special feature being enabled. Citrix says it has not observed exploitation.",
+        whyItMatters:
+          "These appliances sit directly in authentication and application-delivery paths. Upgrade all customer-managed instances to a fixed release, prioritize internet-facing Gateway and AAA virtual servers, preserve off-box telemetry and do not mistake the absence of known exploitation for low exposure.",
+        image: "/images/briefings/2026-11-13/netscaler-packet-processing.svg",
+        imageAlt: "Illustration of malformed network packets being blocked before a NetScaler application delivery and access gateway.",
+        sourceLabel: "Citrix NetScaler security bulletin, 12 November 2026",
+        sourceUrl: "https://support.citrix.com/external/article/CTX697305",
+      },
+      {
+        headline: "Microsoft 365 outage exposes a shared health-check failure domain",
+        category: "IT Infrastructure",
+        summary:
+          "A widespread Microsoft incident disrupted Outlook, Teams, Copilot and other Microsoft 365 services from 12 November into Friday morning. Microsoft attributed the disruption to elevated infrastructure load and servers failing automated health checks; early recovery measures did not immediately restore service.",
+        whyItMatters:
+          "A health system can become part of the outage it is meant to contain. Keep status and incident communications outside the affected tenant, test alternate email and collaboration channels, export essential admin contacts and ensure SaaS runbooks do not depend on the same identity or management plane that may be unavailable.",
+        image: "/images/briefings/2026-11-13/microsoft-365-health-checks.svg",
+        imageAlt: "Illustration of Microsoft 365 services isolated behind failing automated server health checks and an independent incident channel.",
+        sourceLabel: "Associated Press report, 13 November 2026",
+        sourceUrl: "https://apnews.com/article/6376045281feb430c0b923e3a4b251c2",
+      },
+      {
+        headline: "Google makes Gemini 4 Hydrogen generally available for enterprise agents",
+        category: "Artificial Intelligence",
+        summary:
+          "Google Cloud made Gemini 4 Hydrogen generally available in its Enterprise Agent Platform as a short-term release. The model targets coding, multimodal analysis and tool use, with a unified 1,048,576-token limit across input and output; Google also warns that the release may receive as little as 45 days' retirement notice.",
+        whyItMatters:
+          "The capability is useful, but the short lifecycle is an operational constraint. Put model identifiers behind configuration, build regression tests for tool calls and long-context tasks, monitor token budgets and maintain a tested fallback so a forced migration does not become a SaaS outage.",
+        image: "/images/briefings/2026-11-13/gemini-hydrogen-lifecycle.svg",
+        imageAlt: "Illustration of a large-context AI model passing through testing, deployment and short-notice migration stages.",
+        sourceLabel: "Google Cloud release notes, 12 November 2026",
+        sourceUrl: "https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes",
+      },
+      {
+        headline: "US task force advances reporting rules for AI-powered cyber incidents",
+        category: "Artificial Intelligence",
+        summary:
+          "The US AI task force discussed national standards for developers to report AI safety incidents and share cybersecurity information. It also considered protections that would encourage banking, energy, emergency-services and other critical-infrastructure operators to disclose AI-powered attacks and vulnerabilities without added legal exposure.",
+        whyItMatters:
+          "Agent failures and AI-assisted intrusions need a defined reporting path before an incident occurs. Record tool calls and authorization decisions, set thresholds for disabling autonomous actions, preserve evidence outside the agent platform and identify regulators, customers and sector partners who must be notified.",
+        image: "/images/briefings/2026-11-13/ai-cyber-incident-reporting.svg",
+        imageAlt: "Illustration of an AI cyber incident moving through evidence preservation, critical-infrastructure reporting and coordinated response.",
+        sourceLabel: "Reuters report, 13 November 2026",
+        sourceUrl: "https://www.reuters.com/world/us/trumps-ai-task-force-met-thursday-discussed-ai-powered-cyberattacks-2026-11-13/",
+      },
+      {
+        headline: "AWS brings Graviton5 memory-optimized instances to managed databases",
+        category: "IT Infrastructure",
+        summary:
+          "AWS made R9g instances generally available for Aurora PostgreSQL and MySQL, plus RDS PostgreSQL, MySQL and MariaDB. AWS claims up to 30% higher performance and 22% better on-demand price-performance than equivalent Graviton4 instances; the largest size provides 192 vCPUs, 100 Gbps networking and 72 Gbps of EBS bandwidth in four initial regions.",
+        whyItMatters:
+          "This can improve SaaS database economics, but vendor maxima are not a capacity plan. Benchmark representative queries, failover, backup and restore, connection scaling and storage throughput; confirm extension and engine-version support, then roll out with a reversible instance-class change.",
+        image: "/images/briefings/2026-11-13/graviton5-r9g-databases.svg",
+        imageAlt: "Illustration of managed relational databases using Graviton5 compute with measured network and storage throughput.",
+        sourceLabel: "AWS What's New, 12 November 2026",
+        sourceUrl: "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-aurora-rds-postgresql-mysql-mariadb-r9g-instances/",
+      },
+    ],
+  },
+  {
     date: "2026-11-12",
     title: "Daily Tech Briefing — 12 November 2026",
     description:
