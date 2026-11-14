@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-14",
+    title: "Daily Tech Briefing — 14 November 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch and investigate Check Point systems first, then upgrade any MongoDB C# Driver estate that deserializes untrusted or loosely typed data. Rotate exposed AI credentials immediately, and treat both agent payments and multicloud management as privileged workflows with narrowly scoped identities and independent audit evidence.",
+    stories: [
+      {
+        headline: "Check Point confirms active exploitation of a local root-escalation flaw",
+        category: "Cybersecurity",
+        summary:
+          "Check Point says CVE-2026-123039 has been exploited in a small number of cases. A world-writable DynamicCLI control socket can let a local user escalate privileges to root on affected Management, Multi-Domain, Log Server, Security Gateway and Maestro deployments running releases from R80.30 through R82.20.",
+        whyItMatters:
+          "Network-security appliances are high-value pivot points even when exploitation requires prior local access. Install the release-specific Jumbo Hotfix Accumulator, use Check Point's temporary DynamicCLI mitigation where necessary and investigate unexpected local accounts, processes and configuration changes before returning an appliance to trust.",
+        image: "/images/briefings/2026-11-14/checkpoint-root-escalation.svg",
+        imageAlt: "Illustration of a local process being blocked from escalating to root on a Check Point security-management appliance.",
+        sourceLabel: "Check Point security notice, 13 November 2026",
+        sourceUrl: "https://community.checkpoint.com/t5/General-Topics/ACTION-REQUIRED-Security-Advisory-Three-Vulnerabilities-Fixed-in/td-p/284887",
+      },
+      {
+        headline: "MongoDB patches a C# Driver deserialization path that can lead to code execution",
+        category: "Cybersecurity",
+        summary:
+          "MongoDB published CVE-2026-126982, a high-severity allow-list bypass in BSON deserialization. Applications using C# Driver versions 3.2.0 through 3.13.x can instantiate types outside an intended allow-list when they deserialize attacker-controlled polymorphic data; code execution is possible when a suitable .NET gadget type is present.",
+        whyItMatters:
+          "This risk sits in application code rather than the database server. Upgrade to C# Driver 3.14.0, identify loosely typed Object or polymorphic fields, restrict allowed types explicitly and test the stricter deserialization behavior before production rollout.",
+        image: "/images/briefings/2026-11-14/mongodb-deserialization-rce.svg",
+        imageAlt: "Illustration of untrusted BSON data being stopped by a recursive type allow-list before reaching a .NET application.",
+        sourceLabel: "MongoDB security alert CVE-2026-126982, 13 November 2026",
+        sourceUrl: "https://www.mongodb.com/resources/products/alerts",
+      },
+      {
+        headline: "ARTEX agents turn stolen AI credentials into fuel for further attacks",
+        category: "Artificial Intelligence",
+        summary:
+          "Amazon Threat Intelligence says its MadPot decoys captured operational records from ARTEX agent campaigns. The records describe agents finding and validating AI and cloud keys, using stolen model access to power further credential hunting, probing hundreds of targets and attempting deepfake-assisted identity-verification bypasses. Amazon could not independently confirm every outcome described by the agents.",
+        whyItMatters:
+          "AI gateways, model keys and inference endpoints now belong in your production threat model. Remove default credentials, scan source history and container layers, rotate exposed keys, set per-key spend limits and alert on unusual model usage, geography or rapid provider switching.",
+        image: "/images/briefings/2026-11-14/artex-credential-cycle.svg",
+        imageAlt: "Illustration of an AI attack agent using stolen model credentials to fund a repeating credential-hunting cycle while defenders cut the loop.",
+        sourceLabel: "Amazon Threat Intelligence investigation, 13 November 2026",
+        sourceUrl: "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-observes-threat-actors-running-cybercrime-campaigns-with-artex-ai-agents/",
+      },
+      {
+        headline: "ChatGPT Wallet introduces tokenized, user-approved agent payments",
+        category: "Artificial Intelligence",
+        summary:
+          "OpenAI launched ChatGPT Wallet for eligible US ChatGPT Pro users in dots. Users review each purchase and authorize it with a device security check such as biometrics; the payment network then supplies a substitute credential, keeping the actual card details away from the agent and merchant. The initial rollout does not yet provide unattended spending.",
+        whyItMatters:
+          "This is a useful authorization pattern for SaaS agents: separate discovery from payment authority, expose only transaction-specific tokens, show the exact merchant and total, require explicit confirmation and retain a durable record that can support disputes and revocation.",
+        image: "/images/briefings/2026-11-14/agentic-wallet-approval.svg",
+        imageAlt: "Illustration of an AI shopping agent waiting for biometric approval before receiving a tokenized payment credential.",
+        sourceLabel: "OpenAI product announcement, 13 November 2026",
+        sourceUrl: "https://openai.com/index/introducing-chatgpt-wallet/",
+      },
+      {
+        headline: "AWS Systems Manager adds centralized administration for Google Cloud VMs",
+        category: "IT Infrastructure",
+        summary:
+          "AWS Systems Manager Cloud Connector can now deploy the SSM Agent to Google Cloud virtual machines and manage them alongside AWS, Azure and on-premises systems. Administrators can use Session Manager, Run Command, Patch Manager, State Manager, Automation and Inventory through one operational plane.",
+        whyItMatters:
+          "A shared control plane can reduce configuration drift across multicloud estates, but it also concentrates privilege. Use separate connector identities, scope projects and commands narrowly, require approval for mass actions, export audit logs independently and retain a provider-native recovery path if Systems Manager is unavailable or compromised.",
+        image: "/images/briefings/2026-11-14/multicloud-systems-manager.svg",
+        imageAlt: "Illustration of AWS Systems Manager administering Google Cloud, AWS and on-premises virtual machines through scoped identities and audit controls.",
+        sourceLabel: "AWS What's New, 13 November 2026",
+        sourceUrl: "https://aws.amazon.com/about-aws/whats-new/2026/11/systems-manager-google-cloud-support/",
+      },
+    ],
+  },
+  {
     date: "2026-11-13",
     title: "Daily Tech Briefing — 13 November 2026",
     description:
