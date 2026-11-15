@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-15",
+    title: "Daily Tech Briefing — 15 November 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Treat AI-provider datasets as part of your SaaS data boundary, keep credentials out of prompts and rotate any that appear in exposed transcripts. Separately, verify every high-impact takedown through an authenticated channel and test disaster recovery with integrity checks and a rollback path before it can touch production.",
+    stories: [
+      {
+        headline: "Notion finds API keys inside chat transcripts exposed through Fireworks AI",
+        category: "Cybersecurity",
+        summary:
+          "Notion's latest incident update says attackers accessed AI Insights transcripts affecting fewer than 1% of workspaces through its former AI infrastructure provider, Fireworks. Notion revoked exposed Notion API keys on 11 November and, on 13 November, notified the issuers of third-party API keys found in affected messages.",
+        whyItMatters:
+          "An AI vendor can become a secondary data store even when your primary SaaS platform is secure. Keep secrets out of prompts, inventory every model and evaluation provider, verify retention controls technically, and build a bulk process to identify and rotate credentials after a supplier incident.",
+        image: "/images/briefings/2026-11-15/ai-transcript-exposure.svg",
+        imageAlt: "Illustration of AI chat transcripts containing API keys being isolated after a third-party provider breach.",
+        sourceLabel: "Notion security advisory, updated 13 November 2026",
+        sourceUrl: "https://www.notion.com/en-gb/security/advisories/security-incident-involving-a-third-party-ai-vendor",
+      },
+      {
+        headline: "Forged court orders caused Indian providers to block 129 websites",
+        category: "Cybersecurity",
+        summary:
+          "India's prime minister's office summoned the telecommunications secretary after officials directed internet providers to block 129 betting websites using fabricated High Court orders emailed by people posing as lawyers. Police and the telecom ministry are investigating how forged logos, seals and QR codes passed the takedown process.",
+        whyItMatters:
+          "Network controls are only as trustworthy as the authorization path behind them. Require authenticated, independently verified requests for DNS, firewall and hosting takedowns; use dual approval for high-impact changes; and retain the original evidence, approver identity and rollback record.",
+        image: "/images/briefings/2026-11-15/forged-takedown-orders.svg",
+        imageAlt: "Illustration of a forged legal takedown request being rejected before reaching an internet service provider block list.",
+        sourceLabel: "Reuters report, 14 November 2026",
+        sourceUrl: "https://www.reuters.com/world/modi-summons-telecom-secretary-over-website-takedowns-sources-say-2026-11-14/",
+      },
+      {
+        headline: "Workday restores production after a disaster-recovery test created inconsistent data",
+        category: "IT Infrastructure",
+        summary:
+          "Workday returned production tenants to service on 14 November after an issue involving its disaster-recovery environment produced inconsistent production data. The disruption forced production into maintenance, interrupting user access, scheduled jobs and integrations while Workday reindexed and released customer tenants.",
+        whyItMatters:
+          "A recovery mechanism can expand an incident when integrity checks and blast-radius controls fail. Test failover on representative data, define an authoritative source of truth, validate replication before cutover, rehearse rollback and design integrations to pause and replay safely after recovery.",
+        image: "/images/briefings/2026-11-15/workday-dr-integrity.svg",
+        imageAlt: "Illustration of a disaster-recovery replica being stopped by data-integrity checks before production cutover.",
+        sourceLabel: "Florida Atlantic University service status, updated 14 November 2026",
+        sourceUrl: "https://wordpress.fau.edu/oit/",
+      },
+      {
+        headline: "Apple isolates ambient camera and microphone processing from the main OS",
+        category: "IT Infrastructure",
+        summary:
+          "Apple detailed Secure Exclaves, protected runtimes that process ambient camera and microphone data outside the main operating system. The design limits background sensing to defined metadata and uses a separate secure controller to release full sensor data only after verifying that the user-visible indicator is actually displayed.",
+        whyItMatters:
+          "This is a strong pattern for any sensitive SaaS or edge workflow: isolate raw data, expose only the minimum derived result, place authorization outside the requesting process and make the security state independently observable rather than trusting application code to report it.",
+        image: "/images/briefings/2026-11-15/secure-sensor-exclave.svg",
+        imageAlt: "Illustration of camera and microphone streams processed inside an isolated secure enclave that releases only approved metadata.",
+        sourceLabel: "Apple Security Research, 12 November 2026",
+        sourceUrl: "https://security.apple.com/blog/secure-exclaves",
+      },
+      {
+        headline: "DeepSeek exposes its app's web, file and URL tools through the API",
+        category: "Artificial Intelligence",
+        summary:
+          "DeepSeek opened the application capabilities behind its consumer chat experience to developers. The deepseek-flash model can now use hosted web search, file input and URL reading through the Messages, Responses and Chat Completions APIs, with the service handling tool calls and context assembly.",
+        whyItMatters:
+          "Hosted tools can shorten SaaS development, but they also move retrieval, parsing and provenance into a provider-controlled layer. Apply outbound-domain policy, cap file size and tool iterations, preserve citations and tool traces, and keep an abstraction that lets you replace the hosted tool path.",
+        image: "/images/briefings/2026-11-15/deepseek-hosted-tools.svg",
+        imageAlt: "Illustration of an AI model routing web, file and URL tools through a controlled API gateway with audit logs.",
+        sourceLabel: "DeepSeek API changelog, 13 November 2026",
+        sourceUrl: "https://api-docs.deepseek.com/updates/",
+      },
+    ],
+  },
+  {
     date: "2026-11-14",
     title: "Daily Tech Briefing — 14 November 2026",
     description:
