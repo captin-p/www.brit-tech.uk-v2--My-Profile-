@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-17",
+    title: "Daily Tech Briefing — 17 November 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch exposed MiCollab systems first and train administrators not to trust search-engine results as software sources. For AI deployments, inventory model dependencies, require human approval for consequential healthcare actions and treat compute, software, networking and energy as one supply-chain resilience problem.",
+    stories: [
+      {
+        headline: "Mitel patches a critical unauthenticated command-injection chain in MiCollab",
+        category: "Cybersecurity",
+        summary:
+          "Mitel disclosed five flaws in the Audio, Web and Video Conferencing component of MiCollab 10.3.0.18 and earlier. They include a CVSS 10.0 blind command-injection vulnerability, critical XML injection, arbitrary file upload and authentication bypass; Mitel warns that chaining the issues can significantly increase their impact.",
+        whyItMatters:
+          "MiCollab sits inside enterprise communications and often has broad directory and network reach. Identify internet-accessible AWV components, restrict external access immediately, apply Mitel's patch or upgrade to a later release, then inspect off-box proxy, authentication and host telemetry for unusual uploads or commands.",
+        image: "/images/briefings/2026-11-17/mitel-micollab-patch.svg",
+        imageAlt: "Illustration of unauthenticated commands being blocked before reaching a patched Mitel MiCollab collaboration server.",
+        sourceLabel: "Mitel security advisory MISA-2026-0012, 16 November 2026",
+        sourceUrl: "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2026-0012",
+      },
+      {
+        headline: "FBI says Gootloader poisoned search results through more than 1,000 WordPress sites",
+        category: "Cybersecurity",
+        summary:
+          "The FBI says Gootloader used compromised WordPress sites, carefully chosen search terms and traffic filtering to deliver JavaScript malware and provide initial access for ransomware. As of October, investigators had identified more than 1,000 infected WordPress sites, 216 administrator-controlled domains and over $28 million in related ransomware payments.",
+        whyItMatters:
+          "Search ranking and a familiar website do not prove that an installer or document is safe. Obtain administrative tools from vendor-owned domains, restrict script execution from downloads, monitor unusual archive and JavaScript launches, secure WordPress credentials and plugins, and preserve DNS and proxy telemetry for investigation.",
+        image: "/images/briefings/2026-11-17/gootloader-seo-poisoning.svg",
+        imageAlt: "Illustration of a poisoned search result redirecting through a compromised WordPress site toward malware while security controls block the path.",
+        sourceLabel: "FBI FLASH CC-111626-MW, 16 November 2026",
+        sourceUrl: "https://www.ic3.gov/CSA/2026/261116.pdf",
+      },
+      {
+        headline: "OpenAI releases computer-use agents for healthcare workflows",
+        category: "Artificial Intelligence",
+        summary:
+          "OpenAI says healthcare teams, developers and US clinicians can now use computer-use capabilities through its API, ChatGPT for Healthcare and ChatGPT for Clinicians. The agents can move information between existing applications for tasks such as authorization requests, referrals and discharge planning, with configurable approvals, access controls and audit logs.",
+        whyItMatters:
+          "This is directly relevant to MedAid and other hospital software, but clinical data and consequential actions require strict boundaries. Use synthetic data for development, scope each agent to one workflow, require clinician approval before orders or patient messages, log every screen and action, and retain a manual path when an agent or external portal fails.",
+        image: "/images/briefings/2026-11-17/healthcare-computer-use.svg",
+        imageAlt: "Illustration of a healthcare computer-use agent moving data between approved clinical systems while a clinician reviews the final action.",
+        sourceLabel: "OpenAI product announcement, 16 November 2026",
+        sourceUrl: "https://openai.com/index/advancing-computer-use-for-healthcare-teams/",
+      },
+      {
+        headline: "GitHub retires three Copilot models across most coding experiences",
+        category: "Artificial Intelligence",
+        summary:
+          "GitHub deprecated Claude Opus 4.8, Claude Opus 5 and GPT-5.6 Terra across most Copilot chat, edit, agent and completion experiences on 16 November. GitHub recommends Claude Opus 5.5, GPT-6.1 Sol or GPT-6 Luna; default alternatives are automatically enabled for many Business and Enterprise tenants unless administrators changed model policies.",
+        whyItMatters:
+          "Coding-agent dependencies can disappear on a fixed date even when application code has not changed. Inventory model identifiers in editor policies and automation, run regression tests for repository edits and tool calls, review data-governance settings for replacement models and keep a tested fallback rather than relying on automatic substitution.",
+        image: "/images/briefings/2026-11-17/copilot-model-retirement.svg",
+        imageAlt: "Illustration of deprecated coding-assistant models being migrated through regression tests to supported replacements.",
+        sourceLabel: "GitHub Changelog, 16 November 2026",
+        sourceUrl: "https://github.blog/changelog/2026-11-16-github-copilot-models-deprecated-on-november-16-2026/",
+      },
+      {
+        headline: "Ten countries agree to coordinate protection of AI infrastructure and supply chains",
+        category: "IT Infrastructure",
+        summary:
+          "The United States and nine partners — Australia, India, Israel, Japan, South Korea, Qatar, Singapore, the United Arab Emirates and the United Kingdom — signed the San Francisco Declaration. It establishes cooperation on securing the critical goods, software, knowledge, materials and components supporting AI supply chains and infrastructure.",
+        whyItMatters:
+          "AI resilience extends beyond accelerators to networking, energy, firmware, cloud access and specialized suppliers. Map where your SaaS workloads depend on each layer, distinguish announced capacity from usable capacity, maintain exportable data and model interfaces, and test an alternative region or provider before disruption forces a migration.",
+        image: "/images/briefings/2026-11-17/ai-supply-chain-security.svg",
+        imageAlt: "Illustration of international partners protecting interconnected AI compute, networking, software and power supply-chain layers.",
+        sourceLabel: "Reuters report, 16 November 2026",
+        sourceUrl: "https://www.reuters.com/world/china/us-allies-team-up-protect-ai-tech-infrastructure-amid-china-rivalry-2026-11-16/",
+      },
+    ],
+  },
+  {
     date: "2026-11-15",
     title: "Daily Tech Briefing — 15 November 2026",
     description:
