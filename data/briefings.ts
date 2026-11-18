@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-18",
+    title: "Daily Tech Briefing — 18 November 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Inventory and patch every Java runtime first, including copies embedded in containers, appliances and enterprise applications, then upgrade HTTP/2-enabled Apache servers. For AI and infrastructure changes, enforce human approval, preserve full audit evidence and test fallback channels before trusting automated systems with production authority.",
+    stories: [
+      {
+        headline: "Critical Java runtime flaw can enable unauthenticated remote code execution",
+        category: "Cybersecurity",
+        summary:
+          "Oracle released emergency updates for CVE-2026-114938, a heap-based buffer overflow in Java's hardware-accelerated Base64 processing on affected x86-64 systems. A remote unauthenticated attacker may be able to corrupt memory, disclose data, crash a process or execute code when a vulnerable application decodes crafted Base64 input.",
+        whyItMatters:
+          "Java is often hidden inside products, containers and appliances rather than installed as an obvious system package. Build an inventory using the full runtime build number, prioritize internet-facing applications, rebuild container images, restart patched services and ask software vendors whether they bundle an affected JRE.",
+        image: "/images/briefings/2026-11-18/java-runtime-rce.svg",
+        imageAlt: "Illustration of crafted Base64 input being blocked before reaching a patched Java runtime embedded in enterprise applications.",
+        sourceLabel: "Oracle Critical Security Patch Update, 17 November 2026",
+        sourceUrl: "https://www.oracle.com/security-alerts/cspunov2026.html",
+      },
+      {
+        headline: "Singapore warns that attackers are exploiting Apache HTTP/2 remote code execution",
+        category: "Cybersecurity",
+        summary:
+          "Singapore's Cyber Security Agency says CVE-2026-119618 is being actively exploited and that public proof-of-concept code exists. The concurrency flaw can corrupt memory in Apache HTTP Server's mod_http2 module and affect versions 2.4.55 through 2.4.70 when HTTP/2 is enabled; Apache fixed it in 2.4.71.",
+        whyItMatters:
+          "Check every node behind a load balancer rather than testing only the public endpoint. Inventory loaded modules, apply Apache 2.4.71 or a vendor-confirmed backport, restart the service, verify the running binary and inspect error logs for crashes, child-process restarts or other abnormal behavior.",
+        image: "/images/briefings/2026-11-18/apache-http2-exploitation.svg",
+        imageAlt: "Illustration of malicious HTTP/2 traffic being stopped before a patched Apache web-server cluster.",
+        sourceLabel: "Cyber Security Agency of Singapore alert, 17 November 2026",
+        sourceUrl: "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-164/",
+      },
+      {
+        headline: "Microsoft launches specialized models for agentic coding and cyber remediation",
+        category: "Artificial Intelligence",
+        summary:
+          "Microsoft introduced Code 2 and Code 2 Flash for repository-scale coding work, plus Cyber 2 Flash for vulnerability discovery, validation and remediation. The coding models are available through GitHub Copilot and Microsoft Foundry, while the cyber model is being integrated with Microsoft's security tooling.",
+        whyItMatters:
+          "Specialized models can reduce cost, but security claims must be tested against your repositories and threat model. Benchmark detection and false positives, require human validation before applying fixes, isolate agent execution, retain patch diffs and tool traces, and never expose production secrets during evaluation.",
+        image: "/images/briefings/2026-11-18/microsoft-code-cyber-models.svg",
+        imageAlt: "Illustration of coding and cybersecurity AI models passing findings through validation, patch review and controlled deployment.",
+        sourceLabel: "Microsoft Ignite announcement, 17 November 2026",
+        sourceUrl: "https://blogs.microsoft.com/blog/2026/11/17/ignite-2026-building-the-frontier-ecosystem/",
+      },
+      {
+        headline: "NATO expands AI-assisted vulnerability research with human oversight",
+        category: "Artificial Intelligence",
+        summary:
+          "OpenAI says NATO institutions are using its Daybreak cybersecurity models for defensive analysis, and that a 2026 Crossed Swords training stream had participants build and evaluate cyber agents under human supervision. OpenAI also reported cyber-model work with ENISA and national agencies including France's ANSSI.",
+        whyItMatters:
+          "The practical pattern is more valuable than the vendor: AI accelerates investigation while qualified operators retain authorization and verify impact. Apply that pattern to your cybersecurity labs and SaaS work by separating scanning, validation, remediation and production approval into independently logged stages.",
+        image: "/images/briefings/2026-11-18/nato-ai-cyber-defense.svg",
+        imageAlt: "Illustration of multinational cyber defenders supervising an AI agent through discovery, validation and remediation stages.",
+        sourceLabel: "OpenAI announcement, 17 November 2026",
+        sourceUrl: "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai/",
+      },
+      {
+        headline: "Routine maintenance triggers another high-profile infrastructure outage",
+        category: "IT Infrastructure",
+        summary:
+          "The US National Security Agency reported temporary network degradation during scheduled maintenance on 17 November. The incident followed other unrelated disruptions affecting Microsoft 365, Workday, the FAA, banking systems and Apple services, illustrating how tightly coupled platforms can amplify ordinary technical failures.",
+        whyItMatters:
+          "Maintenance is a production change, not a low-risk administrative task. Define blast-radius limits, pre-change health checks and automatic rollback thresholds; keep status communications outside the affected identity domain; and verify that SaaS operations can continue when one collaboration, banking or cloud dependency is unavailable.",
+        image: "/images/briefings/2026-11-18/maintenance-outage-resilience.svg",
+        imageAlt: "Illustration of a maintenance change being contained by staged rollout, health checks and an independent rollback path.",
+        sourceLabel: "NSA statement and Reuters report, 17 November 2026",
+        sourceUrl: "https://www.reuters.com/business/finance/multiple-tech-systems-have-been-crashing-here-is-how-protect-yourself-2026-11-17/",
+      },
+    ],
+  },
+  {
     date: "2026-11-17",
     title: "Daily Tech Briefing — 17 November 2026",
     description:
