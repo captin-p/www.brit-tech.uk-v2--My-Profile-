@@ -48,7 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${siteUrl}/briefings`,
-      lastModified: new Date("2026-11-18"),
+      lastModified: new Date("2026-11-19"),
       changeFrequency: "daily",
       priority: 0.9,
     },
