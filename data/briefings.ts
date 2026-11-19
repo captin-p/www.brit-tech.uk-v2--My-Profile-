@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-19",
+    title: "Daily Tech Briefing — 19 November 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch internet-facing NGINX systems first, then verify every AI agent, model provider and accelerator path as a governed dependency. Regional CDN failures and new compute-access rules show why SaaS resilience now spans software, networks, identity, geography and regulation.",
+    stories: [
+      {
+        headline: "F5 releases out-of-band fixes for critical NGINX vulnerabilities",
+        category: "Cybersecurity",
+        summary:
+          "F5 published an out-of-band security bundle covering multiple NGINX and BIG-IP issues. CERT-EU says five NGINX flaws can let an unauthenticated remote attacker execute code with the worker process's privileges; NGINX Open Source releases before 1.31.9 and 1.30.7 are among the affected versions.",
+        whyItMatters:
+          "NGINX commonly sits at the public edge as a reverse proxy, ingress controller or API gateway. Inventory the actual running package and modules across every node, upgrade using the vendor's fixed release, restart workers, validate configuration and inspect access and error logs for crashes or unusual HTTP/2, HTTP/3 and resolver behavior.",
+        image: "/images/briefings/2026-11-19/nginx-out-of-band-patches.svg",
+        imageAlt: "Illustration of hostile HTTP, resolver and TLS traffic being stopped before a patched NGINX reverse-proxy cluster.",
+        sourceLabel: "F5 out-of-band security notification, 18 November 2026",
+        sourceUrl: "https://my.f5.com/s/article/K000164058",
+      },
+      {
+        headline: "Bipartisan senators call for security standards for autonomous AI agents",
+        category: "Artificial Intelligence",
+        summary:
+          "US senators Maria Cantwell and Mike Rounds warned that AI-enabled cyber threats are advancing faster than defensive infrastructure. Their 18 November letter asks for coordinated defensive AI deployment, common security standards for autonomous agents and measurable responsibilities across government and industry.",
+        whyItMatters:
+          "The proposed controls map directly to SaaS agent design. Maintain an inventory of agent capabilities, authorize individual tools rather than broad roles, require approval for production changes, cap transaction and request volume, preserve tamper-resistant traces and test how an agent is disabled without taking the core service offline.",
+        image: "/images/briefings/2026-11-19/ai-cyber-security-standards.svg",
+        imageAlt: "Illustration of autonomous AI agents passing through permissions, human approval and audit controls before reaching production systems.",
+        sourceLabel: "US Senate Commerce Committee release and letter, 18 November 2026",
+        sourceUrl: "https://www.commerce.senate.gov/press/dem/release/cantwell-rounds-warn-ai-cyber-threats-are-outpacing-u-s-defenses-call-for-urgent-white-house-action-to-protect-critical-infrastructure/",
+      },
+      {
+        headline: "Akamai edge-delivery problems recur in Singapore and Japan",
+        category: "IT Infrastructure",
+        summary:
+          "Akamai reported recurring Edge Delivery degradation in Singapore and Japan on 18 November, including latency, video playback failures and packet loss. Service returned to a healthy state at approximately 19:20 UTC, while Akamai continued investigating how to prevent another recurrence during regional peak traffic.",
+        whyItMatters:
+          "A global CDN can still fail regionally and intermittently. Monitor synthetic requests from several regions, keep origin capacity and DNS failover ready, define which static assets and APIs can bypass the CDN, and make status and administrative access independent of the same edge path used by customers.",
+        image: "/images/briefings/2026-11-19/akamai-edge-instability.svg",
+        imageAlt: "Illustration of traffic being rerouted around degraded CDN edge locations in Singapore and Japan toward healthy delivery paths.",
+        sourceLabel: "Akamai service status, updated 18 November 2026",
+        sourceUrl: "https://www.akamaistatus.com/",
+      },
+      {
+        headline: "Malaysia tells data centres to comply with new US AI-chip access rules",
+        category: "IT Infrastructure",
+        summary:
+          "Malaysia's trade minister said local data-centre operators must comply with new US controls on advanced AI chips. The underlying US rule extends export controls to remote computing arrangements and introduces licensing requirements affecting advanced accelerators sent to Malaysia, Singapore, Thailand, Indonesia and Brazil.",
+        whyItMatters:
+          "Cloud capacity is now constrained by customer identity, remote-access patterns and export compliance as well as power and hardware. Record where accelerators are located, which legal entity provides access, where users and workloads originate, and whether a provider can move the workload if licensing rules change.",
+        image: "/images/briefings/2026-11-19/ai-chip-access-controls.svg",
+        imageAlt: "Illustration of remote AI workloads passing through identity and export-control checks before reaching an overseas accelerator cluster.",
+        sourceLabel: "Reuters report on Malaysia and US AI-chip controls, 18 November 2026",
+        sourceUrl: "https://www.reuters.com/business/finance/malaysia-says-data-centres-must-comply-with-us-ai-chip-rules-2026-11-18/",
+      },
+      {
+        headline: "US considers public disclosure of Chinese AI-model dependencies",
+        category: "Artificial Intelligence",
+        summary:
+          "The US administration is considering requiring companies to disclose publicly when they use Chinese AI models, according to Reuters. The proposal remains under discussion and has not become a formal rule, but it would expose model provenance and supplier choices to customers and regulators.",
+        whyItMatters:
+          "Prepare before disclosure becomes mandatory in any market. Maintain a machine-readable model register covering provider, version, hosting region, data retention, subprocessors, fallback model and affected product features; then ensure customer-facing documentation matches the real production routing rather than the intended architecture.",
+        image: "/images/briefings/2026-11-19/foreign-model-disclosure.svg",
+        imageAlt: "Illustration of a SaaS model registry showing provider, hosting region, data flow and public disclosure status.",
+        sourceLabel: "Reuters report, 18 November 2026",
+        sourceUrl: "https://www.reuters.com/world/china/trump-administration-weighs-forcing-us-firms-disclose-chinese-ai-use-2026-11-18/",
+      },
+    ],
+  },
+  {
     date: "2026-11-18",
     title: "Daily Tech Briefing — 18 November 2026",
     description:
