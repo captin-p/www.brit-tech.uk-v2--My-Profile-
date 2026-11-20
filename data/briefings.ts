@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-20",
+    title: "Daily Tech Briefing — 20 November 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Prioritize the four newly listed exploited vulnerabilities, especially internet-facing Synology, REDCap, Apache Axis and LiteLLM systems. Then review third-party data sharing, isolate AI-enabled security tooling and test regional cloud recovery when a routing or control-plane dependency fails.",
+    stories: [
+      {
+        headline: "CISA adds four actively exploited enterprise flaws to its priority catalog",
+        category: "Cybersecurity",
+        summary:
+          "CISA added vulnerabilities in Synology DSM, BerriAI LiteLLM, Apache Axis 1.x and Vanderbilt REDCap to its Known Exploited Vulnerabilities catalog. The issues include remote-code-execution paths in storage, AI gateway, legacy SOAP and research-data systems; federal remediation dates are 21 November for Synology, Axis and REDCap and 2 December for LiteLLM.",
+        whyItMatters:
+          "These products often sit in different ownership silos, so one generic vulnerability scan may miss them. Identify public NAS management, AI gateways, bundled Axis libraries and REDCap surveys; patch or migrate them, restrict exposure, review connected credentials and perform compromise checks rather than assuming an update removes earlier persistence.",
+        image: "/images/briefings/2026-11-20/cisa-four-exploited-flaws.svg",
+        imageAlt: "Illustration of four exploited paths toward storage, an AI gateway, a SOAP service and a research-data server being blocked.",
+        sourceLabel: "CISA Known Exploited Vulnerabilities catalog, updated 18 November 2026",
+        sourceUrl: "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      },
+      {
+        headline: "European Commission confirms an AI-generated cybercampaign",
+        category: "Cybersecurity",
+        summary:
+          "The European Commission confirmed that attackers used AI tools in a cybercampaign detected on 22 October. Several applications were taken offline as a precaution and most have been restored; the investigation remains active, and the Commission said there was no evidence of a staff-wide data breach.",
+        whyItMatters:
+          "AI-assisted attacks can sustain discovery and exploitation across many applications at once. Separate externally reachable services from HR and finance systems, centralize identity and network telemetry, preserve evidence outside affected domains and maintain an application-level isolation plan that does not require shutting down an entire tenant or platform.",
+        image: "/images/briefings/2026-11-20/eu-ai-cybercampaign.svg",
+        imageAlt: "Illustration of an AI-assisted cybercampaign being contained before reaching European institutional applications and staff data.",
+        sourceLabel: "Reuters report with European Commission confirmation, 19 November 2026",
+        sourceUrl: "https://www.reuters.com/legal/litigation/eu-commission-targeted-cyberattack-politico-reports-2026-11-19/",
+      },
+      {
+        headline: "JPMorgan, Visa and Mastercard report attacks through service providers",
+        category: "Cybersecurity",
+        summary:
+          "JPMorgan said attackers accessed marketing data held by third-party vendors, potentially including customer names and email addresses. Visa and Mastercard separately linked claims involving limited non-payment information to service providers and said their payment networks and card-number data were not affected.",
+        whyItMatters:
+          "A SaaS vendor can expose customer relationships even without touching payment credentials. Minimize data exported to marketing and support tools, map every processor and subprocessor, enforce retention limits, use scoped integration credentials and require vendors to provide rapid evidence, notification and bulk-revocation procedures.",
+        image: "/images/briefings/2026-11-20/payment-vendor-breach.svg",
+        imageAlt: "Illustration of customer marketing data being separated from payment systems while a compromised third-party connection is contained.",
+        sourceLabel: "Reuters report, 19 November 2026",
+        sourceUrl: "https://www.reuters.com/legal/government/jpmorgan-says-third-party-vendors-targeted-cyberattack-2026-11-19/",
+      },
+      {
+        headline: "OVHcloud expands European-hosted AI and cloud capacity",
+        category: "Artificial Intelligence",
+        summary:
+          "France's OVHcloud launched 55 cloud and AI products hosted on European infrastructure, including access to newer Nvidia accelerators and AI-assisted workplace services. The company says its available data-centre capacity could accommodate as many as 60,000 Blackwell chips and that some services will run on its state-certified cloud.",
+        whyItMatters:
+          "This creates another deployment option for European SaaS products that need clearer data location and provider diversification. Compare available—not announced—accelerator capacity, network egress, identity integration, certification scope, model portability, support quality and tested exit procedures before moving sensitive workloads.",
+        image: "/images/briefings/2026-11-20/european-ai-cloud.svg",
+        imageAlt: "Illustration of European SaaS workloads connecting to regionally hosted AI accelerators through portable cloud interfaces.",
+        sourceLabel: "Reuters report, 19 November 2026",
+        sourceUrl: "https://www.reuters.com/business/ovhcloud-launches-ai-cloud-products-hosted-europe-2026-11-19/",
+      },
+      {
+        headline: "DigitalOcean routing failure disrupts multiple SFO3 cloud services",
+        category: "IT Infrastructure",
+        summary:
+          "DigitalOcean said a load-balancer node failure caused a network-routing problem that disrupted connectivity to a core database system in its SFO3 region. Customers experienced errors, timeouts or delays across Droplets, volumes, load balancers, firewalls, managed databases and Kubernetes operations until mitigation.",
+        whyItMatters:
+          "One failed network component can propagate into a regional control-plane incident across otherwise different services. Keep infrastructure state reproducible, test recovery outside the primary region, make retries idempotent, monitor both data and control planes and avoid placing status, secrets and recovery tooling behind the same regional dependency.",
+        image: "/images/briefings/2026-11-20/digitalocean-routing-failure.svg",
+        imageAlt: "Illustration of cloud control-plane traffic being rerouted around a failed load-balancer node and inaccessible regional database path.",
+        sourceLabel: "DigitalOcean status incident, resolved 19 November 2026",
+        sourceUrl: "https://status.digitalocean.com/",
+      },
+    ],
+  },
+  {
     date: "2026-11-19",
     title: "Daily Tech Briefing — 19 November 2026",
     description:
