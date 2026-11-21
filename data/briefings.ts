@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-21",
+    title: "Daily Tech Briefing — 21 November 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch and investigate every reachable vCenter instance first. Then apply the same control discipline to AI-assisted access, industrial devices and AI infrastructure: isolate management paths, authorize consequential actions, preserve evidence and avoid long-lived commitments that assume one technology or provider will always remain available.",
+    stories: [
+      {
+        headline: "Attackers exploit a critical VMware vCenter authentication bypass",
+        category: "Cybersecurity",
+        summary:
+          "Broadcom disclosed CVE-2026-123890, a critical VMware Directory Service authentication bypass affecting vCenter. Google Threat Intelligence and Mandiant report exploitation by a suspected China-linked actor since September; Broadcom published fixed releases and says no workaround is available.",
+        whyItMatters:
+          "vCenter is a high-value control plane for virtual infrastructure. Restrict management access, apply the fixed release across every appliance, preserve logs outside vCenter and investigate identity, administrative and VM changes made before patching. Treat suspected compromise as an incident, not only a maintenance task.",
+        image: "/images/briefings/2026-11-21/vcenter-auth-bypass.svg",
+        imageAlt: "Illustration of an unauthenticated path being blocked before a patched VMware vCenter management plane.",
+        sourceLabel: "Broadcom security advisory VMSA-2026-0009, updated 20 November 2026",
+        sourceUrl: "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/39495",
+      },
+      {
+        headline: "Bell says an agentic attacker stole enterprise network-customer data",
+        category: "Cybersecurity",
+        summary:
+          "Bell Canada confirmed that an 'agentic' threat actor accessed systems used to order and provision telecommunications circuits. The 17 November intrusion exposed business contact details and IP addresses, but Bell says customer services were unaffected and more sensitive files and PDFs were not accessed.",
+        whyItMatters:
+          "Provisioning data maps enterprise networks even when it contains no passwords. Limit what sales and ordering systems expose, segment them from operational platforms, require short-lived credentials, detect bulk or automated queries and provide customers with actionable indicators quickly enough to rotate addresses, accounts and access rules.",
+        image: "/images/briefings/2026-11-21/bell-agentic-breach.svg",
+        imageAlt: "Illustration of an AI-assisted attacker being contained after reaching a telecommunications circuit-ordering system.",
+        sourceLabel: "CBC report with Bell Canada statement, 20 November 2026",
+        sourceUrl: "https://www.cbc.ca/news/business/bell-agentic-cyber-attack-9.7430468",
+      },
+      {
+        headline: "Britain fixes internet-exposed commercial refrigeration systems",
+        category: "IT Infrastructure",
+        summary:
+          "A coordinated UK operation developed and deployed fixes for vulnerabilities in commercial fridges and freezers after attacks disrupted equipment across Europe. Affected organizations first removed refrigeration controllers from the public internet while researchers and the NCSC worked privately on remediation.",
+        whyItMatters:
+          "The incident is a practical model for operational technology: inventory embedded controllers, remove direct internet exposure, place management behind authenticated gateways, restrict outbound traffic and test manual fail-safe operation. Monitoring should cover physical outcomes such as temperature and power, not only device availability.",
+        image: "/images/briefings/2026-11-21/refrigeration-remediation.svg",
+        imageAlt: "Illustration of commercial refrigeration controllers being moved behind a secure gateway while temperature monitoring continues.",
+        sourceLabel: "Reuters report with UK NCSC confirmation, 20 November 2026",
+        sourceUrl: "https://www.reuters.com/world/uk/uk-finds-fix-fridge-freezer-vulnerability-after-european-hacks-2026-11-20/",
+      },
+      {
+        headline: "US and China agree humans should control major military AI decisions",
+        category: "Artificial Intelligence",
+        summary:
+          "US Treasury Secretary Scott Bessent said Presidents Donald Trump and Xi Jinping agreed that humans must remain involved in major military decisions using AI. The statement describes a high-level safeguard rather than a detailed technical or verification framework.",
+        whyItMatters:
+          "The same principle belongs in SaaS agent design: automation may collect evidence and recommend actions, but people should authorize destructive, financial, security or account-wide changes. Enforce approval outside the model, record the exact decision context and keep a tested way to disable the agent independently.",
+        image: "/images/briefings/2026-11-21/human-control-ai.svg",
+        imageAlt: "Illustration of a human approval gate controlling an AI system before a consequential action.",
+        sourceLabel: "Reuters interview with US Treasury Secretary Scott Bessent, 20 November 2026",
+        sourceUrl: "https://www.reuters.com/world/china/trump-xi-agreed-that-military-ai-decisions-should-involve-humans-bessent-says-2026-11-20/",
+      },
+      {
+        headline: "SpaceX GPU buildout receives a record $44 billion debt package",
+        category: "IT Infrastructure",
+        summary:
+          "Apollo and Goldman Sachs priced approximately $44 billion of senior and subordinated notes to finance SpaceX purchases of Nvidia GPUs and related equipment. The firms describe it as the largest AI-related chip financing arranged to date.",
+        whyItMatters:
+          "AI capacity increasingly depends on financing structures as well as chips, power and network fabric. Distinguish equipment already funded and installed from announced capacity, avoid unnecessary long prepayments and keep model and cloud integrations portable if a provider's expansion, pricing or availability changes.",
+        image: "/images/briefings/2026-11-21/gpu-financing.svg",
+        imageAlt: "Illustration of financed GPU racks connected to power, network and repayment dependencies.",
+        sourceLabel: "Apollo and Goldman Sachs financing announcement, 20 November 2026",
+        sourceUrl: "https://www.apollo.com/insights-news/pressreleases/2026/11/apollo-and-goldman-sachs-announce-pricing-of-44-billion-spacex-gpu-financing-3407671",
+      },
+    ],
+  },
+  {
     date: "2026-11-20",
     title: "Daily Tech Briefing — 20 November 2026",
     description:
