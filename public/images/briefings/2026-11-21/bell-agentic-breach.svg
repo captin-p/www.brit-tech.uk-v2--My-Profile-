@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="bell-title bell-desc">
+<title id="bell-title">Agentic telecom breach</title>
+<desc id="bell-desc">Automated attacker activity is contained before reaching a telecom provisioning system.</desc>
+<defs>
+<radialGradient id="bell-bg" cx="50%" cy="38%" r="75%"><stop offset="0" stop-color="#173252"/><stop offset="1" stop-color="#06101d"/></radialGradient>
+<filter id="bell-glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1200" height="675" rx="36" fill="url(#bell-bg)"/>
+<path d="M480 328H720" stroke="#a78bfa" stroke-width="6" stroke-linecap="round" opacity=".75"/>
+<circle cx="600" cy="328" r="58" fill="#0b1c30" stroke="#a78bfa" stroke-width="5" filter="url(#bell-glow)"/>
+<path d="M574 329l17 18 36-41" fill="none" stroke="#f8fafc" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="120" y="205" width="360" height="245" rx="28" fill="#0b1c30" stroke="#334e68" stroke-width="3"/>
+<rect x="720" y="205" width="360" height="245" rx="28" fill="#0b1c30" stroke="#334e68" stroke-width="3"/>
+<text x="300" y="315" text-anchor="middle" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="34" font-weight="700">AGENTIC ACTOR</text>
+<text x="900" y="315" text-anchor="middle" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="34" font-weight="700">CIRCUIT DATA</text>
+<text x="600" y="94" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,sans-serif" font-size="36" font-weight="700">Agentic telecom breach</text>
+<text x="600" y="602" text-anchor="middle" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="22" letter-spacing="4">BRIT TECH · 21 NOVEMBER 2026</text>
+</svg>
