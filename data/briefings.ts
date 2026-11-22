@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-22",
+    title: "Daily Tech Briefing — 22 November 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Rotate every credential that could have been exposed through Rackspace Spot and review Entra sign-in and audit logs first. Then treat inexpensive Android devices as untrusted network participants, benchmark new AI models against real SaaS workloads, and make stateful edge services recoverable outside one data-centre location.",
+    stories: [
+      {
+        headline: "Rackspace Spot breach exposes customer Kubernetes secrets",
+        category: "Cybersecurity",
+        summary:
+          "Rackspace warned customers that an attacker used leaked credentials to access its Spot Kubernetes platform on 17 November. The intruder could create pods, read Kubernetes Secrets and list nodes and volumes in affected organizations; Rackspace restored service on 21 November after revoking tokens, removing workloads and strengthening controls.",
+        whyItMatters:
+          "A leaked platform credential can expose every downstream secret stored in a cluster. Reissue Spot and refresh tokens, download new kubeconfig files, rotate database, registry, Git and cloud credentials stored in Kubernetes Secrets, and inspect audit and service logs from 17 November onward for use of those credentials.",
+        image: "/images/briefings/2026-11-22/rackspace-kubernetes-secrets.svg",
+        imageAlt: "Illustration of compromised cloud credentials reaching Kubernetes pods and secrets before being revoked and rotated.",
+        sourceLabel: "BleepingComputer report citing Rackspace customer notification, 21 November 2026",
+        sourceUrl: "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/",
+      },
+      {
+        headline: "Exploited Entra Connect Health flaw exposes tenant metadata",
+        category: "Cybersecurity",
+        summary:
+          "Microsoft confirmed that an Entra Connect Health API vulnerability enabled unauthorized read-only access to administrator and technical-contact emails, tenant identifiers, domains, license tiers and directory-synchronization status. Microsoft deployed a server-side fix on 19 November and notified affected organizations through Azure Service Health.",
+        whyItMatters:
+          "The exposed metadata is useful for targeted phishing and identity reconnaissance even without passwords or tokens. Check Azure Service Health, review Entra sign-in and audit logs, verify Connect Health configuration and require phishing-resistant MFA for privileged administrators and technical contacts.",
+        image: "/images/briefings/2026-11-22/entra-metadata-exposure.svg",
+        imageAlt: "Illustration of Entra tenant metadata being protected after unauthorized API access while administrator credentials remain isolated.",
+        sourceLabel: "BleepingComputer report with Microsoft confirmation, 21 November 2026",
+        sourceUrl: "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/",
+      },
+      {
+        headline: "BADBOX 3.0 reaches 40 billion fraudulent requests per day",
+        category: "Cybersecurity",
+        summary:
+          "HUMAN Security says the rebuilt BADBOX botnet generated roughly 40 billion fraudulent advertising bid requests daily at its peak. Malware embedded in or installed on low-cost Android phones, tablets and TV boxes also enrolled devices into residential proxy networks without owners' consent.",
+        whyItMatters:
+          "Cheap consumer devices can become persistent proxy infrastructure inside trusted networks. Isolate unmanaged Android and streaming devices on separate VLANs, block unnecessary east-west access, monitor unusual DNS and outbound traffic, use reputable firmware and avoid hardware with uncertain update and supply-chain support.",
+        image: "/images/briefings/2026-11-22/badbox-botnet.svg",
+        imageAlt: "Illustration of compromised Android TV boxes generating fraudulent traffic through residential proxy networks.",
+        sourceLabel: "HUMAN Security BADBOX 3.0 research, reported 21 November 2026",
+        sourceUrl: "https://www.humansecurity.com/satori-threat-intelligence/badbox-3-0/",
+      },
+      {
+        headline: "OpenAI releases GPT-6.2 Astra and Sol for professional and agentic work",
+        category: "Artificial Intelligence",
+        summary:
+          "OpenAI introduced GPT-6.2 Astra for complex professional work and GPT-6.2 Sol for lower-cost everyday and agentic workflows. Both are available in ChatGPT Work, Codex and the API. OpenAI says Astra's API token prices are 20% below GPT-6 Astra and that both models cross its Critical cybersecurity-capability threshold.",
+        whyItMatters:
+          "Lower cost and stronger tool use may improve SaaS automation, but vendor benchmarks are not deployment evidence. Test task completion, latency, total tokens, security failure modes and cost per successful workflow using your own data; keep approval gates, restricted tools and a provider-neutral fallback.",
+        image: "/images/briefings/2026-11-22/gpt-6-2-models.svg",
+        imageAlt: "Illustration of two AI models passing through workload evaluation, permission and cost controls before SaaS deployment.",
+        sourceLabel: "OpenAI release and system information, 22 November 2026",
+        sourceUrl: "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+      },
+      {
+        headline: "Cloudflare stateful edge services briefly fail in Chicago",
+        category: "IT Infrastructure",
+        summary:
+          "Cloudflare reported network-performance problems in its Chicago ORD data centre from 00:32 to 01:11 UTC on 22 November. The incident affected Durable Objects, D1 and R2; Cloudflare implemented a fix within twelve minutes and monitored the location before marking the incident resolved.",
+        whyItMatters:
+          "Stateful edge products can share a physical and network failure domain even when they appear as separate services. Monitor from multiple regions, make writes idempotent, test recovery outside the preferred location and avoid placing application state, object storage and recovery tooling behind a single edge path.",
+        image: "/images/briefings/2026-11-22/cloudflare-ord-incident.svg",
+        imageAlt: "Illustration of stateful edge traffic being rerouted around a disrupted Chicago data-centre path.",
+        sourceLabel: "Cloudflare status incident, resolved 22 November 2026",
+        sourceUrl: "https://www.cloudflarestatus.com/incidents/d2m4kw94ut4f",
+      },
+    ],
+  },
+  {
     date: "2026-11-21",
     title: "Daily Tech Briefing — 21 November 2026",
     description:
