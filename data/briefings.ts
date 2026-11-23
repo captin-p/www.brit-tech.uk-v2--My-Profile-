@@ -46,10 +46,10 @@ export const briefings: TechBriefing[] = [
         summary:
           "GL.iNet says an unauthorized party exploited a vulnerability in its cloud remote-management services to access some routers and remote KVM devices and install malicious software. The vendor blocked the cloud attack path, but warns that this does not remove malware already present on affected devices.",
         whyItMatters:
-          "A compromised router or KVM can observe or alter traffic and administration sessions below endpoint controls. Check the GL.iNet account email for device-specific notices, apply stable security firmware, factory-reset affected hardware as directed, rotate credentials used through KVM sessions and isolate management interfaces from user networks.",
+          "A compromised router or KVM can observe or alter traffic and administration sessions below endpoint controls. Check the GL.iNet account email for device-specific notices, install the latest stable security firmware for the exact model, verify the published malware indicator is absent afterward, rotate credentials used through KVM sessions and isolate management interfaces from user networks.",
         image: "/images/briefings/2026-11-23/glinet-cloud-malware.svg",
         imageAlt: "Illustration of a compromised cloud-management path to routers and KVM devices being severed while infected equipment is rebuilt.",
-        sourceLabel: "GL.iNet security notice, updated 22 November 2026",
+        sourceLabel: "GL.iNet security notice, updated 23 November 2026",
         sourceUrl: "https://www.gl-inet.com/blogs/blog/glinet-security-notice-2026-11-20",
       },
       {
