@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Staged upgrade and rollback</title>
+  <desc id="desc">A staged systems upgrade uses monitoring and rollback to contain an interruption.</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="35%" r="80%"><stop offset="0" stop-color="#173252"/><stop offset="1" stop-color="#06101d"/></radialGradient>
+    <linearGradient id="line" x1="0" x2="1"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#34d399"/></linearGradient>
+  </defs>
+  <rect width="1200" height="675" rx="32" fill="url(#bg)"/>
+  <text x="72" y="94" fill="#f8fafc" font-family="Arial, sans-serif" font-size="38" font-weight="700">Staged upgrade and rollback</text>
+  <rect x="120" y="205" width="360" height="245" rx="24" fill="#0b1b2c" stroke="#38bdf8" stroke-width="3"/>
+  <rect x="720" y="205" width="360" height="245" rx="24" fill="#0b1b2c" stroke="#34d399" stroke-width="3"/>
+  <text x="300" y="330" text-anchor="middle" fill="#bae6fd" font-family="Arial, sans-serif" font-size="28" font-weight="700">UPGRADE</text>
+  <text x="900" y="330" text-anchor="middle" fill="#bbf7d0" font-family="Arial, sans-serif" font-size="28" font-weight="700">SERVICE</text>
+  <path d="M480 327 H720" stroke="url(#line)" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="600" cy="327" r="42" fill="#071827" stroke="#fbbf24" stroke-width="6"/>
+  <path d="M581 327 l13 13 27-30" fill="none" stroke="#fbbf24" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="455" y="490" width="290" height="72" rx="36" fill="#0f273d" stroke="#94a3b8" stroke-width="2"/>
+  <text x="600" y="536" text-anchor="middle" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="24" font-weight="700">ROLLBACK</text>
+  <text x="72" y="620" fill="#94a3b8" font-family="Arial, sans-serif" font-size="21">BRIT TECH · 23 NOVEMBER 2026</text>
+</svg>
