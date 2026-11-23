@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-23",
+    title: "Daily Tech Briefing — 23 November 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch and investigate exposed MONAI Label servers and GL.iNet cloud-managed devices first. Then turn AI capability thresholds, provider sovereignty and upgrade-related outage risk into explicit controls: approval gates, portable architectures, tested rollback and independently observable recovery.",
+    stories: [
+      {
+        headline: "MONAI Label 0.8.6 fixes an exploited arbitrary-file-write flaw",
+        category: "Cybersecurity",
+        summary:
+          "MONAI Label released version 0.8.6 to address CVE-2026-133968, a critical path-traversal weakness in datastore upload endpoints. Versions through 0.8.5 can allow a reachable client to write files outside the intended datastore and potentially execute code; public records say the flaw was exploited in the wild.",
+        whyItMatters:
+          "Medical-imaging software may sit outside normal server inventories, while MONAI Label authentication is not enabled by default. Upgrade to 0.8.6, restrict network access, run the service with minimal filesystem permissions and inspect previously exposed hosts for unexpected files, processes and credentials.",
+        image: "/images/briefings/2026-11-23/monai-file-write.svg",
+        imageAlt: "Illustration of a malicious upload path being blocked before it can write outside a protected MONAI Label datastore.",
+        sourceLabel: "Project MONAI security advisory and fixed release, 22 November 2026",
+        sourceUrl: "https://github.com/Project-MONAI/MONAILabel/security/advisories/GHSA-qc22-rmgc-vg94",
+      },
+      {
+        headline: "GL.iNet cloud flaw was used to install malware on routers and KVMs",
+        category: "Cybersecurity",
+        summary:
+          "GL.iNet says an unauthorized party exploited a vulnerability in its cloud remote-management services to access some routers and remote KVM devices and install malicious software. The vendor blocked the cloud attack path, but warns that this does not remove malware already present on affected devices.",
+        whyItMatters:
+          "A compromised router or KVM can observe or alter traffic and administration sessions below endpoint controls. Check the GL.iNet account email for device-specific notices, apply stable security firmware, factory-reset affected hardware as directed, rotate credentials used through KVM sessions and isolate management interfaces from user networks.",
+        image: "/images/briefings/2026-11-23/glinet-cloud-malware.svg",
+        imageAlt: "Illustration of a compromised cloud-management path to routers and KVM devices being severed while infected equipment is rebuilt.",
+        sourceLabel: "GL.iNet security notice, updated 22 November 2026",
+        sourceUrl: "https://www.gl-inet.com/blogs/blog/glinet-security-notice-2026-11-20",
+      },
+      {
+        headline: "OpenAI chief scientist proposes shared capability limits for frontier models",
+        category: "Artificial Intelligence",
+        summary:
+          "OpenAI chief scientist Jakub Pachocki proposed using perplexity and complementary measures as an industry-wide capability scale, with developers agreeing not to cross defined thresholds until monitoring and control techniques reach specified milestones. The proposal is voluntary and no cross-industry agreement yet exists.",
+        whyItMatters:
+          "The practical SaaS lesson is to tie deployment permissions to measured capability and observability rather than model branding. Define which evaluations unlock tools, data and autonomy; stop expansion when monitoring cannot explain behavior; and preserve human approval for destructive, financial and security-sensitive actions.",
+        image: "/images/briefings/2026-11-23/ai-capability-limits.svg",
+        imageAlt: "Illustration of an AI capability curve stopping at a monitored safety threshold before additional autonomy is permitted.",
+        sourceLabel: "OpenAI essay by Jakub Pachocki, 22 November 2026",
+        sourceUrl: "https://openai.com/index/perplexity-and-intelligence/",
+      },
+      {
+        headline: "European cloud buyers increasingly treat operational control as a requirement",
+        category: "IT Infrastructure",
+        summary:
+          "European governments and regulated industries are giving more weight to sovereign-cloud controls, but AWS, Microsoft Azure and Google Cloud still hold more than 70% of the regional market. The emerging requirement is not only where data is stored, but whether services can continue under European operational control.",
+        whyItMatters:
+          "Data residency alone does not guarantee continuity or independence. For European SaaS workloads, document who can administer the control plane, which laws and subcontractors apply, how encryption keys are controlled and whether the application can be restored on another provider without proprietary identity, database or networking dependencies.",
+        image: "/images/briefings/2026-11-23/europe-cloud-control.svg",
+        imageAlt: "Illustration of a European-controlled cloud boundary with portable workloads spanning several infrastructure providers.",
+        sourceLabel: "Reuters analysis, 23 November 2026",
+        sourceUrl: "https://www.reuters.com/business/finance/europes-cloud-sovereignty-push-gains-ground-us-hyperscalers-remain-dominant-2026-11-23/",
+      },
+      {
+        headline: "US intelligence chief warns modernization will bring more service outages",
+        category: "IT Infrastructure",
+        summary:
+          "US Director of National Intelligence Jay Clayton said organizations should expect additional glitches and interruptions while companies and agencies replace aging systems. He described recent banking, Microsoft, aviation and national-security disruptions as upgrade-related failures rather than a coordinated state attack.",
+        whyItMatters:
+          "Necessary modernization can still create correlated outages when migrations share vendors, identity, DNS or release tooling. Break changes into reversible stages, test rollback with real dependencies, monitor from outside the upgraded environment and keep manual or degraded-mode procedures for services that cannot simply wait for restoration.",
+        image: "/images/briefings/2026-11-23/upgrade-outage-risk.svg",
+        imageAlt: "Illustration of a staged systems upgrade using rollback and monitoring paths to contain a service interruption.",
+        sourceLabel: "Reuters interview, 22 November 2026",
+        sourceUrl: "https://www.reuters.com/business/finance/us-intelligence-chief-predicts-more-tech-outages-systems-undergo-upgrades-2026-11-22/",
+      },
+    ],
+  },
+  {
     date: "2026-11-22",
     title: "Daily Tech Briefing — 22 November 2026",
     description:
