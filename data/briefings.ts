@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-24",
+    title: "Daily Tech Briefing — 24 November 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Rotate Azure API Management secrets and remove Idunno.AntiCsrf from every reachable ASP.NET application first. Then apply bank-style identity controls to AI agents, distinguish contracted AI capacity from operational capacity, and make infrastructure-management writes idempotent when provider control planes become inconsistent.",
+    stories: [
+      {
+        headline: "Norway tells Azure API Management users to assume secrets were exposed",
+        category: "Cybersecurity",
+        summary:
+          "Norway's National Security Authority updated its guidance after an unknown actor actively targeted access tokens, secrets and named values stored in Azure API Management. Microsoft has closed the vulnerability, but NSM says the extent of exploitation remains uncertain and names Equinor and Skagerak Energi among affected organizations.",
+        whyItMatters:
+          "A patched gateway does not invalidate credentials already copied from it. Inventory every APIM instance, verify its runtime version, rotate tokens, subscription keys and named-value secrets, trace what downstream systems they authorize and review API, identity and network logs for use from unexpected locations.",
+        image: "/images/briefings/2026-11-24/azure-apim-secrets.svg",
+        imageAlt: "Illustration of exposed API tokens and named-value secrets being rotated after an Azure API Management compromise.",
+        sourceLabel: "Norwegian National Security Authority guidance, updated 23 November 2026",
+        sourceUrl: "https://nsm.no/fagomrader/digital-sikkerhet/digital-hendelseshandtering/varsler-fra-nsm/nsm-deler-tiltak-mot-sarbarhet-i-azure-api-management",
+      },
+      {
+        headline: "Actively exploited legacy ASP.NET security library has no patch",
+        category: "Cybersecurity",
+        summary:
+          "Mandiant says CVE-2026-131914 in the abandoned Idunno.AntiCsrf library allows an unauthenticated attacker to execute code through a crafted POST request to a reachable ASP.NET WebForms page. The vulnerability is rated critical, active exploitation has been observed and the defunct project has no maintained fix.",
+        whyItMatters:
+          "A forgotten DLL can undermine an otherwise patched Windows server. Search Web.config and application bin directories for Idunno.AntiCsrf, remove the module, migrate to a supported anti-forgery mechanism and inspect IIS logs and webroots. If exploitation is suspected, rotate machine keys, database credentials and other configuration secrets.",
+        image: "/images/briefings/2026-11-24/aspnet-legacy-rce.svg",
+        imageAlt: "Illustration of a malicious ASP.NET POST request being blocked after a vulnerable legacy anti-CSRF module is removed.",
+        sourceLabel: "Mandiant vulnerability disclosure MNDT-2026-0048",
+        sourceUrl: "https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0048.md",
+      },
+      {
+        headline: "Banks bring internal AI agents under identity and access controls",
+        category: "Artificial Intelligence",
+        summary:
+          "Several US banks are tightening controls on internal AI agents by limiting credentials, task duration, reachable systems and permissible actions. They are also isolating tests from production, preserving activity records outside agents' control and preparing operational fallbacks if an agent must be disabled.",
+        whyItMatters:
+          "This is a practical architecture for SaaS automation: give every agent its own identity, short-lived credentials and explicit authorization; keep logs and kill switches outside the model's reach; require human approval for consequential actions; and ensure the core service still works when automation is turned off.",
+        image: "/images/briefings/2026-11-24/bank-agent-controls.svg",
+        imageAlt: "Illustration of an internal AI agent passing through identity, permission, logging and human-approval controls.",
+        sourceLabel: "Reuters report, 23 November 2026",
+        sourceUrl: "https://www.reuters.com/legal/litigation/some-us-banks-tighten-ai-agent-controls-concern-about-models-escaping-safeguards-2026-11-23/",
+      },
+      {
+        headline: "Applied Digital signs an 18-year lease for 150 MW of AI capacity",
+        category: "IT Infrastructure",
+        summary:
+          "Applied Digital signed a lease for 150 megawatts of critical IT capacity with an unnamed investment-grade hyperscaler. The base 18-year term is expected to generate $5.4 billion, with renewal options extending the arrangement to 33 years and approximately $12.7 billion.",
+        whyItMatters:
+          "AI infrastructure commitments are becoming power contracts measured in decades, not ordinary server leases. When evaluating AI providers, separate signed capacity from powered and commissioned racks, examine customer and site concentration and keep workloads portable in case financing, construction, power delivery or pricing assumptions change.",
+        image: "/images/briefings/2026-11-24/ai-capacity-lease.svg",
+        imageAlt: "Illustration of a long-term 150-megawatt AI data-centre lease connecting power, cooling, network and accelerator capacity.",
+        sourceLabel: "Reuters report, 23 November 2026",
+        sourceUrl: "https://www.reuters.com/business/applied-digital-signs-54-billion-ai-data-center-lease-with-hyperscaler-2026-11-23/",
+      },
+      {
+        headline: "Cloudflare investigates delayed and inconsistent Workers API responses",
+        category: "IT Infrastructure",
+        summary:
+          "Cloudflare reported that its Workers API was returning delayed or inconsistent responses from 13:52 UTC on 23 November and later marked the cause as identified. The incident concerns the management API used to inspect and change edge applications, making control-plane state less dependable while investigation continues.",
+        whyItMatters:
+          "An unreliable management response can tempt automation or operators to repeat a change and create drift. Make infrastructure writes idempotent, record the intended configuration independently, verify state after every deployment and pause nonessential changes when the provider control plane cannot confirm a consistent result.",
+        image: "/images/briefings/2026-11-24/workers-api-consistency.svg",
+        imageAlt: "Illustration of delayed and conflicting Workers API responses being reconciled against an independently recorded desired configuration.",
+        sourceLabel: "Cloudflare status incident, updated 24 November 2026",
+        sourceUrl: "https://www.cloudflarestatus.com/history?service=API",
+      },
+    ],
+  },
+  {
     date: "2026-11-23",
     title: "Daily Tech Briefing — 23 November 2026",
     description:
