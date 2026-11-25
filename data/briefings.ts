@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-25",
+    title: "Daily Tech Briefing — 25 November 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Review public-facing and third-party data paths after the CIA and ODNI breach report, then pilot AWS's centralized internet inspection cautiously. For new AI integrations, separate agent identities and approvals from user-facing APIs, and plan server purchases around memory constraints rather than headline AI demand alone.",
+    stories: [
+      {
+        headline: "CIA and ODNI discover a breach of an unclassified intelligence network",
+        category: "Cybersecurity",
+        summary:
+          "The CIA and Office of the Director of National Intelligence recently found that an intrusion exposed some unclassified information on a network used to collect insights from public material. ODNI says classified systems and critical capabilities were not disrupted; the attack method, affected data and responsible actor have not been disclosed.",
+        whyItMatters:
+          "Public-source systems can still contain sensitive analysis, accounts and connections into higher-trust workflows. Treat data classification as only one control: isolate collection networks, minimize service-account reach, monitor cross-zone access and keep identity, DNS and network telemetry outside the compromised environment.",
+        image: "/images/briefings/2026-11-25/us-intelligence-breach.svg",
+        imageAlt: "Illustration of an unclassified intelligence network being isolated while external identity and network logs are reviewed.",
+        sourceLabel: "Reuters report, 24 November 2026",
+        sourceUrl: "https://www.reuters.com/world/us/cia-odni-suffer-cybersecurity-breach-some-unclassified-information-nyt-2026-11-24/",
+      },
+      {
+        headline: "AWS moves centralized internet inspection directly onto VPC gateways",
+        category: "IT Infrastructure",
+        summary:
+          "AWS published technical guidance for automated internet firewall mode, now in public preview. It can apply centrally defined Network Firewall rules to inbound and outbound traffic at each selected VPC internet gateway, add built-in NAT for outbound-only access and extend policy automatically to future VPCs without dedicated firewall subnets or route changes.",
+        whyItMatters:
+          "This could remove duplicated NAT gateways, inspection endpoints and fragile routing from multi-account estates. Treat the preview as a controlled pilot: verify asymmetric-flow handling, logging, fail-open behavior, rule propagation, service limits and rollback before replacing proven production paths.",
+        image: "/images/briefings/2026-11-25/aws-internet-firewall.svg",
+        imageAlt: "Illustration of centralized AWS firewall policy inspecting inbound and outbound traffic at several VPC internet gateways.",
+        sourceLabel: "AWS Security Blog technical announcement, 24 November 2026",
+        sourceUrl: "https://aws.amazon.com/blogs/security/aws-network-firewall-introduces-automated-internet-firewall-mode-preview/",
+      },
+      {
+        headline: "Google makes governed Workspace connections for AI agents generally available",
+        category: "Artificial Intelligence",
+        summary:
+          "Google made its hosted Workspace MCP servers and official command-line tool generally available across Gmail, Drive, Docs, Sheets, Slides, Calendar, Chat and Tasks. The release adds standardized usage tiers, administrator policies, audit controls and user approvals; Google says agents covered by its new terms must use these governed interfaces instead of traditional REST APIs from 1 February 2027.",
+        whyItMatters:
+          "This turns agent access into a distinct integration surface with its own identity and governance. Give each SaaS agent a dedicated OAuth client, request the smallest tool set and scopes, require approval for writes, log every action and preserve a non-agent integration path for ordinary application features.",
+        image: "/images/briefings/2026-11-25/workspace-agent-governance.svg",
+        imageAlt: "Illustration of AI agents reaching Google Workspace tools through separate OAuth, approval, policy and audit controls.",
+        sourceLabel: "Google Workspace announcement, 24 November 2026",
+        sourceUrl: "https://workspace.google.com/blog/product-announcements/built-for-trust-and-control-new-ai-agent-protections-and-developer-tools-in-google-workspace",
+      },
+      {
+        headline: "GPT-6 models show general-purpose protein-design capability",
+        category: "Artificial Intelligence",
+        summary:
+          "OpenAI reports that GPT-6 models can design protein structures and sequences using reasoning and general-purpose code rather than a specialized protein generator. In laboratory tests with Onava, 35 of 322 GPT-6.2-derived minibinders showed evidence of binding across five intended targets, while full protein-structure prediction remains well behind specialist models.",
+        whyItMatters:
+          "General models are becoming orchestration layers for specialist scientific tools, but the result also shows why benchmarks are not enough. For any high-stakes SaaS workflow, separate model proposals from validation, record the tools and intermediate evidence, quantify failure rates on your own tasks and keep expert review before consequential use.",
+        image: "/images/briefings/2026-11-25/gpt-protein-design.svg",
+        imageAlt: "Illustration of a general-purpose AI model proposing protein structures that pass through specialist prediction and laboratory validation.",
+        sourceLabel: "OpenAI research publication, 24 November 2026",
+        sourceUrl: "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/",
+      },
+      {
+        headline: "HPE warns memory and component shortages could last into late 2028",
+        category: "IT Infrastructure",
+        summary:
+          "HPE says memory, NAND and other critical components may remain supply-constrained until at least the second half of 2028 as AI infrastructure demand accelerates. Its latest quarter showed networking revenue of $3.1 billion, up 12.3% year on year, while rising component costs are expected to pressure margins as more AI servers ship.",
+        whyItMatters:
+          "Server and storage plans need longer lead times and realistic replacement budgets even outside AI clusters. Forecast memory and flash separately from CPU and accelerator capacity, qualify alternatives early, avoid single-vendor configurations and reserve scarce parts for workloads where measured utilization justifies them.",
+        image: "/images/briefings/2026-11-25/memory-supply-constraint.svg",
+        imageAlt: "Illustration of constrained memory and NAND supply feeding server, storage and network infrastructure plans through 2028.",
+        sourceLabel: "Reuters report on HPE results, 24 November 2026",
+        sourceUrl: "https://www.reuters.com/business/hpe-shares-fall-margin-worries-overshadow-raised-outlook-2026-11-24/",
+      },
+    ],
+  },
+  {
     date: "2026-11-24",
     title: "Daily Tech Briefing — 24 November 2026",
     description:
