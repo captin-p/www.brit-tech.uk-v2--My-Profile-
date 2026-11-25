@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">Gateway-level internet inspection</title>
+<desc id="desc">Central firewall policy is applied at several VPC internet gateways with built-in outbound NAT.</desc>
+<defs>
+  <radialGradient id="bg" cx="50%" cy="35%" r="85%">
+    <stop offset="0%" stop-color="#173252"/>
+    <stop offset="100%" stop-color="#06101d"/>
+  </radialGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1200" height="675" rx="28" fill="url(#bg)"/>
+<path d="M80 145H1120" stroke="#284865" stroke-width="2"/>
+<text x="80" y="94" fill="#ffffff" font-family="Arial, sans-serif" font-size="40" font-weight="700">Gateway-level internet inspection</text>
+<rect x="120" y="205" width="360" height="245" rx="24" fill="#0d2135" stroke="#355b78" stroke-width="2"/>
+<rect x="720" y="205" width="360" height="245" rx="24" fill="#0d2135" stroke="#355b78" stroke-width="2"/>
+<text x="160" y="255" fill="#62d8ff" font-family="Arial, sans-serif" font-size="25" font-weight="700">CENTRAL POLICY</text>
+<text x="160" y="310" fill="#d7e8f8" font-family="Arial, sans-serif" font-size="24">Organization-wide rules</text>
+<text x="160" y="348" fill="#d7e8f8" font-family="Arial, sans-serif" font-size="24">Inbound + outbound</text>
+<text x="160" y="386" fill="#d7e8f8" font-family="Arial, sans-serif" font-size="24">Automatic future VPCs</text>
+<text x="760" y="255" fill="#62d8ff" font-family="Arial, sans-serif" font-size="25" font-weight="700">VERIFY FIRST</text>
+<text x="760" y="310" fill="#d7e8f8" font-family="Arial, sans-serif" font-size="24">Preview behavior</text>
+<text x="760" y="348" fill="#d7e8f8" font-family="Arial, sans-serif" font-size="24">Logs and flow symmetry</text>
+<text x="760" y="386" fill="#d7e8f8" font-family="Arial, sans-serif" font-size="24">Rollback path</text>
+<path d="M490 327H690" stroke="#62d8ff" stroke-width="8" stroke-linecap="round" filter="url(#glow)"/>
+<circle cx="590" cy="327" r="34" fill="#0d2135" stroke="#62d8ff" stroke-width="6"/>
+<path d="M574 327l11 12 23-27" fill="none" stroke="#a7f3d0" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="80" y="610" fill="#8fb3cf" font-family="Arial, sans-serif" font-size="22" letter-spacing="2">BRIT TECH · 25 NOVEMBER 2026</text>
+</svg>
