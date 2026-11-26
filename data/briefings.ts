@@ -21,6 +21,76 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-26",
+    title: "Daily Tech Briefing — 26 November 2026",
+    description:
+      "Five verified developments in cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Patch and investigate Juniper Session Smart and internet-facing GeoServer systems first, then reset Hex credentials and distrust package mirrors until its new signing system is available. For AI development and infrastructure purchasing, test small self-hosted worker models against real repositories and treat record server backlogs as a delivery-risk signal rather than guaranteed capacity.",
+    stories: [
+      {
+        headline: "CISA confirms exploitation of a critical Juniper Session Smart flaw",
+        category: "Cybersecurity",
+        summary:
+          "CISA added CVE-2026-103406 to its Known Exploited Vulnerabilities catalog on 25 November. The CVSS 9.8 command-injection flaw in Juniper Session Smart Conductor can let an unauthenticated remote attacker execute commands as root through a crafted Salt minion identifier. Juniper fixed it in releases 7.0.5, 7.1.7 and 7.2.3.",
+        whyItMatters:
+          "The Conductor is a high-trust control plane for SD-WAN routers, so compromise can undermine network policy and device management. Upgrade every Conductor and Router node, restrict management reachability, review independently stored authentication and configuration logs, and rebuild affected controllers if exploitation indicators are found.",
+        image: "/images/briefings/2026-11-26/juniper-session-smart.svg",
+        imageAlt: "Illustration of a malicious router identity being blocked before it can execute root commands on a Juniper Session Smart control plane.",
+        sourceLabel: "Juniper security bulletin, updated with exploitation information 25 November 2026",
+        sourceUrl: "https://supportportal.juniper.net/s/article/2026-10-On-Demand-Security-Bulletin-Session-Smart-Router-and-Session-Smart-Conductor-Multiple-internally-discovered-vulnerabilities-resolved",
+      },
+      {
+        headline: "Attackers begin probing two newly disclosed GeoServer flaws",
+        category: "Cybersecurity",
+        summary:
+          "Security authorities report active attempts to exploit CVE-2026-120705 and CVE-2026-129243 in GeoServer. The flaws can allow unauthenticated file reads or server-side requests through WFS and bypass service-security rules; researchers warn they can form part of a longer chain toward remote code execution. Fixed releases are 3.0.2, 2.28.6 and 2.27.7.",
+        whyItMatters:
+          "GeoServer often exposes mapping data directly to the internet and may reach internal databases or file stores. Upgrade immediately, restrict administrative and OGC endpoints, review WFS requests and outbound connections, remove unused extensions and rotate credentials if the service could read them.",
+        image: "/images/briefings/2026-11-26/geoserver-exploitation.svg",
+        imageAlt: "Illustration of malicious WFS requests being blocked before reaching GeoServer files, internal services and administrative functions.",
+        sourceLabel: "Canadian Centre for Cyber Security advisory, 25 November 2026",
+        sourceUrl: "https://www.cyber.gc.ca/en/alerts-advisories/geoserver-security-advisory-av26-1207",
+      },
+      {
+        headline: "Hex package registry breach reaches six production servers",
+        category: "Cybersecurity",
+        summary:
+          "Hex says an attacker exploited CVE-2026-129514 on 23 November and ran operating-system commands on six production web servers. It found no altered packages or database writes, but cannot rule out reads of account data, 2FA secrets or private content. Hex rotated infrastructure credentials and session keys, logging out users and clients.",
+        whyItMatters:
+          "A language package registry sits directly inside the software supply chain. Change your Hex password, reset 2FA and recovery codes, inspect CI for unexpected authentication failures, fetch packages only from repo.hex.pm rather than mirrors, and install the forthcoming client update with the new signing system.",
+        image: "/images/briefings/2026-11-26/hex-registry-breach.svg",
+        imageAlt: "Illustration of compromised package-registry servers being replaced while credentials, sessions and signing controls are rotated.",
+        sourceLabel: "Hex security incident report, 24 November 2026",
+        sourceUrl: "https://hex.pm/blog/security-incident-on-hexpm",
+      },
+      {
+        headline: "JetBrains releases a smaller open model for fast coding-agent work",
+        category: "Artificial Intelligence",
+        summary:
+          "JetBrains released Mellum2.1 Instruct, an Apache 2.0 coding model with 12 billion total and 2.5 billion active parameters. It is designed for concise repository tasks, tool loops and sub-agents, generating roughly half as many tokens as the Thinking variant while performing nearly as well on SWE-bench Verified. An optional multi-token-prediction head can increase generation speed.",
+        whyItMatters:
+          "This provides a practical self-hosted worker for routine SaaS engineering without sending source code to an external API. Benchmark it on your repositories, isolate its shell and file access, require tests before accepting edits and route complex debugging or security decisions to a stronger model and human reviewer.",
+        image: "/images/briefings/2026-11-26/mellum-coding-agent.svg",
+        imageAlt: "Illustration of a compact self-hosted coding model handling repository tasks inside a restricted tool sandbox.",
+        sourceLabel: "JetBrains AI announcement, 25 November 2026",
+        sourceUrl: "https://blog.jetbrains.com/ai/2026/11/mellum2-1-instruct-is-out-bringing-faster-answers-for-coding-agents/",
+      },
+      {
+        headline: "Dell's AI-server backlog reaches $132.3 billion",
+        category: "IT Infrastructure",
+        summary:
+          "Dell reported $60.2 billion of new AI-server orders, $22 billion of quarterly AI-server revenue and a record $132.3 billion backlog. It raised its annual AI-server revenue forecast to $78 billion, while warning that memory shortages and cost pressure are likely to continue through 2027.",
+        whyItMatters:
+          "Demand is moving beyond experiments, but a backlog is not installed capacity. When planning AI infrastructure, confirm delivery dates, memory and storage allocation, rack power, cooling and fabric readiness; avoid long commitments until the workload, financing and operational dependencies are measurable.",
+        image: "/images/briefings/2026-11-26/dell-ai-backlog.svg",
+        imageAlt: "Illustration of a large AI-server order backlog waiting on memory, power, cooling and network-fabric capacity before deployment.",
+        sourceLabel: "Reuters report on Dell results, 24 November 2026",
+        sourceUrl: "https://www.reuters.com/business/dell-lifts-annual-forecasts-after-record-quarter-surging-ai-server-demand-2026-11-24/",
+      },
+    ],
+  },
+  {
     date: "2026-11-25",
     title: "Daily Tech Briefing — 25 November 2026",
     description:
