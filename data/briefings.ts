@@ -21,6 +21,77 @@ export type TechBriefing = {
 
 export const briefings: TechBriefing[] = [
   {
+    date: "2026-11-28",
+    title: "Daily Tech Briefing — 28 November 2026",
+    description:
+      "Five developments reported during 27–28 November across cybersecurity, artificial intelligence and IT infrastructure, selected for network engineers, systems administrators and SaaS builders.",
+    takeaway:
+      "Prioritize the newly KEV-listed Drupal installer bypass, review control-plane separation and emergency-change paths after the reported Cloud One intrusion, and inventory any RETN-dependent U.S. network services before 1 January 2027. Evaluate new decision models on controlled, privacy-safe SaaS workloads before production use.",
+    stories: [
+      {
+        headline: "Reuters reports a breach of the U.S. Air Force's multi-cloud Cloud One platform",
+        category: "Cybersecurity",
+        summary:
+          "Reuters reported on 27 November that attackers breached Cloud One, the Air Force's large cloud platform combining services from Microsoft, Amazon, Oracle and Google. Sources said the intrusion was discovered during upgrade work within the prior month and that a software flaw was used to reach the platform control plane. Application migrations and updates were paused, and some administrator rights were revoked. Reuters could not establish the full scope, the attacker or whether data was stolen; the Air Force declined to discuss the specific system.",
+        whyItMatters:
+          "A shared cloud control plane can create a much larger blast radius than a single compromised workload. Map privileged identities across providers, separate tenant and platform administration, keep audit logs outside the affected control plane, and maintain a tested break-glass path for emergency fixes that does not depend on the same management layer.",
+        image: "/images/briefings/2026-11-28/cloud-one-control-plane.svg",
+        imageAlt: "Original illustration of a multi-cloud control plane connected to military applications, with the management layer isolated for investigation.",
+        sourceLabel: "Reuters investigation, 27 November 2026",
+        sourceUrl: "https://www.reuters.com/world/hackers-breach-us-air-force-flagship-cloud-one-computing-platform-2026-11-27/",
+      },
+      {
+        headline: "CISA adds a highly critical Drupal Core installer bypass to its exploited-vulnerability catalog",
+        category: "Cybersecurity",
+        summary:
+          "In a 27 November update, CISA added CVE-2026-136716 to its Known Exploited Vulnerabilities catalog. Drupal's advisory describes an access-bypass flaw in install.php that can leave sites in unusual or incomplete installation states vulnerable to takeover when the installer has not been secured. Drupal says exploitation is occurring in the wild; this is not a blanket statement that every Drupal installation is vulnerable.",
+        whyItMatters:
+          "Check every internet-facing Drupal site, including older deployments and sites whose installation or recovery process was interrupted. Confirm the installer is secured, apply the vendor's fixed release, restrict access to installation paths and review web, authentication and file-change logs for signs of earlier compromise before treating patching as complete.",
+        image: "/images/briefings/2026-11-28/drupal-kev.svg",
+        imageAlt: "Original illustration of a Drupal installation endpoint behind an access-control gate, with a critical vulnerability alert and patch verification.",
+        sourceLabel: "CISA KEV alert and Drupal security advisory, 27 November 2026",
+        sourceUrl: "https://www.cisa.gov/news-events/alerts/2026/11/27/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+      },
+      {
+        headline: "UK Department for Work and Pensions takes services offline after a serious cyber incident",
+        category: "Cybersecurity",
+        summary:
+          "On 27 November, UK Work and Pensions Minister Pat McFadden described an incident at the Department for Work and Pensions as a serious cyber incident. Some services were taken offline while the investigation continued. The minister said there was no evidence so far that personal details had been compromised; whether the incident was malicious had not yet been established.",
+        whyItMatters:
+          "This is a useful public-sector resilience case: an availability incident and a confirmed data breach are different findings. Design service-by-service isolation, out-of-band staff communications, known-good recovery points and clear status messaging so one affected application can be contained without taking unrelated citizen services offline.",
+        image: "/images/briefings/2026-11-28/dwp-service-continuity.svg",
+        imageAlt: "Original illustration of public-service applications being isolated while a separate recovery and communications path remains available.",
+        sourceLabel: "Reuters report, 27 November 2026",
+        sourceUrl: "https://www.reuters.com/world/uk-pensions-minister-says-no-evidence-personal-data-comprised-cyber-incident-2026-11-27/",
+      },
+      {
+        headline: "U.S. Commerce orders RETN to end specified U.S. network services by 1 January 2027",
+        category: "IT Infrastructure",
+        summary:
+          "A 27 November public-inspection determination from the U.S. Commerce Department's Bureau of Industry and Security prohibits RETN US LLC and its successors from specified transactions in the United States or with U.S. persons. The scope includes IP transit, peering, remote internet-exchange access, BGP routing, private circuits, cloud and data-center interconnection or colocation, and DDoS mitigation. From 1 January 2027, covered services must end and covered equipment must be removed, including equipment installed through third parties. The notice contains a limited exception for qualifying submarine-cable infrastructure regulated under applicable law.",
+        whyItMatters:
+          "If you support cross-border networks or U.S.-connected customers, inventory transit providers, ASNs, peering, private circuits, colocation, DDoS scrubbing and reseller dependencies. Ask carriers whether RETN is embedded behind another provider, then plan replacement routes and physical diversity before the deadline. The order is scoped to U.S. networks and U.S. persons; it is not a worldwide shutdown of every RETN service.",
+        image: "/images/briefings/2026-11-28/retn-network-transition.svg",
+        imageAlt: "Original network topology illustration showing a RETN-dependent route being migrated to alternate transit paths ahead of a U.S. service deadline.",
+        sourceLabel: "U.S. Federal Register public-inspection determination, 27 November 2026",
+        sourceUrl: "https://public-inspection.federalregister.gov/2026-24367.pdf",
+      },
+      {
+        headline: "Liquid AI releases d1.3-ultra, a probability-based decision model for structured workflows",
+        category: "Artificial Intelligence",
+        summary:
+          "Liquid AI announced d1.3-ultra on 27 November. Unlike a general chat model, it returns probabilities for predefined choices, making it suited to classification, ranking and policy-routing tasks. Liquid says the release adds ranking and extraction of numbers and dates from images and audio. Artificial Analysis currently lists the model first among 27 decision models with a score of 76, a median task time of 191 ms and an estimated $133 per million benchmark tasks; those figures are benchmark results, not a production guarantee.",
+        whyItMatters:
+          "Probability outputs can support lower-cost SaaS workflows such as ticket routing, document triage, invoice checks and policy screening, with uncertain cases sent to a human. Benchmark it on your own French- and English-language data, measure calibration and false positives, confirm the API's supported input modalities, and compare total cost and privacy terms before routing customer records to it.",
+        image: "/images/briefings/2026-11-28/liquid-decision-model.svg",
+        imageAlt: "Original illustration of documents entering a decision model and emerging as ranked probability scores for automated routing or human review.",
+        sourceLabel: "Liquid AI release announcement, 27 November 2026",
+        sourceUrl: "https://x.com/liquidai/status/2126374995399975380",
+      },
+    ],
+  },
+
+  {
     date: "2026-11-25",
     title: "Daily Tech Briefing — 25 November 2026",
     description:
